@@ -21,10 +21,16 @@
       "helpers/*": ["./helpers/*"],
       "hooks/*": ["./hooks/*"],
       "references/*": ["./references/*"],
-      "styles/*": ["./styles/*"]
+      "styles/*": ["./styles/*"],
+      "types/*": ["./types/*"]
     },
     "incremental": true
   },
-  "include": ["*.d.ts", "src", "*.*.js"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": ["*.d.ts", "src", "*.*.js", ".storybook"],
   "exclude": ["node_modules"]
 }
