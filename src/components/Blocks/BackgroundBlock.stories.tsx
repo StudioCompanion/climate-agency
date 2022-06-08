@@ -2,17 +2,17 @@ import { BackgroundBlock } from './BackgroundBlock'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { StoryFixtures } from '@types'
+import { StoryFixtures } from '../../types/utils'
 
 export default {
   title: 'Blocks/BackgroundBlock',
   component: BackgroundBlock,
 } as ComponentMeta<typeof BackgroundBlock>
 
-export const NoContent: ComponentStory<
-  typeof BackgroundBlock
-> = () => <BackgroundBlock />
+export const NoContent: ComponentStory<typeof BackgroundBlock> = () => (
+  <BackgroundBlock />
+)
 
-export const WithContent: ComponentStory<
-  typeof BackgroundBlock
-> = () => <BackgroundBlock />
+export const WithContent: ComponentStory<typeof BackgroundBlock> = () => (
+  <BackgroundBlock />
+)

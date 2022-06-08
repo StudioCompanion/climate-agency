@@ -2,21 +2,21 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
-import { MediaImage } from '../Media/MediaImage'
+import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
 interface HomepageOpeningBlockProps {
-  image?: MediaImage
+  mediaImage?: MediaImageProps
   content?: string
 }
 
 export const HomepageOpeningBlock = ({
-  image,
+  mediaImage,
   content,
 }: HomepageOpeningBlockProps) => {
   return (
     <Wrap>
       <ImageContainer>
-        {image ? <MediaImage image={image} /> : null}
+        {mediaImage ? <MediaImage {...mediaImage} /> : null}
       </ImageContainer>
       <TextContainer>{content}</TextContainer>
     </Wrap>
@@ -31,8 +31,11 @@ const Wrap = styled('div', {
 
 const ImageContainer = styled('div', {
   backgroundColor: 'Aquamarine',
+  maxWidth: '50%',
 })
 
 const TextContainer = styled('div', {
   backgroundColor: 'AliceBlue',
+  fontSize: '38px',
+  maxWidth: '50%',
 })

@@ -2,7 +2,7 @@ import { styled } from 'styles/stitches.config'
 import { HomepageOpeningBlock } from 'components/Blocks/HomepageOpeningBlock'
 
 const heroImage = {
-  src: '/../assets/hero.png',
+  src: '/assets/hero.png',
   alt: 'Hero Image',
 }
 const Index = () => {

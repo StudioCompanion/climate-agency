@@ -11,13 +11,15 @@ export type SizesArray = [
   largeDesktop?: string | null
 ]
 
-export interface Image {
+export interface ImageInterface {
   src: string
   altText?: string | undefined
+  width?: number | undefined
+  height?: number | undefined
 }
 
-export type Props = {
-  image: Image
+export type MediaImageProps = {
+  image: ImageInterface
   layout?: ImageLayout
   objectFit?: 'cover' | 'contain'
   sizes?: string | SizesArray
@@ -28,7 +30,7 @@ export const MediaImage = ({
   layout = 'fill',
   objectFit = 'cover',
   sizes = '100vw',
-}: Props) => {
+}: MediaImageProps) => {
   return (
     <NextImage
       src={image.src}
