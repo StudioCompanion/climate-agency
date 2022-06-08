@@ -48,14 +48,25 @@ export const decorators = [
  *
  * Here is the issue:
  *
- * https://github.com/vercel/next.js/issues/18393
+ * https://github.com/vercel/next.js/issues/36417
  *
  * Here is the fix:
  *
- * https://github.com/vercel/next.js/issues/18393#issuecomment-783269086
+ * https://github.com/vercel/next.js/issues/36417#issuecomment-1117360509
  */
 const OriginalNextImage = NextImage.default
+
 Object.defineProperty(NextImage, 'default', {
   configurable: true,
-  value: (props) => <OriginalNextImage {...props} unoptimized />,
+  value: (props) =>
+    typeof props.src === 'string' ? (
+      <OriginalNextImage {...props} unoptimized blurDataURL={props.src} />
+    ) : (
+      <OriginalNextImage {...props} unoptimized />
+    ),
+})
+
+Object.defineProperty(NextImage, '__esModule', {
+  configurable: true,
+  value: true,
 })
