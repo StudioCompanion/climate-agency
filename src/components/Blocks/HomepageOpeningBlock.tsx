@@ -50,7 +50,7 @@ const ImageContainer = styled('div', {
   },
 })
 
-const TextContainer = styled('div', {
+const TextContainer = styled('p', {
   fontFamily: '$inria',
   fontSize: '$S',
   lineHeight: '$S',
