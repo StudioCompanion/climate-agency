@@ -5,22 +5,17 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
 interface HomepageOpeningBlockProps {
-  mediaImage?: MediaImageProps
-  paragraph1?: string
-  paragraph2?: string
+  mediaImage: MediaImageProps
+  content: string
 }
 
 export const HomepageOpeningBlock = ({
   mediaImage,
-  paragraph1,
-  paragraph2,
+  content,
 }: HomepageOpeningBlockProps) => {
   return (
     <Wrap>
-      <TextContainer>
-        <p>{paragraph1}</p>
-        <p>{paragraph2}</p>
-      </TextContainer>
+      <TextContainer>{content}</TextContainer>
       <ImageContainer>
         {mediaImage ? <MediaImage {...mediaImage} /> : null}
       </ImageContainer>
@@ -32,20 +27,19 @@ const Wrap = styled('section', {
   display: 'grid',
   gridAutoFlow: 'dense',
   gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
-  columnGap: '$s',
-  p: '$s',
+  columnGap: '$16',
+  p: '$16',
 
   '@tabletUp': {
-    display: 'grid-inline',
     gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    columnGap: '$l',
-    p: '$l',
+    columnGap: '$20',
+    p: '$20',
   },
 })
 
 const ImageContainer = styled('div', {
   gridColumn: '1 / span 8',
-  mt: '$s',
+  mt: '$16',
 
   '@tabletUp': {
     gridColumn: '1 / span 6',
@@ -53,22 +47,16 @@ const ImageContainer = styled('div', {
   },
 })
 
-const TextContainer = styled('div', {
+const TextContainer = styled('p', {
+  whiteSpace: 'pre-line',
   fontFamily: '$inria',
   fontSize: '$S',
   lineHeight: '$S',
   gridColumn: '1 / span 8',
 
-  '& > p': {
-    mb: '$s',
-  },
   '@tabletUp': {
     fontSize: '$L',
     lineHeight: '$L',
     gridColumn: '7 / span 6',
-
-    '& > p': {
-      mb: '$l',
-    },
   },
 })

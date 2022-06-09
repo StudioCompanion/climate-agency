@@ -25,7 +25,7 @@ const fixtures: StoryFixtures<typeof HomepageOpeningBlock> = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    paragraph1: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.`,
-    paragraph2: `We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
+    content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
+    We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
   },
 }
