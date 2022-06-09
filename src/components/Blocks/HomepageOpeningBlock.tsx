@@ -51,6 +51,7 @@ const ImageContainer = styled('div', {
 })
 
 const TextContainer = styled('div', {
+  fontFamily: '$inria',
   fontSize: '$S',
   lineHeight: '$S',
   gridColumn: '1 / span 8',

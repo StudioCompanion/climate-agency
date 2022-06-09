@@ -1,6 +1,23 @@
 import { globalCss } from './stitches.config'
 
 export const globalStyles = globalCss({
+  '@font-face': [
+    {
+      fontFamily: 'Inria Serif',
+      src: 'url("/fonts/InriaSerif-Light.woff") format("woff"), url("/public/fonts/InriaSerif-Light.woff2") format("woff2")',
+      fontWeight: 300,
+    },
+    {
+      fontFamily: 'Work Sans',
+      src: 'url("/fonts/WorkSans-Regular.woff") format("woff"), url("/fonts/WorkSans-Regular.woff2") format("woff2")',
+      fontWeight: 400,
+    },
+    {
+      fontFamily: 'Work Sans',
+      src: 'url("/fonts/WorkSans-SemiBold.woff") format("woff"), url("/fonts/WorkSans-SemiBold.woff2") format("woff2")',
+      fontWeight: 600,
+    },
+  ],
   '*, *:before, *:after': {
     boxSizing: 'border-box',
   },

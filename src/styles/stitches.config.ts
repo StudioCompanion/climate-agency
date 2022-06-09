@@ -31,9 +31,8 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         max: '999',
       },
       fonts: {
-        inria: '"InriaSerif-Light", -apple-system, system-ui, sans-serif',
-        workSansR: '"WorkSans-Regular", -apple-system, system-ui, sans-serif',
-        workSansSB: '"WorkSans-SemiBold", -apple-system, system-ui, sans-serif',
+        inria: '"Inria Serif", -apple-system, system-ui, sans-serif',
+        workSans: '"Work Sans", -apple-system, system-ui, sans-serif',
       },
       fontSizes: {
         XXXL: '8.4rem',
