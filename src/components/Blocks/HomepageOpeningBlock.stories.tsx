@@ -19,8 +19,10 @@ const fixtures: StoryFixtures<typeof HomepageOpeningBlock> = {
       image: {
         src: '/images/Green_Accent_Image_01.png',
         altText: 'Hero image',
+        width: 653,
+        height: 636,
       },
-      layout: 'fill',
+      layout: 'responsive',
       objectFit: 'cover',
     },
     content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that. 

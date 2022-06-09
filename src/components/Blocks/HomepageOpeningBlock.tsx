@@ -27,24 +27,25 @@ const Wrap = styled('section', {
   display: 'grid',
   gridAutoFlow: 'dense',
   gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
-  columnGap: '16px',
-  p: '16px',
+  columnGap: '1.6rem',
+  p: '1.6prem',
 
   '@tabletUp': {
     display: 'grid-inline',
     gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    columnGap: '20px',
-    p: '20px',
+    columnGap: '2rem',
+    p: '2rem',
   },
 })
 
 const ImageContainer = styled('div', {
-  position: 'relative',
-  height: '336px',
+  // position: 'relative',
+  display: 'block',
+  height: '33.6rem',
   gridColumn: '1 / span 8',
   mt: '16px',
   '@tabletUp': {
-    height: '636px',
+    height: '63.6rem',
     gridColumn: '1 / span 6',
     mt: '0',
   },
