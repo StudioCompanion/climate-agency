@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { styled } from 'styles/stitches.config'
-import { getFontStyle } from 'styles/getFontStyles'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
@@ -27,13 +26,13 @@ export const HomepageOpeningBlock = ({
 const Wrap = styled('section', {
   display: 'grid',
   gridAutoFlow: 'dense',
-  gridTemplateColumns: 'repeat(8, 28.88px)',
+  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
   columnGap: '16px',
   p: '16px',
 
   '@tabletUp': {
     display: 'grid-inline',
-    gridTemplateColumns: 'repeat(12, 98px)',
+    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
     columnGap: '20px',
     p: '20px',
   },
@@ -52,12 +51,13 @@ const ImageContainer = styled('div', {
 })
 
 const TextContainer = styled('div', {
-  // ...getFontStyle('$L'),
-  fontSize: '28px',
+  fontSize: '$S',
+  lineHeight: '$S',
   gridColumn: '1 / span 8',
 
   '@tabletUp': {
-    fontSize: '38px',
+    fontSize: '$L',
+    lineHeight: '$L',
     gridColumn: '7 / span 6',
   },
 })
