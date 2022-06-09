@@ -35,6 +35,8 @@ export const MediaImage = ({
     <NextImage
       src={image.src}
       alt={image.altText}
+      width={image.width}
+      height={image.height}
       layout={layout}
       objectFit={objectFit}
       sizes={generateSrcSetSizes(sizes)}

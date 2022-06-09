@@ -28,7 +28,7 @@ const Wrap = styled('section', {
   gridAutoFlow: 'dense',
   gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
   columnGap: '1.6rem',
-  p: '1.6prem',
+  p: '1.6rem',
 
   '@tabletUp': {
     display: 'grid-inline',
@@ -39,13 +39,10 @@ const Wrap = styled('section', {
 })
 
 const ImageContainer = styled('div', {
-  // position: 'relative',
-  display: 'block',
-  height: '33.6rem',
   gridColumn: '1 / span 8',
   mt: '1.6rem',
+
   '@tabletUp': {
-    height: '63.6rem',
     gridColumn: '1 / span 6',
     mt: '0',
   },

@@ -22,7 +22,7 @@ const fixtures: StoryFixtures<typeof HomepageOpeningBlock> = {
         width: 653,
         height: 636,
       },
-      layout: 'responsive',
+      layout: 'intrinsic',
       objectFit: 'cover',
     },
     content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that. 
