@@ -23,6 +23,11 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         black: '#000000',
         yellow: '#D1FF70',
       },
+      space: {
+        s: '1.6rem',
+        m: '2rem',
+        l: '2.4rem',
+      },
       zIndices: {
         1: '100',
         2: '200',

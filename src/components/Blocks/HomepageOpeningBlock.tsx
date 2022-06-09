@@ -6,16 +6,21 @@ import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
 interface HomepageOpeningBlockProps {
   mediaImage?: MediaImageProps
-  content?: string
+  paragraph1?: string
+  paragraph2?: string
 }
 
 export const HomepageOpeningBlock = ({
   mediaImage,
-  content,
+  paragraph1,
+  paragraph2,
 }: HomepageOpeningBlockProps) => {
   return (
     <Wrap>
-      <TextContainer>{content}</TextContainer>
+      <TextContainer>
+        <p>{paragraph1}</p>
+        <p>{paragraph2}</p>
+      </TextContainer>
       <ImageContainer>
         {mediaImage ? <MediaImage {...mediaImage} /> : null}
       </ImageContainer>
@@ -27,20 +32,20 @@ const Wrap = styled('section', {
   display: 'grid',
   gridAutoFlow: 'dense',
   gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
-  columnGap: '1.6rem',
-  p: '1.6rem',
+  columnGap: '$s',
+  p: '$s',
 
   '@tabletUp': {
     display: 'grid-inline',
     gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    columnGap: '2rem',
-    p: '2rem',
+    columnGap: '$m',
+    p: '$m',
   },
 })
 
 const ImageContainer = styled('div', {
   gridColumn: '1 / span 8',
-  mt: '1.6rem',
+  mt: '$s',
 
   '@tabletUp': {
     gridColumn: '1 / span 6',
@@ -48,15 +53,29 @@ const ImageContainer = styled('div', {
   },
 })
 
-const TextContainer = styled('p', {
+const TextContainer = styled('div', {
   fontFamily: '$inria',
   fontSize: '$S',
   lineHeight: '$S',
   gridColumn: '1 / span 8',
 
+  '& > p': {
+    mb: '$s',
+  },
   '@tabletUp': {
+    fontSize: '$M',
+    lineHeight: '$M',
+    gridColumn: '7 / span 6',
+
+    '& > p': {
+      mb: '$m',
+    },
+  },
+  '@desktopUp': {
     fontSize: '$L',
     lineHeight: '$L',
-    gridColumn: '7 / span 6',
+    '& > p': {
+      mb: '$l',
+    },
   },
 })
