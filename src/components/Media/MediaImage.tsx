@@ -27,7 +27,7 @@ export type MediaImageProps = {
 
 export const MediaImage = ({
   image,
-  layout = 'fill',
+  layout = 'intrinsic',
   objectFit = 'cover',
   sizes = '100vw',
 }: MediaImageProps) => {

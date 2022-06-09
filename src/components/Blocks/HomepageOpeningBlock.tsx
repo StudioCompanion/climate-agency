@@ -23,19 +23,36 @@ export const HomepageOpeningBlock = ({
   )
 }
 
-const Wrap = styled('div', {
+const Wrap = styled('section', {
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'column-reverse',
   alignItems: 'center',
+  gap: '40px',
+  p: '16px',
+
+  '@tabletUp': {
+    flexDirection: 'row',
+    justifyContent: 'center',
+
+    alignItems: 'flex-start',
+    gap: '24px',
+    p: '48px 24px',
+  },
 })
 
 const ImageContainer = styled('div', {
-  backgroundColor: 'Aquamarine',
-  maxWidth: '50%',
+  position: 'relative',
+  width: '100%',
+  height: '636px',
+  '@tabletUp': {
+    width: '50%',
+  },
 })
 
 const TextContainer = styled('div', {
-  backgroundColor: 'AliceBlue',
-  fontSize: '38px',
-  maxWidth: '50%',
+  fontSize: '28px',
+  '@tabletUp': {
+    fontSize: '38px',
+    maxWidth: '50%',
+  },
 })
