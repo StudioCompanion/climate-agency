@@ -38,8 +38,8 @@ const Wrap = styled('section', {
   '@tabletUp': {
     display: 'grid-inline',
     gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    columnGap: '$m',
-    p: '$m',
+    columnGap: '$l',
+    p: '$l',
   },
 })
 
@@ -63,17 +63,10 @@ const TextContainer = styled('div', {
     mb: '$s',
   },
   '@tabletUp': {
-    fontSize: '$M',
-    lineHeight: '$M',
-    gridColumn: '7 / span 6',
-
-    '& > p': {
-      mb: '$m',
-    },
-  },
-  '@desktopUp': {
     fontSize: '$L',
     lineHeight: '$L',
+    gridColumn: '7 / span 6',
+
     '& > p': {
       mb: '$l',
     },

@@ -25,8 +25,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
       },
       space: {
         s: '1.6rem',
-        m: '2rem',
-        l: '2.4rem',
+        l: '2rem',
       },
       zIndices: {
         1: '100',
