@@ -47,6 +47,7 @@ const ImageContainer = styled('div', {
   '@tabletUp': {
     height: '636px',
     gridColumn: '1 / span 6',
+    mt: '0',
   },
 })
 
