@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { styled } from 'styles/stitches.config'
+import { getFontStyle } from 'styles/getFontStyles'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
@@ -15,44 +16,47 @@ export const HomepageOpeningBlock = ({
 }: HomepageOpeningBlockProps) => {
   return (
     <Wrap>
+      <TextContainer>{content}</TextContainer>
       <ImageContainer>
         {mediaImage ? <MediaImage {...mediaImage} /> : null}
       </ImageContainer>
-      <TextContainer>{content}</TextContainer>
     </Wrap>
   )
 }
 
 const Wrap = styled('section', {
-  display: 'flex',
-  flexDirection: 'column-reverse',
-  alignItems: 'center',
-  gap: '40px',
+  display: 'grid',
+  gridAutoFlow: 'dense',
+  gridTemplateColumns: 'repeat(8, 28.88px)',
+  columnGap: '16px',
   p: '16px',
 
   '@tabletUp': {
-    flexDirection: 'row',
-    justifyContent: 'center',
-
-    alignItems: 'flex-start',
-    gap: '24px',
-    p: '48px 24px',
+    display: 'grid-inline',
+    gridTemplateColumns: 'repeat(12, 98px)',
+    columnGap: '20px',
+    p: '20px',
   },
 })
 
 const ImageContainer = styled('div', {
   position: 'relative',
-  width: '100%',
-  height: '636px',
+  height: '336px',
+  gridColumn: '1 / span 8',
+  mt: '16px',
   '@tabletUp': {
-    width: '50%',
+    height: '636px',
+    gridColumn: '1 / span 6',
   },
 })
 
 const TextContainer = styled('div', {
+  // ...getFontStyle('$L'),
   fontSize: '28px',
+  gridColumn: '1 / span 8',
+
   '@tabletUp': {
     fontSize: '38px',
-    maxWidth: '50%',
+    gridColumn: '7 / span 6',
   },
 })
