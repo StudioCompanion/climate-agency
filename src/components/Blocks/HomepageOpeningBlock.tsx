@@ -43,7 +43,7 @@ const ImageContainer = styled('div', {
   display: 'block',
   height: '33.6rem',
   gridColumn: '1 / span 8',
-  mt: '16px',
+  mt: '1.6rem',
   '@tabletUp': {
     height: '63.6rem',
     gridColumn: '1 / span 6',
