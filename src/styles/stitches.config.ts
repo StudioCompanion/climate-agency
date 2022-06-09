@@ -15,12 +15,54 @@ export enum Widths {
 const { styled, globalCss, getCssText, config, keyframes, reset } =
   Stitches.createStitches({
     theme: {
+      colors: {
+        green: '#3DF73D',
+        grey: '#858096',
+        offWhite: '#F7F7F7',
+        stone: '#D6E3D6',
+        black: '#000000',
+        yellow: '#D1FF70',
+      },
+      space: {
+        16: '1.6rem',
+        20: '2rem',
+      },
       zIndices: {
         1: '100',
         2: '200',
         3: '300',
         4: '400',
         max: '999',
+      },
+      fonts: {
+        inria: '"Inria Serif", -apple-system, system-ui, sans-serif',
+        workSans: '"Work Sans", -apple-system, system-ui, sans-serif',
+      },
+      fontSizes: {
+        XXXL: '8.4rem',
+        XXL: '5.5rem',
+        XL: '4.3rem',
+        L: '3.8rem',
+        M: '3.6rem',
+        S: '2.8rem',
+        XS: '1.6rem',
+        XXS: '1.2rem',
+      },
+      lineHeights: {
+        XXXL: '110%',
+        XXL: '110%',
+        XL: '110%',
+        L: '110%',
+        M: '110%',
+        S: '110%',
+        XS: '140%',
+        XXS: '135%',
+        XXXS: '100%',
+      },
+      fontWeights: {
+        light: 300,
+        regular: 400,
+        semiBold: 600,
       },
     },
     media: {
