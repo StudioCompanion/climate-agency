@@ -20,6 +20,10 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
 
     We'd like you to feel as though you have a CMO 
     at your side, working with you to stand out, persuade, and scale.`,
+    link: {
+      href: `#`,
+      description: `Let us help you`,
+    },
     leftImage: {
       image: {
         src: '/images/massimiliano-morosinotto-3i5PHVp1Fkw-unsplash.jpg',

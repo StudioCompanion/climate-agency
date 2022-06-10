@@ -3,7 +3,7 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { GridLayout } from 'components/Layouts/GridLayout'
+import { GreenButton } from '../Buttons/GreenButton'
 
 interface ClimateCausesBlockProps {
   title: string
@@ -30,7 +30,12 @@ export const ClimateCausesBlock = ({
       <Title>
         {title} <sup>(2)</sup>
       </Title>
-      <TextContainer>{content}</TextContainer>
+      <TextContainer>
+        {content}
+        <ButtonContainer>
+          <GreenButton href={link.href} description={link.description} />
+        </ButtonContainer>
+      </TextContainer>
 
       <LeftImageContainer>
         {leftImage ? <MediaImage {...leftImage} /> : null}
@@ -86,6 +91,14 @@ const TextContainer = styled('p', {
     gridColumn: '8 /span 4',
     gridRowStart: '2',
     mt: '$100',
+  },
+})
+
+const ButtonContainer = styled('div', {
+  mt: '$40',
+
+  '@tabletUp': {
+    mt: '$24',
   },
 })
 

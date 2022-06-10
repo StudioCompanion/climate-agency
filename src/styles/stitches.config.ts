@@ -25,8 +25,10 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
       },
       space: {
         8: '0.8rem',
+        12: '1.2rem',
         16: '1.6rem',
         20: '2rem',
+        24: '2.4rem',
         40: '4rem',
         100: '10rem',
         120: '12rem',
