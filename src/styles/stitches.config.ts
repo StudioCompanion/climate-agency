@@ -24,8 +24,10 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         yellow: '#D1FF70',
       },
       space: {
+        8: '0.8rem',
         16: '1.6rem',
         20: '2rem',
+        40: '4rem',
       },
       zIndices: {
         1: '100',
