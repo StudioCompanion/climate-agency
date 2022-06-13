@@ -36,17 +36,19 @@ const netZero = {
     Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these can make a huge difference to our world in the years to come. But they're not being heard.\n
     
     Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
-  mediaImage: {
-    image: {
-      src: '/images/Green_Accent_Image_03.png',
-      altText: 'Greenland Fjords',
-      width: 1326,
-      height: 784.73,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/Green_Accent_Image_03.png',
+        altText: 'Greenland Fjords',
+        width: 1326,
+        height: 784.73,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
   },
-  caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
 }
 
 const Index = () => {
