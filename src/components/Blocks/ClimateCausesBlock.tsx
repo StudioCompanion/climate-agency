@@ -49,13 +49,13 @@ export const ClimateCausesBlock = ({
 
 const ClimateCausesWrap = styled('section', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
+  gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   p: '$16',
 
   '@tabletUp': {
-    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    gridTemplateRows: 'repeat(auto, minmax(auto, 1fr))',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     p: '$20',
   },
@@ -67,12 +67,12 @@ const Title = styled('h1', {
   fontWeight: '$light',
   fontSize: '$XL',
   lineHeight: '$XL',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
 
   '@tabletUp': {
     fontSize: '$XXXL',
     lineHeight: '$XXXL',
-    gridColumn: '1 / span 7',
+    gridColumn: 'span 7',
   },
 })
 
@@ -82,11 +82,11 @@ const TextContainer = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '8 /span 4',
+    gridColumn: '8 / span 4',
     gridRowStart: '2',
     mt: '$100',
   },
@@ -102,27 +102,27 @@ const ButtonContainer = styled('div', {
 
 const MediaContainer = styled('figure', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
-  gridColumn: '1 / span 8',
+  gridTemplateColumns: 'repeat(8, 1fr)',
+  gridColumn: 'span 8',
   columnGap: '$16',
   alignItems: 'end',
   m: '0',
 
   '@tabletUp': {
-    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    gridTemplateRows: 'repeat(auto, minmax(auto, 1fr))',
-    gridColumn: '1 / span 12',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridTemplateRows: 'repeat(auto, 1fr)',
+    gridColumn: 'span 12',
     gridRowStart: '3',
   },
 })
 
 const LeftImageContainer = styled('div', {
   display: 'block',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '1 / span 5',
+    gridColumn: 'span 5',
     mt: '$120',
   },
 })
@@ -133,11 +133,11 @@ const CaptionContainer = styled('figcaption', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
-  gridColumn: '1 / span 7',
+  gridColumn: 'span 7',
   mt: '$8',
 
   '@tabletUp': {
-    gridColumn: '1 / span 4',
+    gridColumn: 'span 4',
     gridRowStart: '2',
   },
 })
