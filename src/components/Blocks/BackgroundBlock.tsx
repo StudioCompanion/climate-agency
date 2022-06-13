@@ -27,12 +27,14 @@ export const BackgroundBlock = ({
         <SectionHeader header={header} />
       </HeaderContainer>
       <TextContainer>{content}</TextContainer>
-      <ImageContainer>
-        {imageSection.mediaImage ? (
-          <MediaImage {...imageSection.mediaImage} />
-        ) : null}
+      <MediaContainer>
+        <ImageContainer>
+          {imageSection.mediaImage ? (
+            <MediaImage {...imageSection.mediaImage} />
+          ) : null}
+        </ImageContainer>
         <CaptionContainer>{imageSection.caption}</CaptionContainer>
-      </ImageContainer>
+      </MediaContainer>
     </BackgroundWrap>
   )
 }
@@ -70,17 +72,30 @@ const TextContainer = styled('p', {
   },
 })
 
+const MediaContainer = styled('figure', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(8, 1fr)',
+  gridColumn: 'span 8',
+  m: '0',
+
+  '@tabletUp': {
+    gridTemplateColumns: 'repeat(6, 1fr)',
+    gridTemplateRows: 'repeat(auto, 1fr)',
+    gridColumn: '7 / span 6',
+  },
+})
+
 const ImageContainer = styled('div', {
   gridColumn: 'span 8',
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '7 / span 6',
+    gridColumn: 'span 6',
     mt: '0',
   },
 })
 
-const CaptionContainer = styled('p', {
+const CaptionContainer = styled('figcaption', {
   fontFamily: '$workSans',
   fontWeight: '$regular',
   fontSize: '$XXS',
@@ -89,6 +104,7 @@ const CaptionContainer = styled('p', {
   mt: '$8',
 
   '@tabletUp': {
-    gridColumn: '7 / span 4',
+    gridColumn: '1 / span 4',
+    gridRowStart: '2',
   },
 })
