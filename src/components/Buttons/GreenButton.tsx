@@ -26,7 +26,10 @@ const LinkContainer = styled('a', {
   lineHeight: '$XXXS',
   p: '$12',
   cursor: 'pointer',
-  transition: 'opacity 250ms ease-out',
+
+  '@motion': {
+    transition: 'opacity 250ms ease-out',
+  },
 
   '& > *': {
     color: '$black',
