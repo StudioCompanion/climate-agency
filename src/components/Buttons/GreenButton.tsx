@@ -10,16 +10,14 @@ export interface GreenButtonProps {
 
 export const GreenButton = ({ href, children }: GreenButtonProps) => {
   return (
-    <LinkContainer>
-      <Link href={href}>
-        <a>{children}</a>
-      </Link>
-    </LinkContainer>
+    <Link href={href}>
+      <LinkContainer>{children}</LinkContainer>
+    </Link>
   )
 }
 
-const LinkContainer = styled('button', {
-  display: 'inline-block',
+const LinkContainer = styled('a', {
+  display: 'inline-flex',
   backgroundColor: '$green',
   border: 'none',
   fontFamily: '$workSans',
@@ -32,9 +30,15 @@ const LinkContainer = styled('button', {
   '& > *': {
     color: '$black',
     textDecoration: 'none',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   '&:hover': {
+    opacity: '50%',
+  },
+
+  '&:active': {
     opacity: '50%',
   },
 })
