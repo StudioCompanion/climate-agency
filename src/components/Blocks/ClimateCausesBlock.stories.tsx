@@ -22,7 +22,7 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
     at your side, working with you to stand out, persuade, and scale.`,
     link: {
       href: `#`,
-      description: `Let us help you`,
+      children: `Let us help you`,
     },
     leftImage: {
       image: {

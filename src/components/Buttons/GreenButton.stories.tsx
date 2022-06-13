@@ -16,6 +16,6 @@ export const Default: ComponentStory<typeof GreenButton> = () => (
 const fixtures: StoryFixtures<typeof GreenButton> = {
   default: {
     href: `#`,
-    description: `Let us help you`,
+    children: `Let us help you`,
   },
 }

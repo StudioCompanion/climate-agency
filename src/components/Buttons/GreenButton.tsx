@@ -1,34 +1,39 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Link from 'next/link'
 
 import { styled } from 'styles/stitches.config'
 
-interface GreenButtonProps {
+export interface GreenButtonProps {
   href: string
-  description: string
+  children: ReactNode
 }
 
-export const GreenButton = ({ href, description }: GreenButtonProps) => {
+export const GreenButton = ({ href, children }: GreenButtonProps) => {
   return (
     <LinkContainer>
       <Link href={href}>
-        <a>{description}</a>
+        <a>{children}</a>
       </Link>
     </LinkContainer>
   )
 }
 
-const LinkContainer = styled('span', {
+const LinkContainer = styled('a', {
+  display: 'inline-block',
+  backgroundColor: '$green',
   fontFamily: '$workSans',
   fontWeight: '$semiBold',
   fontSize: '$XXS',
   lineHeight: '$XXXS',
-  backgroundColor: '$green',
-  display: 'inline-flex',
   p: '$12',
+  cursor: 'pointer',
 
   '& > *': {
     color: '$black',
     textDecoration: 'none',
+  },
+
+  '&:hover': {
+    opacity: '50%',
   },
 })

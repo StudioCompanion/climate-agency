@@ -3,15 +3,12 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { GreenButton } from '../Buttons/GreenButton'
+import { GreenButton, GreenButtonProps } from '../Buttons/GreenButton'
 
 interface ClimateCausesBlockProps {
   title: string
   content: string
-  link: {
-    href: string
-    description: string
-  }
+  link: GreenButtonProps
   leftImage: MediaImageProps
   rightImage: MediaImageProps
   caption: string
@@ -26,33 +23,34 @@ export const ClimateCausesBlock = ({
   caption,
 }: ClimateCausesBlockProps) => {
   return (
-    <Wrap>
+    <ClimateCausesWrap>
       <Title>
         {title} <sup>(2)</sup>
       </Title>
       <TextContainer>
         {content}
         <ButtonContainer>
-          <GreenButton href={link.href} description={link.description} />
+          <GreenButton href={link.href}>{link.children}</GreenButton>
         </ButtonContainer>
       </TextContainer>
 
-      <LeftImageContainer>
-        {leftImage ? <MediaImage {...leftImage} /> : null}
-      </LeftImageContainer>
-      <CaptionContainer>{caption}</CaptionContainer>
-      <RightImageContainer>
-        {rightImage ? <MediaImage {...rightImage} /> : null}
-      </RightImageContainer>
-    </Wrap>
+      <MediaContainer>
+        <LeftImageContainer>
+          {leftImage ? <MediaImage {...leftImage} /> : null}
+        </LeftImageContainer>
+        <CaptionContainer>{caption}</CaptionContainer>
+        <RightImageContainer>
+          {rightImage ? <MediaImage {...rightImage} /> : null}
+        </RightImageContainer>
+      </MediaContainer>
+    </ClimateCausesWrap>
   )
 }
 
-const Wrap = styled('section', {
+const ClimateCausesWrap = styled('section', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
   columnGap: '$16',
-  alignItems: 'end',
   p: '$16',
 
   '@tabletUp': {
@@ -63,7 +61,7 @@ const Wrap = styled('section', {
   },
 })
 
-const Title = styled('p', {
+const Title = styled('header', {
   display: 'block',
   fontFamily: '$inria',
   fontWeight: '$light',
@@ -102,6 +100,22 @@ const ButtonContainer = styled('div', {
   },
 })
 
+const MediaContainer = styled('figure', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
+  gridColumn: '1 / span 8',
+  columnGap: '$16',
+  alignItems: 'end',
+  m: '0',
+
+  '@tabletUp': {
+    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
+    gridTemplateRows: 'repeat(auto, minmax(auto, 1fr))',
+    gridColumn: '1 / span 12',
+    gridRowStart: '3',
+  },
+})
+
 const LeftImageContainer = styled('div', {
   display: 'block',
   gridColumn: '1 / span 8',
@@ -109,12 +123,11 @@ const LeftImageContainer = styled('div', {
 
   '@tabletUp': {
     gridColumn: '1 / span 5',
-    gridRowStart: '3',
     mt: '$120',
   },
 })
 
-const CaptionContainer = styled('p', {
+const CaptionContainer = styled('figcaption', {
   color: '$white',
   fontFamily: '$workSans',
   fontWeight: '$regular',
@@ -125,7 +138,7 @@ const CaptionContainer = styled('p', {
 
   '@tabletUp': {
     gridColumn: '1 / span 4',
-    gridRowStart: '4',
+    gridRowStart: '2',
   },
 })
 
@@ -137,6 +150,5 @@ const RightImageContainer = styled('div', {
 
   '@tabletUp': {
     gridColumn: '6 / span 4',
-    gridRowStart: '3',
   },
 })
