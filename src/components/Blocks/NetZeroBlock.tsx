@@ -58,7 +58,7 @@ const NetZeroWrap = styled('section', {
   },
 })
 
-const HeaderContainer = styled('header', {
+const HeaderContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$16',
@@ -79,7 +79,7 @@ const IconContainer = styled('div', {
   width: '100px',
 })
 
-const TitleContainer = styled('h1', {
+const TitleContainer = styled('h2', {
   fontFamily: '$inria',
   fontWeight: '$light',
   fontSize: '$M',

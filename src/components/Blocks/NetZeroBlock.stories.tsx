@@ -17,7 +17,7 @@ const fixtures: StoryFixtures<typeof NetZeroBlock> = {
   default: {
     icon: {
       image: {
-        src: '/icons/clock-s.svg',
+        src: '/icons/clock.svg',
         altText: 'Clock',
         width: 27,
         height: 27,
@@ -37,7 +37,7 @@ const fixtures: StoryFixtures<typeof NetZeroBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/Green_Accent_Image_03.png',
+          src: '/images/Image_10.png',
           altText: 'Greenland Fjords',
           width: 1326,
           height: 784.73,
