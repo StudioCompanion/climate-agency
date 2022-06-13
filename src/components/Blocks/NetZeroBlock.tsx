@@ -4,42 +4,46 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
-// type SVGType = HTMLElement & SVGElement
-
+interface ImageSection {
+  mediaImage: MediaImageProps
+  caption: string
+}
 interface NetZeroBlockProps {
   icon: MediaImageProps
   title: string
   content: string
-  mediaImage: MediaImageProps
-  caption: string
+  imageSection: ImageSection
 }
 
 export const NetZeroBlock = ({
   icon,
   title,
   content,
-  mediaImage,
-  caption,
+  imageSection,
 }: NetZeroBlockProps) => {
   return (
-    <Wrap>
+    <NetZeroWrap>
       <TitleContainer>
         <IconContainer>{icon ? <MediaImage {...icon} /> : null}</IconContainer>
-        <div>
+        <p>
           {title}
           <sup>(1)</sup>
-        </div>
+        </p>
       </TitleContainer>
       <TextContainer>{content}</TextContainer>
-      <ImageContainer>
-        {mediaImage ? <MediaImage {...mediaImage} /> : null}
-      </ImageContainer>
-      <CaptionContainer>{caption}</CaptionContainer>
-    </Wrap>
+      <MediaContainer>
+        <ImageContainer>
+          {imageSection.mediaImage ? (
+            <MediaImage {...imageSection.mediaImage} />
+          ) : null}
+        </ImageContainer>
+        <CaptionContainer>{imageSection.caption}</CaptionContainer>
+      </MediaContainer>
+    </NetZeroWrap>
   )
 }
 
-const Wrap = styled('section', {
+const NetZeroWrap = styled('section', {
   backgroundColor: '$black',
   display: 'grid',
   gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
@@ -48,12 +52,13 @@ const Wrap = styled('section', {
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
+    gridTemplateRows: 'repeat(auto, minmax(auto, 1fr))',
     columnGap: '$20',
     px: '$20',
   },
 })
 
-const TitleContainer = styled('div', {
+const TitleContainer = styled('header', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$16',
@@ -96,6 +101,19 @@ const TextContainer = styled('p', {
   },
 })
 
+const MediaContainer = styled('figure', {
+  margin: '0',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
+  gridColumn: '1 / span 8',
+
+  '@tabletUp': {
+    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
+    gridColumn: '1 / span 12',
+    gridRowStart: '3',
+  },
+})
+
 const ImageContainer = styled('div', {
   gridColumn: '1 / span 8',
   mt: '$16',
@@ -106,7 +124,7 @@ const ImageContainer = styled('div', {
   },
 })
 
-const CaptionContainer = styled('p', {
+const CaptionContainer = styled('figcaption', {
   color: '$white',
   fontFamily: '$workSans',
   fontWeight: '$regular',
