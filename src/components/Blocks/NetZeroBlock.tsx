@@ -23,13 +23,13 @@ export const NetZeroBlock = ({
 }: NetZeroBlockProps) => {
   return (
     <NetZeroWrap>
-      <TitleContainer>
+      <HeaderContainer>
         <IconContainer>{icon ? <MediaImage {...icon} /> : null}</IconContainer>
-        <p>
+        <TitleContainer>
           {title}
           <sup>(1)</sup>
-        </p>
-      </TitleContainer>
+        </TitleContainer>
+      </HeaderContainer>
       <TextContainer>{content}</TextContainer>
       <MediaContainer>
         <ImageContainer>
@@ -46,43 +46,49 @@ export const NetZeroBlock = ({
 const NetZeroWrap = styled('section', {
   backgroundColor: '$black',
   display: 'grid',
-  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
+  gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   px: '$16',
 
   '@tabletUp': {
-    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    gridTemplateRows: 'repeat(auto, minmax(auto, 1fr))',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     px: '$20',
   },
 })
 
-const TitleContainer = styled('header', {
+const HeaderContainer = styled('header', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$16',
   color: '$white',
-  fontFamily: '$inria',
-  fontWeight: '$light',
-  fontSize: '$M',
-  lineHeight: '$M',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
   mt: '$80',
 
   '@tabletUp': {
     flexDirection: 'row',
     gap: '$30',
-    fontSize: '$XXL',
-    lineHeight: '$XXL',
-    gridColumn: '1 / span 7',
+    gridColumn: 'span 7',
     mt: '$180',
   },
 })
 
 const IconContainer = styled('div', {
-  mt: '$8',
+  mt: '$16',
   width: '100px',
+})
+
+const TitleContainer = styled('h1', {
+  fontFamily: '$inria',
+  fontWeight: '$light',
+  fontSize: '$M',
+  lineHeight: '$M',
+
+  '@tabletUp': {
+    fontSize: '$XXL',
+    lineHeight: '$XXL',
+  },
 })
 
 const TextContainer = styled('p', {
@@ -92,7 +98,7 @@ const TextContainer = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
   py: '$40',
 
   '@tabletUp': {
@@ -104,22 +110,22 @@ const TextContainer = styled('p', {
 const MediaContainer = styled('figure', {
   margin: '0',
   display: 'grid',
-  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
-  gridColumn: '1 / span 8',
+  gridTemplateColumns: 'repeat(8, 1fr)',
+  gridColumn: 'span 8',
 
   '@tabletUp': {
-    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    gridColumn: '1 / span 12',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridColumn: 'span 12',
     gridRowStart: '3',
   },
 })
 
 const ImageContainer = styled('div', {
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
   mt: '$16',
 
   '@tabletUp': {
-    gridColumn: '1 / span 12',
+    gridColumn: 'span 12',
     mt: '0',
   },
 })
@@ -130,10 +136,10 @@ const CaptionContainer = styled('figcaption', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
-  gridColumn: '1 / span 8',
-  mt: '$8',
+  gridColumn: 'span 8',
+  my: '$8',
 
   '@tabletUp': {
-    gridColumn: '1 / span 4',
+    gridColumn: 'span 4',
   },
 })
