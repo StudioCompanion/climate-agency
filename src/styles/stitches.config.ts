@@ -76,7 +76,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
       tabletUp: `(min-width: ${Widths.Tablet}px)`,
       desktopUp: `(min-width: ${Widths.Desktop}px)`,
       largeDesktopUp: `(min-width: ${Widths.LargeDesktop}px)`,
-      motion: '(prefers-reduced-motion: true)',
+      motion: '(prefers-reduced-motion: no-preference)',
     },
     utils: {
       p: (value: Stitches.PropertyValue<'padding'>) => ({
