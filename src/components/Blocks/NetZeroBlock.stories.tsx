@@ -18,7 +18,7 @@ const fixtures: StoryFixtures<typeof NetZeroBlock> = {
     icon: {
       image: {
         src: '/icons/clock.svg',
-        altText: 'Clock',
+        altText: '',
         width: 27,
         height: 27,
       },
