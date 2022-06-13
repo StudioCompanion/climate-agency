@@ -5,49 +5,54 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { SectionHeader } from '../Headers/SectionHeader'
 
+interface ImageSection {
+  mediaImage: MediaImageProps
+  caption: string
+}
+
 interface BackgroundBlockProps {
   header: string
   content: string
-  mediaImage: MediaImageProps
-  caption: string
+  imageSection: ImageSection
 }
 
 export const BackgroundBlock = ({
   header,
   content,
-  mediaImage,
-  caption,
+  imageSection,
 }: BackgroundBlockProps) => {
   return (
-    <Wrap>
+    <BackgroundWrap>
       <HeaderContainer>
         <SectionHeader header={header} />
       </HeaderContainer>
       <TextContainer>{content}</TextContainer>
       <ImageContainer>
-        {mediaImage ? <MediaImage {...mediaImage} /> : null}
-        <CaptionContainer>{caption}</CaptionContainer>
+        {imageSection.mediaImage ? (
+          <MediaImage {...imageSection.mediaImage} />
+        ) : null}
+        <CaptionContainer>{imageSection.caption}</CaptionContainer>
       </ImageContainer>
-    </Wrap>
+    </BackgroundWrap>
   )
 }
 
-const Wrap = styled('section', {
+const BackgroundWrap = styled('section', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
+  gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   p: '$16',
 
   '@tabletUp': {
-    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
-    gridTemplateRows: 'repeat(auto, minmax(auto, 1fr))',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     p: '$20',
   },
 })
 
 const HeaderContainer = styled('div', {
-  gridColumn: '1 / span 3',
+  gridColumn: 'span 3',
   mb: '$8',
 })
 
@@ -56,7 +61,7 @@ const TextContainer = styled('p', {
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
 
   '@tabletUp': {
     fontSize: '$XXL',
@@ -66,11 +71,11 @@ const TextContainer = styled('p', {
 })
 
 const ImageContainer = styled('div', {
-  gridColumn: '1 /span 8',
+  gridColumn: 'span 8',
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '7 /span 6',
+    gridColumn: '7 / span 6',
     mt: '0',
   },
 })
@@ -80,10 +85,10 @@ const CaptionContainer = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
-  gridColumn: '1 /span 8',
+  gridColumn: 'span 8',
   mt: '$8',
 
   '@tabletUp': {
-    gridColumn: '7 /span 4',
+    gridColumn: '7 / span 4',
   },
 })

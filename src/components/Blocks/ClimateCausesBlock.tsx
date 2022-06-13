@@ -128,7 +128,7 @@ const LeftImageContainer = styled('div', {
 })
 
 const CaptionContainer = styled('figcaption', {
-  color: '$white',
+  color: '$black',
   fontFamily: '$workSans',
   fontWeight: '$regular',
   fontSize: '$XXS',

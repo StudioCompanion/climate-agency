@@ -17,16 +17,18 @@ const fixtures: StoryFixtures<typeof BackgroundBlock> = {
   default: {
     header: `Our background`,
     content: `We are a team of experts in marketing and communications, with prestigious careers leading global consumer brands and charities.`,
-    mediaImage: {
-      image: {
-        src: '/images/usgs-uGrT85dVK9U-unsplash.jpg',
-        altText: 'Satellite capture',
-        width: 343,
-        height: 348,
+    imageSection: {
+      mediaImage: {
+        image: {
+          src: '/images/usgs-uGrT85dVK9U-unsplash.jpg',
+          altText: 'Satellite capture',
+          width: 343,
+          height: 348,
+        },
+        layout: 'responsive',
+        objectFit: 'cover',
       },
-      layout: 'responsive',
-      objectFit: 'cover',
+      caption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.`,
     },
-    caption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.`,
   },
 }
