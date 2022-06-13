@@ -26,23 +26,23 @@ export const HomepageOpeningBlock = ({
 const Wrap = styled('section', {
   display: 'grid',
   gridAutoFlow: 'dense',
-  gridTemplateColumns: 'repeat(8, minmax(auto, 1fr))',
+  gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   p: '$16',
 
   '@tabletUp': {
-    gridTemplateColumns: 'repeat(12, minmax(auto, 1fr))',
+    gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
     p: '$20',
   },
 })
 
 const ImageContainer = styled('div', {
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
   mt: '$16',
 
   '@tabletUp': {
-    gridColumn: '1 / span 6',
+    gridColumn: 'span 6',
     mt: '0',
   },
 })
@@ -52,7 +52,7 @@ const TextContainer = styled('p', {
   fontFamily: '$inria',
   fontSize: '$S',
   lineHeight: '$S',
-  gridColumn: '1 / span 8',
+  gridColumn: 'span 8',
 
   '@tabletUp': {
     fontSize: '$L',

@@ -22,6 +22,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         stone: '#D6E3D6',
         black: '#000000',
         yellow: '#D1FF70',
+        white: '#FFFFFF',
       },
       space: {
         8: '0.8rem',
@@ -29,9 +30,13 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         16: '1.6rem',
         20: '2rem',
         24: '2.4rem',
+        30: '3rem',
         40: '4rem',
+        60: '6rem',
+        80: '8rem',
         100: '10rem',
         120: '12rem',
+        180: '18rem',
       },
       zIndices: {
         1: '100',
