@@ -26,7 +26,7 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
     },
     leftImage: {
       image: {
-        src: '/images/massimiliano-morosinotto-3i5PHVp1Fkw-unsplash.jpg',
+        src: '/images/Image_04.jpg',
         altText: 'Person looks at a mountain',
         width: 541,
         height: 650,
@@ -37,7 +37,7 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
     caption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
     rightImage: {
       image: {
-        src: '/images/Green_Accent_Image_02.png',
+        src: '/images/Image_03.png',
         altText: 'Hand in the water',
         width: 429,
         height: 513,
