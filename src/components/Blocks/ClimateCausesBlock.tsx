@@ -61,7 +61,7 @@ const ClimateCausesWrap = styled('section', {
   },
 })
 
-const Title = styled('header', {
+const Title = styled('h1', {
   display: 'block',
   fontFamily: '$inria',
   fontWeight: '$light',

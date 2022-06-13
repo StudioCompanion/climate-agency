@@ -18,9 +18,10 @@ export const GreenButton = ({ href, children }: GreenButtonProps) => {
   )
 }
 
-const LinkContainer = styled('a', {
+const LinkContainer = styled('button', {
   display: 'inline-block',
   backgroundColor: '$green',
+  border: 'none',
   fontFamily: '$workSans',
   fontWeight: '$semiBold',
   fontSize: '$XXS',
