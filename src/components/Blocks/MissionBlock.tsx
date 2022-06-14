@@ -2,8 +2,6 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
-import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-
 interface MissionBlockProps {
   header: string
   content: string
