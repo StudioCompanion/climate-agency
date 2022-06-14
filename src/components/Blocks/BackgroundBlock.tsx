@@ -4,7 +4,7 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextHeader } from '../Text/TextHeader'
-
+import { TextCaption } from '../Text/TextCaption'
 interface ImageSection {
   mediaImage: MediaImageProps
   caption: string
@@ -33,7 +33,7 @@ export const BackgroundBlock = ({
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
         </ImageContainer>
-        <CaptionContainer>{imageSection.caption}</CaptionContainer>
+        <CaptionWrap caption={imageSection.caption} color="black" />
       </MediaContainer>
     </BackgroundWrap>
   )
@@ -95,11 +95,7 @@ const ImageContainer = styled('div', {
   },
 })
 
-const CaptionContainer = styled('figcaption', {
-  fontFamily: '$workSans',
-  fontWeight: '$regular',
-  fontSize: '$XXS',
-  lineHeight: '$XXS',
+const CaptionWrap = styled(TextCaption, {
   gridColumn: 'span 8',
   mt: '$8',
 
