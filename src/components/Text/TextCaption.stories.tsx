@@ -14,7 +14,7 @@ export const Default: ComponentStory<typeof TextCaption> = () => (
 )
 const fixtures: StoryFixtures<typeof TextCaption> = {
   default: {
-    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
+    children: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
     color: `black`,
   },
 }

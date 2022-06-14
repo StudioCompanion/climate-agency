@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 import { styled } from 'styles/stitches.config'
 
 interface TextCaptionProps {
-  caption: string
+  children: ReactNode
   color: 'black' | 'white'
   className?: string
 }
 
 export const TextCaption = ({
-  caption,
+  children,
   color,
   className,
 }: TextCaptionProps) => {
   return (
     <CaptionContainer className={className} color={color}>
-      {caption}
+      {children}
     </CaptionContainer>
   )
 }

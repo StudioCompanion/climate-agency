@@ -5,15 +5,14 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from '../Text/TextCaption'
 
-interface ImageSection {
-  mediaImage: MediaImageProps
-  caption: string
-}
 interface NetZeroBlockProps {
   icon: MediaImageProps
   title: string
   content: string
-  imageSection: ImageSection
+  imageSection: {
+    mediaImage: MediaImageProps
+    caption: string
+  }
 }
 
 export const NetZeroBlock = ({
@@ -38,7 +37,7 @@ export const NetZeroBlock = ({
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
         </ImageContainer>
-        <CaptionWrap caption={imageSection.caption} color="white" />
+        <CaptionWrap color="white">{imageSection.caption}</CaptionWrap>
       </MediaContainer>
     </NetZeroWrap>
   )

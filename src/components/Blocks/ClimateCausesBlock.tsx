@@ -38,7 +38,7 @@ export const ClimateCausesBlock = ({
         <LeftImageContainer>
           {leftImage ? <MediaImage {...leftImage} /> : null}
         </LeftImageContainer>
-        <CaptionWrap caption={caption} color="black" />
+        <CaptionWrap color="black">{caption}</CaptionWrap>
         <RightImageContainer>
           {rightImage ? <MediaImage {...rightImage} /> : null}
         </RightImageContainer>

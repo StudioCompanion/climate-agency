@@ -5,15 +5,14 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextHeader } from '../Text/TextHeader'
 import { TextCaption } from '../Text/TextCaption'
-interface ImageSection {
-  mediaImage: MediaImageProps
-  caption: string
-}
 
 interface BackgroundBlockProps {
   header: string
   content: string
-  imageSection: ImageSection
+  imageSection: {
+    mediaImage: MediaImageProps
+    caption: string
+  }
 }
 
 export const BackgroundBlock = ({
@@ -34,7 +33,7 @@ export const BackgroundBlock = ({
               <MediaImage {...imageSection.mediaImage} />
             ) : null}
           </ImageContainer>
-          <CaptionWrap caption={imageSection.caption} color="black" />
+          <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
         </MediaContainer>
       </RightContainer>
     </BackgroundWrap>
