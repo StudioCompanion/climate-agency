@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { StoryFixtures } from '../../types/utils'
 
 export default {
-  title: 'Blocks/HomepageOpeningBlock',
+  title: 'Blocks/Homepage Opening Block',
   component: HomepageOpeningBlock,
 } as ComponentMeta<typeof HomepageOpeningBlock>
 

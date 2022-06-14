@@ -4,17 +4,17 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { GreenButton, GreenButtonProps } from '../Buttons/GreenButton'
-
-interface ImageSection {
-  mediaImage: MediaImageProps
-  caption: string
-}
+import { TextHeader } from '../Text/TextHeader'
+import { TextCaption } from '../Text/TextCaption'
 
 interface ServicesBlockProps {
   header: string
   content: string
   link: GreenButtonProps
-  imageSection: ImageSection
+  imageSection: {
+    mediaImage: MediaImageProps
+    caption: string
+  }
 }
 
 export const ServicesBlock = ({
@@ -32,11 +32,11 @@ export const ServicesBlock = ({
               <MediaImage {...imageSection.mediaImage} />
             ) : null}
           </ImageContainer>
-          <CaptionWrap>{imageSection.caption}</CaptionWrap>
+          <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
         </MediaContainer>
       </LeftContainer>
       <RightContainer>
-        <HeaderContainer>{header}</HeaderContainer>
+        <HeaderWrap>{header}</HeaderWrap>
         <TextContainer>{content}</TextContainer>
         <GreenButton href={link.href}>{link.children}</GreenButton>
       </RightContainer>
@@ -97,11 +97,7 @@ const ImageContainer = styled('div', {
   },
 })
 
-const CaptionWrap = styled('figcaption', {
-  fontFamily: '$workSans',
-  fontWeight: '$regular',
-  fontSize: '$XXS',
-  lineHeight: '$XXS',
+const CaptionWrap = styled(TextCaption, {
   gridColumn: 'span 8',
   my: '$8',
 
@@ -110,11 +106,7 @@ const CaptionWrap = styled('figcaption', {
   },
 })
 
-const HeaderContainer = styled('h2', {
-  fontFamily: '$workSans',
-  fontWeight: '$semiBold',
-  fontSize: '$XXS',
-  lineHeight: '$XXXS',
+const HeaderWrap = styled(TextHeader, {
   gridColumn: 'span 4',
   mb: '$8',
 
