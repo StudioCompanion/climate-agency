@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { StoryFixtures } from '../../types/utils'
 
 export default {
-  title: 'Blocks/NetZeroBlock',
+  title: 'Blocks/NetZero Block',
   component: NetZeroBlock,
 } as ComponentMeta<typeof NetZeroBlock>
 
