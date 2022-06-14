@@ -25,16 +25,18 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
       children: `Let us help you`,
     },
     leftImage: {
-      image: {
-        src: '/images/Image_04.jpg',
-        altText: 'Person looks at a mountain',
-        width: 541,
-        height: 650,
+      mediaImage: {
+        image: {
+          src: '/images/Image_04.jpg',
+          altText: 'Person looks at a mountain',
+          width: 541,
+          height: 650,
+        },
+        layout: 'responsive',
+        objectFit: 'cover',
       },
-      layout: 'responsive',
-      objectFit: 'cover',
+      caption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
     },
-    caption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
     rightImage: {
       image: {
         src: '/images/Image_03.png',

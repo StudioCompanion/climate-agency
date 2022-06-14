@@ -9,9 +9,11 @@ interface ClimateCausesBlockProps {
   title: string
   content: string
   link: GreenButtonProps
-  leftImage: MediaImageProps
+  leftImage: {
+    mediaImage: MediaImageProps
+    caption: string
+  }
   rightImage: MediaImageProps
-  caption: string
 }
 
 export const ClimateCausesBlock = ({
@@ -20,7 +22,6 @@ export const ClimateCausesBlock = ({
   link,
   leftImage,
   rightImage,
-  caption,
 }: ClimateCausesBlockProps) => {
   return (
     <ClimateCausesWrap>
@@ -36,9 +37,11 @@ export const ClimateCausesBlock = ({
 
       <MediaContainer>
         <LeftImageContainer>
-          {leftImage ? <MediaImage {...leftImage} /> : null}
+          {leftImage.mediaImage ? (
+            <MediaImage {...leftImage.mediaImage} />
+          ) : null}
         </LeftImageContainer>
-        <CaptionWrap color="black">{caption}</CaptionWrap>
+        <CaptionWrap color="black">{leftImage.caption}</CaptionWrap>
         <RightImageContainer>
           {rightImage ? <MediaImage {...rightImage} /> : null}
         </RightImageContainer>
