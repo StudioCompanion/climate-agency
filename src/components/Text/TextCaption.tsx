@@ -5,10 +5,19 @@ import { styled } from 'styles/stitches.config'
 interface TextCaptionProps {
   caption: string
   color: 'black' | 'white'
+  className?: string
 }
 
-export const TextCaption = ({ caption, color }: TextCaptionProps) => {
-  return <CaptionContainer color={color}>{caption}</CaptionContainer>
+export const TextCaption = ({
+  caption,
+  color,
+  className,
+}: TextCaptionProps) => {
+  return (
+    <CaptionContainer className={className} color={color}>
+      {caption}
+    </CaptionContainer>
+  )
 }
 
 const CaptionContainer = styled('figcaption', {
@@ -26,9 +35,4 @@ const CaptionContainer = styled('figcaption', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
-  gridColumn: 'span 8',
-
-  '@tabletUp': {
-    gridColumn: 'span 4',
-  },
 })
