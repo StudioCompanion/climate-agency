@@ -2,11 +2,11 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
-interface SectionHeaderProps {
+interface TextHeaderProps {
   header: string
 }
 
-export const SectionHeader = ({ header }: SectionHeaderProps) => {
+export const TextHeader = ({ header }: TextHeaderProps) => {
   return <HeaderContainer>{header}</HeaderContainer>
 }
 

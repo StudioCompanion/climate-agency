@@ -3,7 +3,7 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { SectionHeader } from '../Headers/SectionHeader'
+import { TextHeader } from '../Text/TextHeader'
 
 interface ImageSection {
   mediaImage: MediaImageProps
@@ -24,7 +24,7 @@ export const BackgroundBlock = ({
   return (
     <BackgroundWrap>
       <HeaderContainer>
-        <SectionHeader header={header} />
+        <TextHeader header={header} />
       </HeaderContainer>
       <TextContainer>{content}</TextContainer>
       <MediaContainer>

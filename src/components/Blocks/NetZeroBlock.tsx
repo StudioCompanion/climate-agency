@@ -3,6 +3,7 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
+import { TextCaption } from '../Text/TextCaption'
 
 interface ImageSection {
   mediaImage: MediaImageProps
@@ -37,7 +38,7 @@ export const NetZeroBlock = ({
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
         </ImageContainer>
-        <CaptionContainer>{imageSection.caption}</CaptionContainer>
+        <CaptionWrap caption={imageSection.caption} color="white" />
       </MediaContainer>
     </NetZeroWrap>
   )
@@ -130,16 +131,11 @@ const ImageContainer = styled('div', {
   },
 })
 
-const CaptionContainer = styled('figcaption', {
-  color: '$white',
-  fontFamily: '$workSans',
-  fontWeight: '$regular',
-  fontSize: '$XXS',
-  lineHeight: '$XXS',
-  gridColumn: 'span 8',
+const CaptionWrap = styled(TextCaption, {
+  // gridColumn: 'span 8',
   my: '$8',
 
   '@tabletUp': {
-    gridColumn: 'span 4',
+    // gridColumn: 'span 4',
   },
 })
