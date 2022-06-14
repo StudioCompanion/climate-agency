@@ -23,18 +23,20 @@ export const BackgroundBlock = ({
 }: BackgroundBlockProps) => {
   return (
     <BackgroundWrap>
-      <HeaderContainer>
-        <TextHeader header={header} />
-      </HeaderContainer>
-      <TextContainer>{content}</TextContainer>
-      <MediaContainer>
-        <ImageContainer>
-          {imageSection.mediaImage ? (
-            <MediaImage {...imageSection.mediaImage} />
-          ) : null}
-        </ImageContainer>
-        <CaptionWrap caption={imageSection.caption} color="black" />
-      </MediaContainer>
+      <LeftContainer>
+        <HeaderWrap>{header}</HeaderWrap>
+        <TextContainer>{content}</TextContainer>
+      </LeftContainer>
+      <RightContainer>
+        <MediaContainer>
+          <ImageContainer>
+            {imageSection.mediaImage ? (
+              <MediaImage {...imageSection.mediaImage} />
+            ) : null}
+          </ImageContainer>
+          <CaptionWrap caption={imageSection.caption} color="black" />
+        </MediaContainer>
+      </RightContainer>
     </BackgroundWrap>
   )
 }
@@ -42,6 +44,7 @@ export const BackgroundBlock = ({
 const BackgroundWrap = styled('section', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
+  gridTemplateRows: 'repeat(auto, 1fr)',
   columnGap: '$16',
   p: '$16',
 
@@ -53,8 +56,24 @@ const BackgroundWrap = styled('section', {
   },
 })
 
-const HeaderContainer = styled('div', {
-  gridColumn: 'span 3',
+const LeftContainer = styled('div', {
+  gridColumn: 'span 8',
+  gridRowStart: '1',
+
+  '@tabletUp': {
+    gridColumn: 'span 6',
+  },
+})
+
+const RightContainer = styled('div', {
+  gridColumn: 'span 8',
+
+  '@tabletUp': {
+    gridColumn: '7 / span 6',
+  },
+})
+
+const HeaderWrap = styled(TextHeader, {
   mb: '$8',
 })
 
@@ -63,25 +82,21 @@ const TextContainer = styled('p', {
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
-  gridColumn: 'span 8',
 
   '@tabletUp': {
     fontSize: '$XXL',
     lineHeight: 'XXL',
-    gridColumn: '1 / span 6',
   },
 })
 
 const MediaContainer = styled('figure', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
-  gridColumn: 'span 8',
   m: '0',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(6, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
-    gridColumn: '7 / span 6',
   },
 })
 

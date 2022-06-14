@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { StoryFixtures } from '../../types/utils'
 
 export default {
-  title: 'Text/Text Header',
+  title: 'Text/Header Text',
   component: TextHeader,
 } as ComponentMeta<typeof TextHeader>
 
@@ -15,6 +15,6 @@ export const Default: ComponentStory<typeof TextHeader> = () => (
 
 const fixtures: StoryFixtures<typeof TextHeader> = {
   default: {
-    header: `Our background`,
+    children: `Our background`,
   },
 }
