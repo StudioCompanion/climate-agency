@@ -4,14 +4,16 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { GreenButton, GreenButtonProps } from '../Buttons/GreenButton'
-
+import { TextCaption } from '../Text/TextCaption'
 interface ClimateCausesBlockProps {
   title: string
   content: string
   link: GreenButtonProps
-  leftImage: MediaImageProps
+  leftImage: {
+    mediaImage: MediaImageProps
+    caption: string
+  }
   rightImage: MediaImageProps
-  caption: string
 }
 
 export const ClimateCausesBlock = ({
@@ -20,7 +22,6 @@ export const ClimateCausesBlock = ({
   link,
   leftImage,
   rightImage,
-  caption,
 }: ClimateCausesBlockProps) => {
   return (
     <ClimateCausesWrap>
@@ -36,9 +37,11 @@ export const ClimateCausesBlock = ({
 
       <MediaContainer>
         <LeftImageContainer>
-          {leftImage ? <MediaImage {...leftImage} /> : null}
+          {leftImage.mediaImage ? (
+            <MediaImage {...leftImage.mediaImage} />
+          ) : null}
         </LeftImageContainer>
-        <CaptionContainer>{caption}</CaptionContainer>
+        <CaptionWrap color="black">{leftImage.caption}</CaptionWrap>
         <RightImageContainer>
           {rightImage ? <MediaImage {...rightImage} /> : null}
         </RightImageContainer>
@@ -127,12 +130,7 @@ const LeftImageContainer = styled('div', {
   },
 })
 
-const CaptionContainer = styled('figcaption', {
-  color: '$white',
-  fontFamily: '$workSans',
-  fontWeight: '$regular',
-  fontSize: '$XXS',
-  lineHeight: '$XXS',
+const CaptionWrap = styled(TextCaption, {
   gridColumn: 'span 7',
   mt: '$8',
 
