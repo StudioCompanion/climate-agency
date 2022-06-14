@@ -2,6 +2,8 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
+import { TextHeader } from '../Text/TextHeader'
+
 interface MissionBlockProps {
   header: string
   content: string
@@ -29,11 +31,7 @@ const MissionWrap = styled('section', {
   },
 })
 
-const HeaderWrap = styled('h2', {
-  fontFamily: '$workSans',
-  fontWeight: '$semiBold',
-  fontSize: '$XXS',
-  lineHeight: '$XXXS',
+const HeaderWrap = styled(TextHeader, {
   gridColumn: 'span 4',
   my: '$8',
 })
