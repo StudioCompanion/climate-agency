@@ -6,12 +6,17 @@ import { styled } from 'styles/stitches.config'
 export interface GreenButtonProps {
   href: string
   children: ReactNode
+  className?: string
 }
 
-export const GreenButton = ({ href, children }: GreenButtonProps) => {
+export const GreenButton = ({
+  href,
+  children,
+  className,
+}: GreenButtonProps) => {
   return (
     <Link href={href}>
-      <LinkContainer>{children}</LinkContainer>
+      <LinkContainer className={className}>{children}</LinkContainer>
     </Link>
   )
 }
