@@ -5683,6 +5683,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chromatic@npm:^6.5.6":
+  version: 6.5.6
+  resolution: "chromatic@npm:6.5.6"
+  bin:
+    chroma: bin/main.cjs
+    chromatic: bin/main.cjs
+    chromatic-cli: bin/main.cjs
+  checksum: dbfe276683add0420e559c1dc42e5c10d9dcd8c3b53fb4a1d36de684077a455d472c5e64427d83ccb88f3b73643aabc4979bd1b38339c42784c73e3659377fc2
+  languageName: node
+  linkType: hard
+
 "chrome-trace-event@npm:^1.0.2":
   version: 1.0.3
   resolution: "chrome-trace-event@npm:1.0.3"
@@ -5813,6 +5824,7 @@ __metadata:
     "@types/react-dom": ^18.0.5
     babel-loader: ^8.2.5
     babel-plugin-react-require: ^3.1.3
+    chromatic: ^6.5.6
     husky: ^8.0.1
     lint-staged: ^13.0.0
     next: ^12.1.6
