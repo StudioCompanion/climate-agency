@@ -42,6 +42,16 @@ const fixtures: StoryFixtures<typeof TestimonialsBlock> = {
         signature: `Neri Oxman, Director of Research`,
         organisation: `Direct Air Capture Coalition`,
       },
+      {
+        content: `“This is a test testimonial”`,
+        signature: `Joe Smith, Director of Research`,
+        organisation: `Testing`,
+      },
+      {
+        content: `“This is another test testimonial”`,
+        signature: `Mary Jones, Director of Research`,
+        organisation: `Testing 2`,
+      },
     ],
   },
 }

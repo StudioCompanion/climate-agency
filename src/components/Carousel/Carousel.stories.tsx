@@ -23,8 +23,13 @@ const fixtures: StoryFixtures<typeof Carousel> = {
       },
       {
         content: `“This is a test testimonial”`,
-        signature: `Neri Oxman, Director of Research`,
-        organisation: `Direct Air Capture Coalition`,
+        signature: `Joe Smith, Director of Research`,
+        organisation: `Testing`,
+      },
+      {
+        content: `“This is another test testimonial”`,
+        signature: `Mary Jones, Director of Research`,
+        organisation: `Testing 2`,
       },
     ],
   },

@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react'
 
+import { styled } from 'styles/stitches.config'
+
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react'
 import Autoplay, {
   AutoplayType,
   AutoplayOptionsType,
 } from 'embla-carousel-autoplay'
 
-import { PrevButton, NextButton } from './CarouselButtons'
+import { Dot } from './CarouselButtons'
 
 import {
   TestimonialBlock,
@@ -14,22 +16,42 @@ import {
 } from '../Blocks/TestimonialBlock'
 
 interface CarouselProps {
-  options?: EmblaOptionsType
+  //   options?: EmblaOptionsType
   slides: TestimonialBlockProps[]
+  className?: string
 }
 
-export const Carousel = ({ options, slides }: CarouselProps) => {
-  const [viewportRef, embla] = useEmblaCarousel({ loop: false })
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
+export const Carousel = ({ slides, className }: CarouselProps) => {
+  const options = { delay: 2000 }
+  const autoplayRoot = (emblaRoot: HTMLElement) => emblaRoot.parentElement
+  const autoplay = Autoplay(options, autoplayRoot)
 
-  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
-  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
+  const [viewportRef, embla] = useEmblaCarousel({ loop: false }, [autoplay])
+
+  const [firstDotEnabled, setFirstDotEnabled] = useState(false)
+  const [middleDotEnabled, setMiddleDotEnabled] = useState(false)
+  const [lastDotEnabled, setLastDotEnabled] = useState(false)
+
   const onSelect = useCallback(() => {
     if (!embla) return
-    setPrevBtnEnabled(embla.canScrollPrev())
-    setNextBtnEnabled(embla.canScrollNext())
-  }, [embla])
+    slides.map((item, idx) => {
+      if (idx % 3 === 0) {
+        setFirstDotEnabled(false)
+        setMiddleDotEnabled(true)
+        setLastDotEnabled(true)
+      }
+      if (idx % 3 === 1) {
+        setFirstDotEnabled(true)
+        setMiddleDotEnabled(false)
+        setLastDotEnabled(true)
+      }
+      if (idx % 3 === 2) {
+        setFirstDotEnabled(true)
+        setMiddleDotEnabled(true)
+        setLastDotEnabled(false)
+      }
+    })
+  }, [embla, slides])
 
   useEffect(() => {
     if (!embla) return
@@ -38,22 +60,65 @@ export const Carousel = ({ options, slides }: CarouselProps) => {
   }, [embla, onSelect])
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={viewportRef}>
-        <div className="embla__container">
+    <CarouselWrap className={className}>
+      <ViewportWrap ref={viewportRef}>
+        <ContainerWrap>
           {slides &&
             slides.map((item, idx) => (
-              <TestimonialBlock
-                key={idx}
-                content={item.content}
-                signature={item.signature}
-                organisation={item.organisation}
-              />
+              <SlideWrap key={idx}>
+                <SlideInnerWrap>
+                  <TestimonialBlock
+                    content={item.content}
+                    signature={item.signature}
+                    organisation={item.organisation}
+                  />
+                </SlideInnerWrap>
+              </SlideWrap>
             ))}
-        </div>
-      </div>
-      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-      <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-    </div>
+        </ContainerWrap>
+      </ViewportWrap>
+      <Dot
+        onClick={() => embla && embla.scrollTo(0)}
+        enabled={firstDotEnabled}
+      />
+      <Dot
+        onClick={() => embla && embla.scrollTo(1)}
+        enabled={middleDotEnabled}
+      />
+      <Dot
+        onClick={() => {
+          embla && embla.scrollTo(2)
+        }}
+        enabled={lastDotEnabled}
+      />
+    </CarouselWrap>
   )
 }
+
+const CarouselWrap = styled('div', {
+  //   position: 'relative',
+  backgroundColor: 'transparent',
+  p: '20px',
+  mx: 'auto',
+})
+
+const ViewportWrap = styled('div', {
+  overflow: 'hidden',
+})
+
+const ContainerWrap = styled('div', {
+  display: 'flex',
+  userSelect: 'none',
+  ml: '-10px',
+})
+
+const SlideWrap = styled('div', {
+  position: 'relative',
+  minWidth: '100%',
+  pl: '10px',
+})
+
+const SlideInnerWrap = styled('div', {
+  position: 'relative',
+  overflow: 'hidden',
+})

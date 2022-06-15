@@ -3,7 +3,8 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { TestimonialBlock, TestimonialBlockProps } from './TestimonialBlock'
+import { TestimonialBlockProps } from './TestimonialBlock'
+import { Carousel } from '../Carousel/Carousel'
 
 interface TestimonialsBlockProps {
   icon: MediaImageProps
@@ -27,15 +28,7 @@ export const TestimonialsBlock = ({
       <ImageContainer>
         {mediaImage ? <MediaImage {...mediaImage} /> : null}
       </ImageContainer>
-      {testimonials &&
-        testimonials.map((item, idx) => (
-          <TestimonialWrap
-            key={idx}
-            content={item.content}
-            signature={item.signature}
-            organisation={item.organisation}
-          />
-        ))}
+      <TestimonialWrap slides={testimonials} />
     </TestimonialsWrap>
   )
 }
@@ -99,8 +92,8 @@ const ImageContainer = styled('div', {
   },
 })
 
-const TestimonialWrap = styled(TestimonialBlock, {
-  gridColumn: `span 8`,
+const TestimonialWrap = styled(Carousel, {
+  gridColumn: 'span 8',
   mt: '$60',
   mb: '$16',
 
