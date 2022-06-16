@@ -23,6 +23,7 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
     link: {
       href: `#`,
       children: `Let us help you`,
+      color: 'green',
     },
     leftImage: {
       mediaImage: {

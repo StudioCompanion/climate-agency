@@ -16,15 +16,17 @@ export const Default: ComponentStory<typeof CtaBlock> = () => (
 const fixtures: StoryFixtures<typeof CtaBlock> = {
   default: {
     content: `Together, we can crack communication around climate solutions. \n
-    
+
     If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
     leftLink: {
       href: `#`,
       children: `I’m working in climate and need help!`,
+      color: `green`,
     },
     rightLink: {
       href: `#`,
       children: `I’m working in the creative industry and want to help!`,
+      color: `stone`,
     },
   },
 }

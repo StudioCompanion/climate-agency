@@ -38,7 +38,7 @@ export const ServicesBlock = ({
       <RightContainer>
         <HeaderWrap>{header}</HeaderWrap>
         <TextContainer>{content}</TextContainer>
-        <Button href={link.href} color="green">
+        <Button href={link.href} color={link.color}>
           {link.children}
         </Button>
       </RightContainer>

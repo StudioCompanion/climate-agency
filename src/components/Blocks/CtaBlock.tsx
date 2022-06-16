@@ -15,10 +15,10 @@ export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
     <CtaBlockWrap>
       <TextContainer>{content}</TextContainer>
       <ButtonsWrap>
-        <Button href={leftLink.href} color="green">
+        <Button href={leftLink.href} color={leftLink.color}>
           {leftLink.children}
         </Button>
-        <Button href={rightLink.href} color="stone">
+        <Button href={rightLink.href} color={rightLink.color}>
           {rightLink.children}
         </Button>
       </ButtonsWrap>
