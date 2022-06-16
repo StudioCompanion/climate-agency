@@ -10,16 +10,12 @@ interface FooterProps {
   logo: MediaImageProps
   linksInformation: LinkProps[]
   linksSocial: LinkProps[]
-  legal: string
-  credits: string
 }
 
 export const Footer = ({
   logo,
   linksSocial,
   linksInformation,
-  legal,
-  credits,
 }: FooterProps) => {
   return (
     <FooterWrap>
@@ -47,8 +43,10 @@ export const Footer = ({
             ))}
         </List>
       </SocialsContainer>
-      <LegalContainer>{legal}</LegalContainer>
-      <CreditsContainer>{credits}</CreditsContainer>
+      <LegalContainer>The Climate Agency Limited (14011922)</LegalContainer>
+      <CreditsContainer>
+        This website was made possible with Companion Studio.
+      </CreditsContainer>
     </FooterWrap>
   )
 }

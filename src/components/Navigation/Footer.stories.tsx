@@ -71,7 +71,5 @@ const fixtures: StoryFixtures<typeof Footer> = {
         isExternal: true,
       },
     ],
-    legal: `The Climate Agency Limited (14011922)`,
-    credits: `This website was made possible with Companion Studio.`,
   },
 }
