@@ -15,20 +15,8 @@ export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
     <CtaBlockWrap>
       <TextContainer>{content}</TextContainer>
       <ButtonsWrap>
-        <Link
-          href={leftLink.href}
-          color={leftLink.color}
-          isExternal={leftLink.isExternal}
-        >
-          {leftLink.children}
-        </Link>
-        <Link
-          href={rightLink.href}
-          color={rightLink.color}
-          isExternal={rightLink.isExternal}
-        >
-          {rightLink.children}
-        </Link>
+        <Link {...leftLink} />
+        <Link {...rightLink} />
       </ButtonsWrap>
     </CtaBlockWrap>
   )

@@ -52,6 +52,8 @@ const Anchor = styled('a', {
     },
   },
   display: 'inline-flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   color: '$black',
   border: 'none',
   fontFamily: '$workSans',
@@ -64,13 +66,6 @@ const Anchor = styled('a', {
 
   '@motion': {
     transition: 'opacity 250ms ease-out',
-  },
-
-  '& > *': {
-    color: '$black',
-    textDecoration: 'none',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
   '&:hover': {

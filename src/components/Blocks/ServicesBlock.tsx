@@ -38,9 +38,7 @@ export const ServicesBlock = ({
       <RightContainer>
         <HeaderWrap>{header}</HeaderWrap>
         <TextContainer>{content}</TextContainer>
-        <Link href={link.href} color={link.color} isExternal={link.isExternal}>
-          {link.children}
-        </Link>
+        <Link {...link} />
       </RightContainer>
     </ServicesWrap>
   )

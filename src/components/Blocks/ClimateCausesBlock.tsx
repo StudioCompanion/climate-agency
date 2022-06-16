@@ -31,13 +31,7 @@ export const ClimateCausesBlock = ({
       <TextContainer>
         {content}
         <ButtonContainer>
-          <Link
-            href={link.href}
-            color={link.color}
-            isExternal={link.isExternal}
-          >
-            {link.children}
-          </Link>
+          <Link {...link} />
         </ButtonContainer>
       </TextContainer>
 
