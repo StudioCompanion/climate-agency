@@ -53,7 +53,7 @@ const LogoContainer = styled('div', {
 
 const InformationContainer = styled('div', {
   gridColumn: 'span 6',
-  gridRowStart: '2',
+  gridRowStart: '3',
   mt: '$40',
 
   '@tabletUp': {
@@ -64,7 +64,7 @@ const InformationContainer = styled('div', {
 
 const SocialsContainer = styled('div', {
   gridColumn: 'span 6',
-  gridRowStart: '3',
+  gridRowStart: '2',
   mt: '$40',
 
   '@tabletUp': {
