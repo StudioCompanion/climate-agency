@@ -1,21 +1,18 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import NextLink from 'next/link'
 
 import { styled } from 'styles/stitches.config'
 
 export interface NavLinkProps {
   href: string
-  children: ReactNode
+  children: string
   className?: string
-  state: 'default' | 'active'
 }
 
-export const NavLink = ({ href, children, className, state }: NavLinkProps) => {
+export const NavLink = ({ href, children, className }: NavLinkProps) => {
   return (
     <NextLink href={href} passHref>
-      <Anchor className={className} state={state}>
-        {children}
-      </Anchor>
+      <Anchor className={className}>{children}</Anchor>
     </NextLink>
   )
 }
@@ -31,23 +28,10 @@ const Anchor = styled('a', {
 
   cursor: 'pointer',
   textDecoration: 'none',
+  color: 'inherit',
 
   '@tabletUp': {
     fontSize: '$XXS',
     lineHeight: '$XXS',
-  },
-  variants: {
-    state: {
-      default: {
-        color: '$grey',
-      },
-      active: {
-        color: '$black',
-        '&:before': {
-          content: '•',
-          mr: '$8',
-        },
-      },
-    },
   },
 })

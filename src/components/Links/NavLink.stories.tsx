@@ -21,11 +21,9 @@ const fixtures: StoryFixtures<typeof NavLink> = {
   default: {
     href: `#`,
     children: `Our Mission`,
-    state: `default`,
   },
   active: {
     href: `#`,
     children: `Our Mission`,
-    state: `active`,
   },
 }
