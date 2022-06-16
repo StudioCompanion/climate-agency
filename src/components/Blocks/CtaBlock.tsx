@@ -2,12 +2,12 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
-import { GreenButton, GreenButtonProps } from '../Buttons/GreenButton'
+import { Button, ButtonProps } from '../Buttons/Button'
 
 interface CtaBlockProps {
   content: string
-  leftLink: GreenButtonProps
-  rightLink: GreenButtonProps
+  leftLink: ButtonProps
+  rightLink: ButtonProps
 }
 
 export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
@@ -15,8 +15,12 @@ export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
     <CtaBlockWrap>
       <TextContainer>{content}</TextContainer>
       <ButtonsWrap>
-        <GreenButton href={leftLink.href}>{leftLink.children}</GreenButton>
-        <StoneButton href={rightLink.href}>{rightLink.children}</StoneButton>
+        <Button href={leftLink.href} color="green">
+          {leftLink.children}
+        </Button>
+        <Button href={rightLink.href} color="stone">
+          {rightLink.children}
+        </Button>
       </ButtonsWrap>
     </CtaBlockWrap>
   )
@@ -65,8 +69,4 @@ const ButtonsWrap = styled('div', {
     flexDirection: 'row',
     gridColumn: '1 / span 6',
   },
-})
-
-const StoneButton = styled(GreenButton, {
-  backgroundColor: '$stone',
 })
