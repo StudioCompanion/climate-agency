@@ -15,6 +15,16 @@ export const Default: ComponentStory<typeof NavBar> = () => (
 
 const fixtures: StoryFixtures<typeof NavBar> = {
   default: {
+    menuClose: {
+      image: {
+        src: '/images/closeNavBar.svg',
+        altText: 'CA Logo',
+        width: 15,
+        height: 16,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
+    },
     links: [
       {
         href: `/our-mission`,
@@ -29,11 +39,21 @@ const fixtures: StoryFixtures<typeof NavBar> = {
         children: `Contact Us`,
       },
     ],
-    logo: {
+    logoDesktop: {
       image: {
         src: '/images/Logo.svg',
         altText: 'CA Logo',
         width: 109,
+        height: 60,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
+    },
+    logoMobile: {
+      image: {
+        src: '/images/Logo-mobile.svg',
+        altText: 'CA Logo',
+        width: 22,
         height: 60,
       },
       layout: 'responsive',

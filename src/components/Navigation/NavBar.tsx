@@ -7,16 +7,35 @@ import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { NavLink, NavLinkProps } from '../Links/NavLink'
 
 interface NavBarProps {
+  menuOpen: MediaImageProps
+  menuClose: MediaImageProps
   links: NavLinkProps[]
-  logo: MediaImageProps
-  state?: 'open' | 'closed'
+  logoDesktop: MediaImageProps
+  logoMobile: MediaImageProps
+  state?: 'open' | 'closed' | 'desktop'
 }
 
-export const NavBar = ({ links, logo, state }: NavBarProps) => {
+export const NavBar = ({
+  menuOpen,
+  menuClose,
+  links,
+  logoDesktop,
+  logoMobile,
+  state,
+}: NavBarProps) => {
   const router = useRouter()
   return (
     <header>
       <NavBarWrap>
+        <TopRow>
+          <CloseWrap>
+            <MediaImage {...menuClose} />
+          </CloseWrap>
+          <LogoMobileWrap>
+            {logoMobile ? <MediaImage {...logoMobile} /> : null}
+          </LogoMobileWrap>
+        </TopRow>
+
         <LinksWrap>
           {links &&
             links.map((link) => (
@@ -28,7 +47,9 @@ export const NavBar = ({ links, logo, state }: NavBarProps) => {
               </ListItem>
             ))}
         </LinksWrap>
-        <LogoWrap>{logo ? <MediaImage {...logo} /> : null}</LogoWrap>
+        <LogoDesktopWrap>
+          {logoDesktop ? <MediaImage {...logoDesktop} /> : null}
+        </LogoDesktopWrap>
       </NavBarWrap>
     </header>
   )
@@ -36,9 +57,37 @@ export const NavBar = ({ links, logo, state }: NavBarProps) => {
 
 const NavBarWrap = styled('nav', {
   display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: '$green',
+  p: '$16',
+  mb: '$24',
+
+  '@tabletUp': {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '$white',
+    p: '$20',
+  },
+})
+
+const TopRow = styled('div', {
+  display: 'flex',
   justifyContent: 'space-between',
-  justifyItems: 'center',
-  p: '$20',
+  alignItems: 'center',
+  mt: '$16',
+  mb: '$8',
+
+  '@tabletUp': {
+    display: 'none',
+  },
+})
+
+const CloseWrap = styled('div', {
+  width: '15px',
+})
+
+const LogoMobileWrap = styled('div', {
+  width: '22px',
 })
 
 const LinksWrap = styled('ul', {
@@ -50,7 +99,7 @@ const LinksWrap = styled('ul', {
 const ListItem = styled('li', {
   color: '$grey',
   '&:before': {
-    content: '• ',
+    content: '•',
     color: 'transparent',
     mr: '$8',
   },
@@ -60,15 +109,27 @@ const ListItem = styled('li', {
       true: {
         color: '$black',
         '&:before': {
-          content: '• ',
-          color: 'purple',
+          content: '•',
+          color: '$black',
           mr: '$8',
+          fontSize: '$XS',
+          lineHeight: '$XS',
+
+          '@tabletUp': {
+            fontSize: '$XXS',
+            lineHeight: '$XXS',
+          },
         },
       },
     },
   },
 })
 
-const LogoWrap = styled('div', {
-  width: '109px',
+const LogoDesktopWrap = styled('div', {
+  display: 'none',
+
+  '@tabletUp': {
+    display: 'unset',
+    width: '109px',
+  },
 })
