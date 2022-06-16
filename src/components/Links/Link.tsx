@@ -6,7 +6,8 @@ import { styled } from 'styles/stitches.config'
 export interface LinkProps {
   href: string
   children: ReactNode
-  color: 'green' | 'stone'
+  color: 'green' | 'stone' | 'transparent'
+  isFooterLink?: boolean
   className?: string
   isExternal: boolean
 }
@@ -15,6 +16,7 @@ export const Link = ({
   href,
   children,
   color,
+  isFooterLink,
   className,
   isExternal,
 }: LinkProps) => {
@@ -24,6 +26,7 @@ export const Link = ({
         href={href}
         className={className}
         color={color}
+        isFooterLink={isFooterLink}
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -33,7 +36,7 @@ export const Link = ({
   else
     return (
       <NextLink href={href} passHref>
-        <Anchor className={className} color={color}>
+        <Anchor className={className} color={color} isFooterLink={isFooterLink}>
           {children}
         </Anchor>
       </NextLink>
@@ -48,6 +51,16 @@ const Anchor = styled('a', {
       },
       stone: {
         backgroundColor: '$stone',
+      },
+      transparent: {
+        backgroundColor: 'transparent',
+      },
+    },
+    isFooterLink: {
+      true: {
+        fontWeight: '$regular',
+        px: '0',
+        py: '$4',
       },
     },
   },

@@ -4,22 +4,48 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextHeader } from '../Text/TextHeader'
+import { Link, LinkProps } from '../Links/Link'
 
 interface FooterProps {
   logo: MediaImageProps
+  linksInformation: LinkProps[]
+  linksSocial: LinkProps[]
   legal: string
   credits: string
 }
 
-export const Footer = ({ logo, legal, credits }: FooterProps) => {
+export const Footer = ({
+  logo,
+  linksSocial,
+  linksInformation,
+  legal,
+  credits,
+}: FooterProps) => {
   return (
     <FooterWrap>
       <LogoContainer>{logo ? <MediaImage {...logo} /> : null}</LogoContainer>
       <InformationContainer>
         <TextHeader>Information</TextHeader>
+        <List>
+          {linksInformation &&
+            linksInformation.map((link) => (
+              <li key={link.href}>
+                <Link {...link} />
+              </li>
+            ))}
+        </List>
       </InformationContainer>
       <SocialsContainer>
         <TextHeader>Social Channels</TextHeader>
+
+        <List>
+          {linksSocial &&
+            linksSocial.map((link) => (
+              <li key={link.href}>
+                <Link {...link} />
+              </li>
+            ))}
+        </List>
       </SocialsContainer>
       <LegalContainer>{legal}</LegalContainer>
       <CreditsContainer>{credits}</CreditsContainer>
@@ -71,6 +97,11 @@ const SocialsContainer = styled('div', {
     gridColumn: '11 / span 2',
     gridRowStart: '1',
   },
+})
+
+const List = styled('ul', {
+  listStyle: 'none',
+  mt: '$12',
 })
 
 const LegalContainer = styled('p', {
