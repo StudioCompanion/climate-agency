@@ -2,12 +2,12 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
-import { Button, ButtonProps } from '../Buttons/Button'
+import { Link, LinkProps } from '../Links/Link'
 
 interface CtaBlockProps {
   content: string
-  leftLink: ButtonProps
-  rightLink: ButtonProps
+  leftLink: LinkProps
+  rightLink: LinkProps
 }
 
 export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
@@ -15,12 +15,20 @@ export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
     <CtaBlockWrap>
       <TextContainer>{content}</TextContainer>
       <ButtonsWrap>
-        <Button href={leftLink.href} color={leftLink.color}>
+        <Link
+          href={leftLink.href}
+          color={leftLink.color}
+          isExternal={leftLink.isExternal}
+        >
           {leftLink.children}
-        </Button>
-        <Button href={rightLink.href} color={rightLink.color}>
+        </Link>
+        <Link
+          href={rightLink.href}
+          color={rightLink.color}
+          isExternal={rightLink.isExternal}
+        >
           {rightLink.children}
-        </Button>
+        </Link>
       </ButtonsWrap>
     </CtaBlockWrap>
   )

@@ -1,28 +1,46 @@
 import React, { ReactNode } from 'react'
+import NextLink from 'next/link'
 
 import { styled } from 'styles/stitches.config'
 
-interface LinkContainerProps {
-  className?: string
+export interface LinkProps {
+  href: string
   children: ReactNode
   color: 'green' | 'stone'
-  href?: string
+  className?: string
+  isExternal: boolean
 }
 
-export const LinkContainer = ({
-  className,
+export const Link = ({
+  href,
   children,
   color,
-  href,
-}: LinkContainerProps) => {
-  return (
-    <LinkWrap className={className} color={color} href={href}>
-      {children}
-    </LinkWrap>
-  )
+  className,
+  isExternal,
+}: LinkProps) => {
+  if (isExternal)
+    return (
+      <Anchor
+        href={href}
+        className={className}
+        color={color}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {children}
+      </Anchor>
+    )
+  else
+    return (
+      <NextLink href={href} passHref>
+        <Anchor className={className} color={color}>
+          {children}
+        </Anchor>
+      </NextLink>
+    )
 }
 
-const LinkWrap = styled('a', {
+const Anchor = styled('a', {
   variants: {
     color: {
       green: {

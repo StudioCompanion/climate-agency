@@ -22,11 +22,13 @@ const fixtures: StoryFixtures<typeof CtaBlock> = {
       href: `#`,
       children: `I’m working in climate and need help!`,
       color: `green`,
+      isExternal: false,
     },
     rightLink: {
       href: `#`,
       children: `I’m working in the creative industry and want to help!`,
       color: `stone`,
+      isExternal: false,
     },
   },
 }

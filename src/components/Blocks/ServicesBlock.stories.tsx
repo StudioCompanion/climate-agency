@@ -22,6 +22,7 @@ const fixtures: StoryFixtures<typeof ServicesBlock> = {
       href: `#`,
       children: `Learn about our accelerator`,
       color: `green`,
+      isExternal: false,
     },
     imageSection: {
       mediaImage: {
