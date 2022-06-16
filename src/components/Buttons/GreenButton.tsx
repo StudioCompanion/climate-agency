@@ -15,7 +15,7 @@ export const GreenButton = ({
   className,
 }: GreenButtonProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <LinkContainer className={className}>{children}</LinkContainer>
     </Link>
   )
@@ -24,6 +24,7 @@ export const GreenButton = ({
 const LinkContainer = styled('a', {
   display: 'inline-flex',
   backgroundColor: '$green',
+  color: '$black',
   border: 'none',
   fontFamily: '$workSans',
   fontWeight: '$semiBold',
@@ -31,6 +32,7 @@ const LinkContainer = styled('a', {
   lineHeight: '$XXXS',
   p: '$12',
   cursor: 'pointer',
+  textDecoration: 'none',
 
   '@motion': {
     transition: 'opacity 250ms ease-out',
