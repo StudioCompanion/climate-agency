@@ -56,29 +56,34 @@ export const Footer = () => {
         <FooterLogo />
       </LogoContainer>
 
-      <InformationContainer>
-        <TextHeader>Information</TextHeader>
-        <List>
-          {linksInformation &&
-            linksInformation.map((link) => (
-              <li key={link.href}>
-                <LinkWrap {...link} />
-              </li>
-            ))}
-        </List>
-      </InformationContainer>
-      <SocialsContainer>
-        <TextHeader>Social Channels</TextHeader>
+      <NavContainer>
+        <NavUlContainer>
+          <InformationContainer>
+            <TextHeader>Information</TextHeader>
+            <List>
+              {linksInformation &&
+                linksInformation.map((link) => (
+                  <li key={link.href}>
+                    <LinkWrap {...link} />
+                  </li>
+                ))}
+            </List>
+          </InformationContainer>
+          <SocialsContainer>
+            <TextHeader>Social Channels</TextHeader>
 
-        <List>
-          {linksSocial &&
-            linksSocial.map((link) => (
-              <li key={link.href}>
-                <LinkWrap {...link} />
-              </li>
-            ))}
-        </List>
-      </SocialsContainer>
+            <List>
+              {linksSocial &&
+                linksSocial.map((link) => (
+                  <li key={link.href}>
+                    <LinkWrap {...link} />
+                  </li>
+                ))}
+            </List>
+          </SocialsContainer>
+        </NavUlContainer>
+      </NavContainer>
+
       <LegalContainer>The Climate Agency Limited (14011922)</LegalContainer>
       <CreditsContainer>
         This website was made possible with{' '}
@@ -116,24 +121,43 @@ const LogoContainer = styled('div', {
   gridColumn: 'span 6',
 })
 
-const InformationContainer = styled('div', {
-  gridColumn: 'span 6',
-  gridRowStart: '3',
-  mt: '$40',
-
+const NavContainer = styled('nav', {
+  gridColumn: 'span 8',
   '@tabletUp': {
-    gridColumn: '9 / span 2',
-    gridRowStart: '1',
+    gridColumn: '9 / span 4',
   },
 })
 
-const SocialsContainer = styled('div', {
+const NavUlContainer = styled('ul', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(8, 1fr)',
+  gridTemplateRows: 'repeat(auto, 1fr)',
+  columnGap: '$16',
+
+  '@tabletUp': {
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    columnGap: '$20',
+  },
+})
+
+const InformationContainer = styled('li', {
   gridColumn: 'span 6',
   gridRowStart: '2',
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '11 / span 2',
+    gridColumn: 'span 2',
+    gridRowStart: '1',
+  },
+})
+
+const SocialsContainer = styled('li', {
+  gridColumn: 'span 6',
+  gridRowStart: '1',
+  mt: '$40',
+
+  '@tabletUp': {
+    gridColumn: '3 / span 2',
     gridRowStart: '1',
   },
 })
@@ -163,6 +187,7 @@ const LegalContainer = styled('p', {
   lineHeight: '$XXS',
   gridColumn: '1 / span 8',
   mt: '$40',
+  maxWidth: '230px',
 
   '@tabletUp': {
     gridColumn: 'span 6',
@@ -179,6 +204,7 @@ const CreditsContainer = styled('p', {
   gridColumn: '1 / span 8',
   mt: '$40',
   mb: '$40',
+  maxWidth: '340px',
 
   '@tabletUp': {
     gridColumn: '9 / span 4',
