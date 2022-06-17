@@ -15,16 +15,6 @@ export const Default: ComponentStory<typeof NavBar> = () => (
 
 const fixtures: StoryFixtures<typeof NavBar> = {
   default: {
-    menuClose: {
-      image: {
-        src: '/images/closeNavBar.svg',
-        altText: 'CA Logo',
-        width: 15,
-        height: 16,
-      },
-      layout: 'responsive',
-      objectFit: 'cover',
-    },
     links: [
       {
         href: `/our-mission`,
