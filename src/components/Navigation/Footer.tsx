@@ -7,19 +7,28 @@ import { TextHeader } from '../Text/TextHeader'
 import { Link, LinkProps } from '../Links/Link'
 
 interface FooterProps {
-  logo: MediaImageProps
   linksInformation: LinkProps[]
   linksSocial: LinkProps[]
 }
 
-export const Footer = ({
-  logo,
-  linksSocial,
-  linksInformation,
-}: FooterProps) => {
+const footerLogo = {
+  image: {
+    src: '/images/Logo-footer.svg',
+    altText: 'CA Logo',
+    width: 653,
+    height: 361,
+  },
+  layout: 'responsive',
+  objectFit: 'cover',
+} as MediaImageProps
+
+export const Footer = ({ linksSocial, linksInformation }: FooterProps) => {
   return (
     <FooterWrap>
-      <LogoContainer>{logo ? <MediaImage {...logo} /> : null}</LogoContainer>
+      <LogoContainer>
+        <MediaImage {...footerLogo} />
+      </LogoContainer>
+
       <InformationContainer>
         <TextHeader>Information</TextHeader>
         <List>

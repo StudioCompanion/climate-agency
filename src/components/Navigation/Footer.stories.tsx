@@ -15,16 +15,6 @@ export const Default: ComponentStory<typeof Footer> = () => (
 
 const fixtures: StoryFixtures<typeof Footer> = {
   default: {
-    logo: {
-      image: {
-        src: '/images/Logo-footer.svg',
-        altText: 'CA Logo',
-        width: 653,
-        height: 361,
-      },
-      layout: 'responsive',
-      objectFit: 'cover',
-    },
     linksInformation: [
       {
         href: `/our-mission`,
