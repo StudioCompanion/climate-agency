@@ -3,9 +3,6 @@ import { useRouter } from 'next/router'
 
 import { styled } from 'styles/stitches.config'
 
-import IconClose from '/images/IconClose.svg'
-import IconOpen from '/images/IconOpen.svg'
-
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { NavLink, NavLinkProps } from '../Links/NavLink'
 
@@ -18,9 +15,6 @@ interface NavBarProps {
 export const NavBar = ({ links, logoDesktop, logoMobile }: NavBarProps) => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
-
-  //   log
-  console.log('OPEN is: ', open)
 
   return (
     <header>
