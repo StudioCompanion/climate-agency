@@ -3,64 +3,52 @@ import { useRouter } from 'next/router'
 
 import { styled } from 'styles/stitches.config'
 
-import { MediaImage, MediaImageProps } from '../Media/MediaImage'
+import IconClose from '../../assets/IconClose.svg'
+import IconOpen from '../../assets/IconOpen.svg'
+import MobileLogo from '../../assets/MobileLogo.svg'
+import DesktopLogo from '../../assets/DesktopLogo.svg'
+
 import { NavLink, NavLinkProps } from '../Links/NavLink'
 
-interface NavBarProps {
-  links: NavLinkProps[]
-  logoDesktop: MediaImageProps
-  logoMobile: MediaImageProps
-}
+const links = [
+  {
+    href: `/our-mission`,
+    children: `Our Mission`,
+  },
+  {
+    href: `/what-we-do`,
+    children: `What We Do`,
+  },
+  {
+    href: `/contact-us`,
+    children: `Contact Us`,
+  },
+] as NavLinkProps[]
 
-export const NavBar = ({ links, logoDesktop, logoMobile }: NavBarProps) => {
+export const NavBar = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  const openMenu = () => {
+    setIsOpen(true)
+  }
   return (
     <header>
       <NavBarWrap isOpen={isOpen}>
         <TopRow>
-          <CloseButton
-            onClick={() => {
-              setIsOpen(false)
-            }}
-            isOpen={isOpen}
-          >
-            <svg
-              width="15"
-              height="16"
-              viewBox="0 0 15 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 1.61143L13.4893 0L7.5 6.38857L1.51071 0L0 1.61143L5.98929 8L0 14.3886L1.51071 16L7.5 9.61143L13.4893 16L15 14.3886L9.01071 8L15 1.61143Z"
-                fill="black"
-              />
-            </svg>
-          </CloseButton>
-
-          <OpenButton
-            onClick={() => {
-              setIsOpen(true)
-            }}
-            isOpen={isOpen}
-          >
-            <svg
-              width="18"
-              height="12"
-              viewBox="0 0 18 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z"
-                fill="black"
-              />
-            </svg>
-          </OpenButton>
+          <MenuButton>
+            {isOpen ? (
+              <IconClose onClick={closeMenu} />
+            ) : (
+              <IconOpen onClick={openMenu} />
+            )}
+          </MenuButton>
           <LogoMobileWrap>
-            {logoMobile ? <MediaImage {...logoMobile} /> : null}
+            <MobileLogo />
           </LogoMobileWrap>
         </TopRow>
 
@@ -76,7 +64,7 @@ export const NavBar = ({ links, logoDesktop, logoMobile }: NavBarProps) => {
             ))}
         </LinksWrap>
         <LogoDesktopWrap>
-          {logoDesktop ? <MediaImage {...logoDesktop} /> : null}
+          <DesktopLogo />
         </LogoDesktopWrap>
       </NavBarWrap>
     </header>
@@ -118,32 +106,11 @@ const TopRow = styled('div', {
   },
 })
 
-const CloseButton = styled('button', {
-  width: '15px',
+const MenuButton = styled('button', {
+  maxWidth: '18px',
   backgroundColor: 'transparent',
   border: 'none',
-
-  variants: {
-    isOpen: {
-      false: {
-        display: 'none',
-      },
-    },
-  },
-})
-
-const OpenButton = styled('button', {
-  width: '18px',
-  backgroundColor: 'transparent',
-  border: 'none',
-
-  variants: {
-    isOpen: {
-      true: {
-        display: 'none',
-      },
-    },
-  },
+  cursor: 'pointer',
 })
 
 const LogoMobileWrap = styled('div', {
@@ -180,9 +147,7 @@ const ListItem = styled('li', {
       true: {
         color: '$black',
         '&:before': {
-          content: '•',
           color: '$black',
-          mr: '$8',
           fontSize: '$XS',
           lineHeight: '$XS',
 
