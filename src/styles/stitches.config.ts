@@ -36,6 +36,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         80: '8rem',
         88: '8.8rem',
         100: '10rem',
+        110: '11rem',
         120: '12rem',
         175: '17.5rem',
         180: '18rem',

@@ -3,14 +3,14 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { GreenButton, GreenButtonProps } from '../Buttons/GreenButton'
+import { Link, LinkProps } from '../Links/Link'
 import { TextHeader } from '../Text/TextHeader'
 import { TextCaption } from '../Text/TextCaption'
 
 interface ServicesBlockProps {
   header: string
   content: string
-  link: GreenButtonProps
+  link: LinkProps
   imageSection: {
     mediaImage: MediaImageProps
     caption: string
@@ -38,7 +38,7 @@ export const ServicesBlock = ({
       <RightContainer>
         <HeaderWrap>{header}</HeaderWrap>
         <TextContainer>{content}</TextContainer>
-        <GreenButton href={link.href}>{link.children}</GreenButton>
+        <Link {...link} />
       </RightContainer>
     </ServicesWrap>
   )

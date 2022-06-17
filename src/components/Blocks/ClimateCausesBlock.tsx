@@ -3,12 +3,12 @@ import React from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { GreenButton, GreenButtonProps } from '../Buttons/GreenButton'
+import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from '../Text/TextCaption'
 interface ClimateCausesBlockProps {
   title: string
   content: string
-  link: GreenButtonProps
+  link: LinkProps
   leftImage: {
     mediaImage: MediaImageProps
     caption: string
@@ -31,7 +31,7 @@ export const ClimateCausesBlock = ({
       <TextContainer>
         {content}
         <ButtonContainer>
-          <GreenButton href={link.href}>{link.children}</GreenButton>
+          <Link {...link} />
         </ButtonContainer>
       </TextContainer>
 
