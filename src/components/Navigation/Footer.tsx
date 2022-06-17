@@ -2,31 +2,58 @@ import React from 'react'
 
 import { styled } from 'styles/stitches.config'
 
-import { MediaImage, MediaImageProps } from '../Media/MediaImage'
+import FooterLogo from '../../assets/LogoFooter.svg'
+
 import { TextHeader } from '../Text/TextHeader'
 import { Link, LinkProps } from '../Links/Link'
 
-interface FooterProps {
-  linksInformation: LinkProps[]
-  linksSocial: LinkProps[]
-}
-
-const footerLogo = {
-  image: {
-    src: '/images/Logo-footer.svg',
-    altText: 'CA Logo',
-    width: 653,
-    height: 361,
+const linksInformation = [
+  {
+    href: `/our-mission`,
+    children: `Our Mission`,
+    color: 'transparent',
+    isExternal: false,
   },
-  layout: 'responsive',
-  objectFit: 'cover',
-} as MediaImageProps
+  {
+    href: `/accelerator`,
+    children: `The Accelerator`,
+    color: 'transparent',
+    isExternal: false,
+  },
+  {
+    href: `/contact-us`,
+    children: `Contact Us`,
+    color: 'transparent',
+    isExternal: false,
+  },
+  {
+    href: `/privacy`,
+    children: `Privacy Policy`,
+    color: 'transparent',
+    isExternal: false,
+  },
+] as LinkProps[]
 
-export const Footer = ({ linksSocial, linksInformation }: FooterProps) => {
+const linksSocial = [
+  {
+    href: `www.linkedin.com`,
+    children: `LinkedIn`,
+    color: 'transparent',
+    isExternal: true,
+  },
+  {
+    href: `www.twitter.com`,
+    children: `Twitter`,
+    color: 'transparent',
+    isExternal: true,
+  },
+] as LinkProps[]
+
+export const Footer = () => {
   return (
     <FooterWrap>
       <LogoContainer>
-        <MediaImage {...footerLogo} />
+        <FooterLogo />
       </LogoContainer>
 
       <InformationContainer>
@@ -35,7 +62,7 @@ export const Footer = ({ linksSocial, linksInformation }: FooterProps) => {
           {linksInformation &&
             linksInformation.map((link) => (
               <li key={link.href}>
-                <Link {...link} />
+                <LinkWrap {...link} />
               </li>
             ))}
         </List>
@@ -47,41 +74,46 @@ export const Footer = ({ linksSocial, linksInformation }: FooterProps) => {
           {linksSocial &&
             linksSocial.map((link) => (
               <li key={link.href}>
-                <Link {...link} />
+                <LinkWrap {...link} />
               </li>
             ))}
         </List>
       </SocialsContainer>
       <LegalContainer>The Climate Agency Limited (14011922)</LegalContainer>
       <CreditsContainer>
-        This website was made possible with Companion Studio.
+        This website was made possible with{' '}
+        <LinkCompanion
+          href="https://companion.studio/"
+          color="transparent"
+          isExternal={true}
+        >
+          Companion Studio
+        </LinkCompanion>
+        .
       </CreditsContainer>
     </FooterWrap>
   )
 }
 
-const FooterWrap = styled('section', {
+const FooterWrap = styled('footer', {
   backgroundColor: '$green',
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   px: '$16',
+  pt: '$40',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
+    rowGap: '$120',
     px: '$20',
   },
 })
 
 const LogoContainer = styled('div', {
   gridColumn: 'span 6',
-  mt: '$40',
-
-  '@tabletUp': {
-    mb: '$120',
-  },
 })
 
 const InformationContainer = styled('div', {
@@ -109,6 +141,19 @@ const SocialsContainer = styled('div', {
 const List = styled('ul', {
   listStyle: 'none',
   mt: '$12',
+})
+
+const LinkWrap = styled(Link, {
+  fontWeight: '$regular',
+  px: '0',
+  py: '$4',
+})
+
+const LinkCompanion = styled(Link, {
+  display: 'inline',
+  fontWeight: '$regular',
+  px: '0',
+  py: '$4',
 })
 
 const LegalContainer = styled('p', {
