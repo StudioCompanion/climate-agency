@@ -4,11 +4,12 @@ import { styled } from 'styles/stitches.config'
 
 interface DotProps {
   enabled: boolean
+  selected: boolean
   onClick: () => void
 }
 
-export const Dot = ({ enabled, onClick }: DotProps) => (
-  <ButtonWrap onClick={onClick} disabled={!enabled}>
+export const Dot = ({ enabled, onClick, selected }: DotProps) => (
+  <ButtonWrap onClick={onClick} disabled={!enabled} selected={selected}>
     <svg
       width="6"
       height="6"
@@ -21,7 +22,7 @@ export const Dot = ({ enabled, onClick }: DotProps) => (
         cy="3"
         r="3"
         fill="#858096"
-        fillOpacity={enabled ? '0.4' : '1'}
+        fillOpacity={selected ? '1' : '0.4'}
       />
     </svg>
   </ButtonWrap>
@@ -34,4 +35,5 @@ const ButtonWrap = styled('button', {
   touchAction: 'manipulation',
   width: '10px',
   height: '10px',
+  transform: 'translate3d(0%, 0px, 0px) !important',
 })

@@ -22,12 +22,22 @@ const fixtures: StoryFixtures<typeof Carousel> = {
         organisation: `Direct Air Capture Coalition`,
       },
       {
-        content: `“This is a test testimonial”`,
+        content: `“This is the 2nd testimonial”`,
         signature: `Joe Smith, Director of Research`,
         organisation: `Testing`,
       },
       {
-        content: `“This is another test testimonial”`,
+        content: `“This is the 3rd testimonial”`,
+        signature: `Mary Jones, Director of Research`,
+        organisation: `Testing 2`,
+      },
+      {
+        content: `“This is the 4th testimonial”`,
+        signature: `Joe Smith, Director of Research`,
+        organisation: `Testing`,
+      },
+      {
+        content: `“This is the 5th testimonial”`,
         signature: `Mary Jones, Director of Research`,
         organisation: `Testing 2`,
       },

@@ -27,31 +27,26 @@ export const Carousel = ({ slides, className }: CarouselProps) => {
   const autoplay = Autoplay(options, autoplayRoot)
 
   const [viewportRef, embla] = useEmblaCarousel({ loop: false }, [autoplay])
+  const [thumbViewportRef, emblaThumbs] = useEmblaCarousel({
+    containScroll: 'keepSnaps',
+    dragFree: true,
+  })
 
   const [firstDotEnabled, setFirstDotEnabled] = useState(false)
   const [middleDotEnabled, setMiddleDotEnabled] = useState(false)
   const [lastDotEnabled, setLastDotEnabled] = useState(false)
 
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
   const onSelect = useCallback(() => {
-    if (!embla) return
-    slides.map((item, idx) => {
-      if (idx % 3 === 0) {
-        setFirstDotEnabled(false)
-        setMiddleDotEnabled(true)
-        setLastDotEnabled(true)
-      }
-      if (idx % 3 === 1) {
-        setFirstDotEnabled(true)
-        setMiddleDotEnabled(false)
-        setLastDotEnabled(true)
-      }
-      if (idx % 3 === 2) {
-        setFirstDotEnabled(true)
-        setMiddleDotEnabled(true)
-        setLastDotEnabled(false)
-      }
-    })
-  }, [embla, slides])
+    if (!embla || !emblaThumbs) return
+    setFirstDotEnabled(true)
+    setMiddleDotEnabled(true)
+    setLastDotEnabled(true)
+
+    setSelectedIndex(embla.selectedScrollSnap())
+    emblaThumbs.scrollTo(embla.selectedScrollSnap())
+  }, [embla, emblaThumbs, setSelectedIndex])
 
   useEffect(() => {
     if (!embla) return
@@ -77,26 +72,30 @@ export const Carousel = ({ slides, className }: CarouselProps) => {
             ))}
         </ContainerWrap>
       </ViewportWrap>
-      <Dot
-        onClick={() => embla && embla.scrollTo(0)}
-        enabled={firstDotEnabled}
-      />
-      <Dot
-        onClick={() => embla && embla.scrollTo(1)}
-        enabled={middleDotEnabled}
-      />
-      <Dot
-        onClick={() => {
-          embla && embla.scrollTo(2)
-        }}
-        enabled={lastDotEnabled}
-      />
+      <DotsWrap ref={thumbViewportRef}>
+        <Dot
+          onClick={() => embla && embla.scrollTo(0)}
+          enabled={firstDotEnabled}
+          selected={selectedIndex % 3 === 0}
+        />
+        <Dot
+          onClick={() => embla && embla.scrollTo(1)}
+          enabled={middleDotEnabled}
+          selected={selectedIndex % 3 === 1}
+        />
+        <Dot
+          onClick={() => {
+            embla && embla.scrollTo(2)
+          }}
+          enabled={lastDotEnabled}
+          selected={selectedIndex % 3 === 2}
+        />
+      </DotsWrap>
     </CarouselWrap>
   )
 }
 
 const CarouselWrap = styled('div', {
-  //   position: 'relative',
   backgroundColor: 'transparent',
   p: '20px',
   mx: 'auto',
@@ -120,5 +119,9 @@ const SlideWrap = styled('div', {
 
 const SlideInnerWrap = styled('div', {
   position: 'relative',
+  overflow: 'hidden',
+})
+
+const DotsWrap = styled('div', {
   overflow: 'hidden',
 })
