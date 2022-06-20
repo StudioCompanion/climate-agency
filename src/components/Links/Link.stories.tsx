@@ -17,6 +17,10 @@ export const Stone: ComponentStory<typeof Link> = () => (
   <Link {...fixtures.stone} />
 )
 
+export const Transparent: ComponentStory<typeof Link> = () => (
+  <Link {...fixtures.transparent} />
+)
+
 const fixtures: StoryFixtures<typeof Link> = {
   green: {
     href: `#`,
@@ -29,5 +33,11 @@ const fixtures: StoryFixtures<typeof Link> = {
     children: `Let us help you`,
     color: `stone`,
     isExternal: false,
+  },
+  transparent: {
+    href: `#`,
+    children: `Let us help you`,
+    color: `transparent`,
+    isExternal: true,
   },
 }
