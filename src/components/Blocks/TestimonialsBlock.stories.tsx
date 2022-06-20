@@ -15,27 +15,45 @@ export const Default: ComponentStory<typeof TestimonialsBlock> = () => (
 
 const fixtures: StoryFixtures<typeof TestimonialsBlock> = {
   default: {
-    icon: {
-      image: {
-        src: '/icons/circle.svg',
-        altText: '',
-        width: 27,
-        height: 27,
-      },
-      layout: 'intrinsic',
-      objectFit: 'cover',
-    },
     title: `We have been very fortunate to work with many great organisations.`,
-    mediaImage: {
-      image: {
-        src: '/images/organisations.png',
-        altText: 'Organisations Logos',
-        width: 1328,
+    logos: [
+      {
+        src: '/images/logos/ov.png',
+        altText: 'Ocean Visions logo',
+        width: 213,
+        height: 49,
+      },
+      {
+        src: '/images/logos/un.png',
+        altText: 'United Nations logo',
+        width: 72,
         height: 61,
       },
-      layout: 'responsive',
-      objectFit: 'cover',
-    },
+      {
+        src: '/images/logos/notpla.png',
+        altText: 'Notpla logo',
+        width: 200,
+        height: 47,
+      },
+      {
+        src: '/images/logos/terra.png',
+        altText: 'Terra Carta logo',
+        width: 129,
+        height: 59,
+      },
+      {
+        src: '/images/logos/dacc.png',
+        altText: 'Direct Air Capture Coallition logo',
+        width: 207,
+        height: 55,
+      },
+      {
+        src: '/images/logos/space10.png',
+        altText: 'Space 10 logo',
+        width: 195,
+        height: 37,
+      },
+    ],
     testimonials: [
       {
         content: `“The Climate Agency is changing the world by impacting the way people think. Sophie and Lisa were crucial to helping us express ourselves better.”`,

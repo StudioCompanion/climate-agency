@@ -1,32 +1,44 @@
+import Marquee from 'react-fast-marquee'
+
 import { styled } from 'styles/stitches.config'
 
+import {
+  TextTestimonial,
+  TextTestimonialProps,
+} from 'components/Text/TextTestimonial'
+
+import CircleIcon from 'assets/circle.svg'
+
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { TestimonialBlockProps } from './TestimonialBlock'
 import { Carousel } from '../Carousel/Carousel'
 
 interface TestimonialsBlockProps {
-  icon: MediaImageProps
   title: string
-  mediaImage: MediaImageProps
-  testimonials: TestimonialBlockProps[]
+  logos: MediaImageProps['image'][]
+  testimonials: TextTestimonialProps[]
 }
 
 export const TestimonialsBlock = ({
-  icon,
   title,
-  mediaImage,
+  logos,
   testimonials,
 }: TestimonialsBlockProps) => {
   return (
     <TestimonialsWrap>
       <HeaderContainer>
-        <IconContainer>{icon ? <MediaImage {...icon} /> : null}</IconContainer>
+        <Circle width="18" />
         <TitleContainer>{title}</TitleContainer>
       </HeaderContainer>
-      <ImageContainer>
-        {mediaImage ? <MediaImage {...mediaImage} /> : null}
+      <ImageContainer gradient={false}>
+        {logos.map((logo) => (
+          <MediaImage key={logo.src} image={logo} />
+        ))}
       </ImageContainer>
-      <TestimonialWrap slides={testimonials} />
+      <TestimonialWrap>
+        <Carousel slides={testimonials}>
+          {(slide) => <TextTestimonial {...slide} />}
+        </Carousel>
+      </TestimonialWrap>
     </TestimonialsWrap>
   )
 }
@@ -36,13 +48,15 @@ const TestimonialsWrap = styled('section', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
-  px: '$16',
+  p: '$40 $16',
+  rowGap: '$60',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
-    px: '$20',
+    p: '$60 $20',
+    rowGap: '$180',
   },
 })
 
@@ -50,21 +64,21 @@ const HeaderContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$16',
-  color: '$white',
   gridColumn: 'span 8',
-  mt: '$40',
 
   '@tabletUp': {
     flexDirection: 'row',
-    gap: '$30',
+    gap: '$20',
     gridColumn: 'span 6',
-    mt: '$60',
   },
 })
 
-const IconContainer = styled('div', {
-  mt: '$16',
-  width: '100px',
+const Circle = styled(CircleIcon, {
+  '@tabletUp': {
+    flex: '1 0 2.7rem',
+    alignSelf: 'flex-start',
+    mt: '$24',
+  },
 })
 
 const TitleContainer = styled('h2', {
@@ -80,24 +94,32 @@ const TitleContainer = styled('h2', {
   },
 })
 
-const ImageContainer = styled('div', {
+const ImageContainer = styled(Marquee, {
   gridColumn: 'span 8',
-  mt: '$88',
+  gap: '$60',
+  mx: -16,
+  width: 'calc(100% + 32px) !important',
+
+  '& > *': {
+    gap: '$60',
+  },
 
   '@tabletUp': {
     gridColumn: 'span 12',
-    mt: '$175',
+
+    mx: -20,
+    width: 'calc(100% + 40px) !important',
   },
 })
 
-const TestimonialWrap = styled(Carousel, {
+/**
+ * If you use `Carousel` as the styled component the
+ * render-child function breaks the TS.
+ */
+const TestimonialWrap = styled('div', {
   gridColumn: 'span 8',
-  mt: '$60',
-  mb: '$16',
 
   '@tabletUp': {
     gridColumn: '7 / span 6',
-    mt: '$197',
-    mb: '$20',
   },
 })

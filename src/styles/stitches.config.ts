@@ -40,9 +40,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         100: '10rem',
         110: '11rem',
         120: '12rem',
-        175: '17.5rem',
         180: '18rem',
-        197: '19.7rem',
         200: '20rem',
       },
       zIndices: {

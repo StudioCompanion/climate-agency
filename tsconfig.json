@@ -17,6 +17,7 @@
     "noUnusedLocals": true,
     "baseUrl": "./src",
     "paths": {
+      "assets/*": ["./assets/*"],
       "components/*": ["./components/*"],
       "helpers/*": ["./helpers/*"],
       "hooks/*": ["./hooks/*"],

@@ -8,18 +8,13 @@ import { styled } from 'styles/stitches.config'
 import { useReducedMotion } from 'hooks/useReducedMotion'
 import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicEffect'
 
-interface BaseItem {
-  key: string
-  [key: string]: unknown
-}
-
-interface CarouselProps<Item extends BaseItem> {
+interface CarouselProps<Item> {
   slides: readonly Item[]
   children: (render: Item) => JSX.Element
   className?: string
 }
 
-export const Carousel = <Item extends BaseItem>({
+export const Carousel = <Item,>({
   className,
   slides,
   children,
@@ -108,7 +103,7 @@ export const Carousel = <Item extends BaseItem>({
             slides.map((item, i) => (
               <Slide
                 ref={(ref) => (slideRefs.current[i] = ref!)}
-                key={item.key}
+                key={i}
                 className="embla__slide"
                 tabIndex={-1}
               >
