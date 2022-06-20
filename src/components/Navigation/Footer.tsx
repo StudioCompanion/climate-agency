@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { styled } from 'styles/stitches.config'
 
 import FooterLogo from '../../assets/LogoFooter.svg'
