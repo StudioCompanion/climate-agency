@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import { animated, useSpring } from '@react-spring/web'
 
 import { styled } from 'styles/stitches.config'
 
@@ -9,6 +10,8 @@ import MobileLogo from '../../assets/MobileLogo.svg'
 import DesktopLogo from '../../assets/DesktopLogo.svg'
 
 import { NavLink, NavLinkProps } from '../Links/NavLink'
+import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicEffect'
+import { useMedia } from 'hooks/useMedia'
 
 const links = [
   {
@@ -29,30 +32,43 @@ export const NavBar = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
-  const closeMenu = () => {
-    setIsOpen(false)
+  const handleMenuClick = () => {
+    setIsOpen((s) => !s)
   }
 
-  const openMenu = () => {
-    setIsOpen(true)
-  }
+  const isTabletUp = useMedia('(min-width: 768px)')
+
+  const [styles, api] = useSpring(
+    () => ({
+      clipPath: isTabletUp
+        ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+        : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+      immediate: true,
+    }),
+    [isTabletUp]
+  )
+
+  useIsomorphicLayoutEffect(() => {
+    api.start({
+      clipPath: isOpen
+        ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+        : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+    })
+  }, [isOpen])
+
   return (
     <header>
-      <NavBarWrap isOpen={isOpen}>
+      <NavBarWrap>
         <TopRow>
-          <MenuButton>
-            {isOpen ? (
-              <IconClose onClick={closeMenu} />
-            ) : (
-              <IconOpen onClick={openMenu} />
-            )}
+          <MenuButton type="button" onClick={handleMenuClick}>
+            {isOpen ? <IconClose /> : <IconOpen />}
           </MenuButton>
           <LogoMobileWrap>
             <MobileLogo />
           </LogoMobileWrap>
         </TopRow>
 
-        <LinksWrap isOpen={isOpen}>
+        <LinksWrap style={styles}>
           {links &&
             links.map((link) => (
               <ListItem
@@ -74,17 +90,11 @@ export const NavBar = () => {
 const NavBarWrap = styled('nav', {
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: '$green',
   p: '$16',
   mb: '$24',
-
-  variants: {
-    isOpen: {
-      false: {
-        backgroundColor: '$white',
-      },
-    },
-  },
+  backgroundColor: '$white',
+  position: 'relative',
+  zIndex: 0,
 
   '@tabletUp': {
     flexDirection: 'row',
@@ -98,7 +108,6 @@ const TopRow = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  mt: '$16',
   mb: '$8',
 
   '@tabletUp': {
@@ -112,7 +121,7 @@ const MenuButton = styled('button', {
   cursor: 'pointer',
   p: 0,
   position: 'relative',
-  top: -15,
+  top: 0,
   left: -11,
 })
 
@@ -120,30 +129,31 @@ const LogoMobileWrap = styled('div', {
   width: '22px',
 })
 
-const LinksWrap = styled('ul', {
+const LinksWrap = styled(animated.ul, {
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'flex-end',
   gap: '$8',
+  p: '$20 $16',
+  backgroundColor: '$green',
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: 187,
+  zIndex: -1,
 
-  variants: {
-    isOpen: {
-      false: {
-        display: 'none',
-
-        '@tabletUp': {
-          display: 'unset',
-        },
-      },
-    },
+  '@tabletUp': {
+    backgroundColor: 'transparent',
+    position: 'unset',
+    height: 'unset',
+    width: 'unset',
+    p: 'unset',
   },
 })
 
 const ListItem = styled('li', {
   color: '$grey',
-
-  '& + &': {
-    mt: '$8',
-  },
 
   '&:before': {
     content: '•',
