@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 
 import { styled } from 'styles/stitches.config'
 
-import IconClose from '../../assets/IconClose.svg'
-import IconOpen from '../../assets/IconOpen.svg'
+import IconClose from '../../assets/IconCross.svg'
+import IconOpen from '../../assets/IconMenu.svg'
 import MobileLogo from '../../assets/MobileLogo.svg'
 import DesktopLogo from '../../assets/DesktopLogo.svg'
 
@@ -107,10 +107,13 @@ const TopRow = styled('div', {
 })
 
 const MenuButton = styled('button', {
-  maxWidth: '18px',
   backgroundColor: 'transparent',
   border: 'none',
   cursor: 'pointer',
+  p: 0,
+  position: 'relative',
+  top: -15,
+  left: -11,
 })
 
 const LogoMobileWrap = styled('div', {
@@ -121,6 +124,7 @@ const LinksWrap = styled('ul', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$8',
+
   variants: {
     isOpen: {
       false: {
@@ -136,10 +140,22 @@ const LinksWrap = styled('ul', {
 
 const ListItem = styled('li', {
   color: '$grey',
+
+  '& + &': {
+    mt: '$8',
+  },
+
   '&:before': {
     content: '•',
     color: 'transparent',
     mr: '$8',
+    fontSize: '$XS',
+    lineHeight: '$XS',
+
+    '@tabletUp': {
+      fontSize: '$XXS',
+      lineHeight: '$XXS',
+    },
   },
 
   variants: {
@@ -148,13 +164,6 @@ const ListItem = styled('li', {
         color: '$black',
         '&:before': {
           color: '$black',
-          fontSize: '$XS',
-          lineHeight: '$XS',
-
-          '@tabletUp': {
-            fontSize: '$XXS',
-            lineHeight: '$XXS',
-          },
         },
       },
     },
