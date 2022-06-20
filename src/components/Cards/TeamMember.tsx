@@ -24,12 +24,14 @@ export const TeamMember = ({
     <TeamMemberWrap>
       {mediaImage ? <MediaImage {...mediaImage} /> : null}
 
-      <div>
-        <NameAndRoleWrap>{name}</NameAndRoleWrap>
-        <NameAndRoleWrap>{role}</NameAndRoleWrap>
-      </div>
+      <NameAndRoleWrap>
+        <SpanWrap>{name}</SpanWrap>
+        <SpanWrap>{role}</SpanWrap>
+      </NameAndRoleWrap>
       <DescriptionWrap>{description}</DescriptionWrap>
-      <LinkWrap {...socialLink} />
+      <SpanWrap>
+        <LinkWrap {...socialLink} />
+      </SpanWrap>
     </TeamMemberWrap>
   )
 }
@@ -48,6 +50,10 @@ const NameAndRoleWrap = styled('p', {
   lineHeight: '$S',
 })
 
+const SpanWrap = styled('span', {
+  display: 'block',
+})
+
 const DescriptionWrap = styled('p', {
   whiteSpace: 'pre-line',
   fontFamily: '$workSans',
@@ -63,5 +69,4 @@ const LinkWrap = styled(Link, {
   lineHeight: '$XXS',
   textDecoration: 'underline',
   p: '0',
-  mt: 'auto !important',
 })

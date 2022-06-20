@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { styled } from 'styles/stitches.config'
-import Asterisk from '../../../public/icons/Asterisk.svg'
+import Asterisk from '../../assets/Asterisk.svg'
 
-import { TeamMember, TeamMemberProps } from './TeamMember'
+import { TeamMember, TeamMemberProps } from '../Cards/TeamMember'
 
 interface TeamBlockProps {
   title: string
-  teamMembers: TeamMemberProps[]
+  teamMembers: TeamMemberProps[][]
 }
 
 export const TeamBlock = ({ title, teamMembers }: TeamBlockProps) => {
@@ -17,21 +17,20 @@ export const TeamBlock = ({ title, teamMembers }: TeamBlockProps) => {
         <Asterisk />
         <TitleWrap>{title}</TitleWrap>
       </HeaderWrap>
-      <FirstMember>
-        <TeamMember {...teamMembers[0]} />
-      </FirstMember>
-      <SecondMember>
-        <TeamMember {...teamMembers[1]} />
-      </SecondMember>
-      <ThirdMember>
-        <TeamMember {...teamMembers[2]} />
-      </ThirdMember>
-      <FourthMember>
-        <TeamMember {...teamMembers[3]} />
-      </FourthMember>
-      <FifthMember>
-        <TeamMember {...teamMembers[4]} />
-      </FifthMember>
+      <TeamGrid>
+        {teamMembers &&
+          teamMembers.map((group, idx) => (
+            <TeamGroupWrap key={idx}>
+              <InnerTeamGroupWrap>
+                {group.map((user) => (
+                  <TeamMemberWrap key={user.name}>
+                    <TeamMember {...user} />
+                  </TeamMemberWrap>
+                ))}
+              </InnerTeamGroupWrap>
+            </TeamGroupWrap>
+          ))}
+      </TeamGrid>
     </TeamBlockWrap>
   )
 }
@@ -80,51 +79,49 @@ const TitleWrap = styled('h2', {
   },
 })
 
-const FirstMember = styled('div', {
+const TeamGrid = styled('ol', {
+  listStyleType: 'none',
   gridColumn: 'span 8',
-  gridRowStart: '2',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(8, 1fr)',
+  columnGap: '$16',
+  p: '0',
 
   '@tabletUp': {
-    gridColumn: 'span 3',
+    gridColumn: 'span 12',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    columnGap: '$20',
   },
 })
 
-const SecondMember = styled('div', {
+const TeamGroupWrap = styled('li', {
   gridColumn: 'span 8',
-  gridRowStart: '3',
 
   '@tabletUp': {
-    gridColumn: 'span 3',
-    gridRowStart: '2',
+    gridColumn: 'span 12',
   },
 })
 
-const ThirdMember = styled('div', {
+const InnerTeamGroupWrap = styled('ul', {
   gridColumn: 'span 8',
-  gridRowStart: '4',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(8, 1fr)',
+  columnGap: '$16',
 
   '@tabletUp': {
-    gridColumn: 'span 3',
-    gridRowStart: '3',
+    gridColumn: 'span 12',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    columnGap: '$20',
+    mb: '$20',
   },
 })
 
-const FourthMember = styled('div', {
+const TeamMemberWrap = styled('li', {
   gridColumn: 'span 8',
-  gridRowStart: '5',
+  mb: '$16',
 
   '@tabletUp': {
     gridColumn: 'span 3',
-    gridRowStart: '3',
-  },
-})
-
-const FifthMember = styled('div', {
-  gridColumn: 'span 8',
-  gridRowStart: '6',
-
-  '@tabletUp': {
-    gridColumn: 'span 3',
-    gridRowStart: '3',
+    mb: '0',
   },
 })

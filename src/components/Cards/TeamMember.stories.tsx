@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { StoryFixtures } from '../../types/utils'
 
 export default {
-  title: 'Blocks/Team Member',
+  title: 'Cards/Team Member',
   component: TeamMember,
 } as ComponentMeta<typeof TeamMember>
 
