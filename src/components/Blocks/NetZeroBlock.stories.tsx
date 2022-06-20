@@ -15,16 +15,6 @@ export const Default: ComponentStory<typeof NetZeroBlock> = () => (
 
 const fixtures: StoryFixtures<typeof NetZeroBlock> = {
   default: {
-    icon: {
-      image: {
-        src: '/icons/clock.svg',
-        altText: '',
-        width: 27,
-        height: 27,
-      },
-      layout: 'intrinsic',
-      objectFit: 'cover',
-    },
     title: `One third of CEOs in the UK are unsure what Net Zero means.`,
     content: `There are urgent messages to tell, but the scientific community is speaking a different language to those with the power to make a difference in climate.\n
 
