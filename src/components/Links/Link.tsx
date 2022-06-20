@@ -6,7 +6,7 @@ import { styled } from 'styles/stitches.config'
 export interface LinkProps {
   href: string
   children: ReactNode
-  color: 'green' | 'stone'
+  color: 'green' | 'stone' | 'transparent'
   className?: string
   isExternal: boolean
 }
@@ -48,6 +48,9 @@ const Anchor = styled('a', {
       },
       stone: {
         backgroundColor: '$stone',
+      },
+      transparent: {
+        backgroundColor: 'transparent',
       },
     },
   },
