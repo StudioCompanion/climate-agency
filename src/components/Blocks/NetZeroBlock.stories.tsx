@@ -27,7 +27,7 @@ const fixtures: StoryFixtures<typeof NetZeroBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/Image_10.png',
+          src: '/images/Greenland_fjords.png',
           altText: 'Greenland Fjords',
           width: 1326,
           height: 784.73,

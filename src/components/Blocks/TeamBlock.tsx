@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { styled } from 'styles/stitches.config'
 import Asterisk from '../../assets/Asterisk.svg'
 
@@ -18,18 +16,17 @@ export const TeamBlock = ({ title, teamMembers }: TeamBlockProps) => {
         <TitleWrap>{title}</TitleWrap>
       </HeaderWrap>
       <TeamGrid>
-        {teamMembers &&
-          teamMembers.map((group, idx) => (
-            <TeamGroupWrap key={idx}>
-              <InnerTeamGroupWrap>
-                {group.map((user) => (
-                  <TeamMemberWrap key={user.name}>
-                    <TeamMember {...user} />
-                  </TeamMemberWrap>
-                ))}
-              </InnerTeamGroupWrap>
-            </TeamGroupWrap>
-          ))}
+        {teamMembers.map((group, idx) => (
+          <TeamGroupWrap key={idx}>
+            <InnerTeamGroupWrap>
+              {group.map((user) => (
+                <TeamMemberWrap key={user.name}>
+                  <TeamMember {...user} />
+                </TeamMemberWrap>
+              ))}
+            </InnerTeamGroupWrap>
+          </TeamGroupWrap>
+        ))}
       </TeamGrid>
     </TeamBlockWrap>
   )

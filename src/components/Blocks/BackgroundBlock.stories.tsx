@@ -20,7 +20,7 @@ const fixtures: StoryFixtures<typeof BackgroundBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/usgs-uGrT85dVK9U-unsplash.jpg',
+          src: '/images/satellite_capture.jpg',
           altText: 'Satellite capture',
           width: 343,
           height: 348,

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { styled } from 'styles/stitches.config'
-import Clock from '../../assets/Clock.svg'
+import ClockIcon from '../../assets/Clock.svg'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from '../Text/TextCaption'
@@ -23,7 +23,7 @@ export const NetZeroBlock = ({
   return (
     <NetZeroWrap>
       <HeaderContainer>
-        <ClockWrap />
+        <Clock width="29" />
         <TitleContainer>
           {title}
           <sup>(1)</sup>
@@ -73,8 +73,12 @@ const HeaderContainer = styled('div', {
   },
 })
 
-const ClockWrap = styled(Clock, {
-  maxWidth: '29px',
+const Clock = styled(ClockIcon, {
+  '@tabletUp': {
+    flex: '1 0 2.7rem',
+    alignSelf: 'flex-start',
+    mt: '$24',
+  },
 })
 
 const TitleContainer = styled('h2', {

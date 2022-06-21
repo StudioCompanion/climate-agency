@@ -21,7 +21,7 @@ const fixtures: StoryFixtures<typeof TeamBlock> = {
         {
           mediaImage: {
             image: {
-              src: '/images/sophie.png',
+              src: '/team-members/sophie.png',
               altText: 'Sophie Gallois',
               width: 317,
               height: 369,
@@ -43,7 +43,7 @@ const fixtures: StoryFixtures<typeof TeamBlock> = {
         {
           mediaImage: {
             image: {
-              src: '/images/lisa.png',
+              src: '/team-members/lisa.png',
               altText: 'Lisa Woodward',
               width: 317,
               height: 369,
@@ -67,7 +67,7 @@ const fixtures: StoryFixtures<typeof TeamBlock> = {
         {
           mediaImage: {
             image: {
-              src: '/images/cyrill.png',
+              src: '/team-members/cyrill.png',
               altText: 'Cyrill Gutsch',
               width: 317,
               height: 369,
@@ -89,7 +89,7 @@ const fixtures: StoryFixtures<typeof TeamBlock> = {
         {
           mediaImage: {
             image: {
-              src: '/images/anab.png',
+              src: '/team-members/anab.png',
               altText: 'Anab Jain',
               width: 317,
               height: 369,
@@ -111,7 +111,7 @@ const fixtures: StoryFixtures<typeof TeamBlock> = {
         {
           mediaImage: {
             image: {
-              src: '/images/myles.png',
+              src: '/team-members/myles.png',
               altText: 'Myles Palmer',
               width: 317,
               height: 369,

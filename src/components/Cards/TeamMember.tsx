@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
@@ -22,16 +20,13 @@ export const TeamMember = ({
 }: TeamMemberProps) => {
   return (
     <TeamMemberWrap>
-      {mediaImage ? <MediaImage {...mediaImage} /> : null}
-
-      <NameAndRoleWrap>
-        <SpanWrap>{name}</SpanWrap>
-        <SpanWrap>{role}</SpanWrap>
-      </NameAndRoleWrap>
-      <DescriptionWrap>{description}</DescriptionWrap>
-      <SpanWrap>
+      <MediaImage {...mediaImage} />
+      <ContentWrap>
+        <NameAndRoleWrap>{name}</NameAndRoleWrap>
+        <NameAndRoleWrap>{role}</NameAndRoleWrap>
+        <DescriptionWrap>{description}</DescriptionWrap>
         <LinkWrap {...socialLink} />
-      </SpanWrap>
+      </ContentWrap>
     </TeamMemberWrap>
   )
 }
@@ -43,24 +38,24 @@ const TeamMemberWrap = styled('section', {
   gap: '$8',
 })
 
-const NameAndRoleWrap = styled('p', {
+const ContentWrap = styled('p', {})
+
+const NameAndRoleWrap = styled('span', {
+  display: 'block',
   fontFamily: '$inria',
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
 })
 
-const SpanWrap = styled('span', {
+const DescriptionWrap = styled('span', {
   display: 'block',
-})
-
-const DescriptionWrap = styled('p', {
   whiteSpace: 'pre-line',
   fontFamily: '$workSans',
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
-  my: '$4',
+  my: '$12',
 })
 
 const LinkWrap = styled(Link, {
