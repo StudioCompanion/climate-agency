@@ -21,7 +21,7 @@ const fixtures: StoryFixtures<typeof OpeningBlock> = {
   default: {
     mediaImage: {
       image: {
-        src: '/images/Green_Accent_Image_01.png',
+        src: '/images/forest_on_fire.png',
         altText: 'Hero image',
         width: 653,
         height: 636,
@@ -36,7 +36,7 @@ const fixtures: StoryFixtures<typeof OpeningBlock> = {
   large: {
     mediaImage: {
       image: {
-        src: '/images/Image_02.png',
+        src: '/images/people_on_mountain.png',
         altText: 'People sitting on a mountain',
         width: 765,
         height: 636,

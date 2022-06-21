@@ -64,6 +64,7 @@ const Anchor = styled('a', {
   fontSize: '$XXS',
   lineHeight: '$XXXS',
   p: '$12',
+  mt: 'auto',
   cursor: 'pointer',
   textDecoration: 'none',
 
