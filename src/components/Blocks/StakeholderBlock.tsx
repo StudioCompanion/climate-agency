@@ -63,7 +63,7 @@ const Spikes = styled(SpikesIcon, {
   '@tabletUp': {
     flex: '1 0 4rem',
     alignSelf: 'flex-start',
-    mt: '$24',
+    mt: '$40',
   },
 })
 
