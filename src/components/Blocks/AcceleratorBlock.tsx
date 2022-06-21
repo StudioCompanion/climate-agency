@@ -1,40 +1,42 @@
-import React from 'react'
+import { ReactDOM } from 'react'
 
 import { styled } from 'styles/stitches.config'
-import Arrows from '../../../public/icons/Arrows.svg'
+import ArrowsIcon from '../../assets/Arrows.svg'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 
 interface AcceleratorBlockProps {
   title: string
-  firstContent: string
   subtitle: string
-  secondContent: string
   link: LinkProps
   mediaImage: MediaImageProps
+  children: ReactDOM
 }
 
 export const AcceleratorBlock = ({
   title,
-  firstContent,
+  children,
   subtitle,
-  secondContent,
   link,
   mediaImage,
 }: AcceleratorBlockProps) => {
+  const [intro, content] = children
+
   return (
     <AcceleratorWrap>
       <HeaderWrap>
-        <ArrowsWrap />
-        <TitleWrap>{title}</TitleWrap>
+        <Arrows width="44" />
+        <Title>{title}</Title>
       </HeaderWrap>
       <ContentWrap>
-        <TextWrap>{firstContent}</TextWrap>
+        <TextWrap>{intro}</TextWrap>
         <SubtitleWrap>{subtitle}</SubtitleWrap>
-        <TextWrap>{secondContent}</TextWrap>
+        <TextWrap>{content}</TextWrap>
       </ContentWrap>
-      <LinkWrap {...link} />
+      <LinkWrap>
+        <Link {...link} />
+      </LinkWrap>
       <ImageWrap>
         {mediaImage ? <MediaImage {...mediaImage} /> : null}
       </ImageWrap>
@@ -65,6 +67,7 @@ const HeaderWrap = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$20',
+
   mb: '$20',
 
   '@tabletUp': {
@@ -75,11 +78,15 @@ const HeaderWrap = styled('div', {
   },
 })
 
-const ArrowsWrap = styled(Arrows, {
-  maxWidth: '44px',
+const Arrows = styled(ArrowsIcon, {
+  '@tabletUp': {
+    flex: '1 0 3.5rem',
+    alignSelf: 'flex-start',
+    mt: '$24',
+  },
 })
 
-const TitleWrap = styled('h2', {
+const Title = styled('h2', {
   fontFamily: '$inria',
   fontWeight: '$light',
   fontSize: '$XL',
@@ -109,6 +116,11 @@ const TextWrap = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
+
+  '& > ul': {
+    listStyleType: 'disc',
+    ml: '$16',
+  },
 })
 
 const SubtitleWrap = styled('h3', {
@@ -125,9 +137,8 @@ const SubtitleWrap = styled('h3', {
   },
 })
 
-const LinkWrap = styled(Link, {
+const LinkWrap = styled('span', {
   gridColumn: 'span 8',
-  maxWidth: '120px',
 
   '@tabletUp': {
     gridColumn: '5 / span 2',
