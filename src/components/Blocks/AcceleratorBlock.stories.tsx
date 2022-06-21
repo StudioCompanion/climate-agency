@@ -39,20 +39,19 @@ const fixtures: StoryFixtures<typeof AcceleratorBlock> = {
         `With elements of business positioning, marketing, behavioural science and stakeholders strategy, with a dash of creativity to inspire you. Plus our very own recommendation tailored to your needs, to help you gain profile and support, landing on your desk within days.
 
       As a non profit dedicated to help climate innovation, we have worked hard to deliver a process which is:
-
       `,
-        <ul>
-          <li key="1">
+        <ul key="list">
+          <li>
             {
               'Accessible: around 10% of the traditional agency/consultancy fees for a similar process.'
             }
           </li>
-          <li key="2">
+          <li>
             {
               'Climate-specific: Climate solutions projects are our only focus. We can share the knowledge gained across the sector.'
             }
           </li>
-          <li key="3">
+          <li>
             {
               'Fast and Intense. The world is on fire, your work is urgent. We aim to equip you with the basic tools to boost your profile and support within days/weeks.'
             }

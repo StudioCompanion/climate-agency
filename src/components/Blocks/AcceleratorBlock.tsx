@@ -1,4 +1,4 @@
-import { ReactDOM } from 'react'
+import { ReactNode } from 'react'
 
 import { styled } from 'styles/stitches.config'
 import ArrowsIcon from '../../assets/Arrows.svg'
@@ -11,7 +11,7 @@ interface AcceleratorBlockProps {
   subtitle: string
   link: LinkProps
   mediaImage: MediaImageProps
-  children: ReactDOM
+  children: ReactNode[]
 }
 
 export const AcceleratorBlock = ({
