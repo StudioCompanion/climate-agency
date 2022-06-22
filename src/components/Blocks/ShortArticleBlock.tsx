@@ -5,25 +5,27 @@ import { Link, LinkProps } from '../Links/Link'
 import { TextHeader } from '../Text/TextHeader'
 import { TextCaption } from '../Text/TextCaption'
 
-interface ServicesBlockProps {
+interface ShortArticleBlockProps {
+  textPosition: 'left' | 'right'
   header: string
   content: string
-  link: LinkProps
+  link?: LinkProps
   imageSection: {
     mediaImage: MediaImageProps
     caption: string
   }
 }
 
-export const ServicesBlock = ({
+export const ShortArticleBlock = ({
+  textPosition,
   header,
   content,
   link,
   imageSection,
-}: ServicesBlockProps) => {
+}: ShortArticleBlockProps) => {
   return (
-    <ServicesWrap>
-      <LeftContainer>
+    <ShortArticleWrap TextPosition={textPosition}>
+      <MediaWrap>
         <MediaContainer>
           <ImageContainer>
             {imageSection.mediaImage ? (
@@ -32,31 +34,48 @@ export const ServicesBlock = ({
           </ImageContainer>
           <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
         </MediaContainer>
-      </LeftContainer>
-      <RightContainer>
+      </MediaWrap>
+      <TextWrap textPosition={textPosition}>
         <HeaderWrap>{header}</HeaderWrap>
-        <TextContainer>{content}</TextContainer>
-        <Link {...link} />
-      </RightContainer>
-    </ServicesWrap>
+        <TextContainer textPosition={textPosition}>{content}</TextContainer>
+        {link && <Link {...link} />}
+      </TextWrap>
+    </ShortArticleWrap>
   )
 }
 
-const ServicesWrap = styled('section', {
+const ShortArticleWrap = styled('section', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
   columnGap: '$16',
-  px: '$16',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
-    px: '$20',
+  },
+
+  variants: {
+    TextPosition: {
+      left: {
+        p: '$16',
+
+        '@tabletUp': {
+          p: '$20',
+        },
+      },
+      right: {
+        px: '$16',
+
+        '@tabletUp': {
+          px: '$20',
+        },
+      },
+    },
   },
 })
 
-const LeftContainer = styled('div', {
+const MediaWrap = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
@@ -64,12 +83,23 @@ const LeftContainer = styled('div', {
   },
 })
 
-const RightContainer = styled('div', {
+const TextWrap = styled('div', {
   gridColumn: 'span 8',
   gridRowStart: '1',
 
-  '@tabletUp': {
-    gridColumn: '7 / span 6',
+  variants: {
+    textPosition: {
+      left: {
+        '@tabletUp': {
+          gridColumn: 'span 6',
+        },
+      },
+      right: {
+        '@tabletUp': {
+          gridColumn: '7 / span 6',
+        },
+      },
+    },
   },
 })
 
@@ -126,5 +156,20 @@ const TextContainer = styled('p', {
     lineHeight: '$XXL',
     gridColumn: '7 / span 6',
     mb: '$20',
+  },
+
+  variants: {
+    textPosition: {
+      left: {
+        mb: '0',
+      },
+      right: {
+        mb: '$40',
+
+        '@tabletUp': {
+          mb: '$20',
+        },
+      },
+    },
   },
 })
