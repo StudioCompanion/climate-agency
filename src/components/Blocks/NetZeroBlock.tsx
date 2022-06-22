@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { styled } from 'styles/stitches.config'
 import ClockIcon from '../../assets/Clock.svg'
 

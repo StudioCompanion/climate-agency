@@ -1,4 +1,3 @@
-import React from 'react'
 import NextLink from 'next/link'
 
 import { styled } from 'styles/stitches.config'

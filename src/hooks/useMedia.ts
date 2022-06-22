@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import { useIsomorphicLayoutEffect } from './useIsomorphicEffect'
 
-export const useMedia = (query: string) => {
+export const useMedia = (
+  query: string,
+  cb?: (isQueryTrue: boolean) => void
+) => {
   const [isQueryTrue, setIsQueryTrue] = useState(false)
 
   useIsomorphicLayoutEffect(() => {
@@ -9,6 +12,10 @@ export const useMedia = (query: string) => {
 
     const handleMediaChange = (e: MediaQueryListEvent) => {
       setIsQueryTrue(e.matches)
+
+      if (cb) {
+        cb(e.matches)
+      }
     }
 
     setIsQueryTrue(mql.matches)
