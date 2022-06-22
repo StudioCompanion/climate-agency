@@ -1,12 +1,11 @@
+import { ReactNode } from 'react'
 import { styled } from 'styles/stitches.config'
-
-import SpikesIcon from '../../assets/Spikes.svg'
-import SunIcon from '../../assets/Sun.svg'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
 interface ArticleBlockProps {
   pageLayout: 'left' | 'right'
+  children: ReactNode
   title: string
   content: string
   mediaImage: MediaImageProps
@@ -14,6 +13,7 @@ interface ArticleBlockProps {
 
 export const ArticleBlock = ({
   pageLayout,
+  children,
   title,
   content,
   mediaImage,
@@ -21,7 +21,7 @@ export const ArticleBlock = ({
   return (
     <ArticleWrap pageLayout={pageLayout}>
       <HeaderContainer pageLayout={pageLayout}>
-        {pageLayout === 'left' ? <Sun width="36" /> : <Spikes width="24" />}
+        <Icon pageLayout={pageLayout}>{children}</Icon>
         <Title>{title}</Title>
       </HeaderContainer>
       <Content pageLayout={pageLayout}>{content}</Content>
@@ -91,19 +91,33 @@ const HeaderContainer = styled('div', {
   },
 })
 
-const Spikes = styled(SpikesIcon, {
+const Icon = styled('div', {
   '@tabletUp': {
-    flex: '1 0 3.8rem',
     alignSelf: 'flex-start',
     mt: '$40',
   },
-})
 
-const Sun = styled(SunIcon, {
-  '@tabletUp': {
-    flex: '1 0 4rem',
-    alignSelf: 'flex-start',
-    mt: '$40',
+  variants: {
+    pageLayout: {
+      left: {
+        '& > *': {
+          width: '21px',
+
+          '@tabletUp': {
+            width: '36px',
+          },
+        },
+      },
+      right: {
+        '& > *': {
+          width: '24px',
+
+          '@tabletUp': {
+            width: '37px',
+          },
+        },
+      },
+    },
   },
 })
 

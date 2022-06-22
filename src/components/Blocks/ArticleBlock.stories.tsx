@@ -1,4 +1,6 @@
 import { ArticleBlock } from './ArticleBlock'
+import SpikesIcon from '../../assets/Spikes.svg'
+import SunIcon from '../../assets/Sun.svg'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -19,6 +21,7 @@ export const Right: ComponentStory<typeof ArticleBlock> = () => (
 const fixtures: StoryFixtures<typeof ArticleBlock> = {
   left: {
     pageLayout: 'left',
+    children: <SunIcon />,
     title: `Helping you plan, connect and deliver with great partners`,
     content: `After the workshop, you may feel you need help building assets (website, video), or running a
         campaign (fundraising, influencers). We can help.
@@ -37,6 +40,7 @@ const fixtures: StoryFixtures<typeof ArticleBlock> = {
   },
   right: {
     pageLayout: 'right',
+    children: <SpikesIcon />,
     title: `Stakeholder Campaigns on neglected climate topics`,
     content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
 
