@@ -27,7 +27,7 @@ const fixtures: StoryFixtures<typeof ServicesBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/Image_08.png',
+          src: '/images/raindrops.png',
           altText: 'Raindrops',
           width: 653,
           height: 646,

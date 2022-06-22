@@ -1,10 +1,10 @@
 import { styled } from 'styles/stitches.config'
+import ClockIcon from '../../assets/Clock.svg'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from '../Text/TextCaption'
 
 interface NetZeroBlockProps {
-  icon: MediaImageProps
   title: string
   content: string
   imageSection: {
@@ -14,7 +14,6 @@ interface NetZeroBlockProps {
 }
 
 export const NetZeroBlock = ({
-  icon,
   title,
   content,
   imageSection,
@@ -22,7 +21,7 @@ export const NetZeroBlock = ({
   return (
     <NetZeroWrap>
       <HeaderContainer>
-        <IconContainer>{icon ? <MediaImage {...icon} /> : null}</IconContainer>
+        <Clock width="29" />
         <TitleContainer>
           {title}
           <sup>(1)</sup>
@@ -72,9 +71,12 @@ const HeaderContainer = styled('div', {
   },
 })
 
-const IconContainer = styled('div', {
-  mt: '$16',
-  width: '100px',
+const Clock = styled(ClockIcon, {
+  '@tabletUp': {
+    flex: '1 0 2.7rem',
+    alignSelf: 'flex-start',
+    mt: '$24',
+  },
 })
 
 const TitleContainer = styled('h2', {

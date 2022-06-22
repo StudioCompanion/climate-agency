@@ -29,7 +29,7 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
     leftImage: {
       mediaImage: {
         image: {
-          src: '/images/Image_04.jpg',
+          src: '/images/mountain_peak.jpg',
           altText: 'Person looks at a mountain',
           width: 541,
           height: 650,
@@ -41,7 +41,7 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
     },
     rightImage: {
       image: {
-        src: '/images/Image_03.png',
+        src: '/images/hand_in_water.png',
         altText: 'Hand in the water',
         width: 429,
         height: 513,
