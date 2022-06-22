@@ -18,7 +18,7 @@ export const StakeholderBlock = ({
   return (
     <StakeholderWrap>
       <HeaderContainer>
-        <Spikes width="39" />
+        <Spikes width="24" />
         <Title>{title}</Title>
       </HeaderContainer>
       <Content>{content}</Content>
@@ -61,7 +61,7 @@ const HeaderContainer = styled('div', {
 
 const Spikes = styled(SpikesIcon, {
   '@tabletUp': {
-    flex: '1 0 4rem',
+    flex: '1 0 3.8rem',
     alignSelf: 'flex-start',
     mt: '$40',
   },
