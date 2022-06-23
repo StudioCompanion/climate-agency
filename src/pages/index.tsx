@@ -27,12 +27,12 @@ const Index = () => {
       <OpeningBlock {...hero} />
       <NetZeroBlock {...netZero} />
       <ClimateCauses {...climateCauses} />
-      <ShortArticleBlock {...ourBackground} />
+      <ShortArticle {...ourBackground} />
       <TestimonialsBlock {...testimonials} />
       <Mission {...mission} />
-      <ShortArticleBlock {...services} />
-      <TeamBlock {...team} />
-      <CtaBlock {...cta} />
+      <ShortArticle {...services} />
+      <Team {...team} />
+      <Cta {...cta} />
     </IndexWrap>
   )
 }
@@ -49,11 +49,34 @@ const ClimateCauses = styled(ClimateCausesBlock, {
   },
 })
 
+const ShortArticle = styled(ShortArticleBlock, {
+  mb: '$40',
+
+  '@tabletUp': {
+    mb: '$60',
+  },
+})
+
 const Mission = styled(MissionBlock, {
   my: '$80',
 
   '@tabletUp': {
-    mt: '$16',
     mb: '$200',
+  },
+})
+
+const Team = styled(TeamBlock, {
+  mb: '$40',
+
+  '@tabletUp': {
+    mb: '$60',
+  },
+})
+
+const Cta = styled(CtaBlock, {
+  mb: '$60',
+
+  '@tabletUp': {
+    mb: '$100',
   },
 })

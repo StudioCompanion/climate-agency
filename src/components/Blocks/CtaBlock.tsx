@@ -6,11 +6,17 @@ export interface CtaBlockProps {
   content: string
   leftLink: LinkProps
   rightLink: LinkProps
+  className?: string
 }
 
-export const CtaBlock = ({ content, leftLink, rightLink }: CtaBlockProps) => {
+export const CtaBlock = ({
+  content,
+  leftLink,
+  rightLink,
+  className,
+}: CtaBlockProps) => {
   return (
-    <CtaBlockWrap>
+    <CtaBlockWrap className={className}>
       <TextContainer>{content}</TextContainer>
       <ButtonsWrap>
         <Link {...leftLink} />
@@ -24,14 +30,12 @@ const CtaBlockWrap = styled('section', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
-  p: '$16',
-  mb: '$60',
+  px: '$16',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
-    p: '$20',
-    mb: '$100',
+    px: '$20',
   },
 })
 

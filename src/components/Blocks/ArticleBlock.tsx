@@ -9,6 +9,7 @@ export interface ArticleBlockProps {
   title: string
   content: string
   mediaImage: MediaImageProps
+  className?: string
 }
 
 export const ArticleBlock = ({
@@ -17,9 +18,10 @@ export const ArticleBlock = ({
   title,
   content,
   mediaImage,
+  className,
 }: ArticleBlockProps) => {
   return (
-    <ArticleWrap pageLayout={pageLayout}>
+    <ArticleWrap pageLayout={pageLayout} className={className}>
       <HeaderContainer pageLayout={pageLayout}>
         <Icon pageLayout={pageLayout}>{children}</Icon>
         <Title>{title}</Title>
@@ -48,19 +50,13 @@ const ArticleWrap = styled('section', {
   variants: {
     pageLayout: {
       left: {
-        mb: '$60',
-
-        '@tabletUp': {
-          mb: '$120',
-        },
+        pt: '0',
       },
       right: {
         pt: '$60',
-        pb: '$50',
 
         '@tabletUp': {
           pt: '$120',
-          pb: '$100',
         },
       },
     },

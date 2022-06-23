@@ -5,11 +5,16 @@ import { TextHeader } from '../Text/TextHeader'
 export interface MissionBlockProps {
   header: string
   content: string
+  className?: string
 }
 
-export const MissionBlock = ({ header, content }: MissionBlockProps) => {
+export const MissionBlock = ({
+  header,
+  content,
+  className,
+}: MissionBlockProps) => {
   return (
-    <MissionWrap>
+    <MissionWrap className={className}>
       <HeaderWrap>{header}</HeaderWrap>
       <TextContainer>{content}</TextContainer>
     </MissionWrap>

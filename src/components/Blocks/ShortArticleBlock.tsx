@@ -14,6 +14,7 @@ export interface ShortArticleBlockProps {
     mediaImage: MediaImageProps
     caption: string
   }
+  className?: string
 }
 
 export const ShortArticleBlock = ({
@@ -22,9 +23,10 @@ export const ShortArticleBlock = ({
   content,
   link,
   imageSection,
+  className,
 }: ShortArticleBlockProps) => {
   return (
-    <ShortArticleWrap TextPosition={textPosition}>
+    <ShortArticleWrap className={className}>
       <MediaWrap>
         <MediaContainer>
           <ImageContainer>
@@ -49,32 +51,12 @@ const ShortArticleWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
   columnGap: '$16',
+  px: '$16',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
-  },
-
-  variants: {
-    TextPosition: {
-      left: {
-        p: '$16',
-
-        '@tabletUp': {
-          p: '$20',
-        },
-      },
-      right: {
-        px: '$16',
-        py: '0',
-        pb: '$40',
-
-        '@tabletUp': {
-          px: '$20',
-          pb: '$60',
-        },
-      },
-    },
+    px: '$20',
   },
 })
 
@@ -93,18 +75,13 @@ const TextWrap = styled('div', {
   variants: {
     textPosition: {
       left: {
-        mb: '0',
-
         '@tabletUp': {
           gridColumn: 'span 6',
         },
       },
       right: {
-        mb: '$40',
-
         '@tabletUp': {
           gridColumn: '7 / span 6',
-          mb: '$20',
         },
       },
     },

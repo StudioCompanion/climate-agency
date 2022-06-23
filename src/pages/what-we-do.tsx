@@ -10,8 +10,8 @@ const WhatWeDo = () => {
     <WhatWeDoWrap>
       <OpeningBlock {...intro} />
       <AcceleratorBlock {...accelerator} />
-      <ArticleBlock {...stakeholders} />
-      <ArticleBlock {...partners} />
+      <Stakeholders {...stakeholders} />
+      <Partners {...partners} />
     </WhatWeDoWrap>
   )
 }
@@ -19,3 +19,19 @@ const WhatWeDo = () => {
 export default WhatWeDo
 
 const WhatWeDoWrap = styled('article', {})
+
+const Stakeholders = styled(ArticleBlock, {
+  mb: '$50',
+
+  '@tabletUp': {
+    mb: '$100',
+  },
+})
+
+const Partners = styled(ArticleBlock, {
+  mb: '$60',
+
+  '@tabletUp': {
+    mb: '$120',
+  },
+})
