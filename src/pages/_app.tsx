@@ -16,7 +16,9 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <DefaultSeo {...SEO} />
       <NavBar />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </>
   )

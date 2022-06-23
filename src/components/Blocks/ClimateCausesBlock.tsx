@@ -30,9 +30,9 @@ export const ClimateCausesBlock = ({
       </Title>
       <TextContainer>
         {content}
-        <ButtonContainer>
+        <LinkWrapper>
           <Link {...link} />
-        </ButtonContainer>
+        </LinkWrapper>
       </TextContainer>
 
       <MediaContainer>
@@ -96,7 +96,8 @@ const TextContainer = styled('p', {
   },
 })
 
-const ButtonContainer = styled('div', {
+const LinkWrapper = styled('span', {
+  display: 'block',
   mt: '$40',
 
   '@tabletUp': {
