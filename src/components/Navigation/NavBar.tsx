@@ -10,10 +10,11 @@ import MobileLogo from '../../assets/MobileLogo.svg'
 import DesktopLogo from '../../assets/DesktopLogo.svg'
 
 import { NavLink, NavLinkProps } from '../Links/NavLink'
+import { Link, LinkProps } from 'components/Links/Link'
 import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicEffect'
 import { useMedia } from 'hooks/useMedia'
 
-const links = [
+const routes = [
   {
     href: `/`,
     children: `Our Mission`,
@@ -22,13 +23,14 @@ const links = [
     href: `/what-we-do`,
     children: `What We Do`,
   },
-  {
-    href: `mailto:`,
-    children: `Contact Us`,
-    rel: 'noopener noreferrer',
-    target: '_blank',
-  },
 ] as NavLinkProps[]
+
+const contactLink = {
+  href: `mailTo:`,
+  children: `Contact Us`,
+  color: `transparent`,
+  isExternal: true,
+} as LinkProps
 
 export const NavBar = () => {
   const router = useRouter()
@@ -71,8 +73,8 @@ export const NavBar = () => {
         </TopRow>
 
         <LinksWrap style={styles}>
-          {links &&
-            links.map((link) => (
+          {routes &&
+            routes.map((link) => (
               <ListItem
                 isActive={router.asPath === link.href}
                 key={link.children}
@@ -80,6 +82,9 @@ export const NavBar = () => {
                 <NavLink {...link} />
               </ListItem>
             ))}
+          <ListItem>
+            <ContactLink {...contactLink} />
+          </ListItem>
         </LinksWrap>
         <LogoDesktopWrap>
           <DesktopLogo />
@@ -189,4 +194,10 @@ const LogoDesktopWrap = styled('div', {
     display: 'unset',
     width: '109px',
   },
+})
+
+const ContactLink = styled(Link, {
+  color: '$grey',
+  fontWeight: '$regular',
+  p: '0',
 })

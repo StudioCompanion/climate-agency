@@ -6,22 +6,12 @@ export interface NavLinkProps {
   href: string
   children: string
   className?: string
-  rel?: 'noopener noreferrer'
-  target?: '_blank'
 }
 
-export const NavLink = ({
-  href,
-  children,
-  className,
-  rel,
-  target,
-}: NavLinkProps) => {
+export const NavLink = ({ href, children, className }: NavLinkProps) => {
   return (
     <NextLink href={href} passHref>
-      <Anchor className={className} rel={rel} target={target}>
-        {children}
-      </Anchor>
+      <Anchor className={className}>{children}</Anchor>
     </NextLink>
   )
 }

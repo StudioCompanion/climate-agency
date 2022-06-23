@@ -1,5 +1,7 @@
 import { styled } from 'styles/stitches.config'
 
+import { NextSeo } from 'next-seo'
+
 import { OpeningBlock } from 'components/Blocks/OpeningBlock'
 import { NetZeroBlock } from 'components/Blocks/NetZeroBlock'
 import { ClimateCausesBlock } from 'components/Blocks/ClimateCausesBlock'
@@ -24,7 +26,21 @@ import {
 const Index = () => {
   return (
     <IndexWrap>
-      <OpeningBlock {...hero} />
+      <NextSeo
+        title="Our Mission"
+        description="This is the landing page"
+        canonical="https://www.climate.agency"
+        openGraph={{
+          url: 'https://www.climate.agency/',
+          title: 'Climate Agency',
+          images: [
+            {
+              url: '/images/forest_on_fire.png',
+            },
+          ],
+        }}
+      />
+      <Opening {...hero} />
       <NetZeroBlock {...netZero} />
       <ClimateCauses {...climateCauses} />
       <ShortArticle {...ourBackground} />
@@ -40,6 +56,10 @@ const Index = () => {
 export default Index
 
 const IndexWrap = styled('article', {})
+
+const Opening = styled(OpeningBlock, {
+  mb: '$40',
+})
 
 const ClimateCauses = styled(ClimateCausesBlock, {
   mb: '$30',

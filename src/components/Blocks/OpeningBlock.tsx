@@ -6,15 +6,17 @@ export interface OpeningBlockProps {
   content: string
   mediaImage: MediaImageProps
   layout: 'default' | 'large'
+  className?: string
 }
 
 export const OpeningBlock = ({
   content,
   mediaImage,
   layout,
+  className,
 }: OpeningBlockProps) => {
   return (
-    <OpeningBlockWrap>
+    <OpeningBlockWrap className={className}>
       <TextContainer layout={layout}>{content}</TextContainer>
       <ImageContainer layout={layout}>
         {mediaImage ? <MediaImage {...mediaImage} /> : null}
@@ -28,13 +30,13 @@ const OpeningBlockWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
   columnGap: '$16',
-  p: '$16',
+  px: '$16',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
-    p: '$20',
+    px: '$20',
   },
 })
 
