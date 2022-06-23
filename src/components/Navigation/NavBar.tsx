@@ -15,7 +15,7 @@ import { useMedia } from 'hooks/useMedia'
 
 const links = [
   {
-    href: `/our-mission`,
+    href: `/`,
     children: `Our Mission`,
   },
   {
@@ -23,8 +23,10 @@ const links = [
     children: `What We Do`,
   },
   {
-    href: `/contact-us`,
+    href: `mailto:`,
     children: `Contact Us`,
+    rel: 'noopener noreferrer',
+    target: '_blank',
   },
 ] as NavLinkProps[]
 

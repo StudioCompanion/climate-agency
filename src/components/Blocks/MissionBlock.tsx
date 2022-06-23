@@ -21,13 +21,11 @@ const MissionWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   px: '$16',
-  py: '$80',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
     px: '$20',
-    py: '$100',
   },
 })
 
@@ -46,6 +44,5 @@ const TextContainer = styled('p', {
   '@tabletUp': {
     fontSize: '$XXXL',
     lineHeight: '$XXXL',
-    mb: '$200',
   },
 })

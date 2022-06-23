@@ -1,25 +1,13 @@
-import { NavBar } from 'components/Navigation/NavBar'
-import { Footer } from 'components/Navigation/Footer'
+import { OpeningBlockProps } from 'components/Blocks/OpeningBlock'
+import { NetZeroBlockProps } from 'components/Blocks/NetZeroBlock'
+import { ClimateCausesBlockProps } from 'components/Blocks/ClimateCausesBlock'
+import { ShortArticleBlockProps } from 'components/Blocks/ShortArticleBlock'
+import { TestimonialsBlockProps } from 'components/Blocks/TestimonialsBlock'
+import { MissionBlockProps } from 'components/Blocks/MissionBlock'
+import { TeamBlockProps } from 'components/Blocks/TeamBlock'
+import { CtaBlockProps } from 'components/Blocks/CtaBlock'
 
-import { OpeningBlock, OpeningBlockProps } from 'components/Blocks/OpeningBlock'
-import { NetZeroBlock, NetZeroBlockProps } from 'components/Blocks/NetZeroBlock'
-import {
-  ClimateCausesBlock,
-  ClimateCausesBlockProps,
-} from 'components/Blocks/ClimateCausesBlock'
-import {
-  ShortArticleBlock,
-  ShortArticleBlockProps,
-} from 'components/Blocks/ShortArticleBlock'
-import {
-  TestimonialsBlock,
-  TestimonialsBlockProps,
-} from 'components/Blocks/TestimonialsBlock'
-import { MissionBlock, MissionBlockProps } from 'components/Blocks/MissionBlock'
-import { TeamBlock, TeamBlockProps } from 'components/Blocks/TeamBlock'
-import { CtaBlock, CtaBlockProps } from 'components/Blocks/CtaBlock'
-
-const hero = {
+export const hero = {
   mediaImage: {
     image: {
       src: '/images/forest_on_fire.png',
@@ -31,20 +19,20 @@ const hero = {
     objectFit: 'cover',
   },
   content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
-  We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
+    We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
   layout: 'default',
 } as OpeningBlockProps
 
-const netZero = {
+export const netZero = {
   title: `One third of CEOs in the UK are unsure what Net Zero means.`,
   content: `There are urgent messages to tell, but the scientific community is speaking a different language to those with the power to make a difference in climate.
-
-    The narrative is impenetrable, and the maths
-    mind–bendingly complex.
-
-    Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these can make a huge difference to our world in the years to come. But they're not being heard.
-
-    Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
+  
+      The narrative is impenetrable, and the maths
+      mind–bendingly complex.
+  
+      Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these can make a huge difference to our world in the years to come. But they're not being heard.
+  
+      Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -60,17 +48,17 @@ const netZero = {
   },
 } as NetZeroBlockProps
 
-const climateCauses = {
+export const climateCauses = {
   title: `Just 2% of global charity giving goes to climate causes.`,
   content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message. \n
-
-    We'd like you to feel as though you have a CMO 
-    at your side, working with you to stand out, persuade, and scale.`,
+  
+      We'd like you to feel as though you have a CMO 
+      at your side, working with you to stand out, persuade, and scale.`,
   link: {
-    href: `#`,
+    href: `mailTo:`,
     children: `Let us help you`,
     color: 'green',
-    isExternal: false,
+    isExternal: true,
   },
   leftImage: {
     mediaImage: {
@@ -97,7 +85,7 @@ const climateCauses = {
   },
 } as ClimateCausesBlockProps
 
-const ourBackground = {
+export const ourBackground = {
   textPosition: 'left',
   header: `Our background`,
   content: `We are a team of experts in marketing and communications, with prestigious careers leading global consumer brands and charities.`,
@@ -116,7 +104,7 @@ const ourBackground = {
   },
 } as ShortArticleBlockProps
 
-const testimonials = {
+export const testimonials = {
   title: `We have been very fortunate to work with many great organisations.`,
   logos: [
     {
@@ -175,17 +163,17 @@ const testimonials = {
   ],
 } as TestimonialsBlockProps
 
-const mission = {
+export const mission = {
   header: `Our mission`,
   content: `We believe in human ingenuity and the power of ideas and we are exclusively focused on climate.`,
 } as MissionBlockProps
 
-const services = {
+export const services = {
   textPosition: 'right',
   header: `Our services don't cost the earth.`,
   content: `We are non-profit, highly cost effective and entrepreneurial. \n
-
-    Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
+  
+      Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
   link: {
     href: `#`,
     children: `Learn about our accelerator`,
@@ -207,7 +195,7 @@ const services = {
   },
 } as ShortArticleBlockProps
 
-const team = {
+export const team = {
   title: `Our team works with inspiring advisors, to help us tackle the biggest communication problem of all times.`,
   teamMembers: [
     [
@@ -225,7 +213,7 @@ const team = {
         name: `Sophie Gallois`,
         role: `Co-Founder`,
         description: `Founder Sophie Gallois is harnessing everything she learnt in a leadership career that spans global brands and charities, including Unicef UK, to the service of climate action. \n
-                    She is a trustee of the Direct Air Capture Coalition and an advisor to Ocean Visions and Climate Science.`,
+                      She is a trustee of the Direct Air Capture Coalition and an advisor to Ocean Visions and Climate Science.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -247,7 +235,7 @@ const team = {
         name: `Lisa Woodward`,
         role: `Co-Founder`,
         description: `With a branding career that spans over 30 years, Lisa  brings a strategic view and pragmatic approach to The Climate Agency. \n
-              For the last decade, she has been running strategic workshops with start-ups and charities, as well as supporting them with their creative implementation.`,
+                For the last decade, she has been running strategic workshops with start-ups and charities, as well as supporting them with their creative implementation.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -271,7 +259,7 @@ const team = {
         name: `Cyrill Gutsch`,
         role: `Advisor`,
         description: `Cyrill is the founder of Parley for the Oceans, a nonprofit environmental organization that focuses on protection of the oceans. \n
-              Gutsch spoke at the United Nations in June 2018, where he argued that "we have to let plastic go" and is an advocate for the “AIR” strategy, calling for the Avoidance, Interception and Redesigning of the sources of plastic pollution.`,
+                Gutsch spoke at the United Nations in June 2018, where he argued that "we have to let plastic go" and is an advocate for the “AIR” strategy, calling for the Avoidance, Interception and Redesigning of the sources of plastic pollution.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -293,7 +281,7 @@ const team = {
         name: `Anab Jain`,
         role: `Advisor`,
         description: `Anab is a designer, futurist, filmmaker and educator. As Co-founder and Director of Superflux, she hopes to realise the vision of the Studio as a new kind of design practice, responsive to the challenges and opportunities of the twenty-first century.\n
-              Anab has gained international recognition for her work and commentary on design, innovation, emerging technologies and complex futures.`,
+                Anab has gained international recognition for her work and commentary on design, innovation, emerging technologies and complex futures.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -315,7 +303,7 @@ const team = {
         name: `Myles Palmer`,
         role: `Advisor`,
         description: `Myles is the founder of Companion, a digital product design studio that partners with start-ups, brands and companies to create new futures. \n
-              Their mission is to enhance the world around them and create a better future for people and planet, which is why they donate 5% of their annual revenue to charitable and non-profit causes.`,
+                Their mission is to enhance the world around them and create a better future for people and planet, which is why they donate 5% of their annual revenue to charitable and non-profit causes.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -327,10 +315,10 @@ const team = {
   ],
 } as TeamBlockProps
 
-const cta = {
+export const cta = {
   content: `Together, we can crack communication around climate solutions. \n
-
-  If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
+  
+    If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
   leftLink: {
     href: `#`,
     children: `I’m working in climate and need help!`,
@@ -344,23 +332,3 @@ const cta = {
     isExternal: false,
   },
 } as CtaBlockProps
-
-const OurMission = () => {
-  return (
-    <>
-      <NavBar />
-      <OpeningBlock {...hero} />
-      <NetZeroBlock {...netZero} />
-      <ClimateCausesBlock {...climateCauses} />
-      <ShortArticleBlock {...ourBackground} />
-      <TestimonialsBlock {...testimonials} />
-      <MissionBlock {...mission} />
-      <ShortArticleBlock {...services} />
-      <TeamBlock {...team} />
-      <CtaBlock {...cta} />
-      <Footer />
-    </>
-  )
-}
-
-export default OurMission

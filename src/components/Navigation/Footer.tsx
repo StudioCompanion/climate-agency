@@ -19,10 +19,10 @@ const linksInformation = [
     isExternal: false,
   },
   {
-    href: `/contact-us`,
+    href: `mailto:`,
     children: `Contact Us`,
     color: 'transparent',
-    isExternal: false,
+    isExternal: true,
   },
   {
     href: `/privacy`,

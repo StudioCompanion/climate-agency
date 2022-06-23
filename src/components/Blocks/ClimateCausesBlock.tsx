@@ -12,6 +12,7 @@ export interface ClimateCausesBlockProps {
     caption: string
   }
   rightImage: MediaImageProps
+  className?: string
 }
 
 export const ClimateCausesBlock = ({
@@ -20,9 +21,10 @@ export const ClimateCausesBlock = ({
   link,
   leftImage,
   rightImage,
+  className,
 }: ClimateCausesBlockProps) => {
   return (
-    <ClimateCausesWrap>
+    <ClimateCausesWrap className={className}>
       <Title>
         {title} <sup>(2)</sup>
       </Title>
@@ -54,14 +56,12 @@ const ClimateCausesWrap = styled('section', {
   columnGap: '$16',
   p: '$16',
   mt: '$120',
-  mb: '$30',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     p: '$20',
-    mb: '$100',
   },
 })
 
