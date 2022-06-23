@@ -320,13 +320,13 @@ export const cta = {
   
     If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
   leftLink: {
-    href: `#`,
+    href: `mailTo:`,
     children: `I’m working in climate and need help!`,
     color: `green`,
     isExternal: false,
   },
   rightLink: {
-    href: `#`,
+    href: `mailTo:`,
     children: `I’m working in the creative industry and want to help!`,
     color: `stone`,
     isExternal: false,

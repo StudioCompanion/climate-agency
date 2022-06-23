@@ -73,15 +73,14 @@ export const NavBar = () => {
         </TopRow>
 
         <LinksWrap style={styles}>
-          {routes &&
-            routes.map((link) => (
-              <ListItem
-                isActive={router.asPath === link.href}
-                key={link.children}
-              >
-                <NavLink {...link} />
-              </ListItem>
-            ))}
+          {routes.map((link) => (
+            <ListItem
+              isActive={router.asPath === link.href}
+              key={link.children}
+            >
+              <NavLink {...link} />
+            </ListItem>
+          ))}
           <ListItem>
             <ContactLink {...contactLink} />
           </ListItem>

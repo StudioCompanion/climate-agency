@@ -19,7 +19,7 @@ const WhatWeDo = () => {
           title: 'Climate Agency',
           images: [
             {
-              url: '/images/people_on_mountain.png',
+              url: 'https://twitter.com/ClimateAgency1/photo',
             },
           ],
         }}
