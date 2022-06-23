@@ -3,7 +3,7 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
-interface ArticleBlockProps {
+export interface ArticleBlockProps {
   pageLayout: 'left' | 'right'
   children: ReactNode
   title: string

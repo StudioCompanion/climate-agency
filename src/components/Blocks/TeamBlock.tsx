@@ -3,7 +3,7 @@ import Asterisk from '../../assets/Asterisk.svg'
 
 import { TeamMember, TeamMemberProps } from '../Cards/TeamMember'
 
-interface TeamBlockProps {
+export interface TeamBlockProps {
   title: string
   teamMembers: TeamMemberProps[][]
 }

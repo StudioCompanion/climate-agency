@@ -2,7 +2,7 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 
-interface OpeningBlockProps {
+export interface OpeningBlockProps {
   content: string
   mediaImage: MediaImageProps
   layout: 'default' | 'large'

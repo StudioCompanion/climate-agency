@@ -2,7 +2,7 @@ import { styled } from 'styles/stitches.config'
 
 import { TextHeader } from '../Text/TextHeader'
 
-interface MissionBlockProps {
+export interface MissionBlockProps {
   header: string
   content: string
 }
@@ -21,11 +21,13 @@ const MissionWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   px: '$16',
+  py: '$80',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
     px: '$20',
+    py: '$100',
   },
 })
 

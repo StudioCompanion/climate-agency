@@ -5,7 +5,7 @@ import { Link, LinkProps } from '../Links/Link'
 import { TextHeader } from '../Text/TextHeader'
 import { TextCaption } from '../Text/TextCaption'
 
-interface ShortArticleBlockProps {
+export interface ShortArticleBlockProps {
   textPosition: 'left' | 'right'
   header: string
   content: string
@@ -66,9 +66,12 @@ const ShortArticleWrap = styled('section', {
       },
       right: {
         px: '$16',
+        py: '0',
+        pb: '$40',
 
         '@tabletUp': {
           px: '$20',
+          pb: '$60',
         },
       },
     },
@@ -90,13 +93,18 @@ const TextWrap = styled('div', {
   variants: {
     textPosition: {
       left: {
+        mb: '0',
+
         '@tabletUp': {
           gridColumn: 'span 6',
         },
       },
       right: {
+        mb: '$40',
+
         '@tabletUp': {
           gridColumn: '7 / span 6',
+          mb: '$20',
         },
       },
     },
@@ -117,11 +125,9 @@ const MediaContainer = styled('figure', {
 
 const ImageContainer = styled('div', {
   gridColumn: 'span 8',
-  mt: '$40',
 
   '@tabletUp': {
     gridColumn: '1 / span 6',
-    mt: '0',
   },
 })
 
@@ -149,13 +155,11 @@ const TextContainer = styled('p', {
   fontSize: '$S',
   lineHeight: '$S',
   gridColumn: 'span 8',
-  mb: '$40',
 
   '@tabletUp': {
     fontSize: '$XXL',
     lineHeight: '$XXL',
     gridColumn: '7 / span 6',
-    mb: '$20',
   },
 
   variants: {
@@ -165,10 +169,6 @@ const TextContainer = styled('p', {
       },
       right: {
         mb: '$40',
-
-        '@tabletUp': {
-          mb: '$20',
-        },
       },
     },
   },

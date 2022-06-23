@@ -2,7 +2,7 @@ import { styled } from 'styles/stitches.config'
 
 import { Link, LinkProps } from '../Links/Link'
 
-interface CtaBlockProps {
+export interface CtaBlockProps {
   content: string
   leftLink: LinkProps
   rightLink: LinkProps
@@ -25,11 +25,13 @@ const CtaBlockWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   p: '$16',
+  mb: '$60',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
     p: '$20',
+    mb: '$100',
   },
 })
 

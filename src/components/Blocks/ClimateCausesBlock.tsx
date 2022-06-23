@@ -3,7 +3,7 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from '../Text/TextCaption'
-interface ClimateCausesBlockProps {
+export interface ClimateCausesBlockProps {
   title: string
   content: string
   link: LinkProps
@@ -53,12 +53,15 @@ const ClimateCausesWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   p: '$16',
+  mt: '$120',
+  mb: '$30',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     p: '$20',
+    mb: '$100',
   },
 })
 
