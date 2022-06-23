@@ -1,6 +1,6 @@
 import { styled } from 'styles/stitches.config'
 
-import { Link, LinkProps } from '../Links/Link'
+import { Link, LinkProps } from '../components/Links/Link'
 
 const link = {
   href: `/our-mission`,
@@ -9,7 +9,7 @@ const link = {
   isExternal: false,
 } as LinkProps
 
-export const PageNotFound = () => {
+const ErrorPage = () => {
   return (
     <PageNotFoundWrap>
       <Title>Page Not Found</Title>
@@ -25,9 +25,13 @@ const PageNotFoundWrap = styled('section', {
   justifyContent: 'center',
   alignItems: 'center',
   gap: '$20',
+  mt: '$80',
+  mb: '17.6rem',
 
   '@tabletUp': {
     gap: '$40',
+    mt: '$160',
+    mb: '27.4rem',
   },
 })
 
@@ -49,3 +53,5 @@ const Subtitle = styled('p', {
   fontSize: '$XS',
   lineHeight: '$XS',
 })
+
+export default ErrorPage
