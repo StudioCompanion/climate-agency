@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint --cache --cache-location=node_modules/.cache/.eslintcache --fix",
     "prepare": "husky install",
