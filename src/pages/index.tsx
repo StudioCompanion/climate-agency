@@ -35,7 +35,7 @@ const Index = () => {
           title: 'Climate Agency',
           images: [
             {
-              url: '/images/forest_on_fire.png',
+              url: 'https://www.climate.agency/forest_on_fire.png',
             },
           ],
         }}
