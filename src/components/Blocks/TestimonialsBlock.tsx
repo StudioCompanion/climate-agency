@@ -12,7 +12,7 @@ import CircleIcon from 'assets/circle.svg'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Carousel } from '../Carousel/Carousel'
 
-interface TestimonialsBlockProps {
+export interface TestimonialsBlockProps {
   title: string
   logos: MediaImageProps['image'][]
   testimonials: TextTestimonialProps[]

@@ -1,64 +1,102 @@
-// import { HomepageOpeningBlock } from 'components/Blocks/HomepageOpeningBlock'
-// import { NetZeroBlock } from 'components/Blocks/NetZeroBlock'
+import { styled } from 'styles/stitches.config'
 
-// const hero = {
-//   mediaImage: {
-//     image: {
-//       src: '/images/Green_Accent_Image_01.png',
-//       altText: 'Hero image',
-//       width: 653,
-//       height: 636,
-//     },
-//     layout: 'responsive',
-//     objectFit: 'cover',
-//   },
-//   content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
-//   We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
-// }
+import { NextSeo } from 'next-seo'
 
-// const netZero = {
-//   icon: {
-//     image: {
-//       src: '/icons/clock-s.svg',
-//       altText: 'Clock',
-//       width: 27,
-//       height: 27,
-//     },
-//     layout: 'intrinsic',
-//     objectFit: 'cover',
-//   },
-//   title: `One third of CEOs in the UK are unsure what Net Zero means.`,
-//   content: `There are urgent messages to tell, but the scientific community is speaking a different language to those with the power to make a difference in climate.\n
+import { OpeningBlock } from 'components/Blocks/OpeningBlock'
+import { NetZeroBlock } from 'components/Blocks/NetZeroBlock'
+import { ClimateCausesBlock } from 'components/Blocks/ClimateCausesBlock'
+import { ShortArticleBlock } from 'components/Blocks/ShortArticleBlock'
+import { TestimonialsBlock } from 'components/Blocks/TestimonialsBlock'
+import { MissionBlock } from 'components/Blocks/MissionBlock'
+import { TeamBlock } from 'components/Blocks/TeamBlock'
+import { CtaBlock } from 'components/Blocks/CtaBlock'
 
-//     The narrative is impenetrable, and the maths
-//     mind–bendingly complex. \n
-
-//     Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these can make a huge difference to our world in the years to come. But they're not being heard.\n
-
-//     Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
-//   imageSection: {
-//     mediaImage: {
-//       image: {
-//         src: '/images/Green_Accent_Image_03.png',
-//         altText: 'Greenland Fjords',
-//         width: 1326,
-//         height: 784.73,
-//       },
-//       layout: 'responsive',
-//       objectFit: 'cover',
-//     },
-//     caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
-//   },
-// }
+import {
+  hero,
+  netZero,
+  climateCauses,
+  ourBackground,
+  testimonials,
+  mission,
+  services,
+  team,
+  cta,
+} from '../data/ourMission'
 
 const Index = () => {
   return (
-    <>
-      Hello!
-      {/* <HomepageOpeningBlock {...hero} />
-      <NetZeroBlock {...netZero} /> */}
-    </>
+    <IndexWrap>
+      <NextSeo
+        title="Our Mission"
+        description="This is the landing page"
+        canonical="https://www.climate.agency"
+        openGraph={{
+          url: 'https://www.climate.agency/',
+          title: 'Climate Agency',
+          images: [
+            {
+              url: 'https://www.climate.agency/images/forest_on_fire.png',
+            },
+          ],
+        }}
+      />
+      <Opening {...hero} />
+      <NetZeroBlock {...netZero} />
+      <ClimateCauses {...climateCauses} />
+      <ShortArticle {...ourBackground} />
+      <TestimonialsBlock {...testimonials} />
+      <Mission {...mission} />
+      <ShortArticle {...services} />
+      <Team {...team} />
+      <Cta {...cta} />
+    </IndexWrap>
   )
 }
 
 export default Index
+
+const IndexWrap = styled('article', {})
+
+const Opening = styled(OpeningBlock, {
+  mb: '$40',
+})
+
+const ClimateCauses = styled(ClimateCausesBlock, {
+  mb: '$30',
+
+  '@tabletUp': {
+    mb: '$100',
+  },
+})
+
+const ShortArticle = styled(ShortArticleBlock, {
+  mb: '$40',
+
+  '@tabletUp': {
+    mb: '$60',
+  },
+})
+
+const Mission = styled(MissionBlock, {
+  my: '$80',
+
+  '@tabletUp': {
+    mb: '$200',
+  },
+})
+
+const Team = styled(TeamBlock, {
+  mb: '$40',
+
+  '@tabletUp': {
+    mb: '$60',
+  },
+})
+
+const Cta = styled(CtaBlock, {
+  mb: '$60',
+
+  '@tabletUp': {
+    mb: '$100',
+  },
+})

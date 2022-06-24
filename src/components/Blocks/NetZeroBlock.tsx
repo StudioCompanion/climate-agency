@@ -4,7 +4,7 @@ import ClockIcon from '../../assets/Clock.svg'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from '../Text/TextCaption'
 
-interface NetZeroBlockProps {
+export interface NetZeroBlockProps {
   title: string
   content: string
   imageSection: {

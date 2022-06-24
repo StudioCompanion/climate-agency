@@ -3,14 +3,19 @@ import Asterisk from '../../assets/Asterisk.svg'
 
 import { TeamMember, TeamMemberProps } from '../Cards/TeamMember'
 
-interface TeamBlockProps {
+export interface TeamBlockProps {
   title: string
   teamMembers: TeamMemberProps[][]
+  className?: string
 }
 
-export const TeamBlock = ({ title, teamMembers }: TeamBlockProps) => {
+export const TeamBlock = ({
+  title,
+  teamMembers,
+  className,
+}: TeamBlockProps) => {
   return (
-    <TeamBlockWrap>
+    <TeamBlockWrap className={className}>
       <HeaderWrap>
         <Asterisk />
         <TitleWrap>{title}</TitleWrap>
@@ -34,20 +39,19 @@ export const TeamBlock = ({ title, teamMembers }: TeamBlockProps) => {
 
 const TeamBlockWrap = styled('section', {
   display: 'grid',
+  backgroundColor: '$stone',
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
   columnGap: '$16',
   rowGap: '$40',
-  px: '$16',
-  my: '$40',
+  p: '$16',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     rowGap: '$60',
-    px: '$20',
-    my: '$60',
+    p: '$20',
   },
 })
 
