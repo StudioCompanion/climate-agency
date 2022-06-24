@@ -13,7 +13,7 @@ const linksInformation = [
     isExternal: false,
   },
   {
-    href: `/accelerator`,
+    href: `/what-we-do/#accelerator`,
     children: `The Accelerator`,
     color: 'transparent',
     isExternal: false,
@@ -34,13 +34,13 @@ const linksInformation = [
 
 const linksSocial = [
   {
-    href: `www.linkedin.com`,
+    href: `https://www.linkedin.com`,
     children: `LinkedIn`,
     color: 'transparent',
     isExternal: true,
   },
   {
-    href: `www.twitter.com`,
+    href: `https://www.twitter.com`,
     children: `Twitter`,
     color: 'transparent',
     isExternal: true,
