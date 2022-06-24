@@ -55,7 +55,7 @@ export const climateCauses = {
       We'd like you to feel as though you have a CMO 
       at your side, working with you to stand out, persuade, and scale.`,
   link: {
-    href: `mailTo:`,
+    href: `mailto:`,
     children: `Let us help you`,
     color: 'green',
     isExternal: true,
@@ -320,13 +320,13 @@ export const cta = {
   
     If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
   leftLink: {
-    href: `mailTo:`,
+    href: `mailto:`,
     children: `I’m working in climate and need help!`,
     color: `green`,
     isExternal: false,
   },
   rightLink: {
-    href: `mailTo:`,
+    href: `mailto:`,
     children: `I’m working in the creative industry and want to help!`,
     color: `stone`,
     isExternal: false,

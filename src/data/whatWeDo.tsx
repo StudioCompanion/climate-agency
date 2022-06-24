@@ -24,7 +24,7 @@ export const accelerator = {
   title: `The Climate Action Accelerator`,
   subtitle: `An intense workshop spread over 2 half days.`,
   link: {
-    href: `mailTo:`,
+    href: `mailto:`,
     children: `Let us help you`,
     color: 'green',
     isExternal: true,

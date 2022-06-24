@@ -26,7 +26,7 @@ const routes = [
 ] as NavLinkProps[]
 
 const contactLink = {
-  href: `mailTo:`,
+  href: `mailto:`,
   children: `Contact Us`,
   color: `transparent`,
   isExternal: true,
