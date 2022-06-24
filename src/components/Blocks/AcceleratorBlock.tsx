@@ -24,7 +24,7 @@ export const AcceleratorBlock = ({
   const [intro, content] = children
 
   return (
-    <AcceleratorWrap>
+    <AcceleratorWrap id="accelerator">
       <HeaderWrap>
         <Arrows width="44" />
         <Title>{title}</Title>
