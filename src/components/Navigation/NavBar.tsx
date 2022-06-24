@@ -198,5 +198,12 @@ const LogoDesktopWrap = styled('div', {
 const ContactLink = styled(Link, {
   color: '$grey',
   fontWeight: '$regular',
+  fontSize: '$XS',
+  lineHeight: '$XS',
   p: '0',
+
+  '@tabletUp': {
+    fontSize: '$XXS',
+    lineHeight: '$XXS',
+  },
 })
