@@ -6,13 +6,20 @@ import SEO from '../../next-seo.config'
 
 import { globalStyles } from 'styles/global'
 
+import { NavBar } from '../components/Navigation/NavBar'
+import { Footer } from '../components/Navigation/Footer'
+
 globalStyles()
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+      <NavBar />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </>
   )
 }

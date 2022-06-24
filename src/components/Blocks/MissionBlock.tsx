@@ -2,14 +2,19 @@ import { styled } from 'styles/stitches.config'
 
 import { TextHeader } from '../Text/TextHeader'
 
-interface MissionBlockProps {
+export interface MissionBlockProps {
   header: string
   content: string
+  className?: string
 }
 
-export const MissionBlock = ({ header, content }: MissionBlockProps) => {
+export const MissionBlock = ({
+  header,
+  content,
+  className,
+}: MissionBlockProps) => {
   return (
-    <MissionWrap>
+    <MissionWrap className={className}>
       <HeaderWrap>{header}</HeaderWrap>
       <TextContainer>{content}</TextContainer>
     </MissionWrap>
@@ -44,6 +49,5 @@ const TextContainer = styled('p', {
   '@tabletUp': {
     fontSize: '$XXXL',
     lineHeight: '$XXXL',
-    mb: '$200',
   },
 })

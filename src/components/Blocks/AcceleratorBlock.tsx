@@ -6,7 +6,7 @@ import ArrowsIcon from '../../assets/Arrows.svg'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 
-interface AcceleratorBlockProps {
+export interface AcceleratorBlockProps {
   title: string
   subtitle: string
   link: LinkProps

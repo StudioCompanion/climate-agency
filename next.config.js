@@ -15,6 +15,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  redirects() {
+    return [
+      {
+        source: '/our-mission',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

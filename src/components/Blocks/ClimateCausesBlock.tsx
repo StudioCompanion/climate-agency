@@ -3,7 +3,7 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from '../Text/TextCaption'
-interface ClimateCausesBlockProps {
+export interface ClimateCausesBlockProps {
   title: string
   content: string
   link: LinkProps
@@ -12,6 +12,7 @@ interface ClimateCausesBlockProps {
     caption: string
   }
   rightImage: MediaImageProps
+  className?: string
 }
 
 export const ClimateCausesBlock = ({
@@ -20,17 +21,18 @@ export const ClimateCausesBlock = ({
   link,
   leftImage,
   rightImage,
+  className,
 }: ClimateCausesBlockProps) => {
   return (
-    <ClimateCausesWrap>
+    <ClimateCausesWrap className={className}>
       <Title>
         {title} <sup>(2)</sup>
       </Title>
       <TextContainer>
         {content}
-        <ButtonContainer>
+        <LinkWrapper>
           <Link {...link} />
-        </ButtonContainer>
+        </LinkWrapper>
       </TextContainer>
 
       <MediaContainer>
@@ -53,6 +55,7 @@ const ClimateCausesWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   p: '$16',
+  mt: '$120',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
@@ -93,7 +96,8 @@ const TextContainer = styled('p', {
   },
 })
 
-const ButtonContainer = styled('div', {
+const LinkWrapper = styled('span', {
+  display: 'block',
   mt: '$40',
 
   '@tabletUp': {
