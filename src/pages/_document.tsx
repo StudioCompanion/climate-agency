@@ -45,27 +45,27 @@ export default class Doc extends Document {
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href={'/favicon-32x32.png'}
+            href={'/site/favicon-32x32.png'}
           />
           <link
             id="icon16"
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href={'/favicon-16x16.png'}
+            href={'/site/favicon-16x16.png'}
           />
-          <link id="ico" rel="shortcut icon" href={'/favicon.ico'} />
-          <link rel="manifest" href={'.webmanifest'} />
-          <link rel="apple-touch-icon" href={'/apple-touch-icon.png'} />
+          <link id="ico" rel="shortcut icon" href={'/site/favicon.ico'} />
+          <link rel="manifest" href={'/site/site.webmanifest'} />
+          <link rel="apple-touch-icon" href={'/site/apple-touch-icon.png'} />
           <link
             rel="android-chrome-192x192"
-            href={'/android-chrome-192x192.png'}
+            href={'/site/android-chrome-192x192.png'}
           />
           <link
             rel="android-chrome-256x256"
-            href={'/android-chrome-256x256.png'}
+            href={'/site/android-chrome-256x256.png'}
           />
-          <link rel="mask-icon" href={'/safari-pinned-tab.svg'} />
+          <link rel="mask-icon" href={'/site/safari-pinned-tab.svg'} />
         </Head>
         <body>
           <Main />

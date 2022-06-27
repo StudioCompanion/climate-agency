@@ -15,7 +15,7 @@ globalStyles()
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <WidgetMarker />3
+      <WidgetMarker />
       <DefaultSeo {...SEO} />
       <NavBar />
       <main>
