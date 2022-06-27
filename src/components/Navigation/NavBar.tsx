@@ -111,7 +111,7 @@ export const NavBar = () => {
   )
 }
 
-const NavBarWrap = styled('div', {
+const NavBarWrap = styled('header', {
   position: 'relative',
   pt: '$110',
 })
