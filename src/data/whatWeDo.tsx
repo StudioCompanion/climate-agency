@@ -25,7 +25,7 @@ export const accelerator = {
   subtitle: `An intense workshop spread over 2 half days.`,
   link: {
     href: `mailto:`,
-    children: `Let us help you`,
+    children: `Get in touch`,
     color: 'green',
     isExternal: true,
   },
