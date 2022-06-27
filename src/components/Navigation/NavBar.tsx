@@ -77,37 +77,35 @@ export const NavBar = () => {
   }, [isOpen, isTabletUp])
 
   return (
-    <header>
-      <NavBarWrap>
-        <NavBarInnerWrap>
-          <TopRow>
-            <MenuButton type="button" onClick={handleMenuClick}>
-              {isOpen ? <IconClose /> : <IconOpen />}
-            </MenuButton>
-            <LogoMobileWrap>
-              <MobileLogo />
-            </LogoMobileWrap>
-          </TopRow>
+    <NavBarWrap>
+      <NavBarInnerWrap>
+        <TopRow>
+          <MenuButton type="button" onClick={handleMenuClick}>
+            {isOpen ? <IconClose /> : <IconOpen />}
+          </MenuButton>
+          <LogoMobileWrap>
+            <MobileLogo />
+          </LogoMobileWrap>
+        </TopRow>
 
-          <LinksWrap style={styles}>
-            {routes.map((link) => (
-              <ListItem
-                isActive={router.asPath === link.href}
-                key={link.children}
-              >
-                <NavLink {...link} />
-              </ListItem>
-            ))}
-            <ListItem>
-              <ContactLink {...contactLink} />
+        <LinksWrap style={styles}>
+          {routes.map((link) => (
+            <ListItem
+              isActive={router.asPath === link.href}
+              key={link.children}
+            >
+              <NavLink {...link} />
             </ListItem>
-          </LinksWrap>
-          <LogoDesktopWrap>
-            <DesktopLogo />
-          </LogoDesktopWrap>
-        </NavBarInnerWrap>
-      </NavBarWrap>
-    </header>
+          ))}
+          <ListItem>
+            <ContactLink {...contactLink} />
+          </ListItem>
+        </LinksWrap>
+        <LogoDesktopWrap>
+          <DesktopLogo />
+        </LogoDesktopWrap>
+      </NavBarInnerWrap>
+    </NavBarWrap>
   )
 }
 
