@@ -79,37 +79,44 @@ export const NavBar = () => {
   return (
     <header>
       <NavBarWrap>
-        <TopRow>
-          <MenuButton type="button" onClick={handleMenuClick}>
-            {isOpen ? <IconClose /> : <IconOpen />}
-          </MenuButton>
-          <LogoMobileWrap>
-            <MobileLogo />
-          </LogoMobileWrap>
-        </TopRow>
+        <NavBarInnerWrap>
+          <TopRow>
+            <MenuButton type="button" onClick={handleMenuClick}>
+              {isOpen ? <IconClose /> : <IconOpen />}
+            </MenuButton>
+            <LogoMobileWrap>
+              <MobileLogo />
+            </LogoMobileWrap>
+          </TopRow>
 
-        <LinksWrap style={styles}>
-          {routes.map((link) => (
-            <ListItem
-              isActive={router.asPath === link.href}
-              key={link.children}
-            >
-              <NavLink {...link} />
+          <LinksWrap style={styles}>
+            {routes.map((link) => (
+              <ListItem
+                isActive={router.asPath === link.href}
+                key={link.children}
+              >
+                <NavLink {...link} />
+              </ListItem>
+            ))}
+            <ListItem>
+              <ContactLink {...contactLink} />
             </ListItem>
-          ))}
-          <ListItem>
-            <ContactLink {...contactLink} />
-          </ListItem>
-        </LinksWrap>
-        <LogoDesktopWrap>
-          <DesktopLogo />
-        </LogoDesktopWrap>
+          </LinksWrap>
+          <LogoDesktopWrap>
+            <DesktopLogo />
+          </LogoDesktopWrap>
+        </NavBarInnerWrap>
       </NavBarWrap>
     </header>
   )
 }
 
-const NavBarWrap = styled('nav', {
+const NavBarWrap = styled('div', {
+  position: 'relative',
+  pt: '$110',
+})
+
+const NavBarInnerWrap = styled('nav', {
   display: 'flex',
   flexDirection: 'column',
   p: '$16',
