@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { animated, useSpring } from '@react-spring/web'
 import Image from 'next/image'
 
@@ -97,13 +97,14 @@ const LogoSvg = styled('svg', {
 })
 
 export const SplashPage = () => {
+  const [noScroll, setNoScroll] = useState(true)
   const imageRefs = useRef<HTMLDivElement[]>([])
 
   const activeImageIndex = useRef(IMAGES.length - 1)
 
   const { width, height } = useWindowResize()
 
-  useDisableScroll(true)
+  useDisableScroll(noScroll)
 
   const [greenStyles, greenApi] = useSpring(
     () => ({
@@ -126,11 +127,18 @@ export const SplashPage = () => {
 
         activeImageIndex.current -= 1
       } else {
+        /**
+         * This could probably be done with
+         * the useChain hook.
+         */
         greenApi.start({
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
           onRest: () => {
             containerApi.start({
               clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+              onRest: () => {
+                setNoScroll(false)
+              },
             })
           },
           onStart: () => {
