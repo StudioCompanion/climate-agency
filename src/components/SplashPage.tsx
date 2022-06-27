@@ -153,7 +153,15 @@ export const SplashPage = () => {
           key={img.src}
           style={{ zIndex: IMAGES.length - index }}
         >
-          <Image {...img} />
+          <Image
+            src={img.src}
+            blurDataURL={img.blurDataURL}
+            height={img.height}
+            width={img.width}
+            placeholder="blur"
+            loading="eager"
+            priority
+          />
         </ImageContainer>
       ))}
       <LayerContainer>
