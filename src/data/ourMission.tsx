@@ -18,7 +18,8 @@ export const hero = {
     layout: 'responsive',
     objectFit: 'cover',
   },
-  content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support. Urgently.\n
+  content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
+  These ideas need profile and they need support. Urgently.\n
     We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
   layout: 'default',
 } as OpeningBlockProps
