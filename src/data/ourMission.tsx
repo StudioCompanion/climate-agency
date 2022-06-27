@@ -50,10 +50,9 @@ export const netZero = {
 
 export const climateCauses = {
   title: `Just 2% of global charity giving goes to climate causes.`,
-  content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message. \n
+  content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message.
   
-      We'd like you to feel as though you have a CMO 
-      at your side, working with you to stand out, persuade, and scale.`,
+  We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
   link: {
     href: `mailto:`,
     children: `Let us help you`,
