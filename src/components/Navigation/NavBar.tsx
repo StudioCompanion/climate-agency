@@ -106,8 +106,10 @@ const NavBarWrap = styled('nav', {
   p: '$16',
   mb: '$24',
   backgroundColor: '$white',
-  position: 'relative',
-  zIndex: 0,
+  zIndex: 1,
+  position: 'fixed',
+  top: '0',
+  width: '100%',
 
   '@tabletUp': {
     flexDirection: 'row',
