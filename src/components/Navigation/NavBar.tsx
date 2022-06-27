@@ -44,6 +44,10 @@ export const NavBar = () => {
 
   const [styles, api] = useSpring(
     () => ({
+      /**
+       * This handles responsive behaviour, i.e. when the device
+       * is tabletUp then we should have the menu show immediately
+       */
       clipPath: isTabletUp
         ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
         : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
@@ -54,15 +58,20 @@ export const NavBar = () => {
 
   useIsomorphicLayoutEffect(() => {
     if (!isTabletUp) {
+      /**
+       * If we're on mobile, we can have animation
+       * abilities handled here
+       */
       api.start({
         clipPath: isOpen
           ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
           : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
       })
     } else if (isTabletUp && isOpen) {
-      api.set({
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-      })
+      /**
+       * If we move to tabletUp and the device has the menu open
+       * we set it false so the icon correctly changes
+       */
       setIsOpen(false)
     }
   }, [isOpen, isTabletUp])
