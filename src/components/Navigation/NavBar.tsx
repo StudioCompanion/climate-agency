@@ -44,12 +44,10 @@ export const NavBar = () => {
 
   const [styles, api] = useSpring(
     () => ({
-      clipPath: isTabletUp
-        ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
-        : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
       immediate: true,
     }),
-    [isTabletUp, isOpen]
+    [isTabletUp]
   )
 
   useIsomorphicLayoutEffect(() => {
@@ -60,7 +58,7 @@ export const NavBar = () => {
           : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
       })
     } else if (isTabletUp && isOpen) {
-      api.start({
+      api.set({
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
       })
       setIsOpen(false)
