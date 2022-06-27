@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { animated, useSpring } from '@react-spring/web'
 
@@ -49,16 +49,23 @@ export const NavBar = () => {
         : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
       immediate: true,
     }),
-    [isTabletUp]
+    [isTabletUp, isOpen]
   )
 
   useIsomorphicLayoutEffect(() => {
-    api.start({
-      clipPath: isOpen
-        ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
-        : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-    })
-  }, [isOpen])
+    if (!isTabletUp) {
+      api.start({
+        clipPath: isOpen
+          ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+          : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+      })
+    } else if (isTabletUp && isOpen) {
+      api.start({
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      })
+      setIsOpen(false)
+    }
+  }, [isOpen, isTabletUp])
 
   return (
     <header>
