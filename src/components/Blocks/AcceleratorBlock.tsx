@@ -67,13 +67,11 @@ const HeaderWrap = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$20',
-
   mb: '$20',
 
   '@tabletUp': {
     flexDirection: 'row',
     gridColumn: '1 / span 7',
-    mt: '$180',
     mb: '$70',
   },
 })
@@ -119,7 +117,11 @@ const TextWrap = styled('p', {
 
   '& > ul': {
     listStyleType: 'disc',
-    ml: '$16',
+    ml: '$20',
+
+    '& > li': {
+      mt: '$20',
+    },
   },
 })
 
