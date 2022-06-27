@@ -44,7 +44,9 @@ export const NavBar = () => {
 
   const [styles, api] = useSpring(
     () => ({
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      clipPath: isTabletUp
+        ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+        : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
       immediate: true,
     }),
     [isTabletUp]
