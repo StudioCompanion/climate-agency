@@ -2,9 +2,16 @@ import { styled } from 'styles/stitches.config'
 
 import { Link, LinkProps } from '../components/Links/Link'
 
-const link = {
-  href: `https://twitter.com/ClimateAgency1`,
-  children: `here`,
+const linkSophie = {
+  href: `mailto:sophie@climateagency.net`,
+  children: `sophie@climateagency.net`,
+  color: 'transparent',
+  isExternal: true,
+} as LinkProps
+
+const linkIco = {
+  href: `https://ico.org.uk`,
+  children: `ico.org.uk`,
   color: 'transparent',
   isExternal: true,
 } as LinkProps
@@ -12,197 +19,316 @@ const link = {
 const Privacy = () => {
   return (
     <PrivacyWrap>
-      <Title> Privacy Policy</Title>
+      <Title> The Climate Agency Privacy Policy</Title>
       <ContentWrap>
-        <Subtitle>Introduction</Subtitle>
+        <Subtitle>How we use your information</Subtitle>
         <Paragraph>
           <SubParagraph>
-            The following terms and conditions (“Terms”) govern your use of,
-            access to, and purchase of products or services from our online and
-            mobile websites, platforms, and applications owned and operated by
-            Seed Health, Inc. (“Seed,” “we,” “us,” or “our”), including without
-            limitation, www.seed.com (collectively, our “Website”). By using our
-            Website, you agree to comply with and be bound by all of the Terms
-            contained below, along with the terms and conditions as stated in
-            our Privacy Policy (please refer to the Privacy Policy section below
-            for more information).
-          </SubParagraph>
-          <SubParagraph>
-            We reserve the right to change these Terms from time to time without
-            notice. The date of the latest version of these Terms is indicated
-            at the end of these Terms. You acknowledge and agree that it is your
-            responsibility to review these Terms periodically to familiarize
-            yourself with any modifications. Your continued use of our Website
-            after such modifications will constitute acknowledgment and
-            agreement of the modified terms and conditions. If you do not wish
-            to be bound by these Terms, do not access our Website and do not
-            purchase our products or services.
-          </SubParagraph>
-          <SubParagraph>
-            PLEASE READ THESE TERMS CAREFULLY BEFORE USING OUR WEBSITE
+            When you contact us to work with us on a project, or to discuss a
+            future partnership, we ask you to give us some of your personal
+            details so that we can prepare a proposal or contract for you. We
+            are committed to keeping all the information we hold about you
+            secure, private and confidential. This information explains why we
+            need to collect your personal details and what we do with it. It
+            also sets out the legal basis on which we collect and use your
+            information and outlines the rights you have under current data
+            protection legislation.
           </SubParagraph>
         </Paragraph>
-        <Subtitle>Responsible Use and Conduct</Subtitle>
+        <Subtitle>Which of my details do you collect?</Subtitle>
         <Paragraph>
           <SubParagraph>
-            By visiting our Website and accessing and using the information,
-            resources, services, and tools we provide for you, and purchasing
-            our products or services, either directly or indirectly (our
-            “Resources”), you agree to use these Resources only for the purposes
-            intended as permitted by (a) these Terms, and (b) applicable laws,
-            regulations and generally accepted online practices or guidelines.
-          </SubParagraph>
-          <SubParagraph>You further understand that:</SubParagraph>
-          <SubParagraph>
-            In order to access our Resources, you may be required to provide
-            certain personal information about yourself (such as identification,
-            contact details, etc.) as part of a registration process, as part of
-            your ability to use the Resources, or your ability to buy our
-            products or services. You agree that any information you provide
-            will always be accurate, correct, and up to date.
-          </SubParagraph>
-          <SubParagraph>
-            You are responsible for maintaining the confidentiality of any login
-            information associated with any account you use to access our
-            Resources. Accordingly, you are responsible for all activities that
-            occur under your account(s).
-          </SubParagraph>
-          <SubParagraph>
-            Accessing (or attempting to access) any of our Resources by any
-            means other than through the means we provide, is strictly
-            prohibited. You specifically agree not to access (or attempt to
-            access) any of our Resources through any automated, unethical or
-            unconventional means.
-          </SubParagraph>
-          <SubParagraph>
-            Engaging in any activity that disrupts or interferes with our
-            Resources, including the servers and/or networks to which our
-            Resources are located or connected, is strictly prohibited.
-          </SubParagraph>
-          <SubParagraph>
-            Attempting to copy, duplicate, reproduce, sell, trade, or resell our
-            Resources is strictly prohibited.
-          </SubParagraph>
-          <SubParagraph>
-            You are solely responsible for any consequences, losses, or damages
-            that we may directly or indirectly incur or suffer due to any
-            unauthorized activities conducted by you, as explained above, and
-            may incur criminal or civil liability.
-          </SubParagraph>
-          <SubParagraph>
-            We do not assume any liability for any content posted by you or any
-            other 3rd party users of our Website. However, any content posted by
-            you using any open communication tools on our Website, provided that
-            it doesn’t violate or infringe on any 3rd party copyrights or
-            trademarks, becomes the property of Seed, and as such, gives us a
-            perpetual, irrevocable, worldwide, royalty-free, exclusive license
-            to reproduce, modify, adapt, translate, publish, publicly display
-            and/or distribute as we see fit. This only refers and applies to
-            content posted via open communication tools as described, and does
-            not refer to information that is provided as part of any
-            registration process, necessary in order to use our Resources. All
-            information provided as part of our registration process is covered
-            by our privacy policy.
-          </SubParagraph>
-          <SubParagraph>
-            We may provide various open communication tools on our Website, such
-            as blog comments, blog posts, public chat, forums, message boards,
-            newsgroups, product ratings and reviews, various social media
-            services, etc. (“Your Submissions”). You understand that generally
-            we do not pre-screen or monitor the content posted by users of these
-            various communication tools, which means that if you choose to use
-            these tools to submit any type of content to our Website, then it is
-            your personal responsibility to use these tools in a responsible and
-            ethical manner. By posting information or otherwise using any open
-            communication tools as mentioned, you agree that you will not
-            upload, post, share, or otherwise distribute any content that:
-          </SubParagraph>
-          <SubParagraph>
-            a. Is illegal, threatening, defamatory, abusive, harassing,
-            degrading, intimidating, fraudulent, deceptive, invasive, racist, or
-            contains any type of suggestive, inappropriate, or explicit
-            language;
-          </SubParagraph>
-          <SubParagraph>
-            b. Infringes on any trademark, patent, trade secret, copyright, or
-            other proprietary right of any party;
-          </SubParagraph>
-          <SubParagraph>
-            c. Contains any type of unauthorized or unsolicited advertising; or
-          </SubParagraph>
-          <SubParagraph>
-            d. Impersonates any person or entity, including any Seed employees
-            or representatives.
-          </SubParagraph>
-          <SubParagraph>
-            We have the right at our sole discretion to remove any content that,
-            we feel in our judgment does not comply with these Terms, along with
-            any content that we feel is otherwise offensive, harmful,
-            objectionable, inaccurate, or violates any 3rd party copyrights or
-            trademarks. We are not responsible for any delay or failure in
-            removing such content. If you post content that we choose to remove,
-            you hereby consent to such removal, and consent to waive any claim
-            against us.
-          </SubParagraph>
-          <SubParagraph>
-            When you provide Your Submissions on our Website, you grant to Seed
-            a non-exclusive, royalty-free, fully paid, perpetual, worldwide,
-            irrevocable and fully sub-licensable and transferable (in whole or
-            in part) license under all copyrights, trademarks, privacy and
-            publicity rights you own or control to: (i) use, reproduce,
-            transmit, modify, index, adapt, publish, translate, distribute,
-            display and otherwise exploit such content throughout the world in
-            any media, whether now known or hereafter invented, including for
-            any and all purposes, including commercial or marketing purposes,
-            all without further notice to you, with or without attribution, and
-            without the requirement of any permission from or payment to you or
-            any other person or entity, and (ii) to use your name, persona or
-            likeness alone or in connection with such uses, without any
-            obligation or remuneration to you.
+            We ask for your full name (title, forename(s) and surname), postal
+            address, phone number and email address. We need this personal
+            information so that we can provide you with the service that you
+            have asked for. If you don’t provide it, then we won’t be able to
+            provide you with our services.
           </SubParagraph>
         </Paragraph>
-        <Subtitle>Not Healthcare Advice</Subtitle>
+        <Subtitle>When do you collect these details?</Subtitle>
         <Paragraph>
           <SubParagraph>
-            Our Website is not intended to provide medical advice, diagnosis or
-            treatment. The Resources, including our products and services,
-            provided on and through our Website, including information that may
-            be provided on our Website directly or via linking to third-party
-            sites by a healthcare or nutrition professional, are provided for
-            informational purposes only. Please consult with your physician or
-            other healthcare professional (collectively, “Healthcare
-            Professional”) regarding any medical or health-related diagnosis or
-            treatment options.
-          </SubParagraph>
-          <SubParagraph>
-            You should always consult with your Healthcare Professional, and
-            carefully read all information provided by the manufacturer of a
-            product and on or in any product label or packaging, before using
-            any medication or nutritional, herbal or homeopathic product; before
-            starting any diet or exercise program; or before adopting any
-            treatment for a health problem. Each person is different, and the
-            way you react to a particular product may be significantly different
-            from the way other people react to such product. You should also
-            consult your Healthcare Professional regarding any interactions
-            between any medication you are currently taking and our products.
-          </SubParagraph>
-          <SubParagraph>
-            Seed employees, consultants and agents may publicly describe their
-            experiences with specific Seed products. Any comments made by such
-            employees, consultants and agents that are not endorsed specifically
-            by Seed are strictly their own personal views made in their
-            personally capacity. These comments are not claims made by Seed nor
-            do they represent the view or position of Seed.
+            We will collect them when you make your initial enquiry with us, by
+            phone or in person. We also collect some of your details whenever
+            you make a transfer to us, such as a note of the name a bank
+            transfer for an invoice payment is received from. This can be online
+            by phone, by post, by email or secure message.
           </SubParagraph>
         </Paragraph>
-        <Subtitle>Privacy</Subtitle>
+        <Subtitle>Using our website, email & social media?</Subtitle>
         <Paragraph>
           <SubParagraph>
-            Your privacy is very important to us, which is why we’ve created a
-            separate Privacy Policy in order to explain in detail how we
-            collect, use, share, secure, and store your private information. Our
-            Privacy Policy is included under the scope of these Terms. To read
-            our privacy policy in its entirety, click <LinkWrap {...link} />.
+            We only use cookie or other tracking technologies to collect
+            information related to performance and usage.
+          </SubParagraph>
+          <SubParagraph>
+            We may also use posts on social media to find out how people view
+            our services.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Providing details on behalf of someone else</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            When you give us details about someone else, you must have their
+            agreement to do so.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>What do you do with my information?</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            The main reasons we use your information are to create our working
+            agreements, process your payments, and keep you up to date with
+            information about your contract with us, or projects we are working
+            on together for the future.
+          </SubParagraph>
+          <SubParagraph>We may also use your information to:</SubParagraph>
+          <SubParagraph>
+            <ParagraphList>
+              <li>
+                meet our legal obligation to check your identity and address.
+              </li>
+              <li>prevent or detect fraud or other crime.</li>
+              <li>
+                develop, test and improve our products, systems and services.
+              </li>
+              <li>invite you to take part in market research and surveys.</li>
+              <li>
+                carry out anonymous statistical analysis (we won't be able to
+                identify individuals when we do this).
+              </li>
+            </ParagraphList>
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Who do you share my details with?</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We use selected organisations to help us deliver the service we
+            provide to you. We may share your personal information with:
+          </SubParagraph>
+          <SubParagraph>
+            <ParagraphList>
+              <li>
+                Our service providers who provide sub-contracting services to
+                us, for example helping to administer your contract, printing
+                and sending warranties and statements to you, and sending you
+                emails about your contract. We only share the information that's
+                necessary for them to provide their services.
+              </li>
+              <li>
+                Credit reference agencies to check your identity, address and to
+                prevent fraud. We may also share your information with
+                government bodies, law enforcement agencies, courts or other
+                third parties to comply with our legal obligations or lawful
+                disclosure requests, for example.
+              </li>
+            </ParagraphList>
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>How long do you keep my information for?</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We keep your personal information where we have an ongoing
+            legitimate or lawful need to do so.
+          </SubParagraph>
+          <SubParagraph>
+            For example, we keep some records for audit purposes for up to seven
+            years after completing our contract with you. When we no longer have
+            a legitimate or lawful need to keep your personal information, we
+            will delete it.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Do you send my information outside Europe?</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            The UK are no longer part of Europe but an understanding has been
+            met that to all intents and purposes the EU-GDPR and UK-GDPR will
+            run parallel with each other for the medium term.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Keeping each other informed</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We will give you information about your contract and provide regular
+            invoice statements. If we need to get in touch, we will call you,
+            write to you by email or letter or send you a text message. In the
+            event of a data breach that could lead to a high risk to your rights
+            and freedoms, for example the risk of financial loss, we will let
+            you know as soon as we reasonably can.
+          </SubParagraph>
+          <SubParagraph>
+            To make sure you can receive information and communications from us,
+            please make sure you tell us whenever you change your name, address,
+            phone number or email address. Giving us your most up to date
+            details will also help protect your contract by making sure any
+            information we send you doesn't fall into the wrong hands. You can
+            update your details by contacting us.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>The legal background & your rights</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            Here we summarise the lawful basis on which we collect and use your
+            information and outline the rights you have under current data
+            protection legislation.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Contract</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We need to collect and use your personal information to be able to
+            provide you with the services that you have requested. We cannot
+            provide the service if you don't give us the information we ask for.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Legal obligation</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We may need to use your personal information to meet our legal
+            obligations, for example if we need to check your identity and
+            address to comply with the Money Laundering Regulations.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Legitimate interests</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We have a legitimate interest in promoting our services. For this
+            reason, we may use your personal details to, for example, send you
+            marketing information about our contract or services that we think
+            you may be interested in. You can ask us to stop sending you
+            marketing at any time.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Consent</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            We only rely on consent as a lawful basis for using your personal
+            information in a few limited circumstances, for example if you ask
+            us to share your contract information with an authorised third party
+            that wishes to provide services to your contract.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Public task</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            There are times when we need to share information with other
+            government bodies to allow them to meet their legal obligations.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Your rights</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            You have a range of data protection rights in relation to the
+            information we hold about you. You can exercise any of these rights
+            by contacting us. Note that not all of the rights are absolute –
+            some of them depend on which lawful basis we are using to process
+            your information.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Right of access</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            You can ask us to provide you with a copy of the information we hold
+            about you by making a 'Data Subject Access Request' contact us via
+            our email.
+          </SubParagraph>
+          <SubParagraph></SubParagraph>
+        </Paragraph>
+        <Subtitle>Right to data portability</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            Where we process your personal information for contractual purposes,
+            or with your consent, you can ask us to provide the information we
+            hold about you in a structured, machine readable format (for example
+            a CSV file).
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Right to rectification</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            If the information we hold about you is incorrect, out of date or
+            incomplete, please let us know and we will put it right.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Right to restrict processing</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            If you think the information we hold about you isn't accurate, you
+            can ask us not to process it until we have corrected any errors or
+            verified that the information is accurate.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Right to erasure</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            You can ask us to delete your personal information when:
+          </SubParagraph>
+          <SubParagraph>
+            <ParagraphList>
+              <li>we no longer need it.</li>
+              <li>you have given us consent and you later withdraw it.</li>
+              <li>
+                you have objected to us processing your information and we have
+                no lawful basis to do so.
+              </li>
+              <li>we are legally obliged to delete it.</li>
+            </ParagraphList>
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Right to object</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            Where we have a legitimate interest or a public interest in
+            processing your personal information, you can object to this.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>
+          Right not to be subject to automated decision-making
+        </Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            Some of our processes are partly or wholly automated, but we don't
+            make decisions that have a significant or legal effect without human
+            involvement. For example, we may check your evidence of identity
+            electronically, but if this is unsuccessful we will write to you to
+            ask for documentary evidence instead.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>
+          Right to lodge a complaint with a supervisory authority
+        </Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            If you have a complaint about the way we have used your information,
+            please contact us first and we will do our best to put things right
+            for you. If you are not happy with our response, you can escalate
+            your complaint to the Information Commissioner's Office (ICO).
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Changes to how we use your information</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            From time to time we may update this privacy notice. You can see the
+            latest version on our website or call or email us and we can send
+            you a copy. If we make a significant change to how we use your
+            information, we will let you know in advance.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Data protection questions or concerns?</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            Sophie Gallois is the data controller of the information we hold
+            about you. If you have any questions or concerns about how we
+            process your information, you can contact us at{' '}
+            <LinkWrap {...linkSophie} /> or write to: Flat 105, Union Wharf, 23
+            Wenlock Road N1 7 SE London.
+          </SubParagraph>
+        </Paragraph>
+        <Subtitle>Want to find out more?</Subtitle>
+        <Paragraph>
+          <SubParagraph>
+            You can find out more about data protection and the rights you have
+            by contacting the independent Information Commissioner's Office:{' '}
+            <LinkWrap {...linkIco} />
           </SubParagraph>
         </Paragraph>
       </ContentWrap>
@@ -237,7 +363,6 @@ const Title = styled('h2', {
   mb: '$60',
 
   '@tabletUp': {
-    gridColumn: '1 / span 6',
     pl: '$30',
     mb: '$110',
   },
@@ -286,5 +411,15 @@ const LinkWrap = styled(Link, {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
+  textDecoration: 'underline',
   p: '0',
+})
+
+const ParagraphList = styled('ul', {
+  listStyleType: 'disc',
+  ml: '$16',
+
+  '& > * + *': {
+    mt: '$8',
+  },
 })

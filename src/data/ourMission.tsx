@@ -8,15 +8,18 @@ import { TeamBlockProps } from 'components/Blocks/TeamBlock'
 import { CtaBlockProps } from 'components/Blocks/CtaBlock'
 
 export const hero = {
-  mediaImage: {
-    image: {
-      src: '/images/earth_nasa.png',
-      altText: 'Hero image',
-      width: 653,
-      height: 636,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/earth_nasa.png',
+        altText: 'Hero image',
+        width: 653,
+        height: 636,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
   },
   content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
   These ideas need profile and they need support. Urgently.\n
@@ -105,40 +108,34 @@ export const testimonials = {
   title: `We have been very fortunate to work with many great organisations.`,
   logos: [
     {
-      src: '/images/logos/ov.png',
+      src: '/images/logos/Carbon-Business-Council.png',
+      altText: 'Carbon Business logo',
+      width: 134.4,
+      height: 57.6,
+    },
+    {
+      src: '/images/logos/Climate-Repair.png',
+      altText: 'Climate Repair logo',
+      width: 110,
+      height: 105.3,
+    },
+    {
+      src: '/images/logos/DirectAirCaptureCoalition.png',
+      altText: 'Direct Air Capture Coalition logo',
+      width: 150,
+      height: 56.25,
+    },
+    {
+      src: '/images/logos/Ocean-Visions.png',
       altText: 'Ocean Visions logo',
-      width: 213,
-      height: 49,
-    },
-    {
-      src: '/images/logos/un.png',
-      altText: 'United Nations logo',
-      width: 72,
-      height: 61,
-    },
-    {
-      src: '/images/logos/notpla.png',
-      altText: 'Notpla logo',
       width: 200,
-      height: 47,
+      height: 46.1,
     },
     {
-      src: '/images/logos/terra.png',
-      altText: 'Terra Carta logo',
-      width: 129,
-      height: 59,
-    },
-    {
-      src: '/images/logos/dacc.png',
-      altText: 'Direct Air Capture Coallition logo',
-      width: 207,
-      height: 55,
-    },
-    {
-      src: '/images/logos/space10.png',
-      altText: 'Space 10 logo',
+      src: '/images/logos/Vlinder.svg',
+      altText: 'Vlinder logo',
       width: 195,
-      height: 37,
+      height: 55,
     },
   ],
   testimonials: [
@@ -168,9 +165,9 @@ export const mission = {
 export const services = {
   textPosition: 'right',
   header: `Our services don't cost the earth.`,
-  content: `We are non-profit, highly cost effective and entrepreneurial.
+  content: `We are non-profit, highly cost-effective and entrepreneurial.
   
-  Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
+  Through our accelerator workshops and stakeholder campaigns, we help you leapfrog traditional processes to get results fast.`,
   link: {
     href: `#`,
     children: `Learn about our accelerator`,
