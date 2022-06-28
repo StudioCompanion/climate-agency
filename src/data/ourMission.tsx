@@ -20,15 +20,13 @@ export const hero = {
   },
   content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
   These ideas need profile and they need support. Urgently.\n
-    We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
+  We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
   layout: 'default',
 } as OpeningBlockProps
 
 export const netZero = {
   title: `One third of CEOs in the UK are unsure what Net Zero means.`,
-  content: `There are urgent messages to tell, but the scientific community is speaking a different language to those with the power to make a difference in climate.
-  
-  The narrative is impenetrable and the maths mind–bendingly complex.
+  content: `Climate communication is not working. The language is impenetrable and the maths mind-bendingly complex.
   
   Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these could make a huge difference in the years to come, if they get the resources to test and scale.
   
@@ -170,9 +168,9 @@ export const mission = {
 export const services = {
   textPosition: 'right',
   header: `Our services don't cost the earth.`,
-  content: `We are non-profit, highly cost effective and entrepreneurial. \n
+  content: `We are non-profit, highly cost effective and entrepreneurial.
   
-      Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
+  Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
   link: {
     href: `#`,
     children: `Learn about our accelerator`,
