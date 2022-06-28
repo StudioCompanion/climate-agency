@@ -1,17 +1,21 @@
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
+import { TextCaption } from 'components/Text/TextCaption'
 
 export interface OpeningBlockProps {
   content: string
-  mediaImage: MediaImageProps
+  imageSection: {
+    mediaImage: MediaImageProps
+    caption?: string
+  }
   layout: 'default' | 'large'
   className?: string
 }
 
 export const OpeningBlock = ({
   content,
-  mediaImage,
+  imageSection,
   layout,
   className,
 }: OpeningBlockProps) => {
@@ -19,7 +23,10 @@ export const OpeningBlock = ({
     <OpeningBlockWrap className={className}>
       <TextContainer layout={layout}>{content}</TextContainer>
       <ImageContainer layout={layout}>
-        {mediaImage ? <MediaImage {...mediaImage} /> : null}
+        {imageSection.mediaImage ? (
+          <MediaImage {...imageSection.mediaImage} />
+        ) : null}
+        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
       </ImageContainer>
     </OpeningBlockWrap>
   )
@@ -95,5 +102,14 @@ const TextContainer = styled('p', {
         },
       },
     },
+  },
+})
+
+const CaptionWrap = styled(TextCaption, {
+  gridColumn: 'span 8',
+  mt: '$8',
+
+  '@tabletUp': {
+    gridColumn: 'span 4',
   },
 })

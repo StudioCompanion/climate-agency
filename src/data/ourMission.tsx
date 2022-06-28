@@ -8,15 +8,18 @@ import { TeamBlockProps } from 'components/Blocks/TeamBlock'
 import { CtaBlockProps } from 'components/Blocks/CtaBlock'
 
 export const hero = {
-  mediaImage: {
-    image: {
-      src: '/images/earth_nasa.png',
-      altText: 'Hero image',
-      width: 653,
-      height: 636,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/earth_nasa.png',
+        altText: 'Hero image',
+        width: 653,
+        height: 636,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
   },
   content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
   These ideas need profile and they need support. Urgently.\n

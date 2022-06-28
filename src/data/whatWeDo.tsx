@@ -6,15 +6,17 @@ import SpikesIcon from '../assets/Spikes.svg'
 import SunIcon from '../assets/Sun.svg'
 
 export const intro = {
-  mediaImage: {
-    image: {
-      src: '/images/people_on_mountain.png',
-      altText: 'People sitting on a mountain',
-      width: 765,
-      height: 636,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/people_on_mountain.png',
+        altText: 'People sitting on a mountain',
+        width: 765,
+        height: 636,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
   },
   content: `We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
   layout: `large`,
