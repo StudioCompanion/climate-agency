@@ -132,7 +132,8 @@ const ImageContainer = styled('div', {
 
 const CaptionWrap = styled(TextCaption, {
   gridColumn: 'span 8',
-  my: '$8',
+  mt: '$8',
+  mb: '$16',
 
   '@tabletUp': {
     gridColumn: 'span 4',
