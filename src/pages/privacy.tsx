@@ -419,6 +419,7 @@ const LinkWrap = styled(Link, {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
+  textDecoration: 'underline',
   p: '0',
 })
 
