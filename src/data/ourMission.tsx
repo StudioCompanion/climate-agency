@@ -10,7 +10,7 @@ import { CtaBlockProps } from 'components/Blocks/CtaBlock'
 export const hero = {
   mediaImage: {
     image: {
-      src: '/images/forest_on_fire.png',
+      src: '/images/earth_nasa.png',
       altText: 'Hero image',
       width: 653,
       height: 636,
@@ -20,20 +20,17 @@ export const hero = {
   },
   content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
   These ideas need profile and they need support. Urgently.\n
-    We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
+  We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
   layout: 'default',
 } as OpeningBlockProps
 
 export const netZero = {
   title: `One third of CEOs in the UK are unsure what Net Zero means.`,
-  content: `There are urgent messages to tell, but the scientific community is speaking a different language to those with the power to make a difference in climate.
+  content: `Climate communication is not working. The language is impenetrable and the maths mind-bendingly complex.
   
-      The narrative is impenetrable, and the maths
-      mind–bendingly complex.
+  Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these could make a huge difference in the years to come, if they get the resources to test and scale.
   
-      Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these can make a huge difference to our world in the years to come. But they're not being heard.
-  
-      Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
+  Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -45,7 +42,7 @@ export const netZero = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
+    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to climate change. This is Scoresby Sund, the world’s largest fjord system.`,
   },
 } as NetZeroBlockProps
 
@@ -88,7 +85,7 @@ export const climateCauses = {
 export const ourBackground = {
   textPosition: 'left',
   header: `Our background`,
-  content: `We are a team of experts in marketing and communications, with prestigious careers leading global consumer brands and charities.`,
+  content: `We are a team of experts in business strategy, marketing and communication, with a strong track record in leading global brands and charities.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -146,19 +143,19 @@ export const testimonials = {
   ],
   testimonials: [
     {
-      content: `“The Climate Agency is changing the world by impacting the way people think. Sophie and Lisa were crucial to helping us express ourselves better.”`,
-      signature: `Neri Oxman, Director of Research`,
+      content: `“Climate organizations will be more effective by developing a brand that captures their voice and mission. The Climate Agency team has a great knowledge of branding and climate change to make this happen. Their sessions are impactful and actionable”`,
+      signature: `Ben Rubin, Executive Director`,
+      organisation: `Carbon Business Council`,
+    },
+    {
+      content: `“It’s amazing. Totally useful to have somebody with a fresh perspective guiding us. After these 2 workshops I will be revising our website and marketing assets”`,
+      signature: `Lena Mechenkova, Communication Director`,
+      organisation: `Vlinder Climate`,
+    },
+    {
+      content: `“Sophie’s wealth of experience, sound judgement and creative thinking have been integral to the successful launch of the Direct Air Capture Coalition.“`,
+      signature: `Jason Hochman, Co-Founder & Senior Director`,
       organisation: `Direct Air Capture Coalition`,
-    },
-    {
-      content: `“This is a test testimonial”`,
-      signature: `Joe Smith, Director of Research`,
-      organisation: `Testing`,
-    },
-    {
-      content: `“This is another test testimonial”`,
-      signature: `Mary Jones, Director of Research`,
-      organisation: `Testing 2`,
     },
   ],
 } as TestimonialsBlockProps
@@ -173,7 +170,7 @@ export const services = {
   header: `Our services don't cost the earth.`,
   content: `We are non-profit, highly cost effective and entrepreneurial.
   
-      Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
+  Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
   link: {
     href: `#`,
     children: `Learn about our accelerator`,
@@ -213,7 +210,7 @@ export const team = {
         name: `Sophie Gallois`,
         role: `Co-Founder`,
         description: `Founder Sophie Gallois is harnessing everything she learnt in a leadership career that spans global brands and charities, including Unicef UK, to the service of climate action. \n
-                      She is a trustee of the Direct Air Capture Coalition and an advisor to Ocean Visions and Climate Science.`,
+        She is a trustee of the Direct Air Capture Coalition and an advisor to Climate Science.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -235,7 +232,7 @@ export const team = {
         name: `Lisa Woodward`,
         role: `Co-Founder`,
         description: `With a branding career that spans over 30 years, Lisa  brings a strategic view and pragmatic approach to The Climate Agency. \n
-                For the last decade, she has been running strategic workshops with start-ups and charities, as well as supporting them with their creative implementation.`,
+        For the last decade, she has been running strategic workshops with start-ups and charities, as well as supporting them with their creative implementation.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -281,7 +278,7 @@ export const team = {
         name: `Anab Jain`,
         role: `Advisor`,
         description: `Anab is a designer, futurist, filmmaker and educator. As Co-founder and Director of Superflux, she hopes to realise the vision of the Studio as a new kind of design practice, responsive to the challenges and opportunities of the twenty-first century.\n
-                Anab has gained international recognition for her work and commentary on design, innovation, emerging technologies and complex futures.`,
+        Anab has gained international recognition for her work and commentary on design, innovation, emerging technologies and complex futures.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -303,7 +300,7 @@ export const team = {
         name: `Myles Palmer`,
         role: `Advisor`,
         description: `Myles is the founder of Companion, a digital product design studio that partners with start-ups, brands and companies to create new futures. \n
-                Their mission is to enhance the world around them and create a better future for people and planet, which is why they donate 5% of their annual revenue to charitable and non-profit causes.`,
+        Their mission is to enhance the world around them and create a better future for people and planet, which is why they donate 5% of their annual revenue to charitable and non-profit causes.`,
         socialLink: {
           href: `#`,
           children: `LinkedIn`,
@@ -317,8 +314,7 @@ export const team = {
 
 export const cta = {
   content: `Together, we can crack communication around climate solutions. \n
-  
-    If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
+  If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
   leftLink: {
     href: `mailto:`,
     children: `I’m working in climate and need help!`,
