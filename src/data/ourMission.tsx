@@ -44,7 +44,7 @@ export const netZero = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
+    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to climate change. This is Scoresby Sund, the world’s largest fjord system.`,
   },
 } as NetZeroBlockProps
 
