@@ -51,19 +51,17 @@ export const accelerator = {
         `,
       <ul key="list">
         <li>
-          {
-            'Accessible: around 10% of the traditional agency/consultancy fees for a similar process.'
-          }
+          <b>Accessible</b>: around 10% of the traditional agency/consultancy
+          fees for a similar process.
         </li>
         <li>
-          {
-            'Climate-specific: Climate solutions projects are our only focus. We can share the knowledge gained across the sector.'
-          }
+          <b>Climate-specific</b>: climate solutions projects are our only
+          focus. We can share the knowledge gained across the sector.
         </li>
         <li>
-          {
-            'Fast and Intense. The world is on fire, your work is urgent. We aim to equip you with the basic tools to boost your profile and support within days/weeks.'
-          }
+          <b>Fast and Intense</b>. The world is on fire, your work is urgent. We
+          aim to equip you with the basic tools to boost your profile and
+          support within days/weeks.
         </li>
       </ul>,
     ],
