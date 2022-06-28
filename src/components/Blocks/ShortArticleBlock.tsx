@@ -127,6 +127,7 @@ const HeaderWrap = styled(TextHeader, {
 })
 
 const TextContainer = styled('p', {
+  whiteSpace: 'pre-line',
   fontFamily: '$inria',
   fontWeight: '$light',
   fontSize: '$S',

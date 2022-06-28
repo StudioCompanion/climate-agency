@@ -18,7 +18,8 @@ export const hero = {
     layout: 'responsive',
     objectFit: 'cover',
   },
-  content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
+  content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
+  These ideas need profile and they need support. Urgently.\n
     We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
   layout: 'default',
 } as OpeningBlockProps
@@ -50,10 +51,9 @@ export const netZero = {
 
 export const climateCauses = {
   title: `Just 2% of global charity giving goes to climate causes.`,
-  content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message. \n
+  content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message.
   
-      We'd like you to feel as though you have a CMO 
-      at your side, working with you to stand out, persuade, and scale.`,
+  We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
   link: {
     href: `mailto:`,
     children: `Let us help you`,
@@ -171,7 +171,7 @@ export const mission = {
 export const services = {
   textPosition: 'right',
   header: `Our services don't cost the earth.`,
-  content: `We are non-profit, highly cost effective and entrepreneurial. \n
+  content: `We are non-profit, highly cost effective and entrepreneurial.
   
       Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
   link: {
