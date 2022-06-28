@@ -70,7 +70,7 @@ export const accelerator = {
 export const stakeholders = {
   pageLayout: 'right',
   children: <SpikesIcon />,
-  title: `Stakeholder Campaigns on neglected climate topics`,
+  title: `Spotlight Campaigns`,
   content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
   
   Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
