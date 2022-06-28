@@ -45,7 +45,7 @@ export const AcceleratorBlock = ({
         {imageSection.mediaImage ? (
           <MediaImage {...imageSection.mediaImage} />
         ) : null}
-        <CaptionWrap>{imageSection.caption}</CaptionWrap>
+        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
       </ImageWrap>
     </AcceleratorWrap>
   )
