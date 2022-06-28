@@ -30,7 +30,7 @@ export const netZero = {
   
   The narrative is impenetrable and the maths mind–bendingly complex.
   
-  Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these can make a huge difference to our world in the years to come. But they're not being heard.
+  Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these could make a huge difference in the years to come, if they get the resources to test and scale.
   
   Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
   imageSection: {
