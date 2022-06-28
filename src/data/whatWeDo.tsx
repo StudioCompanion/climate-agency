@@ -76,7 +76,7 @@ export const stakeholders = {
   title: `Spotlight Campaigns`,
   content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
   
-  Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
+  We need to shine a spotlight on some climate stories, to nudge decision-makers to act. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
       
   Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders.
       
