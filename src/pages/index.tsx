@@ -28,14 +28,14 @@ const Index = () => {
     <IndexWrap>
       <NextSeo
         title="Our Mission"
-        description="This is the landing page"
+        description="We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up."
         canonical="https://www.climate.agency"
         openGraph={{
           url: 'https://www.climate.agency/',
           title: 'Climate Agency',
           images: [
             {
-              url: 'https://www.climate.agency/images/forest_on_fire.png',
+              url: 'https://www.climate.agency/site/our-mission-meta.png',
             },
           ],
         }}

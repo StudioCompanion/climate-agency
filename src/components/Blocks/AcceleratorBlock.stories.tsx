@@ -23,15 +23,17 @@ const fixtures: StoryFixtures<typeof AcceleratorBlock> = {
       color: 'green',
       isExternal: false,
     },
-    mediaImage: {
-      image: {
-        src: '/images/Image_07.png',
-        altText: 'People cleaning a beach',
-        width: 1102,
-        height: 632,
+    imageSection: {
+      mediaImage: {
+        image: {
+          src: '/images/Image_07.png',
+          altText: 'People cleaning a beach',
+          width: 1102,
+          height: 632,
+        },
+        layout: 'responsive',
+        objectFit: 'cover',
       },
-      layout: 'responsive',
-      objectFit: 'cover',
     },
     children: [
       `We believe many climate projects need help in terms of business positioning, marketing, and stakeholder strategy. These are fundamentals that can truly help climate projects scale up. `,

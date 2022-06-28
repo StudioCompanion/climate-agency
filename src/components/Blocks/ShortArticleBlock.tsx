@@ -39,8 +39,8 @@ export const ShortArticleBlock = ({
       </MediaWrap>
       <TextWrap textPosition={textPosition}>
         <HeaderWrap>{header}</HeaderWrap>
-        <TextContainer textPosition={textPosition}>{content}</TextContainer>
-        {link && <Link {...link} />}
+        <TextContainer>{content}</TextContainer>
+        {link && <LinkWrap {...link} />}
       </TextWrap>
     </ShortArticleWrap>
   )
@@ -127,26 +127,25 @@ const HeaderWrap = styled(TextHeader, {
 })
 
 const TextContainer = styled('p', {
+  whiteSpace: 'pre-line',
   fontFamily: '$inria',
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
   gridColumn: 'span 8',
+  mb: '$40',
 
   '@tabletUp': {
     fontSize: '$XXL',
     lineHeight: '$XXL',
     gridColumn: '7 / span 6',
   },
+})
 
-  variants: {
-    textPosition: {
-      left: {
-        mb: '0',
-      },
-      right: {
-        mb: '$40',
-      },
-    },
+const LinkWrap = styled(Link, {
+  mb: '$40',
+
+  '@tabletUp': {
+    mb: '0',
   },
 })

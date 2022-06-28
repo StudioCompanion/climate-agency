@@ -25,19 +25,22 @@ export const accelerator = {
   subtitle: `An intense workshop spread over 2 half days.`,
   link: {
     href: `mailto:`,
-    children: `Let us help you`,
+    children: `Get in touch`,
     color: 'green',
     isExternal: true,
   },
-  mediaImage: {
-    image: {
-      src: '/images/Image_07.png',
-      altText: 'People cleaning a beach',
-      width: 1102,
-      height: 632,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/Mad-Don.jpeg',
+        altText: '"Mad Don", Donal Arabian, Chief of the APOLLO Test Division',
+        width: 1102,
+        height: 632,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: `"Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the APOLLO Test Division. Credit NASA Archives."`,
   },
   children: [
     `We believe many climate projects need help in terms of business positioning, marketing, and stakeholder strategy. These are fundamentals that can truly help climate projects scale up. `,
@@ -70,14 +73,14 @@ export const accelerator = {
 export const stakeholders = {
   pageLayout: 'right',
   children: <SpikesIcon />,
-  title: `Stakeholder Campaigns on neglected climate topics`,
+  title: `Spotlight Campaigns`,
   content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
   
-      Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
+  Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
       
-      Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders – creating highly influential and targeted campaigns.
+  Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders.
       
-      We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
+  We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
   mediaImage: {
     image: {
       src: '/images/ripples.jpg',
