@@ -325,19 +325,11 @@ const Privacy = () => {
         </Paragraph>
         <Subtitle>Want to find out more?</Subtitle>
         <Paragraph>
-          <SubParagraph></SubParagraph>
-          <SubParagraph></SubParagraph>
-          <SubParagraph></SubParagraph>
-        </Paragraph>
-        <Subtitle></Subtitle>
-        <Paragraph>
           <SubParagraph>
             You can find out more about data protection and the rights you have
             by contacting the independent Information Commissioner's Office:{' '}
             <LinkWrap {...linkIco} />
           </SubParagraph>
-          <SubParagraph></SubParagraph>
-          <SubParagraph></SubParagraph>
         </Paragraph>
       </ContentWrap>
     </PrivacyWrap>
