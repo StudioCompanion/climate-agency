@@ -87,7 +87,7 @@ export const climateCauses = {
 export const ourBackground = {
   textPosition: 'left',
   header: `Our background`,
-  content: `We are a team of experts in marketing and communications, with prestigious careers leading global consumer brands and charities.`,
+  content: `We are a team of experts in business strategy, marketing and communication, with a strong track record in leading global brands and charities.`,
   imageSection: {
     mediaImage: {
       image: {
