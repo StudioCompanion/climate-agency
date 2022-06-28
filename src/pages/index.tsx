@@ -47,7 +47,7 @@ const Index = () => {
       <TestimonialsBlock {...testimonials} />
       <Mission {...mission} />
       <ShortArticle {...services} />
-      <Team {...team} />
+      <TeamBlock {...team} />
       <Cta {...cta} />
     </IndexWrap>
   )
@@ -82,14 +82,6 @@ const Mission = styled(MissionBlock, {
 
   '@tabletUp': {
     mb: '$200',
-  },
-})
-
-const Team = styled(TeamBlock, {
-  mb: '$40',
-
-  '@tabletUp': {
-    mb: '$60',
   },
 })
 
