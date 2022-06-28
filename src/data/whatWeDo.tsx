@@ -73,11 +73,11 @@ export const stakeholders = {
   title: `Stakeholder Campaigns on neglected climate topics`,
   content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
   
-      Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
+  Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
       
-      Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders – creating highly influential and targeted campaigns.
+  Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders.
       
-      We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
+  We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
   mediaImage: {
     image: {
       src: '/images/ripples.jpg',
