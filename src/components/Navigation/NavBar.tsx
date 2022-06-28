@@ -97,7 +97,7 @@ const NavBarWrap = styled('nav', {
   display: 'flex',
   flexDirection: 'column',
   p: '$16',
-  mb: '$24',
+  mb: '$20',
   backgroundColor: '$white',
   position: 'relative',
   zIndex: 0,
@@ -114,7 +114,6 @@ const TopRow = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  mb: '$8',
 
   '@tabletUp': {
     display: 'none',
