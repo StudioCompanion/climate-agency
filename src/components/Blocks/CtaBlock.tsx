@@ -31,11 +31,13 @@ const CtaBlockWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   px: '$16',
+  pt: '$60',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
     px: '$20',
+    pt: '$100',
   },
 })
 
@@ -46,14 +48,12 @@ const TextContainer = styled('p', {
   fontSize: '$S',
   lineHeight: '$S',
   gridColumn: 'span 8',
-  mt: '$110',
   mb: '$30',
 
   '@tabletUp': {
     fontSize: '$L',
     lineHeight: '$L',
     gridColumn: 'span 6',
-    mt: '$100',
     mb: '$20',
   },
 })
