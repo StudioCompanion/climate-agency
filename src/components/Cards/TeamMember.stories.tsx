@@ -17,7 +17,7 @@ const fixtures: StoryFixtures<typeof TeamMember> = {
   default: {
     mediaImage: {
       image: {
-        src: '/images/sophie.png',
+        src: '/team-members/sophie.png',
         altText: 'Person looks at a mountain',
         width: 317,
         height: 369,
