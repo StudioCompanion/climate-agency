@@ -27,15 +27,17 @@ const fixtures: StoryFixtures<typeof ArticleBlock> = {
         campaign (fundraising, influencers). We can help.
         
         We will either find the right partners to do this for you, negotiate with them to work “at cost”, and help brief them. We are well connected within the agency / creative world and will use our network to help you scale up. Or do it ourselves if we can, charging for our time at cost.`,
-    mediaImage: {
-      image: {
-        src: '/images/people_gathering.jpg',
-        altText: 'People gathering',
-        width: 989,
-        height: 686,
+    imageSection: {
+      mediaImage: {
+        image: {
+          src: '/images/people_gathering.jpg',
+          altText: 'People gathering',
+          width: 989,
+          height: 686,
+        },
+        layout: 'responsive',
+        objectFit: 'cover',
       },
-      layout: 'responsive',
-      objectFit: 'cover',
     },
   },
   right: {
@@ -49,15 +51,17 @@ const fixtures: StoryFixtures<typeof ArticleBlock> = {
     Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders – creating highly influential and targeted campaigns.
     
     We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
-    mediaImage: {
-      image: {
-        src: '/images/ripples.jpg',
-        altText: 'Ripples in water',
-        width: 541,
-        height: 686,
+    imageSection: {
+      mediaImage: {
+        image: {
+          src: '/images/ripples.jpg',
+          altText: 'Ripples in water',
+          width: 541,
+          height: 686,
+        },
+        layout: 'responsive',
+        objectFit: 'cover',
       },
-      layout: 'responsive',
-      objectFit: 'cover',
     },
   },
 }
