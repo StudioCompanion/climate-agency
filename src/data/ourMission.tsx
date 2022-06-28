@@ -145,19 +145,19 @@ export const testimonials = {
   ],
   testimonials: [
     {
-      content: `“The Climate Agency is changing the world by impacting the way people think. Sophie and Lisa were crucial to helping us express ourselves better.”`,
-      signature: `Neri Oxman, Director of Research`,
+      content: `“Climate organizations will be more effective by developing a brand that captures their voice and mission. The Climate Agency team has a great knowledge of branding and climate change to make this happen. Their sessions are impactful and actionable”`,
+      signature: `Ben Rubin, Executive Director`,
+      organisation: `Carbon Business Council`,
+    },
+    {
+      content: `“It’s amazing. Totally useful to have somebody with a fresh perspective guiding us. After these 2 workshops I will be revising our website and marketing assets”`,
+      signature: `Lena Mechenkova, Communication Director`,
+      organisation: `Vlinder Climate`,
+    },
+    {
+      content: `“Sophie’s wealth of experience, sound judgement and creative thinking have been integral to the successful launch of the Direct Air Capture Coalition.“`,
+      signature: `Jason Hochman, Co-Founder & Senior Director`,
       organisation: `Direct Air Capture Coalition`,
-    },
-    {
-      content: `“This is a test testimonial”`,
-      signature: `Joe Smith, Director of Research`,
-      organisation: `Testing`,
-    },
-    {
-      content: `“This is another test testimonial”`,
-      signature: `Mary Jones, Director of Research`,
-      organisation: `Testing 2`,
     },
   ],
 } as TestimonialsBlockProps
