@@ -10,7 +10,7 @@ import { CtaBlockProps } from 'components/Blocks/CtaBlock'
 export const hero = {
   mediaImage: {
     image: {
-      src: '/images/forest_on_fire.png',
+      src: '/images/earth_nasa.png',
       altText: 'Hero image',
       width: 653,
       height: 636,
