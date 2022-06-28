@@ -168,7 +168,7 @@ export const mission = {
 export const services = {
   textPosition: 'right',
   header: `Our services don't cost the earth.`,
-  content: `We are non-profit, highly cost effective and entrepreneurial.
+  content: `We are non-profit, highly cost-effective and entrepreneurial.
   
   Through our accelerator workshops and stakeholder campaigns, we work with you to help you get results and scale up.`,
   link: {
