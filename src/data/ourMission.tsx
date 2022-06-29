@@ -209,7 +209,7 @@ export const team = {
         description: `Founder Sophie Gallois is harnessing everything she learnt in a leadership career that spans global brands and charities, including Unicef UK, to the service of climate action. \n
         She is a trustee of the Direct Air Capture Coalition and an advisor to Climate Science.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.linkedin.com/in/sophie-gallois/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -231,7 +231,7 @@ export const team = {
         description: `With a branding career that spans over 30 years, Lisa  brings a strategic view and pragmatic approach to The Climate Agency. \n
         For the last decade, she has been running strategic workshops with start-ups and charities, as well as supporting them with their creative implementation.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.linkedin.com/in/lisa-woodward-marketing/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -242,20 +242,42 @@ export const team = {
       {
         mediaImage: {
           image: {
-            src: '/team-members/cyrill.png',
-            altText: 'Cyrill Gutsch',
-            width: 317,
-            height: 369,
+            src: '/team-members/ivo.jpeg',
+            altText: 'Ivo Vlaev',
+            width: 1427,
+            height: 1661,
           },
           layout: 'responsive',
           objectFit: 'cover',
         },
-        name: `Cyrill Gutsch`,
+        name: `Ivo Vlaev`,
         role: `Advisor`,
-        description: `Cyrill is the founder of Parley for the Oceans, a nonprofit environmental organization that focuses on protection of the oceans. \n
-                Gutsch spoke at the United Nations in June 2018, where he argued that "we have to let plastic go" and is an advocate for the “AIR” strategy, calling for the Avoidance, Interception and Redesigning of the sources of plastic pollution.`,
+        description: `Ivo Vlaev is a Professor of Behavioural Science, Warwick Business School, University of Warwick. He received a DPhil (PhD) in Experimental Psychology from the University of Oxford.
+        
+        Ivo is a co-author of the famous UK Cabinet Office MINDSPACE report, which provides a framework for designing effective policy utilising behavioural sciences (also known as nudge theory) and helps public and private organisations develop and apply lessons from behavioural science.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.wbs.ac.uk/about/person/ivo-vlaev`,
+          children: `WBS`,
+          color: `transparent`,
+          isExternal: true,
+        },
+      },
+      {
+        mediaImage: {
+          image: {
+            src: '/team-members/david.jpeg',
+            altText: 'David Addison',
+            width: 1427,
+            height: 1661,
+          },
+          layout: 'responsive',
+          objectFit: 'cover',
+        },
+        name: `David Addison`,
+        role: `Advisor`,
+        description: `David Addison, leading climate, innovation and Net Zero at the Virgin Group.  For more than twelve years David has been working to help explore, evaluate, and evolve carbon removal solutions.  Advisor to Nori, Carbon 180, Project Drawdown.`,
+        socialLink: {
+          href: `https://www.linkedin.com/in/davidaddison350/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -264,20 +286,19 @@ export const team = {
       {
         mediaImage: {
           image: {
-            src: '/team-members/anab.png',
-            altText: 'Anab Jain',
-            width: 317,
-            height: 369,
+            src: '/team-members/fern.jpg',
+            altText: 'Fern Miller',
+            width: 1427,
+            height: 1661,
           },
           layout: 'responsive',
           objectFit: 'cover',
         },
-        name: `Anab Jain`,
+        name: `Fern Miller`,
         role: `Advisor`,
-        description: `Anab is a designer, futurist, filmmaker and educator. As Co-founder and Director of Superflux, she hopes to realise the vision of the Studio as a new kind of design practice, responsive to the challenges and opportunities of the twenty-first century.\n
-        Anab has gained international recognition for her work and commentary on design, innovation, emerging technologies and complex futures.`,
+        description: `Fern Miller is Executive Strategy Director at R/GA – her senior expertise spans strategic planning and creative communication, across global markets; in both agencies and start-ups.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.linkedin.com/in/fernmiller/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -286,20 +307,44 @@ export const team = {
       {
         mediaImage: {
           image: {
-            src: '/team-members/myles.png',
+            src: '/team-members/amanda.jpeg',
+            altText: 'Amanda Hamilton-Stanley',
+            width: 1427,
+            height: 1661,
+          },
+          layout: 'responsive',
+          objectFit: 'cover',
+        },
+        name: `Amanda Hamilton-Stanley`,
+        role: `Advisor`,
+        description: `As a General Counsel of a major international business, trustee of Charities and pensions boards as well as coach, Amanda Stanley brings a wealth of experience with a keen focus on compliance and ESG.`,
+        socialLink: {
+          href: `https://www.linkedin.com/in/amanda-hamilton-stanley/`,
+          children: `LinkedIn`,
+          color: `transparent`,
+          isExternal: true,
+        },
+      },
+      {
+        mediaImage: {
+          image: {
+            src: '/team-members/myles.jpg',
             altText: 'Myles Palmer',
-            width: 317,
-            height: 369,
+            width: 1427,
+            height: 1661,
           },
           layout: 'responsive',
           objectFit: 'cover',
         },
         name: `Myles Palmer`,
         role: `Advisor`,
-        description: `Myles is the founder of Companion, a digital product design studio that partners with start-ups, brands and companies to create new futures. \n
-        Their mission is to enhance the world around them and create a better future for people and planet, which is why they donate 5% of their annual revenue to charitable and non-profit causes.`,
+        description: `Myles is the founder and creative director of Companion, a digital product design studio that works with start-ups and established businesses to create a better future for people and planet.
+
+        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.
+
+        As part of Companion’s commitment to a better future, the studio aims to donate 5% of their annual revenue towards projects, charities and causes the studios care for: from environmental & climate issues, to representation in the arts & creative community, mental health and much more.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.linkedin.com/in/myles-palmer-b1b70519/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
