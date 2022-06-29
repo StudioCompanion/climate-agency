@@ -1,17 +1,32 @@
 import NextLink from 'next/link'
+import { MouseEventHandler } from 'react'
 
 import { styled } from 'styles/stitches.config'
 
 export interface NavLinkProps {
   href: string
   children: string
+  onClick?: MouseEventHandler<HTMLAnchorElement>
   className?: string
 }
 
-export const NavLink = ({ href, children, className }: NavLinkProps) => {
+export const NavLink = ({
+  href,
+  children,
+  className,
+  onClick,
+}: NavLinkProps) => {
+  const handleClick: MouseEventHandler<HTMLAnchorElement> = (e) => {
+    if (onClick) {
+      onClick(e)
+    }
+  }
+
   return (
     <NextLink href={href} passHref>
-      <Anchor className={className}>{children}</Anchor>
+      <Anchor className={className} onClick={handleClick}>
+        {children}
+      </Anchor>
     </NextLink>
   )
 }

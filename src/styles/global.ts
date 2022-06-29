@@ -28,6 +28,7 @@ export const globalStyles = globalCss({
     '-moz-osx-font-smoothing': 'grayscale',
     m: 0,
     p: 0,
+    background: '$white',
   },
 
   'h1, h2, h3, h4, h5, h6, p, dd, dl': {

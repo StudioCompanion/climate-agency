@@ -43,6 +43,10 @@ export const NavBar = () => {
 
   const [styles, api] = useSpring(
     () => ({
+      /**
+       * This handles responsive behaviour, i.e. when the device
+       * is tabletUp then we should have the menu show immediately
+       */
       clipPath: isTabletUp
         ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
         : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
@@ -52,17 +56,40 @@ export const NavBar = () => {
   )
 
   useIsomorphicLayoutEffect(() => {
-    api.start({
-      clipPath: isOpen
-        ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
-        : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-    })
-  }, [isOpen])
+    if (!isTabletUp) {
+      /**
+       * If we're on mobile, we can have animation
+       * abilities handled here
+       */
+      api.start({
+        clipPath: isOpen
+          ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+          : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+      })
+    } else if (isTabletUp && isOpen) {
+      /**
+       * If we move to tabletUp and the device has the menu open
+       * we set it false so the icon correctly changes
+       */
+      setIsOpen(false)
+    }
+  }, [isOpen, isTabletUp])
+
+  const handleLinkClick = () => {
+    if (!isTabletUp) {
+      api.start({
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+        immediate: true,
+      })
+
+      setIsOpen(false)
+    }
+  }
 
   return (
-    <header>
-      <NavBarWrap>
-        <TopRow>
+    <NavBarWrap>
+      <NavBarInnerWrap>
+        <TopRow isOpen={isOpen}>
           <MenuButton type="button" onClick={handleMenuClick}>
             {isOpen ? <IconClose /> : <IconOpen />}
           </MenuButton>
@@ -77,7 +104,7 @@ export const NavBar = () => {
               isActive={router.asPath === link.href}
               key={link.children}
             >
-              <NavLink {...link} />
+              <NavLink {...link} onClick={handleLinkClick} />
             </ListItem>
           ))}
           <ListItem>
@@ -85,34 +112,61 @@ export const NavBar = () => {
           </ListItem>
         </LinksWrap>
         <LogoDesktopWrap>
-          <CALogo />
+          <CALogo fill="white" />
         </LogoDesktopWrap>
-      </NavBarWrap>
-    </header>
+      </NavBarInnerWrap>
+    </NavBarWrap>
   )
 }
 
-const NavBarWrap = styled('nav', {
-  display: 'flex',
-  flexDirection: 'column',
-  p: '$16',
-  mb: '$20',
-  backgroundColor: '$white',
-  position: 'relative',
-  zIndex: 0,
+const NavBarWrap = styled('header', {
+  zIndex: 1,
+})
 
+const NavBarInnerWrap = styled('nav', {
   '@tabletUp': {
+    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '$white',
     p: '$20',
+
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    zIndex: '$3',
+    mixBlendMode: 'difference',
   },
 })
 
 const TopRow = styled('div', {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  zIndex: '$3',
+  mixBlendMode: 'difference',
+  path: {
+    fill: '$white',
+  },
+
+  p: '$16',
+
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  variants: {
+    isOpen: {
+      true: {
+        mixBlendMode: 'unset',
+
+        path: {
+          fill: '$black',
+        },
+      },
+    },
+  },
 
   '@tabletUp': {
     display: 'none',
@@ -144,12 +198,12 @@ const LinksWrap = styled(animated.ul, {
   gap: '$8',
   p: '$20 $16',
   backgroundColor: '$green',
-  position: 'absolute',
+  position: 'fixed',
   top: 0,
   left: 0,
   width: '100%',
   height: 187,
-  zIndex: -1,
+  zIndex: '$2',
 
   '@tabletUp': {
     backgroundColor: 'transparent',
@@ -180,8 +234,17 @@ const ListItem = styled('li', {
     isActive: {
       true: {
         color: '$black',
+
         '&:before': {
           color: '$black',
+        },
+
+        '@tabletUp': {
+          color: '$white',
+
+          '&:before': {
+            color: '$white',
+          },
         },
       },
     },

@@ -36,7 +36,11 @@ export const AcceleratorBlock = ({
       <ContentWrap>
         <TextWrap>{intro}</TextWrap>
         <SubtitleWrap>{subtitle}</SubtitleWrap>
-        <TextWrap>{content}</TextWrap>
+        {Array.isArray(content)
+          ? content.map((c) =>
+              typeof c === 'string' ? <TextWrap key={c}>{c}</TextWrap> : c
+            )
+          : null}
       </ContentWrap>
       <LinkWrap>
         <Link {...link} />
