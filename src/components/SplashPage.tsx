@@ -92,8 +92,14 @@ const Logo = () => (
 )
 
 const LogoSvg = styled('svg', {
-  gridColumn: '4 / span 6',
+  gridColumn: 'span 8',
   alignSelf: 'center',
+  mx: '$16',
+
+  '@tabletUp': {
+    mx: 0,
+    gridColumn: '4 / span 6',
+  },
 })
 
 export const SplashPage = () => {
@@ -169,6 +175,8 @@ export const SplashPage = () => {
             placeholder="blur"
             loading="eager"
             priority
+            objectFit="cover"
+            layout="fill"
           />
         </ImageContainer>
       ))}
