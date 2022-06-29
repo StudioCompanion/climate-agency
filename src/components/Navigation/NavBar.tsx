@@ -104,7 +104,7 @@ export const NavBar = () => {
         <LinksWrap style={styles}>
           {routes.map((link) => (
             <ListItem
-              isActive={router.asPath === link.href}
+              isActive={router.pathname === link.href}
               key={link.children}
             >
               <NavLink {...link} onClick={handleLinkClick} />
