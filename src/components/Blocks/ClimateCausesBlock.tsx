@@ -77,7 +77,7 @@ const Title = styled('h2', {
   '@tabletUp': {
     fontSize: '$XXXL',
     lineHeight: '$XXXL',
-    gridColumn: 'span 9',
+    gridColumn: 'span 10',
   },
   '@desktopUp': {
     gridColumn: 'span 7',

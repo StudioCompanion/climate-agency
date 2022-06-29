@@ -71,7 +71,7 @@ const HeaderContainer = styled('div', {
     gap: '$20',
   },
   '@desktopUp': {
-    gridColumn: 'span 7',
+    gridColumn: 'span 6',
   },
 })
 
