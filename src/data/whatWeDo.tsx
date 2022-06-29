@@ -42,7 +42,7 @@ export const accelerator = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `"Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the APOLLO Test Division. Credit NASA Archives."`,
+    caption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the APOLLO Test Division. Credit NASA Archives.`,
   },
   children: [
     `We believe many climate projects need help in terms of business positioning, marketing, and stakeholder strategy. These are fundamentals that can truly help climate projects scale up. `,
@@ -99,10 +99,9 @@ export const partners = {
   pageLayout: 'left',
   children: <SunIcon />,
   title: `Helping you plan, connect and deliver with great partners`,
-  content: `After the workshop, you may feel you need help building assets (website, video), or running a
-          campaign (fundraising, influencers). We can help.
+  content: `After the workshop, you may feel you need help building assets (website, video), or running a campaign (fundraising, influencers). We can help.
           
-          We will either find the right partners to do this for you, negotiate with them to work “at cost”, and help brief them. We are well connected within the agency / creative world and will use our network to help you scale up. Or do it ourselves if we can, charging for our time at cost.`,
+  We will either find the right partners to do this for you, negotiate with them to work “at cost”, and help brief them. We are well connected within the agency / creative world and will use our network to help you scale up. Or do it ourselves if we can, charging for our time at cost.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -114,6 +113,6 @@ export const partners = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `"Never has teamwork been more critical than when addressing the climate emergency."`,
+    caption: `Never has teamwork been more critical than when addressing the climate emergency.`,
   },
 } as ArticleBlockProps
