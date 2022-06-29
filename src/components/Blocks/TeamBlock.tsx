@@ -72,6 +72,7 @@ const TitleWrap = styled('h2', {
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
+  letterSpacing: '$normal',
 
   '@tabletUp': {
     gridColumn: 'span 8',

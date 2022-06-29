@@ -84,6 +84,7 @@ const TitleContainer = styled('h2', {
   fontWeight: '$light',
   fontSize: '$M',
   lineHeight: '$M',
+  letterSpacing: '$normal',
 
   '@tabletUp': {
     fontSize: '$XXL',
@@ -98,6 +99,7 @@ const TextContainer = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
+  letterSpacing: '$small',
   gridColumn: 'span 8',
   py: '$40',
 

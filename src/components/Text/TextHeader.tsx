@@ -16,4 +16,5 @@ const HeaderContainer = styled('h2', {
   fontWeight: '$semiBold',
   fontSize: '$XXS',
   lineHeight: '$XXXS',
+  letterSpacing: '$small',
 })
