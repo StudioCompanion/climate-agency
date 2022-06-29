@@ -12,6 +12,7 @@ import { WidgetMarker } from 'components/Widgets/WidgetMarker'
 import { SplashPage } from 'components/SplashPage'
 
 import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicEffect'
+import { styled } from 'styles/stitches.config'
 
 globalStyles()
 
@@ -33,12 +34,17 @@ const App = ({ Component, pageProps }: AppProps) => {
       <DefaultSeo {...SEO} />
       {showSplash && <SplashPage />}
       <NavBar />
-      <main>
+      <Main>
         <Component {...pageProps} />
-      </main>
+      </Main>
       <Footer />
     </>
   )
 }
+
+const Main = styled('main', {
+  zIndex: 0,
+  pt: '$110',
+})
 
 export default App
