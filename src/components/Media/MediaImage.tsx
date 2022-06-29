@@ -40,6 +40,7 @@ export const MediaImage = ({
       layout={layout}
       objectFit={objectFit}
       sizes={generateSrcSetSizes(sizes)}
+      style={{ backgroundColor: 'var(--colors-green)' }}
     />
   )
 }
