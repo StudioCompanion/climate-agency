@@ -96,7 +96,7 @@ const Title = styled('h2', {
   fontWeight: '$light',
   fontSize: '$XL',
   lineHeight: '$XL',
-  letterSpacing: '-1.9px',
+  letterSpacing: '$normal',
 
   '@tabletUp': {
     fontSize: '$XXXL',
@@ -122,6 +122,7 @@ const TextWrap = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
+  letterSpacing: '$small',
 
   '& > ul': {
     listStyleType: 'disc',
@@ -138,6 +139,7 @@ const SubtitleWrap = styled('h3', {
   fontWeight: '$light',
   fontSize: '$M',
   lineHeight: '$M',
+  letterSpacing: '$normal',
   gridColumn: 'span 8',
 
   '@tabletUp': {

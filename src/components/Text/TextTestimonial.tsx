@@ -27,6 +27,7 @@ const Testimonial = styled('p', {
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
+  letterSpacing: '$normal',
 
   '@tabletUp': {
     fontSize: '$L',
@@ -51,6 +52,7 @@ const Signature = styled('span', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
+  letterSpacing: '$small',
 })
 
 const Organisation = styled('span', {
@@ -60,4 +62,5 @@ const Organisation = styled('span', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
+  letterSpacing: '$small',
 })

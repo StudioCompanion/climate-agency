@@ -87,7 +87,7 @@ const TitleContainer = styled('h2', {
   fontWeight: '$light',
   fontSize: '$M',
   lineHeight: '$M',
-  letterSpacing: '-1.9px',
+  letterSpacing: '$normal',
 
   '@tabletUp': {
     fontSize: '$XXL',
