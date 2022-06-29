@@ -69,7 +69,7 @@ const HeaderContainer = styled('div', {
   '@tabletUp': {
     flexDirection: 'row',
     gap: '$20',
-    gridColumn: 'span 6',
+    gridColumn: 'span 7',
   },
 })
 
