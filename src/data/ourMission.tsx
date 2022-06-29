@@ -257,7 +257,7 @@ export const team = {
         Ivo is a co-author of the famous UK Cabinet Office MINDSPACE report, which provides a framework for designing effective policy utilising behavioural sciences (also known as nudge theory) and helps public and private organisations develop and apply lessons from behavioural science.`,
         socialLink: {
           href: `https://www.wbs.ac.uk/about/person/ivo-vlaev`,
-          children: `LinkedIn`,
+          children: `WBS`,
           color: `transparent`,
           isExternal: true,
         },
@@ -286,7 +286,7 @@ export const team = {
       {
         mediaImage: {
           image: {
-            src: '/team-members/fern.jpeg',
+            src: '/team-members/fern.jpg',
             altText: 'Fern Miller',
             width: 1427,
             height: 1661,
