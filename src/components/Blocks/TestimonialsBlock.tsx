@@ -67,11 +67,9 @@ const HeaderContainer = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    width: '660px',
     flexDirection: 'row',
     gap: '$20',
-  },
-  '@desktopUp': {
-    gridColumn: 'span 6',
   },
 })
 
