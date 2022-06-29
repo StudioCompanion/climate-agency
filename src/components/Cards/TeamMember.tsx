@@ -34,7 +34,6 @@ export const TeamMember = ({
 const TeamMemberWrap = styled('section', {
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: '343px',
   gap: '$8',
 })
 
