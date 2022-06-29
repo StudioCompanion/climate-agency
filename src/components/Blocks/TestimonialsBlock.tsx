@@ -30,8 +30,8 @@ export const TestimonialsBlock = ({
         <TitleContainer>{title}</TitleContainer>
       </HeaderContainer>
       <ImageContainer gradient={false}>
-        {logos.map((logo) => (
-          <MediaImage key={logo.src} image={logo} />
+        {[...logos, ...logos].map((logo, index) => (
+          <MediaImage key={`${logo.src}_${index}`} image={logo} />
         ))}
       </ImageContainer>
       <TestimonialWrap>
@@ -110,6 +110,10 @@ const ImageContainer = styled(Marquee, {
 
     mx: -20,
     width: 'calc(100% + 40px) !important',
+  },
+
+  '.marquee': {
+    minWidth: 'max-content',
   },
 })
 
