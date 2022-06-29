@@ -113,6 +113,9 @@ const CaptionWrap = styled(TextCaption, {
   my: '$8',
 
   '@tabletUp': {
+    gridColumn: '1 / span 5',
+  },
+  '@desktopUp': {
     gridColumn: '1 / span 4',
   },
 })
@@ -137,9 +140,13 @@ const TextContainer = styled('p', {
   mb: '$40',
 
   '@tabletUp': {
+    fontSize: '$L',
+    lineHeight: '$L',
+    gridColumn: '7 / span 6',
+  },
+  '@desktopUp': {
     fontSize: '$XXL',
     lineHeight: '$XXL',
-    gridColumn: '7 / span 6',
   },
 })
 
