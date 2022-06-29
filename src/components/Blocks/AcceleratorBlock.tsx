@@ -5,12 +5,16 @@ import ArrowsIcon from '../../assets/Arrows.svg'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
+import { TextCaption } from 'components/Text/TextCaption'
 
 export interface AcceleratorBlockProps {
   title: string
   subtitle: string
   link: LinkProps
-  mediaImage: MediaImageProps
+  imageSection: {
+    mediaImage: MediaImageProps
+    caption?: string
+  }
   children: ReactNode[]
 }
 
@@ -19,7 +23,7 @@ export const AcceleratorBlock = ({
   children,
   subtitle,
   link,
-  mediaImage,
+  imageSection,
 }: AcceleratorBlockProps) => {
   const [intro, content] = children
 
@@ -38,7 +42,10 @@ export const AcceleratorBlock = ({
         <Link {...link} />
       </LinkWrap>
       <ImageWrap>
-        {mediaImage ? <MediaImage {...mediaImage} /> : null}
+        {imageSection.mediaImage ? (
+          <MediaImage {...imageSection.mediaImage} />
+        ) : null}
+        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
       </ImageWrap>
     </AcceleratorWrap>
   )
@@ -67,13 +74,11 @@ const HeaderWrap = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '$20',
-
   mb: '$20',
 
   '@tabletUp': {
     flexDirection: 'row',
     gridColumn: '1 / span 7',
-    mt: '$180',
     mb: '$70',
   },
 })
@@ -119,7 +124,11 @@ const TextWrap = styled('p', {
 
   '& > ul': {
     listStyleType: 'disc',
-    ml: '$16',
+    ml: '$20',
+
+    '& > li': {
+      mt: '$20',
+    },
   },
 })
 
@@ -151,5 +160,14 @@ const ImageWrap = styled('div', {
 
   '@tabletUp': {
     gridColumn: '3 / span 10',
+  },
+})
+
+const CaptionWrap = styled(TextCaption, {
+  gridColumn: 'span 8',
+  my: '$8',
+
+  '@tabletUp': {
+    gridColumn: 'span 4',
   },
 })

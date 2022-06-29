@@ -118,7 +118,7 @@ const NavBarInnerWrap = styled('nav', {
   display: 'flex',
   flexDirection: 'column',
   p: '$16',
-  mb: '$24',
+  mb: '$20',
   backgroundColor: '$white',
   zIndex: 1,
   position: 'fixed',
@@ -137,7 +137,6 @@ const TopRow = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  mb: '$8',
 
   '@tabletUp': {
     display: 'none',

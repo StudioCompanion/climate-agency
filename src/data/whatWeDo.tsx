@@ -6,15 +6,17 @@ import SpikesIcon from '../assets/Spikes.svg'
 import SunIcon from '../assets/Sun.svg'
 
 export const intro = {
-  mediaImage: {
-    image: {
-      src: '/images/people_on_mountain.png',
-      altText: 'People sitting on a mountain',
-      width: 765,
-      height: 636,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/people_on_mountain.png',
+        altText: 'People sitting on a mountain',
+        width: 765,
+        height: 636,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
   },
   content: `We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
   layout: `large`,
@@ -25,19 +27,22 @@ export const accelerator = {
   subtitle: `An intense workshop spread over 2 half days.`,
   link: {
     href: `mailto:`,
-    children: `Let us help you`,
+    children: `Get in touch`,
     color: 'green',
     isExternal: true,
   },
-  mediaImage: {
-    image: {
-      src: '/images/Image_07.png',
-      altText: 'People cleaning a beach',
-      width: 1102,
-      height: 632,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/Mad-Don.jpeg',
+        altText: '"Mad Don", Donal Arabian, Chief of the APOLLO Test Division',
+        width: 1102,
+        height: 632,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: `"Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the APOLLO Test Division. Credit NASA Archives."`,
   },
   children: [
     `We believe many climate projects need help in terms of business positioning, marketing, and stakeholder strategy. These are fundamentals that can truly help climate projects scale up. `,
@@ -48,19 +53,17 @@ export const accelerator = {
         `,
       <ul key="list">
         <li>
-          {
-            'Accessible: around 10% of the traditional agency/consultancy fees for a similar process.'
-          }
+          <b>Accessible</b>: around 10% of the traditional agency/consultancy
+          fees for a similar process.
         </li>
         <li>
-          {
-            'Climate-specific: Climate solutions projects are our only focus. We can share the knowledge gained across the sector.'
-          }
+          <b>Climate-specific</b>: climate solutions projects are our only
+          focus. We can share the knowledge gained across the sector.
         </li>
         <li>
-          {
-            'Fast and Intense. The world is on fire, your work is urgent. We aim to equip you with the basic tools to boost your profile and support within days/weeks.'
-          }
+          <b>Fast and Intense</b>. The world is on fire, your work is urgent. We
+          aim to equip you with the basic tools to boost your profile and
+          support within days/weeks.
         </li>
       </ul>,
     ],
@@ -70,23 +73,25 @@ export const accelerator = {
 export const stakeholders = {
   pageLayout: 'right',
   children: <SpikesIcon />,
-  title: `Stakeholder Campaigns on neglected climate topics`,
+  title: `Spotlight Campaigns`,
   content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
   
-      Some stories are screaming to be told and are needed to nudge decisions taken by stakeholders. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
+  We need to shine a spotlight on some climate stories, to nudge decision-makers to act. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
       
-      Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders – creating highly influential and targeted campaigns.
+  Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders.
       
-      We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
-  mediaImage: {
-    image: {
-      src: '/images/ripples.jpg',
-      altText: 'Ripples in water',
-      width: 541,
-      height: 686,
+  We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/ripples.jpg',
+        altText: 'Ripples in water',
+        width: 541,
+        height: 686,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
   },
 } as ArticleBlockProps
 
@@ -98,14 +103,17 @@ export const partners = {
           campaign (fundraising, influencers). We can help.
           
           We will either find the right partners to do this for you, negotiate with them to work “at cost”, and help brief them. We are well connected within the agency / creative world and will use our network to help you scale up. Or do it ourselves if we can, charging for our time at cost.`,
-  mediaImage: {
-    image: {
-      src: '/images/people_gathering.jpg',
-      altText: 'People gathering',
-      width: 989,
-      height: 686,
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/team-rowing.jpeg',
+        altText: 'People gathering',
+        width: 989,
+        height: 686,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: `"Never has teamwork been more critical than when addressing the climate emergency."`,
   },
 } as ArticleBlockProps

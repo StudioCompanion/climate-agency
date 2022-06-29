@@ -2,13 +2,17 @@ import { ReactNode } from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
+import { TextCaption } from 'components/Text/TextCaption'
 
 export interface ArticleBlockProps {
   pageLayout: 'left' | 'right'
   children: ReactNode
   title: string
   content: string
-  mediaImage: MediaImageProps
+  imageSection: {
+    mediaImage: MediaImageProps
+    caption?: string
+  }
   className?: string
 }
 
@@ -17,7 +21,7 @@ export const ArticleBlock = ({
   children,
   title,
   content,
-  mediaImage,
+  imageSection,
   className,
 }: ArticleBlockProps) => {
   return (
@@ -28,7 +32,8 @@ export const ArticleBlock = ({
       </HeaderContainer>
       <Content pageLayout={pageLayout}>{content}</Content>
       <ImageContainer pageLayout={pageLayout}>
-        <MediaImage {...mediaImage} />
+        <MediaImage {...imageSection.mediaImage} />
+        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
       </ImageContainer>
     </ArticleWrap>
   )
@@ -173,5 +178,14 @@ const ImageContainer = styled('div', {
         },
       },
     },
+  },
+})
+
+const CaptionWrap = styled(TextCaption, {
+  gridColumn: 'span 8',
+  mt: '$8',
+
+  '@tabletUp': {
+    gridColumn: 'span 4',
   },
 })
