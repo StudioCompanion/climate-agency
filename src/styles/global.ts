@@ -24,6 +24,9 @@ export const globalStyles = globalCss({
 
   'html, body': {
     fontSize: '62.5%',
+    fontFamily: '$workSans',
+    letterSpacing: '$small',
+    fontWeight: '$regular',
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale',
     m: 0,
