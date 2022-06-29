@@ -113,16 +113,15 @@ const InnerTeamGroupWrap = styled('ul', {
     gridColumn: 'span 12',
     gridTemplateColumns: 'repeat(12, 1fr)',
     columnGap: '$20',
-    mb: '$20',
   },
 })
 
 const TeamMemberWrap = styled('li', {
   gridColumn: 'span 8',
-  mb: '$16',
+  mb: '$40',
 
   '@tabletUp': {
     gridColumn: 'span 3',
-    mb: '0',
+    mb: '$16',
   },
 })
