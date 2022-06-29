@@ -35,4 +35,5 @@ const CaptionContainer = styled('figcaption', {
   fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
+  letterSpacing: '$small',
 })

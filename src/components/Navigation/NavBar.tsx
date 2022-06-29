@@ -6,8 +6,7 @@ import { styled } from 'styles/stitches.config'
 
 import IconClose from '../../assets/IconCross.svg'
 import IconOpen from '../../assets/IconMenu.svg'
-import MobileLogo from '../../assets/MobileLogo.svg'
-import DesktopLogo from '../../assets/DesktopLogo.svg'
+import CALogo from '../../assets/CALogo.svg'
 
 import { NavLink, NavLinkProps } from '../Links/NavLink'
 import { Link, LinkProps } from 'components/Links/Link'
@@ -84,7 +83,7 @@ export const NavBar = () => {
             {isOpen ? <IconClose /> : <IconOpen />}
           </MenuButton>
           <LogoMobileWrap>
-            <MobileLogo />
+            <CALogo />
           </LogoMobileWrap>
         </TopRow>
 
@@ -102,7 +101,7 @@ export const NavBar = () => {
           </ListItem>
         </LinksWrap>
         <LogoDesktopWrap>
-          <DesktopLogo />
+          <CALogo />
         </LogoDesktopWrap>
       </NavBarInnerWrap>
     </NavBarWrap>
@@ -174,7 +173,11 @@ const MenuButton = styled('button', {
 })
 
 const LogoMobileWrap = styled('div', {
-  width: '22px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignContent: 'center',
+  justifyContent: 'space-around',
+  alignItems: 'flex-end',
 })
 
 const LinksWrap = styled(animated.ul, {

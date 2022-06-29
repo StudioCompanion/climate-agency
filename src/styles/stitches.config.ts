@@ -78,6 +78,10 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         XXS: '135%',
         XXXS: '100%',
       },
+      letterSpacings: {
+        normal: '-0.05em',
+        small: '-0.01em',
+      },
       fontWeights: {
         light: 300,
         regular: 400,
