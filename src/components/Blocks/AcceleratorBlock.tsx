@@ -33,15 +33,17 @@ export const AcceleratorBlock = ({
         <Arrows width="44" />
         <Title>{title}</Title>
       </HeaderWrap>
-      <ContentWrap>
-        <TextWrap>{intro}</TextWrap>
-        <SubtitleWrap>{subtitle}</SubtitleWrap>
+      {/* <ContentWrap> */}
+      <TextWrap>{intro}</TextWrap>
+      <SubtitleWrap>{subtitle}</SubtitleWrap>
+      <ListWrap>
         {Array.isArray(content)
           ? content.map((c) =>
               typeof c === 'string' ? <TextWrap key={c}>{c}</TextWrap> : c
             )
           : null}
-      </ContentWrap>
+      </ListWrap>
+      {/* </ContentWrap> */}
       <LinkWrap>
         <Link {...link} />
       </LinkWrap>
@@ -108,25 +110,27 @@ const Title = styled('h2', {
   },
 })
 
-const ContentWrap = styled('div', {
-  gridColumn: 'span 8',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '$40',
-  mb: '$40',
+// const ContentWrap = styled('div', {
+//   gridColumn: 'span 8',
+//   display: 'flex',
+//   flexDirection: 'column',
+//   gap: '$40',
+//   mb: '$40',
 
-  '@tabletUp': {
-    gridColumn: '5 / span 4',
-  },
-})
+//   '@tabletUp': {
+//     gridColumn: '5 / span 4',
+//   },
+// })
 
 const TextWrap = styled('p', {
   whiteSpace: 'pre-line',
+  gridColumn: 'span 8',
   fontFamily: '$workSans',
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
   letterSpacing: '$small',
+  mb: '$40',
 
   '& + ul': {
     whiteSpace: 'pre-line',
@@ -142,6 +146,19 @@ const TextWrap = styled('p', {
       mt: '$20',
     },
   },
+
+  '@tabletUp': {
+    gridColumn: '5 / span 4',
+  },
+})
+
+const ListWrap = styled('div', {
+  gridColumn: 'span 8',
+  mb: '$40',
+
+  '@tabletUp': {
+    gridColumn: '5 / span 4',
+  },
 })
 
 const SubtitleWrap = styled('h3', {
@@ -151,11 +168,12 @@ const SubtitleWrap = styled('h3', {
   lineHeight: '$M',
   letterSpacing: '$normal',
   gridColumn: 'span 8',
+  mb: '$40',
 
   '@tabletUp': {
     fontSize: '$XXL',
     lineHeight: '$XXL',
-    gridColumn: '5 / span 4',
+    gridColumn: '5 / span 7',
   },
 })
 

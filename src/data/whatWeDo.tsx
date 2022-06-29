@@ -24,7 +24,8 @@ export const intro = {
 
 export const accelerator = {
   title: `The Climate Action Accelerator`,
-  subtitle: `An intense workshop spread over 2 half days.`,
+  // subtitle: `An intense workshop spread over 2 half days.`,
+  subtitle: `"Our accelerator module pulls forward what is traditionally a 3 to 6 months process into 3 to 6 weeks. It consists of 2 intense workshops, followed by a full recommendation. This will include your stakeholder strategy and an action-focused persuasion plan."`,
   link: {
     href: `mailto:`,
     children: `Get in touch`,
