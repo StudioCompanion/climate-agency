@@ -128,11 +128,17 @@ const TextWrap = styled('p', {
   lineHeight: '$XS',
   letterSpacing: '$small',
 
-  '& > ul': {
+  '& + ul': {
+    whiteSpace: 'pre-line',
+    fontFamily: '$workSans',
+    fontWeight: '$regular',
+    fontSize: '$XS',
+    lineHeight: '$XS',
+    letterSpacing: '$small',
     listStyleType: 'disc',
     ml: '$20',
 
-    '& > li': {
+    '& > li + li': {
       mt: '$20',
     },
   },
