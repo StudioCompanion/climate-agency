@@ -57,6 +57,11 @@ const DescriptionWrap = styled('span', {
   lineHeight: '$XXS',
   letterSpacing: '$small',
   my: '$12',
+
+  '@largeDesktopUp': {
+    fontSize: '$XS',
+    lineHeight: '$XS',
+  },
 })
 
 const LinkWrap = styled(Link, {
@@ -65,4 +70,9 @@ const LinkWrap = styled(Link, {
   lineHeight: '$XXS',
   textDecoration: 'underline',
   p: '0',
+
+  '@largeDesktopUp': {
+    fontSize: '$XS',
+    lineHeight: '$XS',
+  },
 })
