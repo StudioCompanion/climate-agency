@@ -76,6 +76,7 @@ const TextContainer = styled('p', {
   whiteSpace: 'pre-line',
   fontFamily: '$inria',
   fontWeight: '$light',
+  letterSpacing: '$normal',
   mb: '$40',
 
   '@tabletUp': {

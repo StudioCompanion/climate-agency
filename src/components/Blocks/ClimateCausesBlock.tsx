@@ -72,6 +72,7 @@ const Title = styled('h2', {
   fontSize: '$XL',
   lineHeight: '$XL',
   gridColumn: 'span 8',
+  letterSpacing: '$normal',
 
   '@tabletUp': {
     fontSize: '$XXXL',
@@ -86,6 +87,7 @@ const TextContainer = styled('p', {
   fontWeight: '$regular',
   fontSize: '$XS',
   lineHeight: '$XS',
+  letterSpacing: '$small',
   gridColumn: 'span 8',
   mt: '$40',
 
