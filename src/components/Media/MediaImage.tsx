@@ -1,4 +1,7 @@
 import NextImage from 'next/image'
+import { useState } from 'react'
+
+import { styled } from 'styles/stitches.config'
 
 import { generateSrcSetSizes } from '../../helpers/media'
 
@@ -31,15 +34,42 @@ export const MediaImage = ({
   objectFit = 'cover',
   sizes = '100vw',
 }: MediaImageProps) => {
+  const [loaded, setLoaded] = useState(false)
+
+  const handleLoadingComplete = () => setLoaded(true)
+
   return (
-    <NextImage
-      src={image.src}
-      alt={image.altText}
-      width={image.width}
-      height={image.height}
-      layout={layout}
-      objectFit={objectFit}
-      sizes={generateSrcSetSizes(sizes)}
-    />
+    <ImgContainer>
+      <Img
+        src={image.src}
+        alt={image.altText}
+        width={image.width}
+        height={image.height}
+        layout={layout}
+        objectFit={objectFit}
+        sizes={generateSrcSetSizes(sizes)}
+        loaded={loaded}
+        onLoadingComplete={handleLoadingComplete}
+      />
+    </ImgContainer>
   )
 }
+
+const ImgContainer = styled('div', {
+  backgroundColor: '$green',
+})
+
+const Img = styled(NextImage, {
+  transition: 'opacity 0.4s ease-out',
+
+  variants: {
+    loaded: {
+      true: {
+        opacity: 1,
+      },
+      false: {
+        opacity: 0,
+      },
+    },
+  },
+})
