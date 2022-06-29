@@ -65,6 +65,9 @@ const HeaderWrap = styled('div', {
     gridColumn: 'span 8',
     gap: '$20',
   },
+  '@desktopUp': {
+    gridColumn: 'span 6',
+  },
 })
 
 const TitleWrap = styled('h2', {
@@ -122,7 +125,10 @@ const TeamMemberWrap = styled('li', {
   mb: '$40',
 
   '@tabletUp': {
-    gridColumn: 'span 3',
+    gridColumn: 'span 4',
     mb: '$16',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 3',
   },
 })

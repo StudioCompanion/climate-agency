@@ -54,8 +54,10 @@ const TextContainer = styled('p', {
   '@tabletUp': {
     fontSize: '$L',
     lineHeight: '$L',
-    gridColumn: 'span 6',
     mb: '$20',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 6',
   },
 })
 
