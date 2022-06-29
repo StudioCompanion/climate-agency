@@ -75,6 +75,17 @@ export const NavBar = () => {
     }
   }, [isOpen, isTabletUp])
 
+  const handleLinkClick = () => {
+    if (!isTabletUp) {
+      api.start({
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+        immediate: true,
+      })
+
+      setIsOpen(false)
+    }
+  }
+
   return (
     <NavBarWrap>
       <NavBarInnerWrap>
@@ -93,7 +104,7 @@ export const NavBar = () => {
               isActive={router.asPath === link.href}
               key={link.children}
             >
-              <NavLink {...link} />
+              <NavLink {...link} onClick={handleLinkClick} />
             </ListItem>
           ))}
           <ListItem>
