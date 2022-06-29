@@ -101,7 +101,7 @@ export const NavBar = () => {
           </ListItem>
         </LinksWrap>
         <LogoDesktopWrap>
-          <CALogo />
+          <CALogo fill="white" />
         </LogoDesktopWrap>
       </NavBarInnerWrap>
     </NavBarWrap>
