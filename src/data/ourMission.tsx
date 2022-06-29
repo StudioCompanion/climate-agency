@@ -252,13 +252,11 @@ export const team = {
         },
         name: `Ivo Vlaev`,
         role: `Advisor`,
-        description: `Ivo Vlaev is a Professor of Behavioural Science, Warwick Business School, University of Warwick.
+        description: `Ivo Vlaev is a Professor of Behavioural Science, Warwick Business School, University of Warwick. He received a DPhil (PhD) in Experimental Psychology from the University of Oxford.
         
-        Ivo received a DPhil (PhD) in Experimental Psychology from the University of Oxford. He is a co-author of the famous UK Cabinet Office MINDSPACE  report, which provides a framework for designing effective policy utilising  behavioural sciences (also known as nudge theory).
-        
-        Ivo helps public and private organisations develop and apply lessons from behavioural science.`,
+        Ivo is a co-author of the famous UK Cabinet Office MINDSPACE report, which provides a framework for designing effective policy utilising behavioural sciences (also known as nudge theory) and helps public and private organisations develop and apply lessons from behavioural science.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.wbs.ac.uk/about/person/ivo-vlaev`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -279,7 +277,7 @@ export const team = {
         role: `Advisor`,
         description: `David Addison, leading climate, innovation and Net Zero at the Virgin Group.  For more than twelve years David has been working to help explore, evaluate, and evolve carbon removal solutions.  Advisor to Nori, Carbon 180, Project Drawdown.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.linkedin.com/in/davidaddison350/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -298,11 +296,30 @@ export const team = {
         },
         name: `Fern Miller`,
         role: `Advisor`,
-        description: `Fern Miller is Executive Strategy Director at R/GA – her senior expertise spans strategic planning and creative communication, across global markets; in both agencies and start-ups.
-
-        As a General Counsel of a major international business, trustee of Charities and pensions boards as well as coach, Amanda Stanley brings a wealth of experience with a keen focus on compliance and ESG.`,
+        description: `Fern Miller is Executive Strategy Director at R/GA – her senior expertise spans strategic planning and creative communication, across global markets; in both agencies and start-ups.`,
         socialLink: {
-          href: `#`,
+          href: `https://www.linkedin.com/in/fernmiller/`,
+          children: `LinkedIn`,
+          color: `transparent`,
+          isExternal: true,
+        },
+      },
+      {
+        mediaImage: {
+          image: {
+            src: '/team-members/amanda.jpeg',
+            altText: 'Amanda Hamilton-Stanley',
+            width: 1427,
+            height: 1661,
+          },
+          layout: 'responsive',
+          objectFit: 'cover',
+        },
+        name: `Amanda Hamilton-Stanley`,
+        role: `Advisor`,
+        description: `As a General Counsel of a major international business, trustee of Charities and pensions boards as well as coach, Amanda Stanley brings a wealth of experience with a keen focus on compliance and ESG.`,
+        socialLink: {
+          href: `https://www.linkedin.com/in/amanda-hamilton-stanley/`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -321,11 +338,11 @@ export const team = {
         },
         name: `Myles Palmer`,
         role: `Advisor`,
-        description: `Myles is the founder and creative director of Companion, a digital product design studio. He is passionate about design and care about environmental issues.
+        description: `Myles is the founder and creative director of Companion, a digital product design studio that works with start-ups and established businesses to create a better future for people and planet.
 
-        His studio’s mission is to enhance the world around us by designing services and products that inspire, disrupt established norms and create a better future for people and planet. 
-        
-        Companion aims to donate 5% of their annual revenue to projects, charities and causes the studio cares about, including 1% for the planet and many more organisations.`,
+        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.
+
+        As part of Companion’s commitment to a better future, the studio aims to donate 5% of their annual revenue towards projects, charities and causes the studios care for: from environmental & climate issues, to representation in the arts & creative community, mental health and much more.`,
         socialLink: {
           href: `https://www.linkedin.com/in/myles-palmer-b1b70519/`,
           children: `LinkedIn`,
