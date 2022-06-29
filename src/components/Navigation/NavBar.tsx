@@ -79,7 +79,7 @@ export const NavBar = () => {
   return (
     <NavBarWrap>
       <NavBarInnerWrap>
-        <TopRow>
+        <TopRow isOpen={isOpen}>
           <MenuButton type="button" onClick={handleMenuClick}>
             {isOpen ? <IconClose /> : <IconOpen />}
           </MenuButton>
@@ -111,10 +111,6 @@ export const NavBar = () => {
 
 const NavBarWrap = styled('header', {
   zIndex: 1,
-
-  path: {
-    fill: '$white',
-  },
 })
 
 const NavBarInnerWrap = styled('nav', {
@@ -140,12 +136,27 @@ const TopRow = styled('div', {
   width: '100%',
   zIndex: '$3',
   mixBlendMode: 'difference',
+  path: {
+    fill: '$white',
+  },
 
   p: '$16',
 
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  variants: {
+    isOpen: {
+      true: {
+        mixBlendMode: 'unset',
+
+        path: {
+          fill: '$black',
+        },
+      },
+    },
+  },
 
   '@tabletUp': {
     display: 'none',
@@ -179,7 +190,6 @@ const LinksWrap = styled(animated.ul, {
   width: '100%',
   height: 187,
   zIndex: '$2',
-  mixBlendMode: 'unset',
 
   '@tabletUp': {
     backgroundColor: 'transparent',
@@ -209,9 +219,18 @@ const ListItem = styled('li', {
   variants: {
     isActive: {
       true: {
-        color: '$white',
+        color: '$black',
+
         '&:before': {
+          color: '$black',
+        },
+
+        '@tabletUp': {
           color: '$white',
+
+          '&:before': {
+            color: '$white',
+          },
         },
       },
     },
