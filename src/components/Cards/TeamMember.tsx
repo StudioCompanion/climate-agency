@@ -45,6 +45,7 @@ const NameAndRoleWrap = styled('span', {
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
+  letterSpacing: '-1.9px',
 })
 
 const DescriptionWrap = styled('span', {

@@ -44,6 +44,7 @@ const TextContainer = styled('p', {
   fontWeight: '$light',
   fontSize: '$XL',
   lineHeight: '$XL',
+  letterSpacing: '-1.9px',
   gridColumn: '1 / span 8',
 
   '@tabletUp': {

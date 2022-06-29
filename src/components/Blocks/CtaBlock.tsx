@@ -47,6 +47,7 @@ const TextContainer = styled('p', {
   fontWeight: '$light',
   fontSize: '$S',
   lineHeight: '$S',
+  letterSpacing: '-1.9px',
   gridColumn: 'span 8',
   mb: '$30',
 
