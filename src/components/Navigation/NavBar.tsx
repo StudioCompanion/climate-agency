@@ -110,30 +110,39 @@ export const NavBar = () => {
 }
 
 const NavBarWrap = styled('header', {
-  position: 'relative',
-  pt: '$110',
+  zIndex: 1,
+
+  path: {
+    fill: '$white',
+  },
 })
 
 const NavBarInnerWrap = styled('nav', {
-  display: 'flex',
-  flexDirection: 'column',
-  p: '$16',
-  mb: '$20',
-  backgroundColor: '$white',
-  zIndex: 1,
-  position: 'fixed',
-  top: '0',
-  width: '100%',
-
   '@tabletUp': {
+    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '$white',
     p: '$20',
+
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    zIndex: '$3',
+    mixBlendMode: 'difference',
   },
 })
 
 const TopRow = styled('div', {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  zIndex: '$3',
+  mixBlendMode: 'difference',
+
+  p: '$16',
+
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -164,12 +173,13 @@ const LinksWrap = styled(animated.ul, {
   gap: '$8',
   p: '$20 $16',
   backgroundColor: '$green',
-  position: 'absolute',
+  position: 'fixed',
   top: 0,
   left: 0,
   width: '100%',
   height: 187,
-  zIndex: -1,
+  zIndex: '$2',
+  mixBlendMode: 'unset',
 
   '@tabletUp': {
     backgroundColor: 'transparent',
@@ -199,9 +209,9 @@ const ListItem = styled('li', {
   variants: {
     isActive: {
       true: {
-        color: '$black',
+        color: '$white',
         '&:before': {
-          color: '$black',
+          color: '$white',
         },
       },
     },
