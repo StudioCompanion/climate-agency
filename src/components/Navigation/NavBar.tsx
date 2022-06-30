@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import NextLink from 'next/link'
 import { animated, useSpring } from '@react-spring/web'
 
 import { styled } from 'styles/stitches.config'
@@ -25,7 +26,7 @@ const routes = [
 ] as NavLinkProps[]
 
 const contactLink = {
-  href: `mailto:`,
+  href: `mailto:sophie@climateagency.net`,
   children: `Contact Us`,
   color: `transparent`,
   isExternal: true,
@@ -93,15 +94,17 @@ export const NavBar = () => {
           <MenuButton type="button" onClick={handleMenuClick}>
             {isOpen ? <IconClose /> : <IconOpen />}
           </MenuButton>
-          <LogoMobileWrap>
-            <CALogo />
-          </LogoMobileWrap>
+          <NextLink passHref href="/">
+            <LogoMobileWrap>
+              <CALogo />
+            </LogoMobileWrap>
+          </NextLink>
         </TopRow>
 
         <LinksWrap style={styles}>
           {routes.map((link) => (
             <ListItem
-              isActive={router.asPath === link.href}
+              isActive={router.pathname === link.href}
               key={link.children}
             >
               <NavLink {...link} onClick={handleLinkClick} />
@@ -111,9 +114,11 @@ export const NavBar = () => {
             <ContactLink {...contactLink} />
           </ListItem>
         </LinksWrap>
-        <LogoDesktopWrap>
-          <CALogo fill="white" />
-        </LogoDesktopWrap>
+        <NextLink passHref href="/">
+          <LogoDesktopWrap>
+            <CALogo fill="white" />
+          </LogoDesktopWrap>
+        </NextLink>
       </NavBarInnerWrap>
     </NavBarWrap>
   )
@@ -183,7 +188,7 @@ const MenuButton = styled('button', {
   left: -11,
 })
 
-const LogoMobileWrap = styled('div', {
+const LogoMobileWrap = styled('a', {
   display: 'flex',
   flexDirection: 'column',
   alignContent: 'center',
@@ -251,7 +256,7 @@ const ListItem = styled('li', {
   },
 })
 
-const LogoDesktopWrap = styled('div', {
+const LogoDesktopWrap = styled('a', {
   display: 'none',
 
   '@tabletUp': {

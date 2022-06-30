@@ -67,9 +67,9 @@ const HeaderContainer = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    width: '660px',
     flexDirection: 'row',
     gap: '$20',
-    gridColumn: 'span 6',
   },
 })
 
@@ -125,6 +125,9 @@ const TestimonialWrap = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    gridColumn: '5 / span 8',
+  },
+  '@desktopUp': {
     gridColumn: '7 / span 6',
   },
 })
