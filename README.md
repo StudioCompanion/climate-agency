@@ -1,11 +1,3 @@
-<style>
-    .callout_info {
-        background-color: #3DF73D56;
-        padding: 10px 15px;
-        border-left: 5px solid #3DF73D;
-    }
-</style>
-
 # The Climate Agency
 
 _The Climate Agency is a marketing strategy consultancy, non-profit, and dedicated to help climate projects scale up._
@@ -39,4 +31,4 @@ _The Climate Agency is a marketing strategy consultancy, non-profit, and dedicat
 - [Node.js](https://nodejs.org/en/) -> an asynchronous event-driven JavaScript runtime, designed to build scalable network applications
 - [nvm](https://github.com/nvm-sh/nvm) -> quickly install and use different versions of node via the command line
 
-<p class='callout_info'>💡 The node version we are using in the project is 17.6.0. It can be found in the <code>.nvmrc</code> file.</p>
+> 💡 The node version we are using in the project is 17.6.0. It can be found in the <code>.nvmrc</code> file.
