@@ -71,4 +71,4 @@ This will run the website in your local server.
 yarn storybook
 ```
 
-Here you can see all component in isolation.
+Here you can see all components in isolation.
