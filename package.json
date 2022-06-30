@@ -33,6 +33,7 @@
     "chromatic": "npx chromatic --project-token=7aed7cc2063d"
   },
   "dependencies": {
+    "@radix-ui/react-popover": "latest",
     "@radix-ui/react-tooltip": "latest",
     "@react-spring/web": "^9.4.5",
     "@stitches/react": "^1.2.8",

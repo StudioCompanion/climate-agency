@@ -4,13 +4,25 @@ import ClockIcon from '../../assets/Clock.svg'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from '../Text/TextCaption'
 
+import { useMedia } from 'hooks/useMedia'
+
+import PopoverCloseIcon from '../../assets/popoverClose.svg'
+
 import {
   Tooltip,
-  Provider,
+  TooltipProvider,
   TooltipTrigger,
   TooltipContent,
   StyledArrow,
 } from '../Tools/Tooltip'
+
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverClose,
+} from 'components/Tools/Popover'
 
 export interface NetZeroBlockProps {
   title: string
@@ -26,27 +38,51 @@ export const NetZeroBlock = ({
   content,
   imageSection,
 }: NetZeroBlockProps) => {
+  const isTabletUp = useMedia('(min-width: 768px)')
+
   return (
     <NetZeroWrap>
       <HeaderContainer>
         <Clock width="29" />
         <TitleContainer>
           {title}
-          <Provider delayDuration={200} skipDelayDuration={500}>
-            <Tooltip>
-              <TooltipTrigger fontColor="white" asChild>
+          {isTabletUp ? (
+            <TooltipProvider delayDuration={200} skipDelayDuration={500}>
+              <Tooltip>
+                <TooltipTrigger fontColor="white" asChild>
+                  <sup>(1)</sup>
+                </TooltipTrigger>
+                <TooltipContent sideOffset={5} side="top" align="start">
+                  (1) The UK Carbon Trust research found that 71% of small and
+                  medium size businesses in the UK could not refer to a single
+                  web source for help on decarbonization, and one third were not
+                  familiar with the term “Net Zero”. SMEs represent 90% of
+                  businesses in the UK.
+                  <StyledArrow offset={8} width={18} height={7} />
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          ) : (
+            <Popover>
+              <PopoverTrigger fontColor="white" asChild>
                 <sup>(1)</sup>
-              </TooltipTrigger>
-              <TooltipContent sideOffset={5} side="top" align="start">
-                (1) The UK Carbon Trust research found that 71% of small and
-                medium size businesses in the UK could not refer to a single web
-                source for help on decarbonization, and one third were not
-                familiar with the term “Net Zero”. SMEs represent 90% of
-                businesses in the UK.
-                <StyledArrow offset={8} width={18} height={7} />
-              </TooltipContent>
-            </Tooltip>
-          </Provider>
+              </PopoverTrigger>
+              <PopoverContent sideOffset={5} side="top" align="center">
+                <p>CITATION</p>
+                <p>
+                  (1) The UK Carbon Trust research found that 71% of small and
+                  medium size businesses in the UK could not refer to a single
+                  web source for help on decarbonization, and one third were not
+                  familiar with the term “Net Zero”. SMEs represent 90% of
+                  businesses in the UK.
+                </p>
+                <PopoverClose>
+                  <PopoverCloseIcon />
+                </PopoverClose>
+                <PopoverArrow offset={8} width={18} height={7} />
+              </PopoverContent>
+            </Popover>
+          )}
         </TitleContainer>
       </HeaderContainer>
       <TextContainer>{content}</TextContainer>
