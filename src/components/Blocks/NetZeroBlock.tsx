@@ -38,7 +38,7 @@ export const NetZeroBlock = ({
   content,
   imageSection,
 }: NetZeroBlockProps) => {
-  const isTabletUp = useMedia('(min-width: 768px)')
+  const isDesktopUp = useMedia('(min-width: 1024px)')
 
   return (
     <NetZeroWrap>
@@ -46,7 +46,7 @@ export const NetZeroBlock = ({
         <Clock width="29" />
         <TitleContainer>
           {title}
-          {isTabletUp ? (
+          {isDesktopUp ? (
             <TooltipProvider delayDuration={200} skipDelayDuration={500}>
               <Tooltip>
                 <TooltipTrigger fontColor="white" asChild>

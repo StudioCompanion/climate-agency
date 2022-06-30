@@ -43,13 +43,13 @@ export const ClimateCausesBlock = ({
   rightImage,
   className,
 }: ClimateCausesBlockProps) => {
-  const isTabletUp = useMedia('(min-width: 768px)')
+  const isDesktopUp = useMedia('(min-width: 1024px)')
 
   return (
     <ClimateCausesWrap className={className}>
       <Title>
         {title}
-        {isTabletUp ? (
+        {isDesktopUp ? (
           <TooltipProvider delayDuration={200} skipDelayDuration={500}>
             <Tooltip>
               <TooltipTrigger fontColor="black" asChild>
