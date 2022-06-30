@@ -81,6 +81,9 @@ const Mission = styled(MissionBlock, {
   my: '$80',
 
   '@tabletUp': {
+    mb: '$120',
+  },
+  '@desktopUp': {
     mb: '$200',
   },
 })
