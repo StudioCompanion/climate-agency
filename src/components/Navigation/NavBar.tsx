@@ -25,7 +25,7 @@ const routes = [
 ] as NavLinkProps[]
 
 const contactLink = {
-  href: `mailto:`,
+  href: `mailto:sophie@climateagency.net`,
   children: `Contact Us`,
   color: `transparent`,
   isExternal: true,
