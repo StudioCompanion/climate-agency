@@ -169,7 +169,7 @@ export const services = {
   
   Through our accelerator workshops and stakeholder campaigns, we help you leapfrog traditional processes to get results fast.`,
   link: {
-    href: `#`,
+    href: `/what-we-do/#accelerator`,
     children: `Learn about our accelerator`,
     color: `green`,
     isExternal: false,
@@ -364,7 +364,7 @@ export const cta = {
     isExternal: true,
   },
   rightLink: {
-    href: `mailto:sophie@climateagency.net`,
+    href: `mailto:lisa@climateagency.net`,
     children: `I’m working in the creative industry and want to help!`,
     color: `stone`,
     isExternal: true,
