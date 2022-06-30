@@ -77,6 +77,9 @@ const Title = styled('h2', {
   '@tabletUp': {
     fontSize: '$XXXL',
     lineHeight: '$XXXL',
+    gridColumn: 'span 10',
+  },
+  '@desktopUp': {
     gridColumn: 'span 7',
   },
 })
@@ -92,9 +95,12 @@ const TextContainer = styled('p', {
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '8 / span 4',
+    gridColumn: '7 / span 6',
     gridRowStart: '2',
     mt: '$100',
+  },
+  '@desktopUp': {
+    gridColumn: '8 / span 4',
   },
 })
 
@@ -129,8 +135,11 @@ const LeftImageContainer = styled('div', {
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: 'span 5',
+    gridColumn: 'span 7',
     mt: '$120',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 5',
   },
 })
 
@@ -139,8 +148,11 @@ const CaptionWrap = styled(TextCaption, {
   mt: '$8',
 
   '@tabletUp': {
-    gridColumn: 'span 4',
+    gridColumn: 'span 5',
     gridRowStart: '2',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 4',
   },
 })
 
@@ -151,6 +163,9 @@ const RightImageContainer = styled('div', {
   mt: '$40',
 
   '@tabletUp': {
+    gridColumn: '8 / span 5',
+  },
+  '@desktopUp': {
     gridColumn: '6 / span 4',
   },
 })

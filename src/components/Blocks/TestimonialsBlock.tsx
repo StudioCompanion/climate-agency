@@ -30,8 +30,8 @@ export const TestimonialsBlock = ({
         <TitleContainer>{title}</TitleContainer>
       </HeaderContainer>
       <ImageContainer gradient={false}>
-        {logos.map((logo) => (
-          <MediaImage key={logo.src} image={logo} />
+        {[...logos, ...logos].map((logo, index) => (
+          <MediaImage key={`${logo.src}_${index}`} image={logo} />
         ))}
       </ImageContainer>
       <TestimonialWrap>
@@ -67,9 +67,9 @@ const HeaderContainer = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    width: '660px',
     flexDirection: 'row',
     gap: '$20',
-    gridColumn: 'span 6',
   },
 })
 
@@ -111,6 +111,10 @@ const ImageContainer = styled(Marquee, {
     mx: -20,
     width: 'calc(100% + 40px) !important',
   },
+
+  '.marquee': {
+    minWidth: 'max-content',
+  },
 })
 
 /**
@@ -121,6 +125,9 @@ const TestimonialWrap = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    gridColumn: '5 / span 8',
+  },
+  '@desktopUp': {
     gridColumn: '7 / span 6',
   },
 })
