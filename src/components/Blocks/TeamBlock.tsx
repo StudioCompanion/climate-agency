@@ -125,7 +125,7 @@ const TeamMemberWrap = styled('li', {
   mb: '$40',
 
   '@tabletUp': {
-    gridColumn: 'span 4',
+    gridColumn: 'span 6',
     mb: '$16',
   },
   '@desktopUp': {

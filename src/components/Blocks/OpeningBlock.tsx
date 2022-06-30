@@ -96,7 +96,6 @@ const TextContainer = styled('p', {
         '@desktopUp': {
           fontSize: '$L',
           lineHeight: '$L',
-          gridColumn: '7 / span 5',
         },
       },
       large: {

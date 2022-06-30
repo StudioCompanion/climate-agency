@@ -144,7 +144,7 @@ const TextContainer = styled('p', {
     lineHeight: '$L',
     gridColumn: '7 / span 6',
   },
-  '@desktopUp': {
+  '@largeDesktopUp': {
     fontSize: '$XXL',
     lineHeight: '$XXL',
   },

@@ -125,6 +125,9 @@ const TestimonialWrap = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    gridColumn: '5 / span 8',
+  },
+  '@desktopUp': {
     gridColumn: '7 / span 6',
   },
 })
