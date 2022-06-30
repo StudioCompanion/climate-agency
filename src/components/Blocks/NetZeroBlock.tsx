@@ -4,6 +4,14 @@ import ClockIcon from '../../assets/Clock.svg'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from '../Text/TextCaption'
 
+import {
+  Tooltip,
+  Provider,
+  TooltipTrigger,
+  TooltipContent,
+  StyledArrow,
+} from '../Tools/Tooltip'
+
 export interface NetZeroBlockProps {
   title: string
   content: string
@@ -24,7 +32,21 @@ export const NetZeroBlock = ({
         <Clock width="29" />
         <TitleContainer>
           {title}
-          <sup>(1)</sup>
+          <Provider delayDuration={200} skipDelayDuration={500}>
+            <Tooltip>
+              <TooltipTrigger>
+                <sup>(1)</sup>
+              </TooltipTrigger>
+              <TooltipContent sideOffset={5}>
+                (1) The UK Carbon Trust research found that 71% of small and
+                medium size businesses in the UK could not refer to a single web
+                source for help on decarbonization, and one third were not
+                familiar with the term “Net Zero”. SMEs represent 90% of
+                businesses in the UK.
+                <StyledArrow />
+              </TooltipContent>
+            </Tooltip>
+          </Provider>
         </TitleContainer>
       </HeaderContainer>
       <TextContainer>{content}</TextContainer>
