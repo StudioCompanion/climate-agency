@@ -49,7 +49,7 @@ export const accelerator = {
     [
       `With elements of business positioning, marketing, behavioural science and stakeholders strategy, with a dash of creativity to inspire you. Plus our very own recommendation tailored to your needs, to help you gain profile and support, landing on your desk within days.
   
-        As a non profit dedicated to help climate innovation, we have worked hard to deliver a process which is:
+        As a non-profit dedicated to help climate innovation, we have worked hard to deliver a process which is:
         `,
       <ul key="list">
         <li>

@@ -34,13 +34,13 @@ const linksInformation = [
 
 const linksSocial = [
   {
-    href: `https://www.linkedin.com`,
+    href: `https://www.linkedin.com/company/climate-agency/`,
     children: `LinkedIn`,
     color: 'transparent',
     isExternal: true,
   },
   {
-    href: `https://www.twitter.com`,
+    href: `https://twitter.com/ClimateAgency1`,
     children: `Twitter`,
     color: 'transparent',
     isExternal: true,
