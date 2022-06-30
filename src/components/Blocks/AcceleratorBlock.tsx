@@ -82,16 +82,25 @@ const HeaderWrap = styled('div', {
 
   '@tabletUp': {
     flexDirection: 'row',
-    gridColumn: '1 / span 7',
+    gridColumn: '1 / span 12',
     mb: '$70',
+  },
+  '@desktopUp': {
+    gridColumn: '1 / span 9',
+  },
+  '@largeDesktopUp': {
+    gridColumn: '1 / span 7',
   },
 })
 
 const Arrows = styled(ArrowsIcon, {
   '@tabletUp': {
-    flex: '1 0 3.5rem',
+    flex: '1 0 3.7rem',
     alignSelf: 'flex-start',
     mt: '$24',
+  },
+  '@largeDesktopUp': {
+    flex: '0 1 5rem',
   },
 })
 
@@ -116,6 +125,9 @@ const ContentWrap = styled('div', {
   mb: '$40',
 
   '@tabletUp': {
+    gridColumn: '4 / span 6',
+  },
+  '@desktopUp': {
     gridColumn: '5 / span 4',
   },
 })
@@ -136,7 +148,7 @@ const TextWrap = styled('p', {
     lineHeight: '$XS',
     letterSpacing: '$small',
     listStyleType: 'disc',
-    ml: '$20',
+    ml: '$12',
 
     '& > li + li': {
       mt: '$20',
@@ -163,6 +175,9 @@ const LinkWrap = styled('span', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
+    gridColumn: '4 / span 2',
+  },
+  '@desktopUp': {
     gridColumn: '5 / span 2',
   },
 })

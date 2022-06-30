@@ -54,8 +54,11 @@ const TextContainer = styled('p', {
   '@tabletUp': {
     fontSize: '$L',
     lineHeight: '$L',
-    gridColumn: 'span 6',
+    gridColumn: 'span 8',
     mb: '$20',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 7',
   },
 })
 
@@ -66,8 +69,10 @@ const ButtonsWrap = styled('div', {
   gap: '$8',
   gridColumn: 'span 8',
 
-  '@tabletUp': {
+  '@desktopUp': {
     flexDirection: 'row',
+  },
+  '@largeDesktopUp': {
     gridColumn: '1 / span 6',
   },
 })
