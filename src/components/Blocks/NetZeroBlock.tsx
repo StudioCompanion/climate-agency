@@ -66,8 +66,11 @@ const HeaderContainer = styled('div', {
   '@tabletUp': {
     flexDirection: 'row',
     gap: '$30',
-    gridColumn: 'span 7',
+    gridColumn: 'span 10',
     mt: '$180',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 7',
   },
 })
 
@@ -104,8 +107,11 @@ const TextContainer = styled('p', {
   py: '$40',
 
   '@tabletUp': {
-    gridColumn: '5 / span 4',
+    gridColumn: '4 / span 6',
     py: '$60',
+  },
+  '@desktopUp': {
+    gridColumn: '5 / span 4',
   },
 })
 
@@ -138,6 +144,9 @@ const CaptionWrap = styled(TextCaption, {
   mb: '$16',
 
   '@tabletUp': {
+    gridColumn: 'span 5',
+  },
+  '@desktopUp': {
     gridColumn: 'span 4',
   },
 })
