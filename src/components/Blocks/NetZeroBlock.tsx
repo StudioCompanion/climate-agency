@@ -34,16 +34,16 @@ export const NetZeroBlock = ({
           {title}
           <Provider delayDuration={200} skipDelayDuration={500}>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger fontColor="white" asChild>
                 <sup>(1)</sup>
               </TooltipTrigger>
-              <TooltipContent sideOffset={5}>
+              <TooltipContent sideOffset={5} side="top" align="start">
                 (1) The UK Carbon Trust research found that 71% of small and
                 medium size businesses in the UK could not refer to a single web
                 source for help on decarbonization, and one third were not
                 familiar with the term “Net Zero”. SMEs represent 90% of
                 businesses in the UK.
-                <StyledArrow />
+                <StyledArrow offset={8} width={18} height={7} />
               </TooltipContent>
             </Tooltip>
           </Provider>

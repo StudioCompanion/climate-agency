@@ -22,10 +22,34 @@ const slideLeftAndFade = keyframes({
   '100%': { opacity: 1, transform: 'translateX(0)' },
 })
 
+const StyledTrigger = styled(TooltipPrimitive.Trigger, {
+  variants: {
+    fontColor: {
+      black: {
+        color: '$black',
+      },
+      white: {
+        color: '$white',
+      },
+    },
+  },
+  backgroundColor: 'transparent',
+  fontFamily: '$inria',
+  fontWeight: '$light',
+  fontSize: '$M',
+  lineHeight: '$M',
+  boxShadow: 'none',
+  border: 'none',
+  cursor: 'pointer',
+  p: '0',
+})
+
 const StyledContent = styled(TooltipPrimitive.Content, {
   maxWidth: '366px',
   padding: '10px 15px',
+  borderRadius: '2px',
   fontFamily: '$workSans',
+  fontWeight: '$regular',
   fontSize: '$XXS',
   lineHeight: '$XXS',
   color: '$black',
@@ -53,5 +77,5 @@ export const StyledArrow = styled(TooltipPrimitive.Arrow, {
 // Exports
 export const Provider = TooltipPrimitive.Provider
 export const Tooltip = TooltipPrimitive.Root
-export const TooltipTrigger = TooltipPrimitive.Trigger
+export const TooltipTrigger = StyledTrigger
 export const TooltipContent = StyledContent

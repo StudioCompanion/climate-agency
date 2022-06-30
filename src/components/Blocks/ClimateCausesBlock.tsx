@@ -3,6 +3,14 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from '../Text/TextCaption'
+
+import {
+  Tooltip,
+  Provider,
+  TooltipTrigger,
+  TooltipContent,
+  StyledArrow,
+} from '../Tools/Tooltip'
 export interface ClimateCausesBlockProps {
   title: string
   content: string
@@ -26,7 +34,21 @@ export const ClimateCausesBlock = ({
   return (
     <ClimateCausesWrap className={className}>
       <Title>
-        {title} <sup>(2)</sup>
+        {title}
+        <Provider delayDuration={200} skipDelayDuration={500}>
+          <Tooltip>
+            <TooltipTrigger fontColor="black" asChild>
+              <sup>(2)</sup>
+            </TooltipTrigger>
+            <TooltipContent sideOffset={5} side="top" align="start">
+              (2) According to Climateworks foundation, mitigating climate
+              change receives less than 2% of charitable contributions globally.
+              According to Charity Navigator, just 3% of US charity giving goes
+              to environmental causes as a whole.
+              <StyledArrow offset={8} width={18} height={7} />
+            </TooltipContent>
+          </Tooltip>
+        </Provider>
       </Title>
       <TextContainer>
         {content}
