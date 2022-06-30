@@ -364,7 +364,7 @@ export const cta = {
     isExternal: true,
   },
   rightLink: {
-    href: `mailto:sophie@climateagency.net`,
+    href: `mailto:lisa@climateagency.net`,
     children: `I’m working in the creative industry and want to help!`,
     color: `stone`,
     isExternal: true,
