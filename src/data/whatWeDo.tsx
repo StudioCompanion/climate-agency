@@ -24,7 +24,7 @@ export const intro = {
 
 export const accelerator = {
   title: `The Climate Action Accelerator`,
-  subtitle: `An intense workshop spread over 2 half days.`,
+  subtitle: `Our accelerator module pulls forward what is traditionally a 3 to 6 months process into 3 to 6 weeks.`,
   link: {
     href: `mailto:sophie@climateagency.net`,
     children: `Get in touch`,
@@ -47,6 +47,8 @@ export const accelerator = {
   children: [
     `We believe many climate projects need help in terms of business positioning, marketing, and stakeholder strategy. These are fundamentals that can truly help climate projects scale up. `,
     [
+      `It consists of 2 intense workshops, followed by a full recommendation. This will include your stakeholder strategy and an action-focused persuasion plan.
+    `,
       `With elements of business positioning, marketing, behavioural science and stakeholders strategy, with a dash of creativity to inspire you. Plus our very own recommendation tailored to your needs, to help you gain profile and support, landing on your desk within days.
   
         As a non-profit dedicated to help climate innovation, we have worked hard to deliver a process which is:
