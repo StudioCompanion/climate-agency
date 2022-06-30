@@ -169,7 +169,7 @@ export const services = {
   
   Through our accelerator workshops and stakeholder campaigns, we help you leapfrog traditional processes to get results fast.`,
   link: {
-    href: `#`,
+    href: `/what-we-do/#accelerator`,
     children: `Learn about our accelerator`,
     color: `green`,
     isExternal: false,
