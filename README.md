@@ -32,3 +32,43 @@ _The Climate Agency is a marketing strategy consultancy, non-profit, and dedicat
 - [nvm](https://github.com/nvm-sh/nvm) -> quickly install and use different versions of node via the command line
 
 > 💡 The node version we are using in the project is 17.6.0. It can be found in the <code>.nvmrc</code> file.
+
+#### Developing the project
+
+##### Download the repo
+
+1. Clone the GitHub repo of the project:
+
+```
+git clone git@github.com:StudioCompanion/climate-agency.git
+```
+
+2. Navigate to the project in your local folder
+
+```
+cd climate-agency/
+```
+
+3. Install all dependencies and dev-dependencies in found `package.json` file
+
+```
+yarn install
+```
+
+##### After these steps, you are now ready to run the project locally. To do that:
+
+1. Run in your terminal
+
+```
+yarn dev
+```
+
+This will run the website in your local server.
+
+2. Run `Storybook` - for this you will need to open a separate terminal window.
+
+```
+yarn storybook
+```
+
+Here you can see all component in isolation.
