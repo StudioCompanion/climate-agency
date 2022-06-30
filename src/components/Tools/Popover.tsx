@@ -1,4 +1,5 @@
-import { styled, keyframes } from '@stitches/react'
+import { styled } from 'styles/stitches.config'
+import { keyframes } from '@stitches/react'
 
 import * as PopoverPrimitive from '@radix-ui/react-popover'
 
@@ -36,12 +37,16 @@ const StyledTrigger = styled(PopoverPrimitive.Trigger, {
   backgroundColor: 'transparent',
   fontFamily: '$inria',
   fontWeight: '$light',
-  fontSize: '$M',
-  lineHeight: '$M',
+  fontSize: '$XS',
+  lineHeight: '$XS',
   boxShadow: 'none',
   border: 'none',
   cursor: 'pointer',
   p: '0',
+  '@tabletUp': {
+    fontSize: '$L',
+    lineHeight: '$L',
+  },
 })
 
 const StyledContent = styled(PopoverPrimitive.Content, {
@@ -72,6 +77,10 @@ const StyledContent = styled(PopoverPrimitive.Content, {
   display: 'flex',
   flexDirection: 'column',
   gap: '$10',
+
+//   '@tabletUp': {
+//     ml: '$100',
+//   },
 })
 
 const StyledArrow = styled(PopoverPrimitive.Arrow, {
