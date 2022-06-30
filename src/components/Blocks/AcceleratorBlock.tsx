@@ -165,8 +165,8 @@ const SubtitleWrap = styled('h3', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
-    fontSize: '$XXL',
-    lineHeight: '$XXL',
+    fontSize: '$XL',
+    lineHeight: '$XL',
     gridColumn: '5 / span 4',
   },
 })
