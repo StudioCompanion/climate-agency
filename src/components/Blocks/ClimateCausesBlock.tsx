@@ -43,6 +43,7 @@ export const ClimateCausesBlock = ({
   rightImage,
   className,
 }: ClimateCausesBlockProps) => {
+  const isTabletUp = useMedia('(min-width: 768px)')
   const isDesktopUp = useMedia('(min-width: 1024px)')
 
   return (
@@ -60,7 +61,7 @@ export const ClimateCausesBlock = ({
                 change receives less than 2% of charitable contributions
                 globally. According to Charity Navigator, just 3% of US charity
                 giving goes to environmental causes as a whole.
-                <StyledArrow offset={8} width={18} height={7} />
+                <StyledArrow offset={7} width={18} height={7} />
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -69,7 +70,12 @@ export const ClimateCausesBlock = ({
             <PopoverTrigger fontColor="black" asChild>
               <sup>(2)</sup>
             </PopoverTrigger>
-            <PopoverContent sideOffset={5} side="top" align="start">
+            <PopoverContentWrap
+              sideOffset={5}
+              side="top"
+              align="start"
+              alignOffset={isTabletUp ? -8 : 0}
+            >
               <p>CITATION</p>
               <p>
                 (2) According to Climateworks foundation, mitigating climate
@@ -80,8 +86,8 @@ export const ClimateCausesBlock = ({
               <PopoverClose>
                 <PopoverCloseIcon />
               </PopoverClose>
-              <PopoverArrow offset={8} width={18} height={7} />
-            </PopoverContent>
+              <PopoverArrow offset={isTabletUp ? 9 : 7} width={18} height={7} />
+            </PopoverContentWrap>
           </Popover>
         )}
       </Title>
@@ -225,4 +231,8 @@ const RightImageContainer = styled('div', {
   '@desktopUp': {
     gridColumn: '6 / span 4',
   },
+})
+
+const PopoverContentWrap = styled(PopoverContent, {
+  ml: '$10',
 })
