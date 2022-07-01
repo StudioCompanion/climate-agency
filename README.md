@@ -26,7 +26,7 @@ _The Climate Agency is a marketing strategy consultancy, non-profit, and dedicat
 
 ### Prerequisites 📝
 
-#### Global dependencies needed to set up the dev environment are the following:
+#### Global dependencies for development
 
 - [Node.js](https://nodejs.org/en/) -> an asynchronous event-driven JavaScript runtime, designed to build scalable network applications
 - [nvm](https://github.com/nvm-sh/nvm) -> quickly install and use different versions of node via the command line
@@ -35,7 +35,7 @@ _The Climate Agency is a marketing strategy consultancy, non-profit, and dedicat
 
 #### Developing the project
 
-##### Download the repo
+##### Download the repo ⬇️
 
 1. Clone the GitHub repo of the project:
 
@@ -55,9 +55,9 @@ cd climate-agency/
 yarn install
 ```
 
-##### After these steps, you are now ready to run the project locally. To do that:
+##### After these steps, you are now ready to run the project locally 🚀
 
-1. Run in your terminal
+1. In your terminal, run:
 
 ```
 yarn dev
