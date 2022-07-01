@@ -1,4 +1,5 @@
-import { styled, keyframes } from '@stitches/react'
+import { styled } from 'styles/stitches.config'
+import { keyframes } from '@stitches/react'
 
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 
