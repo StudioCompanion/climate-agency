@@ -73,9 +73,9 @@ yarn storybook
 
 Here you can see all components in isolation.
 
-## Delpoying / Publishing
+## Delpoying / Publishing ✈️
 
-to be updated soon
+There's an automatic pipeline from pushing to main to the vercel deployment.
 
 ## Versioning 📦
 
