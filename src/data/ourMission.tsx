@@ -340,9 +340,7 @@ export const team = {
         role: `Advisor`,
         description: `Myles is the founder and creative director of Companion, a digital product design studio that works with start-ups and established businesses to create a better future for people and planet.
 
-        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.
-
-        As part of Companion’s commitment to a better future, the studio aims to donate 5% of their annual revenue towards projects, charities and causes the studios care for: from environmental & climate issues, to representation in the arts & creative community, mental health and much more.`,
+        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.`,
         socialLink: {
           href: `https://www.linkedin.com/in/myles-palmer-b1b70519/`,
           children: `LinkedIn`,
