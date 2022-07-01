@@ -72,3 +72,11 @@ yarn storybook
 ```
 
 Here you can see all components in isolation.
+
+## Delpoying / Publishing
+
+to be updated soon
+
+## Versioning 📦
+
+We use [SemVer](https://semver.org/) for versioning
