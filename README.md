@@ -26,10 +26,11 @@ _The Climate Agency is a marketing strategy consultancy, non-profit, and dedicat
 
 ### Prerequisites 📝
 
-#### Global dependencies for development
+#### Global dependencies for development 🧶
 
 - [Node.js](https://nodejs.org/en/) -> an asynchronous event-driven JavaScript runtime, designed to build scalable network applications
 - [nvm](https://github.com/nvm-sh/nvm) -> quickly install and use different versions of node via the command line
+- [yarn](https://yarnpkg.com/) -> package and project manager
 
 > 💡 The node version we are using in the project is 17.6.0. It can be found in the <code>.nvmrc</code> file.
 
