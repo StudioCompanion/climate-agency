@@ -40,7 +40,7 @@ export const netZero = {
         src: '/images/Greenland_fjords.png',
         altText: 'Greenland Fjords',
         width: 1989,
-        height: 1176,
+        height: 1170,
       },
       layout: 'responsive',
       objectFit: 'cover',
@@ -198,7 +198,7 @@ export const team = {
           image: {
             src: '/team-members/sophie.png',
             altText: 'Sophie Gallois',
-            width: 317,
+            width: 318,
             height: 369,
           },
           layout: 'responsive',
@@ -330,7 +330,7 @@ export const team = {
           image: {
             src: '/team-members/myles.jpg',
             altText: 'Myles Palmer',
-            width: 1427,
+            width: 1428,
             height: 1661,
           },
           layout: 'responsive',
