@@ -28,14 +28,15 @@ export const accelerator = {
   link: {
     href: `mailto:sophie@climateagency.net`,
     children: `Get in touch`,
-    color: 'green',
+    color: 'stone',
     isExternal: true,
   },
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/Mad-Don.jpeg',
-        altText: '"Mad Don", Donal Arabian, Chief of the APOLLO Test Division',
+        src: '/images/satelite.jpg',
+        altText:
+          'Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.',
         width: 1102,
         height: 632,
       },
@@ -45,44 +46,55 @@ export const accelerator = {
     caption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the APOLLO Test Division. Credit NASA Archives.`,
   },
   children: [
-    `We believe many climate projects need help in terms of business positioning, marketing, and stakeholder strategy. These are fundamentals that can truly help climate projects scale up. `,
-    [
-      `It consists of 2 intense workshops, followed by a full recommendation. This will include your stakeholder strategy and an action-focused persuasion plan.
-    `,
-      `With elements of business positioning, marketing, behavioural science and stakeholders strategy, with a dash of creativity to inspire you. Plus our very own recommendation tailored to your needs, to help you gain profile and support, landing on your desk within days.
-  
-        As a non-profit dedicated to help climate innovation, we have worked hard to deliver a process which is:
-        `,
-      <ul key="list">
-        <li>
-          <b>Accessible</b>: around 10% of the traditional agency/consultancy
-          fees for a similar process.
-        </li>
-        <li>
-          <b>Climate-specific</b>: climate solutions projects are our only
-          focus. We can share the knowledge gained across the sector.
-        </li>
-        <li>
-          <b>Fast and Intense</b>. The world is on fire, your work is urgent. We
-          aim to equip you with the basic tools to boost your profile and
-          support within days/weeks.
-        </li>
-      </ul>,
-    ],
+    'It consists of 2 half-day workshops, followed by a full recommendation.',
+    <strong key="strong1">Key deliverables</strong>,
+    <ul key="list1">
+      <li>
+        A strategic planning recommendation (unique mission, messaging, look and
+        feel)
+      </li>
+      <li>
+        A stakeholder strategy (who to influence, how, with what call to action)
+      </li>
+      <li>
+        A top line, action-focused communication plan (with focus on fundraising
+        , advocacy, engagement, depending on your needs)
+      </li>
+    </ul>,
+    'As a non-profit dedicated to help climate innovation, we have worked hard to deliver a process which is:',
+    <dl key="list2">
+      <dt>
+        <b>Accessible</b>
+      </dt>
+      <dd>
+        around 10% of the traditional agency/consultancy fees for a similar
+        process.
+      </dd>
+      <dt>
+        <b>Climate-specific</b>
+      </dt>
+      <dd>
+        climate solutions projects are our only focus. We can share the
+        knowledge gained across the sector.
+      </dd>
+      <dt>
+        <b>Fast and Intense</b>
+      </dt>
+      <dd>
+        The world is on fire, your work is urgent. We aim to equip you with the
+        basic tools to boost your profile and support within days/weeks.
+      </dd>
+    </dl>,
   ],
 } as AcceleratorBlockProps
 
 export const stakeholders = {
   pageLayout: 'right',
   children: <SpikesIcon />,
-  title: `Spotlight Campaigns`,
-  content: `We believe there are neglected topics which are critical to climate yet poorly understood by key stakeholders such as politicians, philanthropists, CEOs, Media & influencers etc.
-  
-  We need to shine a spotlight on some climate stories, to nudge decision-makers to act. For example, key actions needed around Methane, or the role of the ocean as a climate solution.
-      
-  Facts and figures are not enough: we can invite some of the best creative and strategic minds to help tell these stories in a way which is persuasive, powerful, and relevant for stakeholders.
-      
-  We are working with founders, scientists and agencies to bring to life these topical stakeholder campaigns.`,
+  title: `Stakeholder Campaigns on neglected climate topics`,
+  content: `We need to shine a spotlight on some climate stories, to nudge decision-makers. For example, the urgency around Methane, or the role of the ocean as a climate solution.
+
+  Facts and figures are not enough: we want to invite some of the best creative minds to help tell these stories.  Time and resources are short to communicate with the wider public, we plan to focus on persuading key stakeholders.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -101,13 +113,11 @@ export const partners = {
   pageLayout: 'left',
   children: <SunIcon />,
   title: `Helping you plan, connect and deliver with great partners`,
-  content: `After the workshop, you may feel you need help building assets (website, video), or running a campaign (fundraising, influencers). We can help.
-          
-  We will either find the right partners to do this for you, negotiate with them to work “at cost”, and help brief them. We are well connected within the agency / creative world and will use our network to help you scale up. Or do it ourselves if we can, charging for our time at cost.`,
+  content: `After the Accelerator, if you need help creating assets (website, video) or running a campaign, we can help. Thanks to our little black book, we will connect you to the right partners.`,
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/team-rowing.jpeg',
+        src: '/images/team-rowing.jpg',
         altText: 'People gathering',
         width: 989,
         height: 686,
