@@ -160,7 +160,13 @@ export const SplashPage = () => {
   }, [])
 
   return (
-    <Splash style={{ width, height, ...containerStyles }}>
+    <Splash
+      style={{
+        width: width === 0 ? '100vw' : width,
+        height: height === 0 ? '100vh' : height,
+        ...containerStyles,
+      }}
+    >
       {IMAGES.map((img, index) => (
         <ImageContainer
           ref={(ref) => (imageRefs.current[IMAGES.length - 1 - index] = ref!)}
