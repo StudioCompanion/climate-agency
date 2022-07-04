@@ -33,7 +33,7 @@ export const Carousel = <Item,>({
   const [carouselAutoplay] = useState(() =>
     Autoplay({
       playOnInit: false,
-      delay: 7000,
+      delay: 11000,
     })
   )
   const [viewportRef, embla] = useEmblaCarousel(
