@@ -35,15 +35,14 @@ export const accelerator = {
     mediaImage: {
       image: {
         src: '/images/satelite.jpg',
-        altText:
-          'Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.',
+        altText: 'Satellite capture from United States Geological Survey',
         width: 1102,
         height: 632,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the APOLLO Test Division. Credit NASA Archives.`,
+    caption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.'`,
   },
   children: [
     'It consists of 2 half-day workshops, followed by a full recommendation.',
