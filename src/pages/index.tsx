@@ -28,7 +28,7 @@ const Index = () => {
     <IndexWrap>
       <NextSeo
         title="Our Mission"
-        description="We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up."
+        description="We are a marketing strategy consultancy, non-profit, and dedicated to help climate projects scale up."
         canonical="https://www.climate.agency"
         openGraph={{
           url: 'https://www.climate.agency/',
@@ -81,6 +81,9 @@ const Mission = styled(MissionBlock, {
   my: '$80',
 
   '@tabletUp': {
+    mb: '$120',
+  },
+  '@desktopUp': {
     mb: '$200',
   },
 })

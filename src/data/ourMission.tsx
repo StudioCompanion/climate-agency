@@ -55,7 +55,7 @@ export const climateCauses = {
   
   We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
   link: {
-    href: `mailto:`,
+    href: `mailto:sophie@climateagency.net`,
     children: `Let us help you`,
     color: 'green',
     isExternal: true,
@@ -169,7 +169,7 @@ export const services = {
   
   Through our accelerator workshops and stakeholder campaigns, we help you leapfrog traditional processes to get results fast.`,
   link: {
-    href: `#`,
+    href: `/what-we-do/#accelerator`,
     children: `Learn about our accelerator`,
     color: `green`,
     isExternal: false,
@@ -340,9 +340,7 @@ export const team = {
         role: `Advisor`,
         description: `Myles is the founder and creative director of Companion, a digital product design studio that works with start-ups and established businesses to create a better future for people and planet.
 
-        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.
-
-        As part of Companion’s commitment to a better future, the studio aims to donate 5% of their annual revenue towards projects, charities and causes the studios care for: from environmental & climate issues, to representation in the arts & creative community, mental health and much more.`,
+        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.`,
         socialLink: {
           href: `https://www.linkedin.com/in/myles-palmer-b1b70519/`,
           children: `LinkedIn`,
@@ -358,15 +356,15 @@ export const cta = {
   content: `Together, we can crack communication around climate solutions. \n
   If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
   leftLink: {
-    href: `mailto:`,
+    href: `mailto:sophie@climateagency.net`,
     children: `I’m working in climate and need help!`,
     color: `green`,
-    isExternal: false,
+    isExternal: true,
   },
   rightLink: {
-    href: `mailto:`,
+    href: `mailto:lisa@climateagency.net`,
     children: `I’m working in the creative industry and want to help!`,
     color: `stone`,
-    isExternal: false,
+    isExternal: true,
   },
 } as CtaBlockProps

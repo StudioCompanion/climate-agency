@@ -3,6 +3,26 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from '../Text/TextCaption'
+
+import { useMedia } from 'hooks/useMedia'
+
+import PopoverCloseIcon from '../../assets/popoverClose.svg'
+
+import {
+  Tooltip,
+  TooltipProvider,
+  TooltipTrigger,
+  TooltipContent,
+  StyledArrow,
+} from '../Tools/Tooltip'
+
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverClose,
+} from 'components/Tools/Popover'
 export interface ClimateCausesBlockProps {
   title: string
   content: string
@@ -23,10 +43,53 @@ export const ClimateCausesBlock = ({
   rightImage,
   className,
 }: ClimateCausesBlockProps) => {
+  const isTabletUp = useMedia('(min-width: 768px)')
+  const isDesktopUp = useMedia('(min-width: 1024px)')
+
   return (
     <ClimateCausesWrap className={className}>
       <Title>
-        {title} <sup>(2)</sup>
+        {title}
+        {isDesktopUp ? (
+          <TooltipProvider delayDuration={200} skipDelayDuration={500}>
+            <Tooltip>
+              <TooltipTrigger fontColor="black" asChild>
+                <sup>(2)</sup>
+              </TooltipTrigger>
+              <TooltipContent sideOffset={5} side="top" align="start">
+                (2) According to Climateworks foundation, mitigating climate
+                change receives less than 2% of charitable contributions
+                globally. According to Charity Navigator, just 3% of US charity
+                giving goes to environmental causes as a whole.
+                <StyledArrow offset={7} width={18} height={7} />
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ) : (
+          <Popover>
+            <PopoverTrigger fontColor="black" asChild>
+              <sup>(2)</sup>
+            </PopoverTrigger>
+            <PopoverContentWrap
+              sideOffset={5}
+              side="top"
+              align="start"
+              alignOffset={isTabletUp ? -8 : 0}
+            >
+              <p>CITATION</p>
+              <p>
+                (2) According to Climateworks foundation, mitigating climate
+                change receives less than 2% of charitable contributions
+                globally. According to Charity Navigator, just 3% of US charity
+                giving goes to environmental causes as a whole.
+              </p>
+              <PopoverClose>
+                <PopoverCloseIcon />
+              </PopoverClose>
+              <PopoverArrow offset={isTabletUp ? 9 : 7} width={18} height={7} />
+            </PopoverContentWrap>
+          </Popover>
+        )}
       </Title>
       <TextContainer>
         {content}
@@ -77,6 +140,9 @@ const Title = styled('h2', {
   '@tabletUp': {
     fontSize: '$XXXL',
     lineHeight: '$XXXL',
+    gridColumn: 'span 10',
+  },
+  '@desktopUp': {
     gridColumn: 'span 7',
   },
 })
@@ -92,9 +158,12 @@ const TextContainer = styled('p', {
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: '8 / span 4',
+    gridColumn: '7 / span 6',
     gridRowStart: '2',
     mt: '$100',
+  },
+  '@desktopUp': {
+    gridColumn: '8 / span 4',
   },
 })
 
@@ -129,8 +198,11 @@ const LeftImageContainer = styled('div', {
   mt: '$40',
 
   '@tabletUp': {
-    gridColumn: 'span 5',
+    gridColumn: 'span 7',
     mt: '$120',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 5',
   },
 })
 
@@ -139,8 +211,11 @@ const CaptionWrap = styled(TextCaption, {
   mt: '$8',
 
   '@tabletUp': {
-    gridColumn: 'span 4',
+    gridColumn: 'span 5',
     gridRowStart: '2',
+  },
+  '@desktopUp': {
+    gridColumn: 'span 4',
   },
 })
 
@@ -151,6 +226,13 @@ const RightImageContainer = styled('div', {
   mt: '$40',
 
   '@tabletUp': {
+    gridColumn: '8 / span 5',
+  },
+  '@desktopUp': {
     gridColumn: '6 / span 4',
   },
+})
+
+const PopoverContentWrap = styled(PopoverContent, {
+  ml: '$10',
 })
