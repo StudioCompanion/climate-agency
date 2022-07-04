@@ -296,7 +296,7 @@ export const team = {
         },
         name: `Fern Miller`,
         role: `Advisor`,
-        description: `Fern Miller is Executive Strategy Director at R/GA – her senior expertise spans strategic planning and creative communication, across global markets; in both agencies and start-ups.`,
+        description: `Fern Miller is Executive Strategy Director at R/GA – A leading digital, marketing and innovation agency. Her senior expertise spans strategic planning and creative communication, across global markets; in both agencies and start-ups.`,
         socialLink: {
           href: `https://www.linkedin.com/in/fernmiller/`,
           children: `LinkedIn`,
