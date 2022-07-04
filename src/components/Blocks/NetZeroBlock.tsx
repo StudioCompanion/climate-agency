@@ -5,6 +5,7 @@ import { styled } from 'styles/stitches.config'
 import { MediaImage, MediaImageProps } from 'components/Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
 import { parseStringAndInsertFootnoteBetweenSupTags } from 'helpers/strings'
+import { Link } from 'components/Links/Link'
 
 export interface NetZeroBlockProps {
   title: string
@@ -31,6 +32,7 @@ export const NetZeroBlock = ({
           content,
           'The UK Carbon Trust research found that 71% of small and medium size businesses in the UK could not refer to a single web source for help on decarbonization, and one third were not familiar with the term “Net Zero”. SMEs represent 90% of businesses in the UK.'
         )}
+        <TextLink href="/what-we-do">{'See how'}</TextLink>
       </TextContainer>
       <MediaContainer>
         <ImageContainer>
@@ -153,4 +155,9 @@ const CaptionWrap = styled(TextCaption, {
   '@desktopUp': {
     gridColumn: 'span 4',
   },
+})
+
+const TextLink = styled(Link, {
+  mt: '$24',
+  display: 'table',
 })

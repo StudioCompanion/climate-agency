@@ -98,21 +98,6 @@ export const Carousel = <Item,>({
 
   return (
     <CarouselWrap className={clsx('embla', className)}>
-      <ViewportWrap className="embla__viewport" ref={viewportRef}>
-        <SlidesContainer className="embla__container">
-          {slides &&
-            slides.map((item, i) => (
-              <Slide
-                ref={(ref) => (slideRefs.current[i] = ref!)}
-                key={i}
-                className="embla__slide"
-                tabIndex={-1}
-              >
-                {children(item)}
-              </Slide>
-            ))}
-        </SlidesContainer>
-      </ViewportWrap>
       <CarouselFooter>
         {/**
          * This is a live region that can read out
@@ -139,6 +124,21 @@ export const Carousel = <Item,>({
           </Dot>
         ))}
       </CarouselFooter>
+      <ViewportWrap className="embla__viewport" ref={viewportRef}>
+        <SlidesContainer className="embla__container">
+          {slides &&
+            slides.map((item, i) => (
+              <Slide
+                ref={(ref) => (slideRefs.current[i] = ref!)}
+                key={i}
+                className="embla__slide"
+                tabIndex={-1}
+              >
+                {children(item)}
+              </Slide>
+            ))}
+        </SlidesContainer>
+      </ViewportWrap>
     </CarouselWrap>
   )
 }
@@ -167,10 +167,10 @@ const Slide = styled('li', {
 const CarouselFooter = styled('div', {
   display: 'flex',
   gap: '$8',
-  mt: '$16',
+  mb: '$16',
 
   '@tabletUp': {
-    mt: '$20',
+    mb: '$20',
   },
 })
 

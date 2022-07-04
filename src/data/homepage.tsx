@@ -3,7 +3,6 @@ import { NetZeroBlockProps } from 'components/Blocks/NetZeroBlock'
 import { ClimateCausesBlockProps } from 'components/Blocks/ClimateCausesBlock'
 import { ShortArticleBlockProps } from 'components/Blocks/ShortArticleBlock'
 import { TestimonialsBlockProps } from 'components/Blocks/TestimonialsBlock'
-import { MissionBlockProps } from 'components/Blocks/MissionBlock'
 import { TeamBlockProps } from 'components/Blocks/TeamBlock'
 import { CtaBlockProps } from 'components/Blocks/CtaBlock'
 
@@ -50,9 +49,7 @@ export const netZero = {
 
 export const climateCauses = {
   title: `Just 2% of global charity giving goes to climate causes.<sup>(2)</sup>`,
-  content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message.
-  
-  We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
+  content: `At the Climate Agency, we harness business leadership and marketing strategy to help climate innovators. It’s about talking to the right people with the right message and - importantly - the best call to action. You’ll have a CMO at your side, working to help you stand out, fundraise and scale.`,
   link: {
     href: `mailto:sophie@climateagency.net`,
     children: `Let us help you`,
@@ -87,19 +84,19 @@ export const climateCauses = {
 export const ourBackground = {
   textPosition: 'left',
   header: `Our background`,
-  content: `We are a team of experts in business strategy, marketing and communication, with a strong track record in leading global brands and charities.`,
+  content: `We are a team of experts in marketing and communications, with prestigious careers leading global consumer brands and charities.`,
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/satellite_capture.jpg',
-        altText: 'Satellite capture',
+        src: '/images/Mad-Don.jpeg',
+        altText: 'Mad Don',
         width: 343,
         height: 348,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.`,
+    caption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the Apollo Test Division. Credit NASA Archives.`,
   },
 } as ShortArticleBlockProps
 
@@ -155,11 +152,6 @@ export const testimonials = {
     },
   ],
 } as TestimonialsBlockProps
-
-export const mission = {
-  header: `Our mission`,
-  content: `We believe in human ingenuity and the power of ideas and we are exclusively focused on climate.`,
-} as MissionBlockProps
 
 export const services = {
   textPosition: 'right',
@@ -274,7 +266,7 @@ export const team = {
         },
         name: `David Addison`,
         role: `Advisor`,
-        description: `David Addison, leading climate, innovation and Net Zero at the Virgin Group.  For more than twelve years David has been working to help explore, evaluate, and evolve carbon removal solutions.  Advisor to Nori, Carbon 180, Project Drawdown.`,
+        description: `David Addison works for Virgin on a range of climate, environment, purpose, and sustainability efforts. For more than twelve years David has been working with and learning from others across academia, business, civil society, governments, and non-profits to help explore carbon removal solutions, and was involved with <a href="https://carbon180.org/" rel="noopener noreferrer" target="_blank">Carbon180</a> from its inception and with the <a href="https://drawdown.org/the-book" rel="noopener noreferrer" target="_blank">New York Times best-selling book: Drawdown</a>. He also volunteers in an advisory role to <a href="https://climatescience.org/" rel="noopener noreferrer" target="_blank">ClimateScience.org</a> and <a href="https://nori.com/" rel="noopener noreferrer" target="_blank">Nori</a>.`,
         socialLink: {
           href: `https://www.linkedin.com/in/davidaddison350/`,
           children: `LinkedIn`,
@@ -314,7 +306,7 @@ export const team = {
           layout: 'responsive',
           objectFit: 'cover',
         },
-        name: `Amanda Hamilton-Stanley`,
+        name: `Amanda Stanley`,
         role: `Advisor`,
         description: `As a General Counsel of a major international business, trustee of Charities and pensions boards as well as coach, Amanda Stanley brings a wealth of experience with a keen focus on compliance and ESG.`,
         socialLink: {
@@ -352,8 +344,7 @@ export const team = {
 } as TeamBlockProps
 
 export const cta = {
-  content: `Together, we can crack communication around climate solutions. \n
-  If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
+  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Do you believe that climate projects need more funding and support?\n\nThen please get in touch. Together let’s persuade the people you need to scale up.`,
   leftLink: {
     href: `mailto:sophie@climateagency.net`,
     children: `I’m working in climate and need help!`,
