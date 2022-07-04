@@ -24,25 +24,21 @@ const slideLeftAndFade = keyframes({
 })
 
 const StyledTrigger = styled(TooltipPrimitive.Trigger, {
-  variants: {
-    fontColor: {
-      black: {
-        color: '$black',
-      },
-      white: {
-        color: '$white',
-      },
-    },
-  },
+  display: 'none',
   backgroundColor: 'transparent',
-  fontFamily: '$inria',
-  fontWeight: '$light',
-  fontSize: '$M',
-  lineHeight: '$M',
+  fontSize: '0.6em',
+  fontFamily: 'inherit',
+  fontWeight: 'inherit',
+  lineHeight: 'inherit',
+  color: 'inherit',
   boxShadow: 'none',
   border: 'none',
   cursor: 'pointer',
   p: '0',
+
+  '@desktopUp': {
+    display: 'inline-block',
+  },
 })
 
 const StyledContent = styled(TooltipPrimitive.Content, {

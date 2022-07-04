@@ -6,7 +6,12 @@ import { OpeningBlock } from 'components/Blocks/OpeningBlock'
 import { AcceleratorBlock } from 'components/Blocks/AcceleratorBlock'
 import { ArticleBlock } from 'components/Blocks/ArticleBlock'
 
-import { intro, accelerator, stakeholders, partners } from '../data/whatWeDo'
+import {
+  intro,
+  accelerator,
+  stakeholders,
+  partners,
+} from '../data/whatWeDoPage'
 const WhatWeDo = () => {
   return (
     <WhatWeDoWrap>

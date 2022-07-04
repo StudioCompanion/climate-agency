@@ -21,7 +21,7 @@ import {
   services,
   team,
   cta,
-} from '../data/ourMission'
+} from '../data/homepage'
 
 const Index = () => {
   return (

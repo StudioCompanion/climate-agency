@@ -21,19 +21,18 @@ export const hero = {
     },
     caption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
   },
-  content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n 
-  These ideas need profile and they need support. Urgently.\n
-  We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
+  content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n
+  These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
+  We are a non-profit marketing strategy consultancy, dedicated to help climate innovators scale up.`,
   layout: 'default',
 } as OpeningBlockProps
 
 export const netZero = {
-  title: `One third of CEOs in the UK are unsure what Net Zero means.`,
-  content: `Climate communication is not working. The language is impenetrable and the maths mind-bendingly complex.
-  
-  Thousands of innovative climate solutions are in the making, exploring everything from extracting CO2 from the atmosphere, to preserving ice at the poles. Some of these could make a huge difference in the years to come, if they get the resources to test and scale.
-  
-  Global corporations and brands have evolved for decades the marketing techniques to persuade, engage and build trust.  But, with limited resources, Climate projects find it hard to access these strategic skills. Yet the world is on fire, and they need results with urgency.`,
+  title: `Climate Communication is not working.`,
+  content: `Public and key stakeholders are confused by the jargon and mind-bending complexity. For eg: One third of UK CEOs in the UK are unfamiliar with the term Net Zero <sup>(1)</sup>
+
+  This matters. Climate start-ups need to persuade investors, partners, customers, communities.
+  We can help.  Corporate brands have evolved over decades the marketing techniques to engage, persuade and build trust.  We make these skills accessible and tailored to climate.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -50,7 +49,7 @@ export const netZero = {
 } as NetZeroBlockProps
 
 export const climateCauses = {
-  title: `Just 2% of global charity giving goes to climate causes.`,
+  title: `Just 2% of global charity giving goes to climate causes.<sup>(2)</sup>`,
   content: `The Climate Agency harness their business leadership and marketing expertise to help climate innovators, startups, scientists and small NGOs to influence the right people, with the relevant message.
   
   We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
