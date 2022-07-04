@@ -78,9 +78,9 @@ const StyledContent = styled(PopoverPrimitive.Content, {
   flexDirection: 'column',
   gap: '$10',
 
-//   '@tabletUp': {
-//     ml: '$100',
-//   },
+  //   '@tabletUp': {
+  //     ml: '$100',
+  //   },
 })
 
 const StyledArrow = styled(PopoverPrimitive.Arrow, {
