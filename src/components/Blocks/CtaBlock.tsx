@@ -42,6 +42,7 @@ const CtaBlockWrap = styled('section', {
 })
 
 const TextContainer = styled('p', {
+  whiteSpace: 'pre-line',
   color: '$black',
   fontFamily: '$inria',
   fontWeight: '$light',

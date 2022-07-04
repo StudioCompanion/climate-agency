@@ -353,8 +353,9 @@ export const team = {
 } as TeamBlockProps
 
 export const cta = {
-  content: `Together, we can crack communication around climate solutions. \n
-  If you believe that climate projects need funding and support by the people who can make a difference, please get in touch.`,
+  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Or that climate projects need more funding and support?
+
+  Then please get in touch. Together let’s persuade the people you need to scale up.`,
   leftLink: {
     href: `mailto:sophie@climateagency.net`,
     children: `I’m working in climate and need help!`,
