@@ -13,8 +13,8 @@ const linksInformation = [
     isExternal: false,
   },
   {
-    href: `/what-we-do/#accelerator`,
-    children: `The Accelerator`,
+    href: `/what-we-do`,
+    children: `What We Do`,
     color: 'transparent',
     isExternal: false,
   },
@@ -84,15 +84,14 @@ export const Footer = () => {
 
       <LegalContainer>The Climate Agency Limited (14011922)</LegalContainer>
       <CreditsContainer>
-        This website was made possible with{' '}
+        This website was made possible by{' '}
         <LinkCompanion
           href="https://companion.studio/"
           color="transparent"
           isExternal={true}
         >
-          Companion Studio
+          Companion Studio.
         </LinkCompanion>
-        .
       </CreditsContainer>
     </FooterWrap>
   )
