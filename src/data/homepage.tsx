@@ -37,8 +37,8 @@ export const netZero = {
       image: {
         src: '/images/Greenland_fjords.png',
         altText: 'Greenland Fjords',
-        width: 1326,
-        height: 784.73,
+        width: 1989,
+        height: 1176,
       },
       layout: 'responsive',
       objectFit: 'cover',
