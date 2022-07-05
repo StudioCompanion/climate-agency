@@ -25,6 +25,8 @@ const WhatWeDo = () => {
           images: [
             {
               url: 'https://www.climateagency.net/site/what-we-do-meta.png',
+              width: 1200,
+              height: 630,
             },
           ],
         }}

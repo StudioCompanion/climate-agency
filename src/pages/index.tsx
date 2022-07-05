@@ -34,6 +34,8 @@ const Index = () => {
           images: [
             {
               url: 'https://www.climateagency.net/site/our-mission-meta.png',
+              width: 1200,
+              height: 630,
             },
           ],
         }}
