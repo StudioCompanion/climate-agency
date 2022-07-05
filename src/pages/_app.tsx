@@ -13,6 +13,7 @@ import { SplashPage } from 'components/SplashPage'
 
 import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicEffect'
 import { styled } from 'styles/stitches.config'
+import { WidgetPlausible } from 'components/Widgets/WidgetPlausible'
 
 globalStyles()
 
@@ -31,6 +32,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <WidgetMarker />
+      <WidgetPlausible />
       <DefaultSeo {...SEO} />
       {showSplash && <SplashPage />}
       <NavBar />
