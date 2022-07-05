@@ -97,6 +97,7 @@ const LogoSvg = styled('svg', {
   mx: '$16',
 
   '@tabletUp': {
+    width: '100%',
     mx: 0,
     gridColumn: '4 / span 6',
   },
