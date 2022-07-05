@@ -136,12 +136,12 @@ export const testimonials = {
   ],
   testimonials: [
     {
-      content: `“Climate organizations will be more effective by developing a brand that captures their voice and mission. The Climate Agency team has a great knowledge of branding and climate change to make this happen. Their sessions are impactful and actionable”`,
+      content: `“Climate organizations will be more effective by developing a brand that captures their voice and mission. The Climate Agency team has a great knowledge of branding and climate change to make this happen. Their sessions are impactful and actionable.”`,
       signature: `Ben Rubin, Executive Director`,
       organisation: `Carbon Business Council`,
     },
     {
-      content: `“It’s amazing. Totally useful to have somebody with a fresh perspective guiding us. After these 2 workshops I will be revising our website and marketing assets”`,
+      content: `“It’s amazing. Totally useful to have somebody with a fresh perspective guiding us. After these 2 workshops I will be revising our website and marketing assets.”`,
       signature: `Lena Mechenkova, Communication Director`,
       organisation: `Vlinder Climate`,
     },
