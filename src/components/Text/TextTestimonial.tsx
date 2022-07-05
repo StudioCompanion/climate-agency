@@ -50,8 +50,8 @@ const Signature = styled('span', {
   color: '$black',
   fontFamily: '$workSans',
   fontWeight: '$regular',
-  fontSize: '$XXS',
-  lineHeight: '$XXS',
+  fontSize: '$XS',
+  lineHeight: '$XS',
   letterSpacing: '$small',
 })
 
@@ -60,7 +60,7 @@ const Organisation = styled('span', {
   color: '$grey',
   fontFamily: '$workSans',
   fontWeight: '$regular',
-  fontSize: '$XXS',
-  lineHeight: '$XXS',
+  fontSize: '$XS',
+  lineHeight: '$XS',
   letterSpacing: '$small',
 })
