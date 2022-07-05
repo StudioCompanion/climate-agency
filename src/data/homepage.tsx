@@ -101,7 +101,7 @@ export const ourBackground = {
 } as ShortArticleBlockProps
 
 export const testimonials = {
-  title: `We have been very fortunate to work with many great organisations.`,
+  title: `We have worked with great organizations.`,
   logos: [
     {
       src: '/images/logos/Carbon-Business-Council.png',
