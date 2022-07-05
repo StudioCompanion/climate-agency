@@ -1,6 +1,6 @@
 export default {
   defaultTitle: 'Climate Agency',
-  titleTemplate: '%s | ClimateAgency',
+  titleTemplate: '%s | Climate Agency',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
