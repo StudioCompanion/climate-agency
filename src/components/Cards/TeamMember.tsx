@@ -24,7 +24,7 @@ export const TeamMember = ({
       <ContentWrap>
         <NameAndRoleWrap>{name}</NameAndRoleWrap>
         <NameAndRoleWrap>{role}</NameAndRoleWrap>
-        <DescriptionWrap>{description}</DescriptionWrap>
+        <DescriptionWrap dangerouslySetInnerHTML={{ __html: description }} />
         <LinkWrap {...socialLink} />
       </ContentWrap>
     </TeamMemberWrap>
@@ -61,6 +61,22 @@ const DescriptionWrap = styled('span', {
   '@largeDesktopUp': {
     fontSize: '$XS',
     lineHeight: '$XS',
+  },
+
+  a: {
+    color: 'inherit',
+
+    '@motion': {
+      transition: 'opacity 250ms ease-out',
+    },
+
+    '&:hover': {
+      opacity: '50%',
+    },
+
+    '&:active': {
+      opacity: '50%',
+    },
   },
 })
 
