@@ -31,7 +31,11 @@ export const TestimonialsBlock = ({
       </HeaderContainer>
       <ImageContainer gradient={false}>
         {[...logos, ...logos].map((logo, index) => (
-          <MediaImage key={`${logo.src}_${index}`} image={logo} />
+          /**
+           * We're adding priority here to solve this issue – https://github.com/vercel/next.js/issues/32774
+           * this discussion has the answer – https://github.com/vercel/next.js/discussions/37202
+           */
+          <MediaImage key={`${logo.src}_${index}`} image={logo} priority />
         ))}
       </ImageContainer>
       <TestimonialWrap>
@@ -56,7 +60,7 @@ const TestimonialsWrap = styled('section', {
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     p: '$60 $20',
-    rowGap: '$180',
+    rowGap: '8.4rem',
   },
 })
 

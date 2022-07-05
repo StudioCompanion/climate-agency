@@ -6,17 +6,17 @@ import { styled } from 'styles/stitches.config'
 export interface LinkProps {
   href: string
   children: ReactNode
-  color: 'green' | 'stone' | 'transparent'
+  color?: 'green' | 'stone' | 'transparent'
   className?: string
-  isExternal: boolean
+  isExternal?: boolean
 }
 
 export const Link = ({
   href,
   children,
-  color,
+  color = 'green',
   className,
-  isExternal,
+  isExternal = false,
 }: LinkProps) => {
   if (isExternal)
     return (

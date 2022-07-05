@@ -6,7 +6,12 @@ import { OpeningBlock } from 'components/Blocks/OpeningBlock'
 import { AcceleratorBlock } from 'components/Blocks/AcceleratorBlock'
 import { ArticleBlock } from 'components/Blocks/ArticleBlock'
 
-import { intro, accelerator, stakeholders, partners } from '../data/whatWeDo'
+import {
+  intro,
+  accelerator,
+  stakeholders,
+  partners,
+} from '../data/whatWeDoPage'
 const WhatWeDo = () => {
   return (
     <WhatWeDoWrap>
@@ -26,8 +31,8 @@ const WhatWeDo = () => {
       />
       <Opening {...intro} />
       <AcceleratorBlock {...accelerator} />
-      <Stakeholders {...stakeholders} />
       <Partners {...partners} />
+      <Stakeholders {...stakeholders} />
     </WhatWeDoWrap>
   )
 }
@@ -41,17 +46,20 @@ const Opening = styled(OpeningBlock, {
 })
 
 const Stakeholders = styled(ArticleBlock, {
-  mb: '$50',
+  background: '$stone',
+  pb: '$30',
+  mt: '$60',
 
   '@tabletUp': {
-    mb: '$100',
+    pb: '$60',
+    mt: '$120',
   },
 })
 
 const Partners = styled(ArticleBlock, {
-  mb: '$60',
+  mt: '$60',
 
   '@tabletUp': {
-    mb: '$120',
+    mt: '$120',
   },
 })

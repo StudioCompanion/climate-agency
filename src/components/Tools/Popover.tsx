@@ -24,28 +24,19 @@ const slideLeftAndFade = keyframes({
 })
 
 const StyledTrigger = styled(PopoverPrimitive.Trigger, {
-  variants: {
-    fontColor: {
-      black: {
-        color: '$black',
-      },
-      white: {
-        color: '$white',
-      },
-    },
-  },
   backgroundColor: 'transparent',
-  fontFamily: '$inria',
-  fontWeight: '$light',
-  fontSize: '$XS',
-  lineHeight: '$XS',
+  fontFamily: 'inherit',
+  fontWeight: 'inherit',
+  fontSize: '0.6em',
+  lineHeight: 'inherit',
+  color: 'inherit',
   boxShadow: 'none',
   border: 'none',
   cursor: 'pointer',
   p: '0',
-  '@tabletUp': {
-    fontSize: '$L',
-    lineHeight: '$L',
+
+  '@desktopUp': {
+    display: 'none',
   },
 })
 
@@ -78,9 +69,9 @@ const StyledContent = styled(PopoverPrimitive.Content, {
   flexDirection: 'column',
   gap: '$10',
 
-//   '@tabletUp': {
-//     ml: '$100',
-//   },
+  //   '@tabletUp': {
+  //     ml: '$100',
+  //   },
 })
 
 const StyledArrow = styled(PopoverPrimitive.Arrow, {
