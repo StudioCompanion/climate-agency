@@ -116,10 +116,10 @@ export const testimonials = {
       height: 105.3,
     },
     {
-      src: '/images/logos/DirectAirCaptureCoalition.png',
+      src: '/images/logos/DAC-V4-HigherType.png',
       altText: 'Direct Air Capture Coalition logo',
-      width: 150,
-      height: 56.25,
+      width: 200,
+      height: 75,
     },
     {
       src: '/images/logos/Ocean-Visions.png',
