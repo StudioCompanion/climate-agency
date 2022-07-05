@@ -7,7 +7,6 @@ import { NetZeroBlock } from 'components/Blocks/NetZeroBlock'
 import { ClimateCausesBlock } from 'components/Blocks/ClimateCausesBlock'
 import { ShortArticleBlock } from 'components/Blocks/ShortArticleBlock'
 import { TestimonialsBlock } from 'components/Blocks/TestimonialsBlock'
-import { MissionBlock } from 'components/Blocks/MissionBlock'
 import { TeamBlock } from 'components/Blocks/TeamBlock'
 import { CtaBlock } from 'components/Blocks/CtaBlock'
 
@@ -17,11 +16,10 @@ import {
   climateCauses,
   ourBackground,
   testimonials,
-  mission,
   services,
   team,
   cta,
-} from '../data/ourMission'
+} from '../data/homepage'
 
 const Index = () => {
   return (
@@ -45,8 +43,7 @@ const Index = () => {
       <ClimateCauses {...climateCauses} />
       <ShortArticle {...ourBackground} />
       <TestimonialsBlock {...testimonials} />
-      <Mission {...mission} />
-      <ShortArticle {...services} />
+      <ServicesBlock {...services} />
       <TeamBlock {...team} />
       <Cta {...cta} />
     </IndexWrap>
@@ -77,14 +74,11 @@ const ShortArticle = styled(ShortArticleBlock, {
   },
 })
 
-const Mission = styled(MissionBlock, {
-  my: '$80',
+const ServicesBlock = styled(ShortArticle, {
+  mt: '$100',
 
   '@tabletUp': {
     mb: '$120',
-  },
-  '@desktopUp': {
-    mb: '$200',
   },
 })
 

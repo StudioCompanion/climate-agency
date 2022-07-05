@@ -1,28 +1,11 @@
+import CommunicationIcon from 'assets/Communication.svg'
+
 import { styled } from 'styles/stitches.config'
-import ClockIcon from '../../assets/Clock.svg'
 
-import { MediaImage, MediaImageProps } from '../Media/MediaImage'
-import { TextCaption } from '../Text/TextCaption'
-
-import { useMedia } from 'hooks/useMedia'
-
-import PopoverCloseIcon from '../../assets/popoverClose.svg'
-
-import {
-  Tooltip,
-  TooltipProvider,
-  TooltipTrigger,
-  TooltipContent,
-  StyledArrow,
-} from '../Tools/Tooltip'
-
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverClose,
-} from 'components/Tools/Popover'
+import { MediaImage, MediaImageProps } from 'components/Media/MediaImage'
+import { TextCaption } from 'components/Text/TextCaption'
+import { parseStringAndInsertFootnoteBetweenSupTags } from 'helpers/strings'
+import { Link } from 'components/Links/Link'
 
 export interface NetZeroBlockProps {
   title: string
@@ -38,54 +21,31 @@ export const NetZeroBlock = ({
   content,
   imageSection,
 }: NetZeroBlockProps) => {
-  const isDesktopUp = useMedia('(min-width: 1024px)')
-
   return (
     <NetZeroWrap>
       <HeaderContainer>
-        <Clock width="29" />
-        <TitleContainer>
-          {title}
-          {isDesktopUp ? (
-            <TooltipProvider delayDuration={200} skipDelayDuration={500}>
-              <Tooltip>
-                <TooltipTrigger fontColor="white" asChild>
-                  <sup>(1)</sup>
-                </TooltipTrigger>
-                <TooltipContent sideOffset={5} side="top" align="start">
-                  (1) The UK Carbon Trust research found that 71% of small and
-                  medium size businesses in the UK could not refer to a single
-                  web source for help on decarbonization, and one third were not
-                  familiar with the term “Net Zero”. SMEs represent 90% of
-                  businesses in the UK.
-                  <StyledArrow offset={8} width={18} height={7} />
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          ) : (
-            <Popover>
-              <PopoverTrigger fontColor="white" asChild>
-                <sup>(1)</sup>
-              </PopoverTrigger>
-              <PopoverContent sideOffset={5} side="top" align="center">
-                <p>CITATION</p>
-                <p>
-                  (1) The UK Carbon Trust research found that 71% of small and
-                  medium size businesses in the UK could not refer to a single
-                  web source for help on decarbonization, and one third were not
-                  familiar with the term “Net Zero”. SMEs represent 90% of
-                  businesses in the UK.
-                </p>
-                <PopoverClose>
-                  <PopoverCloseIcon />
-                </PopoverClose>
-                <PopoverArrow offset={8} width={18} height={7} />
-              </PopoverContent>
-            </Popover>
-          )}
-        </TitleContainer>
+        <Communication width="27" />
+        <TitleContainer>{title}</TitleContainer>
       </HeaderContainer>
-      <TextContainer>{content}</TextContainer>
+      <TextContainer>
+        {parseStringAndInsertFootnoteBetweenSupTags(
+          content,
+          'The UK Carbon Trust research found that 71% of small and medium size businesses in the UK could not refer to a single web source for help on decarbonization, and one third were not familiar with the term “Net Zero”. SMEs represent 90% of businesses in the UK.',
+          {
+            tooltipProps: {
+              contentProps: {
+                alignOffset: -12,
+              },
+            },
+            popoverProps: {
+              contentProps: {
+                alignOffset: -12,
+              },
+            },
+          }
+        )}
+        <TextLink href="/what-we-do">{'See how'}</TextLink>
+      </TextContainer>
       <MediaContainer>
         <ImageContainer>
           {imageSection.mediaImage ? (
@@ -132,7 +92,7 @@ const HeaderContainer = styled('div', {
   },
 })
 
-const Clock = styled(ClockIcon, {
+const Communication = styled(CommunicationIcon, {
   '@tabletUp': {
     flex: '1 0 2.7rem',
     alignSelf: 'flex-start',
@@ -143,13 +103,13 @@ const Clock = styled(ClockIcon, {
 const TitleContainer = styled('h2', {
   fontFamily: '$inria',
   fontWeight: '$light',
-  fontSize: '$M',
-  lineHeight: '$M',
+  fontSize: '$XL',
+  lineHeight: '$XL',
   letterSpacing: '$normal',
 
   '@tabletUp': {
-    fontSize: '$XXL',
-    lineHeight: '$XXL',
+    fontSize: '$XXXL',
+    lineHeight: '$XXXL',
   },
 })
 
@@ -207,4 +167,9 @@ const CaptionWrap = styled(TextCaption, {
   '@desktopUp': {
     gridColumn: 'span 4',
   },
+})
+
+const TextLink = styled(Link, {
+  mt: '$24',
+  display: 'table',
 })

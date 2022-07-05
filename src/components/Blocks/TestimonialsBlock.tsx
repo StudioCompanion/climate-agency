@@ -56,7 +56,7 @@ const TestimonialsWrap = styled('section', {
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     p: '$60 $20',
-    rowGap: '$180',
+    rowGap: '8.4rem',
   },
 })
 
