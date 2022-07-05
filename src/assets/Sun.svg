@@ -1,10 +1,10 @@
-<svg width='100%' height='100%' viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 4.28497V0H17V4.28497H19Z" fill="black"/>
-<path d="M19 35.999V31.7109H17V35.999H19Z" fill="black"/>
-<path d="M31.7109 18.3945H35.999V16.3945H31.7109V18.3945Z" fill="black"/>
-<path d="M0 18.3945H4.28498V16.3945H0V18.3945Z" fill="black"/>
-<path d="M9.22291 7.20632L6.19184 4.17216L4.77691 5.58565L7.80797 8.61981L9.22291 7.20632Z" fill="black"/>
-<path d="M31.6481 29.6246L28.617 26.5936L27.2028 28.0078L30.2339 31.0388L31.6481 29.6246Z" fill="black"/>
-<path d="M28.1837 8.19129L31.2147 5.16023L29.8005 3.74602L26.7695 6.77708L28.1837 8.19129Z" fill="black"/>
-<path d="M5.76961 30.6171L8.80067 27.586L7.38646 26.1718L4.35539 29.2029L5.76961 30.6171Z" fill="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+    <line x1="18" y1="4.28" x2="18" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="31.71" y1="17.39" x2="36" y2="17.39" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line y1="17.39" x2="4.28" y2="17.39" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="18" y1="36" x2="18" y2="31.71" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="5.06" y1="29.91" x2="8.09" y2="26.88" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="27.48" y1="7.48" x2="30.51" y2="4.45" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="30.94" y1="30.33" x2="27.91" y2="27.3" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="8.51" y1="7.91" x2="5.48" y2="4.88" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
 </svg>
