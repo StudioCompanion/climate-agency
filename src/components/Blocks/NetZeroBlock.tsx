@@ -30,7 +30,14 @@ export const NetZeroBlock = ({
       <TextContainer>
         {parseStringAndInsertFootnoteBetweenSupTags(
           content,
-          'The UK Carbon Trust research found that 71% of small and medium size businesses in the UK could not refer to a single web source for help on decarbonization, and one third were not familiar with the term “Net Zero”. SMEs represent 90% of businesses in the UK.'
+          'The UK Carbon Trust research found that 71% of small and medium size businesses in the UK could not refer to a single web source for help on decarbonization, and one third were not familiar with the term “Net Zero”. SMEs represent 90% of businesses in the UK.',
+          {
+            tooltipProps: {
+              contentProps: {
+                alignOffset: -12,
+              },
+            },
+          }
         )}
         <TextLink href="/what-we-do">{'See how'}</TextLink>
       </TextContainer>

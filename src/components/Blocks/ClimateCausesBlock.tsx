@@ -34,7 +34,14 @@ export const ClimateCausesBlock = ({
           `According to Climateworks foundation, mitigating climate
                 change receives less than 2% of charitable contributions
                 globally. According to Charity Navigator, just 3% of US charity
-                giving goes to environmental causes as a whole.`
+                giving goes to environmental causes as a whole.`,
+          {
+            tooltipProps: {
+              contentProps: {
+                alignOffset: 6,
+              },
+            },
+          }
         )}
       </Title>
       <TextContainer>
