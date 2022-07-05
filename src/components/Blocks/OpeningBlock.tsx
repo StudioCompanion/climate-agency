@@ -2,6 +2,7 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
+import { Link, LinkProps } from 'components/Links/Link'
 
 export interface OpeningBlockProps {
   content: string
@@ -11,6 +12,7 @@ export interface OpeningBlockProps {
   }
   layout: 'default' | 'large'
   className?: string
+  link?: LinkProps
 }
 
 export const OpeningBlock = ({
@@ -18,14 +20,20 @@ export const OpeningBlock = ({
   imageSection,
   layout,
   className,
+  link,
 }: OpeningBlockProps) => {
   return (
     <OpeningBlockWrap className={className}>
-      <TextContainer layout={layout}>{content}</TextContainer>
+      <ContentWrap layout={layout}>
+        <TextContainer layout={layout}>{content}</TextContainer>
+        {link ? <Link {...link} /> : null}
+      </ContentWrap>
       <ImageContainer layout={layout}>
-        {imageSection.mediaImage ? (
-          <MediaImage {...imageSection.mediaImage} />
-        ) : null}
+        <MediaImageWrap>
+          {imageSection.mediaImage ? (
+            <MediaImage {...imageSection.mediaImage} />
+          ) : null}
+        </MediaImageWrap>
         <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
       </ImageContainer>
     </OpeningBlockWrap>
@@ -61,11 +69,53 @@ const ImageContainer = styled('div', {
       default: {
         '@tabletUp': {
           gridColumn: 'span 6',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(6, 1fr)',
         },
       },
       large: {
         '@tabletUp': {
           gridColumn: 'span 7',
+        },
+      },
+    },
+  },
+})
+
+const MediaImageWrap = styled('div', {
+  gridColumn: 'span 8',
+
+  '@tabletUp': {
+    gridColumn: 'span 6',
+  },
+})
+
+const CaptionWrap = styled(TextCaption, {
+  gridColumn: 'span 8',
+  mt: '$8',
+
+  '@tabletUp': {
+    gridColumn: 'span 4',
+  },
+})
+
+const ContentWrap = styled('div', {
+  variants: {
+    layout: {
+      default: {
+        gridColumn: 'span 8',
+
+        '@tabletUp': {
+          gridColumn: '7 / span 6',
+        },
+      },
+      large: {
+        gridColumn: 'span 8',
+
+        '@tabletUp': {
+          fontSize: '$XXL',
+          lineHeight: '$XXL',
+          gridColumn: '8 / span 5',
         },
       },
     },
@@ -80,7 +130,7 @@ const TextContainer = styled('p', {
   mb: '$40',
 
   '@tabletUp': {
-    mb: '0',
+    mb: '$50',
   },
 
   variants: {
@@ -88,11 +138,7 @@ const TextContainer = styled('p', {
       default: {
         fontSize: '$S',
         lineHeight: '$S',
-        gridColumn: 'span 8',
 
-        '@tabletUp': {
-          gridColumn: '7 / span 6',
-        },
         '@desktopUp': {
           fontSize: '$L',
           lineHeight: '$L',
@@ -101,23 +147,12 @@ const TextContainer = styled('p', {
       large: {
         fontSize: '$M',
         lineHeight: '$M',
-        gridColumn: 'span 8',
 
         '@tabletUp': {
           fontSize: '$XXL',
           lineHeight: '$XXL',
-          gridColumn: '8 / span 5',
         },
       },
     },
-  },
-})
-
-const CaptionWrap = styled(TextCaption, {
-  gridColumn: 'span 8',
-  mt: '$8',
-
-  '@tabletUp': {
-    gridColumn: 'span 4',
   },
 })

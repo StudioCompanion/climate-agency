@@ -9,17 +9,27 @@ export const intro = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/people_on_mountain.png',
-        altText: 'People sitting on a mountain',
+        src: '/images/wright_brothers_glider.jpeg',
+        altText: 'Vintage photo of a Wright Brothers Glider',
         width: 765,
         height: 636,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
+    caption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
   },
-  content: `We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
-  layout: `large`,
+  content: `Climate change is the challenge of our lives and climate start-ups face an uphill struggle. It is a problem that can only be solved by testing and scaling different ideas, which our unique tools are designed to support
+
+  From pitch-deck crafting to accelerator workshops or spotlight campaigns, our processes are fast and accessible.
+  `,
+  link: {
+    href: `mailto:sophie@climateagency.net`,
+    children: `Ready to fly?`,
+    color: 'green',
+    isExternal: true,
+  },
+  layout: `default`,
 } as OpeningBlockProps
 
 export const accelerator = {

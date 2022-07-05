@@ -26,6 +26,7 @@ export type MediaImageProps = {
   layout?: ImageLayout
   objectFit?: 'cover' | 'contain'
   sizes?: string | SizesArray
+  priority?: boolean
 }
 
 export const MediaImage = ({
@@ -33,10 +34,13 @@ export const MediaImage = ({
   layout = 'intrinsic',
   objectFit = 'cover',
   sizes = '100vw',
+  priority,
 }: MediaImageProps) => {
   const [loaded, setLoaded] = useState(false)
 
-  const handleLoadingComplete = () => setLoaded(true)
+  const handleLoadingComplete = () => {
+    setLoaded(true)
+  }
 
   return (
     <ImgContainer>
@@ -48,6 +52,7 @@ export const MediaImage = ({
         layout={layout}
         objectFit={objectFit}
         sizes={generateSrcSetSizes(sizes)}
+        priority={priority}
         loaded={loaded}
         onLoadingComplete={handleLoadingComplete}
       />
