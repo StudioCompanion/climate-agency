@@ -19,7 +19,7 @@ export const intro = {
     },
     caption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
   },
-  content: `Climate change is the challenge of our lives and climate start-ups face an uphill struggle. It is a problem that can only be solved by testing and scaling different ideas, which our unique tools are designed to support
+  content: `Climate change is the challenge of our lives and climate start-ups face an uphill struggle. It is a problem that can only be solved by testing and scaling different ideas, which our unique tools are designed to support.
 
   From pitch-deck crafting to accelerator workshops or spotlight campaigns, our processes are fast and accessible.
   `,
