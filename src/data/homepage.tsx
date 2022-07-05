@@ -67,7 +67,7 @@ export const climateCauses = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
+    caption: `Humans' relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
   },
   rightImage: {
     image: {
