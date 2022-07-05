@@ -158,10 +158,10 @@ export const services = {
   header: `Our services don't cost the earth.`,
   content: `We are non-profit, highly cost-effective and entrepreneurial.
   
-  Through our accelerator workshops and stakeholder campaigns, we help you leapfrog traditional processes to get results fast.`,
+  We have designed unique tools to help you leapfrog traditional processes and get results fast.`,
   link: {
-    href: `/what-we-do/#accelerator`,
-    children: `Learn about our accelerator`,
+    href: `/what-we-do`,
+    children: `What we do`,
     color: `green`,
     isExternal: false,
   },
