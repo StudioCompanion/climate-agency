@@ -50,6 +50,7 @@ const TextContainer = styled('p', {
   letterSpacing: '$normal',
   gridColumn: 'span 8',
   mb: '$30',
+  whiteSpace: 'pre-line',
 
   '@tabletUp': {
     fontSize: '$L',

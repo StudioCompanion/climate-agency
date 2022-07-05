@@ -25,8 +25,6 @@ export const AcceleratorBlock = ({
   link,
   imageSection,
 }: AcceleratorBlockProps) => {
-  const [intro, content] = children
-
   return (
     <AcceleratorWrap id="accelerator">
       <HeaderWrap>
@@ -34,10 +32,9 @@ export const AcceleratorBlock = ({
         <Title>{title}</Title>
       </HeaderWrap>
       <ContentWrap>
-        <TextWrap>{intro}</TextWrap>
         <SubtitleWrap>{subtitle}</SubtitleWrap>
-        {Array.isArray(content)
-          ? content.map((c) =>
+        {Array.isArray(children)
+          ? children.map((c) =>
               typeof c === 'string' ? <TextWrap key={c}>{c}</TextWrap> : c
             )
           : null}
@@ -56,7 +53,7 @@ export const AcceleratorBlock = ({
 }
 
 const AcceleratorWrap = styled('section', {
-  backgroundColor: '$stone',
+  backgroundColor: '$yellow',
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
@@ -121,7 +118,7 @@ const ContentWrap = styled('div', {
   gridColumn: 'span 8',
   display: 'flex',
   flexDirection: 'column',
-  gap: '$40',
+  gap: '$20',
   mb: '$40',
 
   '@tabletUp': {
@@ -130,6 +127,28 @@ const ContentWrap = styled('div', {
   '@desktopUp': {
     gridColumn: '5 / span 4',
   },
+
+  'ul, dl, strong': {
+    whiteSpace: 'pre-line',
+    fontFamily: '$workSans',
+    fontWeight: '$regular',
+    fontSize: '$XS',
+    lineHeight: '$XS',
+    letterSpacing: '$small',
+  },
+
+  strong: { fontWeight: '$semiBold' },
+
+  ul: {
+    listStyleType: 'disc',
+    ml: '$12',
+
+    '& > li + li': {
+      mt: '$20',
+    },
+  },
+
+  'dd + dt': { mt: '1.4em' },
 })
 
 const TextWrap = styled('p', {
@@ -139,21 +158,6 @@ const TextWrap = styled('p', {
   fontSize: '$XS',
   lineHeight: '$XS',
   letterSpacing: '$small',
-
-  '& + ul': {
-    whiteSpace: 'pre-line',
-    fontFamily: '$workSans',
-    fontWeight: '$regular',
-    fontSize: '$XS',
-    lineHeight: '$XS',
-    letterSpacing: '$small',
-    listStyleType: 'disc',
-    ml: '$12',
-
-    '& > li + li': {
-      mt: '$20',
-    },
-  },
 })
 
 const SubtitleWrap = styled('h3', {
