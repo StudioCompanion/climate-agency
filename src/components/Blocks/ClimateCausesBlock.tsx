@@ -41,6 +41,11 @@ export const ClimateCausesBlock = ({
                 alignOffset: 6,
               },
             },
+            popoverProps: {
+              contentProps: {
+                alignOffset: -6,
+              },
+            },
           }
         )}
       </Title>

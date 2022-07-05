@@ -37,6 +37,11 @@ export const NetZeroBlock = ({
                 alignOffset: -12,
               },
             },
+            popoverProps: {
+              contentProps: {
+                alignOffset: -12,
+              },
+            },
           }
         )}
         <TextLink href="/what-we-do">{'See how'}</TextLink>

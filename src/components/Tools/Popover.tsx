@@ -34,10 +34,7 @@ const StyledTrigger = styled(PopoverPrimitive.Trigger, {
   border: 'none',
   cursor: 'pointer',
   p: '0',
-  '@tabletUp': {
-    fontSize: '$L',
-    lineHeight: '$L',
-  },
+
   '@desktopUp': {
     display: 'none',
   },

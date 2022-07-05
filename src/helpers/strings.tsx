@@ -18,10 +18,14 @@ import {
 
 import PopoverCloseIcon from 'assets/popoverClose.svg'
 import { TooltipContentProps } from '@radix-ui/react-tooltip'
+import { PopoverContentProps } from '@radix-ui/react-popover'
 
 interface ComponentProps {
   tooltipProps?: {
     contentProps?: TooltipContentProps
+  }
+  popoverProps?: {
+    contentProps?: PopoverContentProps
   }
 }
 
@@ -30,9 +34,10 @@ export const parseStringAndInsertFootnoteBetweenSupTags = (
   footnoteContent: string,
   props: ComponentProps = {}
 ): ReactNode[] | string => {
-  const { tooltipProps } = props
+  const { tooltipProps, popoverProps } = props
 
   const { contentProps } = tooltipProps ?? {}
+  const { contentProps: popoverContentProps } = popoverProps ?? {}
 
   const regex = /<sup>(.*?)<\/sup>/g
   const matches = str.match(regex)
@@ -69,7 +74,11 @@ export const parseStringAndInsertFootnoteBetweenSupTags = (
             <PopoverTrigger asChild>
               <sup>{sanitizedMatch}</sup>
             </PopoverTrigger>
-            <PopoverContent sideOffset={5} side="top" align="center">
+            <PopoverContent
+              alignOffset={popoverContentProps?.alignOffset}
+              side="top"
+              align="center"
+            >
               <p>CITATION</p>
               <p>{`${sanitizedMatch} ${footnoteContent}`}</p>
               <PopoverClose>
