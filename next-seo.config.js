@@ -4,7 +4,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://www.climate.agency',
+    url: 'https://climateagency.net',
     site_name: 'Climate Agency',
   },
 }
