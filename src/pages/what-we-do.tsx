@@ -18,13 +18,13 @@ const WhatWeDo = () => {
       <NextSeo
         title="What We Do"
         description="We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale."
-        canonical="https://www.climateagency.net"
+        canonical="https://climateagency.net"
         openGraph={{
-          url: 'https://www.climateagency.net/what-we-do',
+          url: 'https://climateagency.net/what-we-do',
           title: 'Climate Agency',
           images: [
             {
-              url: 'https://www.climateagency.net/site/what-we-do-meta.png',
+              url: 'https://climateagency.net/site/what-we-do-meta.png',
               width: 1200,
               height: 630,
             },
