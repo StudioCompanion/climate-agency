@@ -266,7 +266,9 @@ export const team = {
         },
         name: `David Addison`,
         role: `Advisor`,
-        description: `David Addison works for Virgin on a range of climate, environment, purpose, and sustainability efforts. For more than twelve years David has been working with and learning from others across academia, business, civil society, governments, and non-profits to help explore carbon removal solutions, and was involved with <a href="https://carbon180.org/" rel="noopener noreferrer" target="_blank">Carbon180</a> from its inception and with the <a href="https://drawdown.org/the-book" rel="noopener noreferrer" target="_blank">New York Times best-selling book: Drawdown</a>. He also volunteers in an advisory role to <a href="https://climatescience.org/" rel="noopener noreferrer" target="_blank">ClimateScience.org</a> and <a href="https://nori.com/" rel="noopener noreferrer" target="_blank">Nori</a>.`,
+        description: `David Addison works at Virgin on a range of climate, environment, purpose, and sustainability efforts. For more than 12 years he has been working with and learning from others across academia, business, civil society, governments, and non-profits on scalable, sustainable carbon removal. 
+        
+        He also serves as an advisor to <a href="https://climatescience.org/" rel="noopener noreferrer" target="_blank">ClimateScience.org</a>, <a href="https://nori.com/" rel="noopener noreferrer" target="_blank"> Nori Inc.</a>, and a number of other initiatives. Previously David was also an advisor to initiatives including <a href="https://carbon180.org/" rel="noopener noreferrer" target="_blank">Carbon180</a> and the <a href="https://drawdown.org/the-book" rel="noopener noreferrer" target="_blank">New York Times best-selling book: Drawdown</a>.`,
         socialLink: {
           href: `https://www.linkedin.com/in/davidaddison350/`,
           children: `LinkedIn`,
