@@ -11,7 +11,7 @@ export const InnerTextCaption = ({
 }: InnerTextCaptionProps) => {
   return (
     <InnerCaptionContainer className={className}>
-      {children}
+      <p>{children}</p>
     </InnerCaptionContainer>
   )
 }
@@ -30,4 +30,8 @@ const InnerCaptionContainer = styled('figcaption', {
   lineHeight: '$XXS',
   letterSpacing: '$small',
   whiteSpace: 'pre-line',
+
+  '& > p': {
+    maxWidth: '430px',
+  },
 })

@@ -49,8 +49,7 @@ export const netZero = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    innerCaption: `This is Scoresby Sund. Greenland fjords receive considerable amounts of 
-    glacial meltwater discharge due to climate change. `,
+    innerCaption: `This is Scoresby Sund. Greenland fjords receive considerable amounts of glacial meltwater discharge due to climate change. `,
     caption: (
       <Link
         href="https://unsplash.com/@anniespratt/"
@@ -132,7 +131,16 @@ export const ourBackground = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the Apollo Test Division. Credit NASA Archives.`,
+    innerCaption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the Apollo Test Division.`,
+    caption: (
+      <Link
+        href="https://www.nasa.gov/multimedia/videogallery/Video_Gallery_Archives.html"
+        isExternal
+        color="captionBlack"
+      >
+        NASA Archives
+      </Link>
+    ),
   },
 } as ShortArticleBlockProps
 
@@ -212,7 +220,12 @@ export const services = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+    innerCaption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+    caption: (
+      <Link href="https://unsplash.com/@jxb511" isExternal color="captionBlack">
+        John Bakator
+      </Link>
+    ),
   },
 } as ShortArticleBlockProps
 
