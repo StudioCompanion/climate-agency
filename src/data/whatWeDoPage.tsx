@@ -1,6 +1,7 @@
 import { OpeningBlockProps } from 'components/Blocks/OpeningBlock'
 import { AcceleratorBlockProps } from 'components/Blocks/AcceleratorBlock'
 import { ArticleBlockProps } from 'components/Blocks/ArticleBlock'
+import { Link } from 'components/Links/Link'
 
 import SpikesIcon from '../assets/Spikes.svg'
 import SunIcon from '../assets/Sun.svg'
@@ -18,11 +19,26 @@ export const intro = {
       objectFit: 'cover',
     },
     innerCaption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
+    caption: (
+      <Link href="#" isExternal color="captionBlack">
+        Wright Brothers Glider
+      </Link>
+    ),
   },
-  content: `Climate change is the challenge of our lives and climate start-ups face an uphill struggle. It is a problem that can only be solved by testing and scaling different ideas, which our unique tools are designed to support.
-
-  From pitch-deck crafting to accelerator workshops or spotlight campaigns, our processes are fast and accessible.
-  `,
+  content: (
+    <>
+      <p>
+        Climate change is the challenge of our lives and climate start-ups face
+        an uphill struggle. It is a problem that can only be solved by testing
+        and scaling different ideas, which our unique tools are designed to
+        support.
+      </p>
+      <p>
+        From pitch-deck crafting to accelerator workshops or spotlight
+        campaigns, our processes are fast and accessible.
+      </p>
+    </>
+  ),
   link: {
     href: `mailto:sophie@climateagency.net`,
     children: `Ready to fly?`,

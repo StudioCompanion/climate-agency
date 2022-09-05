@@ -7,7 +7,7 @@ import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 import { Link, LinkProps } from 'components/Links/Link'
 
 export interface OpeningBlockProps {
-  content: string
+  content: ReactNode
   imageSection: {
     mediaImage: MediaImageProps
     innerCaption?: string
@@ -49,6 +49,7 @@ export const OpeningBlock = ({
 }
 
 const OpeningBlockWrap = styled('section', {
+  whiteSpace: 'no-wrap',
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
@@ -92,6 +93,7 @@ const ImageContainer = styled('div', {
 
 const MediaImageWrap = styled('div', {
   position: 'relative',
+
   gridColumn: 'span 8',
 
   '@tabletUp': {
@@ -131,11 +133,16 @@ const ContentWrap = styled('div', {
   },
 })
 
-const TextContainer = styled('p', {
-  whiteSpace: 'pre-line',
-  fontFamily: '$inria',
-  fontWeight: '$light',
-  letterSpacing: '$normal',
+const TextContainer = styled('div', {
+  // whiteSpace: 'pre-line',
+  '& > * + *': {
+    mt: '$20',
+  },
+  '& > p': {
+    fontFamily: '$inria',
+    fontWeight: '$light',
+    letterSpacing: '$normal',
+  },
   mb: '$40',
 
   '@tabletUp': {
@@ -145,21 +152,29 @@ const TextContainer = styled('p', {
   variants: {
     layout: {
       default: {
-        fontSize: '$S',
-        lineHeight: '$S',
+        '& > p': {
+          fontSize: '$S',
+          lineHeight: '$S',
+        },
 
         '@desktopUp': {
-          fontSize: '$L',
-          lineHeight: '$L',
+          '& > p': {
+            fontSize: '$L',
+            lineHeight: '$L',
+          },
         },
       },
       large: {
-        fontSize: '$M',
-        lineHeight: '$M',
+        '& > p': {
+          fontSize: '$M',
+          lineHeight: '$M',
+        },
 
         '@tabletUp': {
-          fontSize: '$XXL',
-          lineHeight: '$XXL',
+          '& > p': {
+            fontSize: '$XXL',
+            lineHeight: '$XXL',
+          },
         },
       },
     },

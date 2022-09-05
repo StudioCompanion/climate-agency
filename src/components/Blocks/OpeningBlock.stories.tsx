@@ -38,8 +38,26 @@ const fixtures: StoryFixtures<typeof OpeningBlock> = {
         </Link>
       ),
     },
-    content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
-    We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
+    content: (
+      <>
+        <p>
+          Truth is, we’re going to need some big ideas to keep our world
+          habitable.
+        </p>
+
+        <p>
+          These ideas need profile and they need support, with urgency. And we
+          aim to get them just that.
+        </p>
+
+        <p>
+          We are a non-profit marketing strategy consultancy, dedicated to help
+          climate innovators scale up.
+        </p>
+      </>
+    ),
+    // content: `Truth is, we’re going to need some big ideas to keep our world habitable. These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
+    // We are a marketing strategy consultancy, non profit, and dedicated to help climate projects scale up.`,
     layout: `default`,
   },
   large: {
@@ -61,7 +79,22 @@ const fixtures: StoryFixtures<typeof OpeningBlock> = {
       //   </Link>
       // ),
     },
-    content: `We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
-    layout: `large`,
+    content: (
+      <>
+        <p>
+          Climate change is the challenge of our lives and climate start-ups
+          face an uphill struggle. It is a problem that can only be solved by
+          testing and scaling different ideas, which our unique tools are
+          designed to support.
+        </p>
+
+        <p>
+          From pitch-deck crafting to accelerator workshops or spotlight
+          campaigns, our processes are fast and accessible.
+        </p>
+      </>
+    ),
+    // content: `We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
+    layout: `default`,
   },
 }

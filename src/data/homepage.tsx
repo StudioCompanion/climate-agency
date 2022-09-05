@@ -26,9 +26,24 @@ export const hero = {
       </Link>
     ),
   },
-  content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n
-  These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
-  We are a non-profit marketing strategy consultancy, dedicated to help climate innovators scale up.`,
+  content: (
+    <>
+      <p>
+        Truth is, we’re going to need some big ideas to keep our world
+        habitable.
+      </p>
+
+      <p>
+        These ideas need profile and they need support, with urgency. And we aim
+        to get them just that.
+      </p>
+
+      <p>
+        We are a non-profit marketing strategy consultancy, dedicated to help
+        climate innovators scale up.
+      </p>
+    </>
+  ),
   layout: 'default',
 } as OpeningBlockProps
 
