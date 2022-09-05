@@ -46,14 +46,20 @@ const fixtures: StoryFixtures<typeof OpeningBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/people_on_mountain.png',
-          altText: 'People sitting on a mountain',
+          src: '/images/wright_brothers_glider.jpg',
+          altText: 'Vintage photo of a Wright Brothers Glider',
           width: 765,
           height: 636,
         },
         layout: 'responsive',
         objectFit: 'cover',
       },
+      innerCaption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
+      // caption: (
+      //   <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
+      //     Nasa
+      //   </Link>
+      // ),
     },
     content: `We'd like you to feel as though you have a CMO at your side, working with you to stand out, persuade, and scale.`,
     layout: `large`,

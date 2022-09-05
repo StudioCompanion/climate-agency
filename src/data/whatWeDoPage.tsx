@@ -9,7 +9,7 @@ export const intro = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/wright_brothers_glider.jpeg',
+        src: '/images/wright_brothers_glider.jpg',
         altText: 'Vintage photo of a Wright Brothers Glider',
         width: 765,
         height: 636,
@@ -17,7 +17,7 @@ export const intro = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
+    innerCaption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
   },
   content: `Climate change is the challenge of our lives and climate start-ups face an uphill struggle. It is a problem that can only be solved by testing and scaling different ideas, which our unique tools are designed to support.
 
@@ -52,7 +52,7 @@ export const accelerator = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.'`,
+    innerCaption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.'`,
   },
   children: [
     'It consists of 2 half-day workshops, followed by a full recommendation.',
@@ -134,6 +134,6 @@ export const partners = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Never has teamwork been more critical than when addressing the climate emergency.`,
+    innerCaption: `Never has teamwork been more critical than when addressing the climate emergency.`,
   },
 } as ArticleBlockProps

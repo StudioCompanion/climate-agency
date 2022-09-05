@@ -3,6 +3,7 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 
 export interface ArticleBlockProps {
   pageLayout: 'left' | 'right'
@@ -11,7 +12,8 @@ export interface ArticleBlockProps {
   content: string
   imageSection: {
     mediaImage: MediaImageProps
-    caption?: string
+    innerCaption?: string
+    caption?: ReactNode
   }
   className?: string
 }
@@ -33,7 +35,12 @@ export const ArticleBlock = ({
       <Content pageLayout={pageLayout}>{content}</Content>
       <ImageContainer pageLayout={pageLayout}>
         <MediaImage {...imageSection.mediaImage} />
-        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+        {imageSection.innerCaption && (
+          <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+        )}
+        {imageSection.caption && (
+          <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+        )}
       </ImageContainer>
     </ArticleWrap>
   )
@@ -165,6 +172,7 @@ const Content = styled('p', {
 })
 
 const ImageContainer = styled('div', {
+  position: 'relative',
   gridColumn: 'span 8',
 
   variants: {

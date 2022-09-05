@@ -95,7 +95,7 @@ const MediaImageWrap = styled('div', {
   gridColumn: 'span 8',
 
   '@tabletUp': {
-    gridColumn: 'span 6',
+    gridColumn: '1 / span 6',
   },
 })
 
