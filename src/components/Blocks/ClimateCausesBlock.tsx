@@ -1,8 +1,10 @@
+import { ReactNode } from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from '../Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 
 import { parseStringAndInsertFootnoteBetweenSupTags } from 'helpers/strings'
 
@@ -12,9 +14,13 @@ export interface ClimateCausesBlockProps {
   link: LinkProps
   leftImage: {
     mediaImage: MediaImageProps
-    caption: string
+    innerCaption?: string
+    caption: ReactNode
   }
-  rightImage: MediaImageProps
+  rightImage: {
+    mediaImage: MediaImageProps
+    caption: ReactNode
+  }
   className?: string
 }
 
@@ -61,11 +67,19 @@ export const ClimateCausesBlock = ({
           {leftImage.mediaImage ? (
             <MediaImage {...leftImage.mediaImage} />
           ) : null}
+          {leftImage.innerCaption && (
+            <InnerTextCaption>{leftImage.innerCaption}</InnerTextCaption>
+          )}
         </LeftImageContainer>
-        <CaptionWrap color="black">{leftImage.caption}</CaptionWrap>
+        <CaptionWrapLeft color="black">
+          Photo: {leftImage.caption}
+        </CaptionWrapLeft>
         <RightImageContainer>
-          {rightImage ? <MediaImage {...rightImage} /> : null}
+          {rightImage ? <MediaImage {...rightImage.mediaImage} /> : null}
         </RightImageContainer>
+        <CaptionWrapRight color="black">
+          Photo: {rightImage.caption}
+        </CaptionWrapRight>
       </MediaContainer>
     </ClimateCausesWrap>
   )
@@ -151,6 +165,7 @@ const MediaContainer = styled('figure', {
 })
 
 const LeftImageContainer = styled('div', {
+  position: 'relative',
   display: 'block',
   gridColumn: 'span 8',
   mt: '$40',
@@ -164,7 +179,7 @@ const LeftImageContainer = styled('div', {
   },
 })
 
-const CaptionWrap = styled(TextCaption, {
+const CaptionWrapLeft = styled(TextCaption, {
   gridColumn: 'span 7',
   mt: '$8',
 
@@ -174,6 +189,20 @@ const CaptionWrap = styled(TextCaption, {
   },
   '@desktopUp': {
     gridColumn: 'span 4',
+  },
+})
+
+const CaptionWrapRight = styled(TextCaption, {
+  gridColumn: '3 / span 5',
+  mt: '$8',
+
+  '@tabletUp': {
+    alignSelf: 'start',
+    gridColumn: '8 / span 5',
+    gridRowStart: '2',
+  },
+  '@desktopUp': {
+    gridColumn: '6 / span 4',
   },
 })
 

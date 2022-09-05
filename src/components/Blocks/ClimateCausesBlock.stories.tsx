@@ -1,4 +1,5 @@
 import { ClimateCausesBlock } from './ClimateCausesBlock'
+import { Link } from 'components/Links/Link'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -37,17 +38,37 @@ const fixtures: StoryFixtures<typeof ClimateCausesBlock> = {
         layout: 'responsive',
         objectFit: 'cover',
       },
-      caption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
+      innerCaption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
+      caption: (
+        <Link
+          href="https://unsplash.com/@therawhunter"
+          isExternal
+          color="captionBlack"
+        >
+          Massimiliano Morosinotto
+        </Link>
+      ),
     },
     rightImage: {
-      image: {
-        src: '/images/hand_in_water.png',
-        altText: 'Hand in the water',
-        width: 429,
-        height: 513,
+      mediaImage: {
+        image: {
+          src: '/images/hand_in_water.jpg',
+          altText: 'Hand in the water',
+          width: 429,
+          height: 513,
+        },
+        layout: 'responsive',
+        objectFit: 'cover',
       },
-      layout: 'responsive',
-      objectFit: 'cover',
+      caption: (
+        <Link
+          href="https://unsplash.com/@eliapelle"
+          isExternal
+          color="captionBlack"
+        >
+          Elia Pellegrini
+        </Link>
+      ),
     },
   },
 }
