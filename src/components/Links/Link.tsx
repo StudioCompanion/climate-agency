@@ -6,7 +6,7 @@ import { styled } from 'styles/stitches.config'
 export interface LinkProps {
   href: string
   children: ReactNode
-  color?: 'green' | 'stone' | 'transparent'
+  color?: 'green' | 'stone' | 'transparent' | 'captionBlack' | 'captionWhite'
   className?: string
   isExternal?: boolean
 }
@@ -51,6 +51,20 @@ const Anchor = styled('a', {
       },
       transparent: {
         backgroundColor: 'transparent',
+      },
+      captionBlack: {
+        backgroundColor: 'transparent',
+        color: '$black',
+        textDecoration: 'underline',
+        fontWeight: '$regular',
+        p: 0,
+      },
+      captionWhite: {
+        backgroundColor: 'transparent',
+        color: '$white',
+        textDecoration: 'underline',
+        fontWeight: '$regular',
+        p: 0,
       },
     },
   },

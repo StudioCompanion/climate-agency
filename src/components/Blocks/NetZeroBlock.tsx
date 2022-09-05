@@ -1,9 +1,12 @@
-import CommunicationIcon from 'assets/Communication.svg'
+import { ReactNode } from 'react'
 
 import { styled } from 'styles/stitches.config'
 
+import CommunicationIcon from 'assets/Communication.svg'
+
 import { MediaImage, MediaImageProps } from 'components/Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 import { parseStringAndInsertFootnoteBetweenSupTags } from 'helpers/strings'
 import { Link } from 'components/Links/Link'
 
@@ -12,7 +15,8 @@ export interface NetZeroBlockProps {
   content: string
   imageSection: {
     mediaImage: MediaImageProps
-    caption: string
+    innerCaption?: string
+    caption?: ReactNode
   }
 }
 
@@ -51,8 +55,11 @@ export const NetZeroBlock = ({
           {imageSection.mediaImage ? (
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
+          {imageSection.innerCaption && (
+            <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+          )}
         </ImageContainer>
-        <CaptionWrap color="white">{imageSection.caption}</CaptionWrap>
+        <CaptionWrap color="white">Photo: {imageSection.caption}</CaptionWrap>
       </MediaContainer>
     </NetZeroWrap>
   )
@@ -147,6 +154,7 @@ const MediaContainer = styled('figure', {
 })
 
 const ImageContainer = styled('div', {
+  position: 'relative',
   gridColumn: 'span 8',
   mt: '$16',
 

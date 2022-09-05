@@ -21,6 +21,10 @@ export const Transparent: ComponentStory<typeof Link> = () => (
   <Link {...fixtures.transparent} />
 )
 
+export const Caption: ComponentStory<typeof Link> = () => (
+  <Link {...fixtures.caption} />
+)
+
 const fixtures: StoryFixtures<typeof Link> = {
   green: {
     href: `#`,
@@ -38,6 +42,12 @@ const fixtures: StoryFixtures<typeof Link> = {
     href: `#`,
     children: `Let us help you`,
     color: `transparent`,
+    isExternal: true,
+  },
+  caption: {
+    href: `https://www.nasa.gov/`,
+    children: `Nasa`,
+    color: `caption`,
     isExternal: true,
   },
 }

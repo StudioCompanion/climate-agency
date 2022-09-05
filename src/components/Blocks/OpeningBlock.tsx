@@ -1,14 +1,17 @@
+import { ReactNode } from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 import { Link, LinkProps } from 'components/Links/Link'
 
 export interface OpeningBlockProps {
   content: string
   imageSection: {
     mediaImage: MediaImageProps
-    caption?: string
+    innerCaption?: string
+    caption?: ReactNode
   }
   layout: 'default' | 'large'
   className?: string
@@ -33,8 +36,13 @@ export const OpeningBlock = ({
           {imageSection.mediaImage ? (
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
+          {imageSection.innerCaption && (
+            <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+          )}
         </MediaImageWrap>
-        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+        {imageSection.caption && (
+          <CaptionWrap color="black">Photo: {imageSection.caption}</CaptionWrap>
+        )}
       </ImageContainer>
     </OpeningBlockWrap>
   )
@@ -83,6 +91,7 @@ const ImageContainer = styled('div', {
 })
 
 const MediaImageWrap = styled('div', {
+  position: 'relative',
   gridColumn: 'span 8',
 
   '@tabletUp': {

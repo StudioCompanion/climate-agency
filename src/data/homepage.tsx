@@ -5,20 +5,26 @@ import { ShortArticleBlockProps } from 'components/Blocks/ShortArticleBlock'
 import { TestimonialsBlockProps } from 'components/Blocks/TestimonialsBlock'
 import { TeamBlockProps } from 'components/Blocks/TeamBlock'
 import { CtaBlockProps } from 'components/Blocks/CtaBlock'
+import { Link } from 'components/Links/Link'
 
 export const hero = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/earth_nasa.png',
+        src: '/images/earth_nasa.jpg',
         altText: 'Hero image',
-        width: 653,
-        height: 636,
+        width: 1307,
+        height: 1272,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
+    innerCaption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
+    caption: (
+      <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
+        Nasa
+      </Link>
+    ),
   },
   content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n
   These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
@@ -35,7 +41,7 @@ export const netZero = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/Greenland_fjords.png',
+        src: '/images/Greenland_fjords.jpg',
         altText: 'Greenland Fjords',
         width: 1989,
         height: 1170,
@@ -43,7 +49,17 @@ export const netZero = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to climate change. This is Scoresby Sund, the world’s largest fjord system.`,
+    innerCaption: `This is Scoresby Sund. Greenland fjords receive considerable amounts of 
+    glacial meltwater discharge due to climate change. `,
+    caption: (
+      <Link
+        href="https://unsplash.com/@anniespratt/"
+        isExternal
+        color="captionWhite"
+      >
+        Annie Spratt
+      </Link>
+    ),
   },
 } as NetZeroBlockProps
 

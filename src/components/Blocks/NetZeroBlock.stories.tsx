@@ -1,4 +1,5 @@
 import { NetZeroBlock } from './NetZeroBlock'
+import { Link } from 'components/Links/Link'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -27,7 +28,7 @@ const fixtures: StoryFixtures<typeof NetZeroBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/Greenland_fjords.png',
+          src: '/images/Greenland_fjords.jpg',
           altText: 'Greenland Fjords',
           width: 1326,
           height: 784.73,
@@ -35,7 +36,16 @@ const fixtures: StoryFixtures<typeof NetZeroBlock> = {
         layout: 'responsive',
         objectFit: 'cover',
       },
-      caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to present climate warming. This is Scoresby Sund, the world’s largest fjord system.`,
+      innerCaption: `This is Scoresby Sund. Greenland fjords receive considerable amounts of glacial meltwater discharge due to climate change. `,
+      caption: (
+        <Link
+          href="https://unsplash.com/@anniespratt/"
+          isExternal
+          color="captionWhite"
+        >
+          Annie Spratt
+        </Link>
+      ),
     },
   },
 }
