@@ -47,7 +47,7 @@ const fixtures: StoryFixtures<typeof Link> = {
   caption: {
     href: `https://www.nasa.gov/`,
     children: `Nasa`,
-    color: `caption`,
+    color: `captionBlack`,
     isExternal: true,
   },
 }
