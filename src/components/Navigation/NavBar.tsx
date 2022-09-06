@@ -185,7 +185,8 @@ const MenuButton = styled('button', {
   p: 0,
   position: 'relative',
   top: 0,
-  left: -11,
+  // left: -11,
+  right: -11,
 })
 
 const LogoMobileWrap = styled('a', {
@@ -221,7 +222,6 @@ const LinksWrap = styled(animated.ul, {
 
 const ListItem = styled('li', {
   color: '$grey',
-  mr: '$20',
 
   '&:before': {
     content: '•',
@@ -231,7 +231,7 @@ const ListItem = styled('li', {
     lineHeight: '$XS',
 
     '@tabletUp': {
-      fontSize: '$XXS',
+      fontSize: '$X_S',
       lineHeight: '$XXS',
     },
   },
@@ -274,7 +274,7 @@ const ContactLink = styled(Link, {
   p: '0',
 
   '@tabletUp': {
-    fontSize: '$XXS',
+    fontSize: '$X_S',
     lineHeight: '$XXS',
   },
 })

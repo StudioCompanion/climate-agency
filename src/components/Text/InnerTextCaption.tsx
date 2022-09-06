@@ -25,7 +25,7 @@ const InnerCaptionContainer = styled('figcaption', {
   bottom: 0,
   p: '$8',
   fontFamily: '$workSans',
-  fontWeight: '$regular',
+  fontWeight: '$medium',
   fontSize: '$XXS',
   lineHeight: '$XXS',
   letterSpacing: '$small',
