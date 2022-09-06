@@ -137,7 +137,7 @@ const ContentWrap = styled('div', {
 const TextContainer = styled('div', {
   // whiteSpace: 'pre-line',
   '& > * + *': {
-    mt: '$20',
+    mt: '$40',
   },
   '& > p': {
     fontFamily: '$inria',
