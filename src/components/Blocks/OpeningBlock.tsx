@@ -53,6 +53,7 @@ const OpeningBlockWrap = styled('section', {
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
+  alignItems: 'start',
   columnGap: '$16',
   px: '$16',
 

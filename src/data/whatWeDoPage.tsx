@@ -19,11 +19,6 @@ export const intro = {
       objectFit: 'cover',
     },
     innerCaption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
-    caption: (
-      <Link href="#" isExternal color="captionBlack">
-        Wright Brothers Glider
-      </Link>
-    ),
   },
   content: (
     <>
@@ -69,6 +64,11 @@ export const accelerator = {
       objectFit: 'cover',
     },
     innerCaption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.'`,
+    caption: (
+      <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
+        Nasa
+      </Link>
+    ),
   },
   children: [
     'It consists of 2 half-day workshops, followed by a full recommendation.',
@@ -131,6 +131,15 @@ export const stakeholders = {
       layout: 'responsive',
       objectFit: 'cover',
     },
+    caption: (
+      <Link
+        href="https://unsplash.com/@jungleboymiguel"
+        isExternal
+        color="captionBlack"
+      >
+        @jungleboymiguel
+      </Link>
+    ),
   },
 } as ArticleBlockProps
 
@@ -151,5 +160,14 @@ export const partners = {
       objectFit: 'cover',
     },
     innerCaption: `Never has teamwork been more critical than when addressing the climate emergency.`,
+    caption: (
+      <Link
+        href="https://unsplash.com/@quinoal"
+        isExternal
+        color="captionBlack"
+      >
+        Quino Al
+      </Link>
+    ),
   },
 } as ArticleBlockProps

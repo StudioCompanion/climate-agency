@@ -38,10 +38,12 @@ export const ArticleBlock = ({
         {imageSection.innerCaption && (
           <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
         )}
-        {imageSection.caption && (
-          <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
-        )}
       </ImageContainer>
+      {imageSection.caption && (
+        <CaptionWrap pageLayout={pageLayout} color="black">
+          Photo: {imageSection.caption}
+        </CaptionWrap>
+      )}
     </ArticleWrap>
   )
 }
@@ -194,8 +196,21 @@ const ImageContainer = styled('div', {
 const CaptionWrap = styled(TextCaption, {
   gridColumn: 'span 8',
   mt: '$8',
+  alignSelf: 'start',
 
-  '@tabletUp': {
-    gridColumn: 'span 4',
+  variants: {
+    pageLayout: {
+      left: {
+        '@tabletUp': {
+          gridColumn: 'span 4',
+        },
+      },
+      right: {
+        '@tabletUp': {
+          gridColumn: '6 / span 4',
+          // gridRow: '2',
+        },
+      },
+    },
   },
 })

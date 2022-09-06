@@ -51,10 +51,10 @@ export const AcceleratorBlock = ({
         {imageSection.innerCaption && (
           <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
         )}
-        {imageSection.caption && (
-          <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
-        )}
       </ImageWrap>
+      {imageSection.caption && (
+        <CaptionWrap color="black">Photo: {imageSection.caption}</CaptionWrap>
+      )}
     </AcceleratorWrap>
   )
 }
@@ -208,6 +208,6 @@ const CaptionWrap = styled(TextCaption, {
   my: '$8',
 
   '@tabletUp': {
-    gridColumn: 'span 4',
+    gridColumn: '3 / span 4',
   },
 })

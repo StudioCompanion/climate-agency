@@ -297,6 +297,27 @@ export const team = {
       {
         mediaImage: {
           image: {
+            src: '/team-members/guy.jpeg',
+            altText: 'Guy Lomax',
+            width: 1427,
+            height: 1661,
+          },
+          layout: 'responsive',
+          objectFit: 'cover',
+        },
+        name: `Guy Lomax`,
+        role: `Advisor`,
+        description: `Guy has spent the last decade studying promising climate change solutions. He has held research roles with Virgin, The Nature Conservancy and the University of Oxford, and is currently completing a PhD in Environmental Data Science at the University of Exeter.`,
+        socialLink: {
+          href: `https://www.linkedin.com/in/guy-lomax-climate/`,
+          children: `LinkedIn`,
+          color: `transparent`,
+          isExternal: true,
+        },
+      },
+      {
+        mediaImage: {
+          image: {
             src: '/team-members/ivo.jpeg',
             altText: 'Ivo Vlaev',
             width: 1427,
