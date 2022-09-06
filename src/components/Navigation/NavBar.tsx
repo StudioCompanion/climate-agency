@@ -268,7 +268,7 @@ const LogoDesktopWrap = styled('a', {
 
 const ContactLink = styled(Link, {
   color: '$grey',
-  fontWeight: '$regular',
+  fontWeight: '$medium',
   fontSize: '$XS',
   lineHeight: '$XS',
   p: '0',
