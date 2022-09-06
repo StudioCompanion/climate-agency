@@ -91,16 +91,21 @@ export const NavBar = () => {
     <NavBarWrap>
       <NavBarInnerWrap>
         <TopRow isOpen={isOpen}>
-          <MenuButton type="button" onClick={handleMenuClick}>
-            {isOpen ? <IconClose /> : <IconOpen />}
-          </MenuButton>
           <NextLink passHref href="/">
             <LogoMobileWrap>
               <CALogo />
             </LogoMobileWrap>
           </NextLink>
+          <MenuButton type="button" onClick={handleMenuClick}>
+            {isOpen ? <IconClose /> : <IconOpen />}
+          </MenuButton>
         </TopRow>
 
+        <NextLink passHref href="/">
+          <LogoDesktopWrap>
+            <CALogo fill="white" />
+          </LogoDesktopWrap>
+        </NextLink>
         <LinksWrap style={styles}>
           {routes.map((link) => (
             <ListItem
@@ -114,11 +119,6 @@ export const NavBar = () => {
             <ContactLink {...contactLink} />
           </ListItem>
         </LinksWrap>
-        <NextLink passHref href="/">
-          <LogoDesktopWrap>
-            <CALogo fill="white" />
-          </LogoDesktopWrap>
-        </NextLink>
       </NavBarInnerWrap>
     </NavBarWrap>
   )
@@ -200,12 +200,12 @@ const LinksWrap = styled(animated.ul, {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-end',
+  alignItems: 'end',
   gap: '$8',
   p: '$20 $16',
   backgroundColor: '$green',
   position: 'fixed',
   top: 0,
-  left: 0,
   width: '100%',
   height: 187,
   zIndex: '$2',
@@ -221,6 +221,7 @@ const LinksWrap = styled(animated.ul, {
 
 const ListItem = styled('li', {
   color: '$grey',
+  mr: '$20',
 
   '&:before': {
     content: '•',

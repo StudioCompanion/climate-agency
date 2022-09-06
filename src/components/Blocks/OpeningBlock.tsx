@@ -37,7 +37,7 @@ export const OpeningBlock = ({
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
           {imageSection.innerCaption && (
-            <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+            <InnerCaption>{imageSection.innerCaption}</InnerCaption>
           )}
         </MediaImageWrap>
         {imageSection.caption && (
@@ -179,5 +179,11 @@ const TextContainer = styled('div', {
         },
       },
     },
+  },
+})
+
+const InnerCaption = styled(InnerTextCaption, {
+  '& > p': {
+    maxWidth: '500px',
   },
 })
