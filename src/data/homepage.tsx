@@ -49,10 +49,10 @@ export const hero = {
 
 export const netZero = {
   title: `Climate Communication is not working.`,
-  content: `Public and key stakeholders are confused by the jargon and mind-bending complexity. For eg: One third of UK CEOs in the UK are unfamiliar with the term Net Zero <sup>(1)</sup>
+  content: `Outside of the climate echo chamber, people are confused by the jargon and mind-bending complexity. For e.g.: One third of UK CEOs in the UK are unfamiliar with the term "Net Zero" <sup>(1)</sup>
 
-  This matters. Climate start-ups need to persuade investors, partners, customers, communities.
-  We can help.  Corporate brands have evolved over decades the marketing techniques to engage, persuade and build trust.  We make these skills accessible and tailored to climate.`,
+  This matters, Climate start-ups need to persuade investors, customers and communities.
+  We can help, making marketing techniques accessible and tailored to climate.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -431,7 +431,9 @@ export const team = {
 } as TeamBlockProps
 
 export const cta = {
-  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Do you believe that climate projects need more funding and support?\n\nThen please get in touch. Together let’s persuade the people you need to scale up.`,
+  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Do you believe that climate projects need more funding and support?
+  
+  Then please get in touch. Together, let's persuade the people who can help you scale up.`,
   leftLink: {
     href: `mailto:sophie@climateagency.net`,
     children: `I’m working in climate and need help!`,

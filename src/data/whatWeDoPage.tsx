@@ -23,14 +23,17 @@ export const intro = {
   content: (
     <>
       <p>
-        Climate change is the challenge of our lives and climate start-ups face
-        an uphill struggle. It is a problem that can only be solved by testing
-        and scaling different ideas, which our unique tools are designed to
-        support.
+        Time and time again, human ingenuity has proven its ability to solve the
+        most complex problems.
       </p>
       <p>
-        From pitch-deck crafting to accelerator workshops or spotlight
-        campaigns, our processes are fast and accessible.
+        But climate change is our biggest challenge yet, and climate start-ups
+        face an uphill struggle.
+      </p>
+      <p>
+        Our techniques help you define your vision, your message, your
+        stakeholder strategy. From accelerator workshops to spotlight campaigns,
+        our processes are fast and accessible.
       </p>
     </>
   ),
@@ -71,7 +74,7 @@ export const accelerator = {
     ),
   },
   children: [
-    'It consists of 2 half-day workshops, followed by a full recommendation.',
+    '2 half-day workshops, followed by:',
     <strong key="strong1">Key deliverables</strong>,
     <ul key="list1">
       <li>
@@ -91,10 +94,7 @@ export const accelerator = {
       <dt>
         <b>Accessible</b>
       </dt>
-      <dd>
-        around 10% of the traditional agency/consultancy fees for a similar
-        process.
-      </dd>
+      <dd>At a fraction of the cost of a traditional agency.</dd>
       <dt>
         <b>Climate-specific</b>
       </dt>
@@ -119,7 +119,7 @@ export const stakeholders = {
   title: `Stakeholder Campaigns on neglected climate topics`,
   content: `We need to shine a spotlight on some climate stories, to nudge decision-makers. For example, the urgency around Methane, or the role of the ocean as a climate solution.
 
-  Facts and figures are not enough: we want to invite some of the best creative minds to help tell these stories.  Time and resources are short to communicate with the wider public, we plan to focus on persuading key stakeholders.`,
+  Facts and figures are not enough: we want to invite some of the best creative minds to help tell these stories. We plan to focus on persuading key influencers and decision-makers.`,
   imageSection: {
     mediaImage: {
       image: {
