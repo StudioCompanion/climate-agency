@@ -245,7 +245,7 @@ export const services = {
 } as ShortArticleBlockProps
 
 export const team = {
-  title: `Our team works with inspiring advisors, to help us tackle the biggest communication problem of all time.`,
+  title: `Our team works with inspiring advisors, to tackle the biggest communication problem of all time.`,
   teamMembers: [
     [
       {
