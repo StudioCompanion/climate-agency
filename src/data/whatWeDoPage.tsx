@@ -24,11 +24,8 @@ export const intro = {
     <>
       <p>
         Time and time again, human ingenuity has proven its ability to solve the
-        most complex problems.
-      </p>
-      <p>
-        But climate change is our biggest challenge yet, and climate start-ups
-        face an uphill struggle.
+        most complex problems. But climate change is our biggest challenge yet,
+        and climate start-ups face an uphill struggle.
       </p>
       <p>
         Our techniques help you define your vision, your message, your
@@ -74,7 +71,7 @@ export const accelerator = {
     ),
   },
   children: [
-    '2 half-day workshops, followed by:',
+    '2 half-day workshops, followed by a full recommendation:',
     <strong key="strong1">Key deliverables</strong>,
     <ul key="list1">
       <li>
