@@ -3,6 +3,7 @@ import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 
 export interface ArticleBlockProps {
   pageLayout: 'left' | 'right'
@@ -11,7 +12,8 @@ export interface ArticleBlockProps {
   content: string
   imageSection: {
     mediaImage: MediaImageProps
-    caption?: string
+    innerCaption?: string
+    caption?: ReactNode
   }
   className?: string
 }
@@ -33,8 +35,15 @@ export const ArticleBlock = ({
       <Content pageLayout={pageLayout}>{content}</Content>
       <ImageContainer pageLayout={pageLayout}>
         <MediaImage {...imageSection.mediaImage} />
-        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+        {imageSection.innerCaption && (
+          <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+        )}
       </ImageContainer>
+      {imageSection.caption && (
+        <CaptionWrap pageLayout={pageLayout} color="black">
+          Photo: {imageSection.caption}
+        </CaptionWrap>
+      )}
     </ArticleWrap>
   )
 }
@@ -165,6 +174,7 @@ const Content = styled('p', {
 })
 
 const ImageContainer = styled('div', {
+  position: 'relative',
   gridColumn: 'span 8',
 
   variants: {
@@ -186,8 +196,21 @@ const ImageContainer = styled('div', {
 const CaptionWrap = styled(TextCaption, {
   gridColumn: 'span 8',
   mt: '$8',
+  alignSelf: 'start',
 
-  '@tabletUp': {
-    gridColumn: 'span 4',
+  variants: {
+    pageLayout: {
+      left: {
+        '@tabletUp': {
+          gridColumn: 'span 4',
+        },
+      },
+      right: {
+        '@tabletUp': {
+          gridColumn: '6 / span 4',
+          // gridRow: '2',
+        },
+      },
+    },
   },
 })

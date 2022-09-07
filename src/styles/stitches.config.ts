@@ -67,6 +67,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
         M: '3.6rem',
         S: '2.8rem',
         XS: '1.6rem',
+        X_S: '1.4rem',
         XXS: '1.2rem',
       },
       lineHeights: {
@@ -87,6 +88,7 @@ const { styled, globalCss, getCssText, config, keyframes, reset } =
       fontWeights: {
         light: 300,
         regular: 400,
+        medium: 500,
         semiBold: 600,
       },
     },

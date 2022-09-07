@@ -91,16 +91,21 @@ export const NavBar = () => {
     <NavBarWrap>
       <NavBarInnerWrap>
         <TopRow isOpen={isOpen}>
-          <MenuButton type="button" onClick={handleMenuClick}>
-            {isOpen ? <IconClose /> : <IconOpen />}
-          </MenuButton>
           <NextLink passHref href="/">
             <LogoMobileWrap>
               <CALogo />
             </LogoMobileWrap>
           </NextLink>
+          <MenuButton type="button" onClick={handleMenuClick}>
+            {isOpen ? <IconClose /> : <IconOpen />}
+          </MenuButton>
         </TopRow>
 
+        <NextLink passHref href="/">
+          <LogoDesktopWrap>
+            <CALogo fill="white" />
+          </LogoDesktopWrap>
+        </NextLink>
         <LinksWrap style={styles}>
           {routes.map((link) => (
             <ListItem
@@ -114,11 +119,6 @@ export const NavBar = () => {
             <ContactLink {...contactLink} />
           </ListItem>
         </LinksWrap>
-        <NextLink passHref href="/">
-          <LogoDesktopWrap>
-            <CALogo fill="white" />
-          </LogoDesktopWrap>
-        </NextLink>
       </NavBarInnerWrap>
     </NavBarWrap>
   )
@@ -185,7 +185,8 @@ const MenuButton = styled('button', {
   p: 0,
   position: 'relative',
   top: 0,
-  left: -11,
+  // left: -11,
+  right: -11,
 })
 
 const LogoMobileWrap = styled('a', {
@@ -200,12 +201,12 @@ const LinksWrap = styled(animated.ul, {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-end',
+  alignItems: 'end',
   gap: '$8',
   p: '$20 $16',
   backgroundColor: '$green',
   position: 'fixed',
   top: 0,
-  left: 0,
   width: '100%',
   height: 187,
   zIndex: '$2',
@@ -230,7 +231,7 @@ const ListItem = styled('li', {
     lineHeight: '$XS',
 
     '@tabletUp': {
-      fontSize: '$XXS',
+      fontSize: '$X_S',
       lineHeight: '$XXS',
     },
   },
@@ -267,13 +268,13 @@ const LogoDesktopWrap = styled('a', {
 
 const ContactLink = styled(Link, {
   color: '$grey',
-  fontWeight: '$regular',
+  fontWeight: '$medium',
   fontSize: '$XS',
   lineHeight: '$XS',
   p: '0',
 
   '@tabletUp': {
-    fontSize: '$XXS',
+    fontSize: '$X_S',
     lineHeight: '$XXS',
   },
 })

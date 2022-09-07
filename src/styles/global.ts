@@ -14,6 +14,11 @@ export const globalStyles = globalCss({
     },
     {
       fontFamily: 'Work Sans',
+      src: 'url("/fonts/WorkSans-Medium.woff") format("woff"), url("/fonts/WorkSans-Medium.woff2") format("woff2")',
+      fontWeight: 500,
+    },
+    {
+      fontFamily: 'Work Sans',
       src: 'url("/fonts/WorkSans-SemiBold.woff") format("woff"), url("/fonts/WorkSans-SemiBold.woff2") format("woff2")',
       fontWeight: 600,
     },

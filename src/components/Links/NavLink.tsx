@@ -36,7 +36,7 @@ const Anchor = styled('a', {
   justifyContent: 'center',
   alignItems: 'center',
   fontFamily: '$workSans',
-  fontWeight: '$regular',
+  fontWeight: '$medium',
   fontSize: '$XS',
   lineHeight: '$XS',
 
@@ -45,7 +45,7 @@ const Anchor = styled('a', {
   color: 'inherit',
 
   '@tabletUp': {
-    fontSize: '$XXS',
+    fontSize: '$X_S',
     lineHeight: '$XXS',
   },
 })

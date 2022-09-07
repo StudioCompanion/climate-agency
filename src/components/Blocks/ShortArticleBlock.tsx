@@ -1,9 +1,12 @@
+import { ReactNode } from 'react'
+
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextHeader } from '../Text/TextHeader'
 import { TextCaption } from '../Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 
 export interface ShortArticleBlockProps {
   textPosition: 'left' | 'right'
@@ -12,7 +15,8 @@ export interface ShortArticleBlockProps {
   link?: LinkProps
   imageSection: {
     mediaImage: MediaImageProps
-    caption: string
+    innerCaption?: string
+    caption: ReactNode
   }
   className?: string
 }
@@ -33,8 +37,11 @@ export const ShortArticleBlock = ({
             {imageSection.mediaImage ? (
               <MediaImage {...imageSection.mediaImage} />
             ) : null}
+            {imageSection.innerCaption && (
+              <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+            )}
           </ImageContainer>
-          <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+          <CaptionWrap color="black">Photo: {imageSection.caption}</CaptionWrap>
         </MediaContainer>
       </MediaWrap>
       <TextWrap textPosition={textPosition}>
@@ -101,6 +108,7 @@ const MediaContainer = styled('figure', {
 })
 
 const ImageContainer = styled('div', {
+  position: 'relative',
   gridColumn: 'span 8',
 
   '@tabletUp': {

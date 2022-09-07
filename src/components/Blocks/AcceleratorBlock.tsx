@@ -6,6 +6,7 @@ import ArrowsIcon from '../../assets/Arrows.svg'
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from 'components/Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 
 export interface AcceleratorBlockProps {
   title: string
@@ -13,7 +14,8 @@ export interface AcceleratorBlockProps {
   link: LinkProps
   imageSection: {
     mediaImage: MediaImageProps
-    caption?: string
+    innerCaption?: string
+    caption?: ReactNode
   }
   children: ReactNode[]
 }
@@ -46,8 +48,13 @@ export const AcceleratorBlock = ({
         {imageSection.mediaImage ? (
           <MediaImage {...imageSection.mediaImage} />
         ) : null}
-        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+        {imageSection.innerCaption && (
+          <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+        )}
       </ImageWrap>
+      {imageSection.caption && (
+        <CaptionWrap color="black">Photo: {imageSection.caption}</CaptionWrap>
+      )}
     </AcceleratorWrap>
   )
 }
@@ -187,6 +194,7 @@ const LinkWrap = styled('span', {
 })
 
 const ImageWrap = styled('div', {
+  position: 'relative',
   gridColumn: 'span 8',
   mt: '$40',
 
@@ -200,6 +208,6 @@ const CaptionWrap = styled(TextCaption, {
   my: '$8',
 
   '@tabletUp': {
-    gridColumn: 'span 4',
+    gridColumn: '3 / span 4',
   },
 })

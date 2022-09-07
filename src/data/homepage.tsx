@@ -5,37 +5,57 @@ import { ShortArticleBlockProps } from 'components/Blocks/ShortArticleBlock'
 import { TestimonialsBlockProps } from 'components/Blocks/TestimonialsBlock'
 import { TeamBlockProps } from 'components/Blocks/TeamBlock'
 import { CtaBlockProps } from 'components/Blocks/CtaBlock'
+import { Link } from 'components/Links/Link'
 
 export const hero = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/earth_nasa.png',
+        src: '/images/earth_nasa.jpg',
         altText: 'Hero image',
-        width: 653,
-        height: 636,
+        width: 1307,
+        height: 1272,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
+    innerCaption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
+    caption: (
+      <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
+        Nasa
+      </Link>
+    ),
   },
-  content: `Truth is, we’re going to need some big ideas to keep our world habitable.\n
-  These ideas need profile and they need support, with urgency. And we aim to get them just that.\n
-  We are a non-profit marketing strategy consultancy, dedicated to help climate innovators scale up.`,
+  content: (
+    <>
+      <p>
+        Truth is, we’re going to need some big ideas to keep our world
+        habitable.
+      </p>
+
+      <p>
+        These ideas need profile and they need support, with urgency. And we aim
+        to get them just that.
+      </p>
+
+      <p>
+        We are a non-profit marketing strategy consultancy, dedicated to help
+        climate innovators scale up.
+      </p>
+    </>
+  ),
   layout: 'default',
 } as OpeningBlockProps
 
 export const netZero = {
   title: `Climate Communication is not working.`,
-  content: `Public and key stakeholders are confused by the jargon and mind-bending complexity. For eg: One third of UK CEOs in the UK are unfamiliar with the term Net Zero <sup>(1)</sup>
+  content: `Outside of the climate echo chamber, people are confused by the jargon and mind-bending complexity. For example, one third of UK CEOs in the UK are unfamiliar with the term "Net Zero" <sup>(1)</sup>.
 
-  This matters. Climate start-ups need to persuade investors, partners, customers, communities.
-  We can help.  Corporate brands have evolved over decades the marketing techniques to engage, persuade and build trust.  We make these skills accessible and tailored to climate.`,
+  This matters, Climate start-ups need to persuade investors, customers and communities. We can help, making marketing techniques accessible and tailored to climate.`,
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/Greenland_fjords.png',
+        src: '/images/Greenland_fjords.jpg',
         altText: 'Greenland Fjords',
         width: 1989,
         height: 1170,
@@ -43,7 +63,16 @@ export const netZero = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Greenland fjords receive considerable amounts of glacial meltwater discharge from the Greenland Ice Sheet due to climate change. This is Scoresby Sund, the world’s largest fjord system.`,
+    innerCaption: `This is Scoresby Sund. Greenland fjords receive considerable amounts of glacial meltwater discharge due to climate change. `,
+    caption: (
+      <Link
+        href="https://unsplash.com/@anniespratt/"
+        isExternal
+        color="captionWhite"
+      >
+        Annie Spratt
+      </Link>
+    ),
   },
 } as NetZeroBlockProps
 
@@ -67,17 +96,37 @@ export const climateCauses = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Humans' relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
+    innerCaption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
+    caption: (
+      <Link
+        href="https://unsplash.com/@therawhunter"
+        isExternal
+        color="captionBlack"
+      >
+        Massimiliano Morosinotto
+      </Link>
+    ),
   },
   rightImage: {
-    image: {
-      src: '/images/hand_in_water.png',
-      altText: 'Hand in the water',
-      width: 429,
-      height: 513,
+    mediaImage: {
+      image: {
+        src: '/images/hand_in_water.jpg',
+        altText: 'Hand in the water',
+        width: 429,
+        height: 513,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
     },
-    layout: 'responsive',
-    objectFit: 'cover',
+    caption: (
+      <Link
+        href="https://unsplash.com/@eliapelle"
+        isExternal
+        color="captionBlack"
+      >
+        Elia Pellegrini
+      </Link>
+    ),
   },
 } as ClimateCausesBlockProps
 
@@ -96,7 +145,16 @@ export const ourBackground = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the Apollo Test Division. Credit NASA Archives.`,
+    innerCaption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the Apollo Test Division.`,
+    caption: (
+      <Link
+        href="https://www.nasa.gov/multimedia/videogallery/Video_Gallery_Archives.html"
+        isExternal
+        color="captionBlack"
+      >
+        NASA Archives
+      </Link>
+    ),
   },
 } as ShortArticleBlockProps
 
@@ -176,12 +234,17 @@ export const services = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    caption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+    innerCaption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+    caption: (
+      <Link href="https://unsplash.com/@jxb511" isExternal color="captionBlack">
+        John Bakator
+      </Link>
+    ),
   },
 } as ShortArticleBlockProps
 
 export const team = {
-  title: `Our team works with inspiring advisors, to help us tackle the biggest communication problem of all time.`,
+  title: `Our team works with inspiring advisors to tackle the biggest communication problem of all time.`,
   teamMembers: [
     [
       {
@@ -230,6 +293,27 @@ export const team = {
       },
     ],
     [
+      {
+        mediaImage: {
+          image: {
+            src: '/team-members/guy.jpeg',
+            altText: 'Guy Lomax',
+            width: 1427,
+            height: 1661,
+          },
+          layout: 'responsive',
+          objectFit: 'cover',
+        },
+        name: `Guy Lomax`,
+        role: `Advisor`,
+        description: `Guy has spent the last decade studying promising climate change solutions. He has held research roles with Virgin, The Nature Conservancy and the University of Oxford, and is currently completing a PhD in Environmental Data Science at the University of Exeter.`,
+        socialLink: {
+          href: `https://www.linkedin.com/in/guy-lomax-climate/`,
+          children: `LinkedIn`,
+          color: `transparent`,
+          isExternal: true,
+        },
+      },
       {
         mediaImage: {
           image: {
@@ -346,7 +430,9 @@ export const team = {
 } as TeamBlockProps
 
 export const cta = {
-  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Do you believe that climate projects need more funding and support?\n\nThen please get in touch. Together let’s persuade the people you need to scale up.`,
+  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Do you believe that climate projects need more funding and support?
+  
+  Then please get in touch. Together, let's persuade the people who can help you scale up.`,
   leftLink: {
     href: `mailto:sophie@climateagency.net`,
     children: `I’m working in climate and need help!`,

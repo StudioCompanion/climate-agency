@@ -1,4 +1,5 @@
 import { ShortArticleBlock } from './ShortArticleBlock'
+import { Link } from 'components/Links/Link'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -24,7 +25,7 @@ const fixtures: StoryFixtures<typeof ShortArticleBlock> = {
     imageSection: {
       mediaImage: {
         image: {
-          src: '/images/satellite_capture.jpg',
+          src: '/images/Mad-Don.jpeg',
           altText: 'Satellite capture',
           width: 343,
           height: 348,
@@ -32,7 +33,16 @@ const fixtures: StoryFixtures<typeof ShortArticleBlock> = {
         layout: 'responsive',
         objectFit: 'cover',
       },
-      caption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.`,
+      innerCaption: `Inspired teamwork can achieve the impossible. Here “Mad Don”, Donal Arabian, Chief of the Apollo Test Division.`,
+      caption: (
+        <Link
+          href="https://www.nasa.gov/multimedia/videogallery/Video_Gallery_Archives.html"
+          isExternal
+          color="captionBlack"
+        >
+          NASA Archives
+        </Link>
+      ),
     },
   },
   right: {
@@ -58,7 +68,16 @@ const fixtures: StoryFixtures<typeof ShortArticleBlock> = {
         layout: 'responsive',
         objectFit: 'cover',
       },
-      caption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+      innerCaption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+      caption: (
+        <Link
+          href="https://unsplash.com/@jxb511"
+          isExternal
+          color="captionBlack"
+        >
+          John Bakator
+        </Link>
+      ),
     },
   },
 }

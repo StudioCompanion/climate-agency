@@ -1,14 +1,17 @@
+import { ReactNode } from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
 import { TextCaption } from 'components/Text/TextCaption'
+import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 import { Link, LinkProps } from 'components/Links/Link'
 
 export interface OpeningBlockProps {
-  content: string
+  content: ReactNode
   imageSection: {
     mediaImage: MediaImageProps
-    caption?: string
+    innerCaption?: string
+    caption?: ReactNode
   }
   layout: 'default' | 'large'
   className?: string
@@ -33,17 +36,24 @@ export const OpeningBlock = ({
           {imageSection.mediaImage ? (
             <MediaImage {...imageSection.mediaImage} />
           ) : null}
+          {imageSection.innerCaption && (
+            <InnerCaption>{imageSection.innerCaption}</InnerCaption>
+          )}
         </MediaImageWrap>
-        <CaptionWrap color="black">{imageSection.caption}</CaptionWrap>
+        {imageSection.caption && (
+          <CaptionWrap color="black">Photo: {imageSection.caption}</CaptionWrap>
+        )}
       </ImageContainer>
     </OpeningBlockWrap>
   )
 }
 
 const OpeningBlockWrap = styled('section', {
+  whiteSpace: 'no-wrap',
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   gridTemplateRows: 'repeat(auto, 1fr)',
+  alignItems: 'start',
   columnGap: '$16',
   px: '$16',
 
@@ -83,10 +93,12 @@ const ImageContainer = styled('div', {
 })
 
 const MediaImageWrap = styled('div', {
+  position: 'relative',
+
   gridColumn: 'span 8',
 
   '@tabletUp': {
-    gridColumn: 'span 6',
+    gridColumn: '1 / span 6',
   },
 })
 
@@ -122,11 +134,16 @@ const ContentWrap = styled('div', {
   },
 })
 
-const TextContainer = styled('p', {
-  whiteSpace: 'pre-line',
-  fontFamily: '$inria',
-  fontWeight: '$light',
-  letterSpacing: '$normal',
+const TextContainer = styled('div', {
+  // whiteSpace: 'pre-line',
+  '& > * + *': {
+    mt: '$40',
+  },
+  '& > p': {
+    fontFamily: '$inria',
+    fontWeight: '$light',
+    letterSpacing: '$normal',
+  },
   mb: '$40',
 
   '@tabletUp': {
@@ -136,23 +153,37 @@ const TextContainer = styled('p', {
   variants: {
     layout: {
       default: {
-        fontSize: '$S',
-        lineHeight: '$S',
+        '& > p': {
+          fontSize: '$S',
+          lineHeight: '$S',
+        },
 
         '@desktopUp': {
-          fontSize: '$L',
-          lineHeight: '$L',
+          '& > p': {
+            fontSize: '$L',
+            lineHeight: '$L',
+          },
         },
       },
       large: {
-        fontSize: '$M',
-        lineHeight: '$M',
+        '& > p': {
+          fontSize: '$M',
+          lineHeight: '$M',
+        },
 
         '@tabletUp': {
-          fontSize: '$XXL',
-          lineHeight: '$XXL',
+          '& > p': {
+            fontSize: '$XXL',
+            lineHeight: '$XXL',
+          },
         },
       },
     },
+  },
+})
+
+const InnerCaption = styled(InnerTextCaption, {
+  '& > p': {
+    maxWidth: '500px',
   },
 })
