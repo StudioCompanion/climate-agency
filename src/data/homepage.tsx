@@ -49,7 +49,7 @@ export const hero = {
 
 export const netZero = {
   title: `Climate Communication is not working.`,
-  content: `Outside of the climate echo chamber, people are confused by the jargon and mind-bending complexity. For e.g.: One third of UK CEOs in the UK are unfamiliar with the term "Net Zero" <sup>(1)</sup>.
+  content: `Outside of the climate echo chamber, people are confused by the jargon and mind-bending complexity. For example, one third of UK CEOs in the UK are unfamiliar with the term "Net Zero" <sup>(1)</sup>.
 
   This matters, Climate start-ups need to persuade investors, customers and communities. We can help, making marketing techniques accessible and tailored to climate.`,
   imageSection: {
