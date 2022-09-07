@@ -63,7 +63,7 @@ export const accelerator = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    innerCaption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.'`,
+    innerCaption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.`,
     caption: (
       <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
         Nasa
@@ -134,7 +134,7 @@ export const stakeholders = {
         isExternal
         color="captionBlack"
       >
-        @jungleboymiguel
+        Miguel Bandeira
       </Link>
     ),
   },
