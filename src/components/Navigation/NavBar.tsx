@@ -90,6 +90,7 @@ export const NavBar = () => {
   return (
     <NavBarWrap>
       <NavBarInnerWrap>
+        <HiddenH1>The Climate Agency</HiddenH1>
         <TopRow isOpen={isOpen}>
           <NextLink passHref href="/">
             <LogoMobileWrap>
@@ -126,6 +127,10 @@ export const NavBar = () => {
 
 const NavBarWrap = styled('header', {
   zIndex: 1,
+})
+
+const HiddenH1 = styled('h1', {
+  visuallyHidden: '',
 })
 
 const NavBarInnerWrap = styled('nav', {
