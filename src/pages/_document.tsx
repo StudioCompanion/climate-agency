@@ -66,6 +66,14 @@ export default class Doc extends Document {
             href={'/site/android-chrome-256x256.png'}
           />
           <link rel="mask-icon" href={'/site/safari-pinned-tab.svg'} />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ9JDVSZSK"></script>
+          <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-RJ9JDVSZSK');
+          </script>
         </Head>
         <body>
           <Main />
