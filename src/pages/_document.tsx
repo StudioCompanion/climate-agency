@@ -9,6 +9,8 @@ import Document, {
 
 import { getCssText, reset } from 'styles/stitches.config'
 
+const GA_TRACKING_ID = 'G-RJ9JDVSZSK'
+
 export default class Doc extends Document {
   getInitialProps = async (ctx: DocumentContext) => {
     // render page
@@ -39,6 +41,20 @@ export default class Doc extends Document {
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-RJ9JDVSZSK"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}');
+              `,
+            }}
           />
           <link
             id="icon32"
