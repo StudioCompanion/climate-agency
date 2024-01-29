@@ -12,16 +12,20 @@ export const hero = {
     mediaImage: {
       image: {
         src: '/images/earth_nasa.jpg',
-        altText: 'Hero image',
+        altText: 'NASA Airborne Campaigns Focus on climate Impacts in the Arctic. Nasa images.',
         width: 1307,
-        height: 1272,
+        height: 1307,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
     innerCaption: `NASA/Goddard Space Flight Center/Reto Stöckli`,
     caption: (
-      <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
+      <Link
+        href="https://nasa.gov"
+        isExternal
+        color="captionBlack"
+      >
         Nasa
       </Link>
     ),
@@ -29,29 +33,77 @@ export const hero = {
   content: (
     <>
       <p>
-        Truth is, we’re going to need some big ideas to keep our world
-        habitable.
+        We’re 100% focused on the climate sector.
       </p>
 
       <p>
-        These ideas need profile and they need support, with urgency. And we aim
-        to get them just that.
+        As a boutique marketing consultancy, we help climate tech <b>persuade and scale</b>.
       </p>
 
       <p>
-        We are a non-profit marketing strategy consultancy, dedicated to help
-        climate innovators scale up.
+        A non profit, accessible to early-stage organisations.
       </p>
     </>
   ),
+  leftLink: {
+    href: `/case-studies`,
+    children: `See our case studies`,
+    color: `green`,
+    isExternal: false,
+  },
+  rightLink: {
+    href: `/what-we-do`,
+    children: `How we could help`,
+    color: `green`,
+    isExternal: false,
+  },
   layout: 'default',
 } as OpeningBlockProps
 
-export const netZero = {
-  title: `Climate Communication is not working.`,
-  content: `Outside of the climate echo chamber, people are confused by the jargon and mind-bending complexity. For example, one third of UK CEOs in the UK are unfamiliar with the term "Net Zero" <sup>(1)</sup>.
+export const howWeWork = {
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/earth_ai_shutterstock_2.jpg',
+        altText: 'How we work',
+        width: 1307,
+        height: 1307,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
+    },
+  },
+  className: 'blackBackground',
+  content: (
+    <>
+      <p>
+        Climate tech needs the support of many stakeholders.
+      </p>
 
-  This matters, Climate start-ups need to persuade investors, customers and communities. We can help, making marketing techniques accessible and tailored to climate.`,
+      <p>
+      This is why we help innovators reach <b><i>outside of the expert bubble</i></b>, to investors, decision makers, influencers.
+      </p>
+    </>
+  ),
+  link: {
+    href: `/what-we-do`,
+    children: `How we work`,
+    color: `green`,
+    isExternal: false,
+  },
+  layout: 'default',
+  textPosition: 'left'
+} as OpeningBlockProps
+
+export const netZero = {
+  title: (
+    <>
+    Climate Communication is not working. <b><i>Let's change this</i></b>
+    </>
+  ),
+  content: `Outside of the climate echo chamber, people are confused by the jargon and mind-bending complexity. For example, only 2% <sup>(2)</sup> of global charity giving goes to climate.
+
+  This matters, climate start-ups need to persuade investors, customers and communities. We can help, making marketing techniques accessible and tailored to climate.`,
   imageSection: {
     mediaImage: {
       image: {
@@ -131,6 +183,7 @@ export const climateCauses = {
 } as ClimateCausesBlockProps
 
 export const ourBackground = {
+  className: 'blackBackground',
   textPosition: 'left',
   header: `Our background`,
   content: `We are a team of experts in marketing and communications, with prestigious careers leading global consumer brands and charities.`,
@@ -191,22 +244,107 @@ export const testimonials = {
       width: 195,
       height: 55,
     },
+    {
+      src: '/images/logos/carbongap.png',
+      altText: 'Carbon Gap logo',
+      width: 200,
+      height: 62.8,
+    },
+    {
+      src: '/images/logos/powertrust.png',
+      altText: 'Powertrust logo',
+      width: 135,
+      height: 52,
+    },
+    {
+      src: '/images/logos/zulu.png',
+      altText: 'Zulu Ecosystems logo',
+      width: 200,
+      height: 48.4,
+    },
+    {
+      src: '/images/logos/ucaneo.png',
+      altText: 'Ucaneo logo',
+      width: 200,
+      height: 78.1,
+    },
+    {
+      src: '/images/logos/kita.png',
+      altText: 'Kita logo',
+      width: 135,
+      height: 56,
+    },
+    {
+      src: '/images/logos/airhive.png',
+      altText: 'Airhive logo',
+      width: 150,
+      height: 56,
+    },
+    {
+      src: '/images/logos/carbon-to-stone.png',
+      altText: 'Carbon to Stone logo',
+      width: 150,
+      height: 72,
+    },
+    {
+      src: '/images/logos/pv-radar.png',
+      altText: 'PVRadar logo',
+      width: 200,
+      height: 28,
+    },
+    {
+      src: '/images/logos/jolt.png',
+      altText: 'Jolt Solutions logo',
+      width: 87.7,
+      height: 100,
+    },
+    {
+      src: '/images/logos/bluemethane.png',
+      altText: 'Blue Methane logo',
+      width: 200,
+      height: 55,
+    },
   ],
   testimonials: [
     {
-      content: `“Climate organizations will be more effective by developing a brand that captures their voice and mission. The Climate Agency team has a great knowledge of branding and climate change to make this happen. Their sessions are impactful and actionable.”`,
+      content: `“The Climate Agency did a phenomenal job telling our story.  Their industry knowledge was critical to establishing our unique voice”`,
+      signature: `Sravanth Gadikota, CEO`,
+      organisation: `Carbon to Stone`,
+    },
+    {
+      content: `“Sophie and Lisa took an extremely complex topic and made it digestible. They helped us craft content that will break through the noise”`,
+      signature: `Paul Birkelo, Head of Operations`,
+      organisation: `Powertrust`,
+    },
+    {
+      content: `“The Climate Agency has without doubt been a core part of our scale-up story.”`,
+      signature: `Alexander Makela, Policy Director`,
+      organisation: `Carbon Gap`,
+    },
+    {
+      content: `“The Climate Agency team has a great knowledge of branding and climate change to make this happen. Their sessions are impactful and actionable.”`,
       signature: `Ben Rubin, Executive Director`,
       organisation: `Carbon Business Council`,
     },
     {
-      content: `“It’s amazing. Totally useful to have somebody with a fresh perspective guiding us. After these 2 workshops I will be revising our website and marketing assets.”`,
+      content: `“It’s amazing. After these 2 workshops I will be revising our website and marketing assets.”`,
       signature: `Lena Mechenkova, Communication Director`,
       organisation: `Vlinder Climate`,
     },
     {
-      content: `“Sophie’s wealth of experience, sound judgement and creative thinking have been integral to the successful launch of the Direct Air Capture Coalition.“`,
+      content: `“Sophie’s wealth of experience, sound judgement and creative thinking have been integral to the successful launch of the Direct Air Capture Coalition.”`,
       signature: `Jason Hochman, Co-Founder & Senior Director`,
       organisation: `Direct Air Capture Coalition`,
+    },
+    {
+      content: `“The Climate Agency bring a huge amount of experience which is a huge time saving benefit.”`,
+      signature: `Natalia Dorfman, CEO and Co-Founder`,
+      organisation: `Kita`,
+    },
+    {
+      content: `“The Climate Agency helped us distil down our perspective on building out our tech into really crisp and clear language. They’re great!”`,
+      signature: `Rory Brown, Co-founder and CEO`,
+      organisation: `Airhive`,
     },
   ],
 } as TestimonialsBlockProps
@@ -214,8 +352,8 @@ export const testimonials = {
 export const services = {
   textPosition: 'right',
   header: `Our services don't cost the earth.`,
-  content: `We are non-profit, highly cost-effective and entrepreneurial.
-  
+  content: `We are non profit, highly cost-effective and entrepreneurial.
+
   We have designed unique tools to help you leapfrog traditional processes and get results fast.`,
   link: {
     href: `/what-we-do`,
@@ -226,7 +364,7 @@ export const services = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/raindrops.png',
+        src: '/images/mountain_peak.jpg',
         altText: 'Raindrops',
         width: 653,
         height: 646,
@@ -234,10 +372,14 @@ export const services = {
       layout: 'responsive',
       objectFit: 'cover',
     },
-    innerCaption: `Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.`,
+    innerCaption: `Humans relationship with Nature must change. The scale and speed at which scientists say we must effect that change are hard to grasp for most of us. Can we adapt in time to protect our world?`,
     caption: (
-      <Link href="https://unsplash.com/@jxb511" isExternal color="captionBlack">
-        John Bakator
+      <Link
+        href="https://unsplash.com/@therawhunter"
+        isExternal
+        color="captionBlack"
+      >
+        Massimiliano Morosinotto
       </Link>
     ),
   },
@@ -291,6 +433,28 @@ export const team = {
           isExternal: true,
         },
       },
+      {
+        mediaImage: {
+          image: {
+            src: '/team-members/katie.jpg',
+            altText: 'Katie Parker',
+            width: 317,
+            height: 369,
+          },
+          layout: 'responsive',
+          objectFit: 'cover',
+        },
+        name: `Katie Parker`,
+        role: `Associate Director`,
+        description: `Associate director of the Climate Agency.  Katie has 25 years of marketing and sustainability experience, including L’Oreal, Diageo and McDonald’s. \n
+        She was a management consultant with McKinsey and spent two years at the Cambridge Centre for Climate Repair, with a focus on CDR.`,
+        socialLink: {
+          href: `https://uk.linkedin.com/in/katieparker`,
+          children: `LinkedIn`,
+          color: `transparent`,
+          isExternal: true,
+        },
+      },
     ],
     [
       {
@@ -328,7 +492,7 @@ export const team = {
         name: `Ivo Vlaev`,
         role: `Advisor`,
         description: `Ivo Vlaev is a Professor of Behavioural Science, Warwick Business School, University of Warwick. He received a DPhil (PhD) in Experimental Psychology from the University of Oxford.
-        
+
         Ivo is a co-author of the famous UK Cabinet Office MINDSPACE report, which provides a framework for designing effective policy utilising behavioural sciences (also known as nudge theory) and helps public and private organisations develop and apply lessons from behavioural science.`,
         socialLink: {
           href: `https://www.wbs.ac.uk/about/person/ivo-vlaev`,
@@ -350,8 +514,8 @@ export const team = {
         },
         name: `David Addison`,
         role: `Advisor`,
-        description: `David Addison works at Virgin on a range of climate, environment, purpose, and sustainability efforts. For more than 12 years he has been working with and learning from others across academia, business, civil society, governments, and non-profits on scalable, sustainable carbon removal. 
-        
+        description: `David Addison works at Virgin on a range of climate, environment, purpose, and sustainability efforts. For more than 12 years he has been working with and learning from others across academia, business, civil society, governments, and non profits on scalable, sustainable carbon removal.
+
         He also serves as an advisor to <a href="https://climatescience.org/" rel="noopener noreferrer" target="_blank">ClimateScience.org</a>, <a href="https://nori.com/" rel="noopener noreferrer" target="_blank"> Nori Inc.</a>, and a number of other initiatives. Previously David was also an advisor to initiatives including <a href="https://carbon180.org/" rel="noopener noreferrer" target="_blank">Carbon180</a> and the <a href="https://drawdown.org/the-book" rel="noopener noreferrer" target="_blank">New York Times best-selling book: Drawdown</a>.`,
         socialLink: {
           href: `https://www.linkedin.com/in/davidaddison350/`,
@@ -363,19 +527,19 @@ export const team = {
       {
         mediaImage: {
           image: {
-            src: '/team-members/fern.jpg',
-            altText: 'Fern Miller',
+            src: '/team-members/dipa.jpg',
+            altText: 'Dipa Shah',
             width: 1427,
             height: 1661,
           },
           layout: 'responsive',
           objectFit: 'cover',
         },
-        name: `Fern Miller`,
+        name: `Dipa Shah`,
         role: `Advisor`,
-        description: `Fern Miller is Executive Strategy Director at R/GA – A leading digital, marketing and innovation agency. Her senior expertise spans strategic planning and creative communication, across global markets; in both agencies and start-ups.`,
+        description: `A Senior Finance Executive, Dipa has extensive and successful experience of raising funds for businesses as well as refinancing. She is currently head of Finance, Strategy & Transformation for a UK NGO and director of a consumer good startup.`,
         socialLink: {
-          href: `https://www.linkedin.com/in/fernmiller/`,
+          href: `https://uk.linkedin.com/in/dipa-shah-née-jaintilal-21b6b99`,
           children: `LinkedIn`,
           color: `transparent`,
           isExternal: true,
@@ -415,9 +579,7 @@ export const team = {
         },
         name: `Myles Palmer`,
         role: `Advisor`,
-        description: `Myles is the founder and creative director of Companion, a digital product design studio that works with start-ups and established businesses to create a better future for people and planet.
-
-        He is passionate about how design & communication can shape the world around us and the power of using design to solve complex problems.`,
+        description: `Myles is a Creative Director and Associate lecturer with over ten years experience working with startups and businesses.  He is passionate about how design & communication can shape the world around us for the better.  He recently launched Pair Up, a platform for creatives to offer time in the spirit of learning.`,
         socialLink: {
           href: `https://www.linkedin.com/in/myles-palmer-b1b70519/`,
           children: `LinkedIn`,
@@ -430,19 +592,73 @@ export const team = {
 } as TeamBlockProps
 
 export const cta = {
-  content: `Do you believe greenwashing should have a monopoly on good marketing and clever comms? Do you believe that climate projects need more funding and support?
-  
-  Then please get in touch. Together, let's persuade the people who can help you scale up.`,
+  content: `Find out how we can help: from defining your core message, developing your influencing strategy, crafting your website, designing materials or building your thought-leadership campaign.`,
   leftLink: {
-    href: `mailto:sophie@climateagency.net`,
-    children: `I’m working in climate and need help!`,
+    href: `/case-studies`,
+    children: `See our case studies`,
     color: `green`,
-    isExternal: true,
+    isExternal: false,
   },
-  rightLink: {
-    href: `mailto:lisa@climateagency.net`,
-    children: `I’m working in the creative industry and want to help!`,
-    color: `stone`,
-    isExternal: true,
-  },
+  mediaImages: [
+    {
+      mediaImage: {
+        image: {
+          src: '/images/cta-band/powertrust.gif',
+          altText: 'Powertrust',
+          width: 300,
+          height: 200,
+        },
+        layout: 'responsive',
+        objectFit: 'contain',
+      }
+    },
+    {
+      mediaImage: {
+        image: {
+          src: '/images/cta-band/small-is-scalable.png',
+          altText: 'Small is Scalable',
+          width: 300,
+          height: 200,
+        },
+        layout: 'responsive',
+        objectFit: 'contain',
+      }
+    },
+    {
+      mediaImage: {
+        image: {
+          src: '/images/cta-band/carbon-gap.png',
+          altText: 'Carbon Gap',
+          width: 300,
+          height: 200,
+        },
+        layout: 'responsive',
+        objectFit: 'contain',
+      }
+    },
+    {
+      mediaImage: {
+        image: {
+          src: '/images/cta-band/powertrust-square.png',
+          altText: 'Powertrust',
+          width: '300',
+          height: 200,
+        },
+        layout: 'intrinsic',
+        objectFit: 'contain',
+      }
+    },
+    {
+      mediaImage: {
+        image: {
+          src: '/images/cta-band/carbon-to-stone.png',
+          altText: 'Carbon to Stone',
+          width: 300,
+          height: 200,
+        },
+        layout: 'responsive',
+        objectFit: 'contain',
+      }
+    },
+  ]
 } as CtaBlockProps

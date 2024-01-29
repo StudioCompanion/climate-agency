@@ -17,7 +17,13 @@ export interface AcceleratorBlockProps {
     innerCaption?: string
     caption?: ReactNode
   }
+  secondImageSection?: {
+    mediaImage: MediaImageProps
+    innerCaption?: string
+    caption?: ReactNode
+  }
   children: ReactNode[]
+  className?: string
 }
 
 export const AcceleratorBlock = ({
@@ -26,6 +32,8 @@ export const AcceleratorBlock = ({
   subtitle,
   link,
   imageSection,
+  secondImageSection,
+  className
 }: AcceleratorBlockProps) => {
   return (
     <AcceleratorWrap id="accelerator">
@@ -44,12 +52,18 @@ export const AcceleratorBlock = ({
       <LinkWrap>
         <Link {...link} />
       </LinkWrap>
-      <ImageWrap>
+      <ImageWrap className={className}>
         {imageSection.mediaImage ? (
           <MediaImage {...imageSection.mediaImage} />
         ) : null}
         {imageSection.innerCaption && (
           <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+        )}
+        {secondImageSection?.mediaImage ? (
+          <MediaImage {...secondImageSection.mediaImage} />
+        ) : null}
+        {secondImageSection?.innerCaption && (
+          <InnerTextCaption>{secondImageSection.innerCaption}</InnerTextCaption>
         )}
       </ImageWrap>
       {imageSection.caption && (
@@ -198,8 +212,25 @@ const ImageWrap = styled('div', {
   gridColumn: 'span 8',
   mt: '$40',
 
+  '&.twoImages': {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+
+  '&.twoImages > *': {
+    width: '100%',
+    margin: '0 0 $10'
+  },
+
   '@tabletUp': {
     gridColumn: '3 / span 10',
+    '&.twoImages': {
+      flexDirection: 'row'
+    },
+    '&.twoImages > *': {
+      width: '50%',
+      margin: '0 $10'
+    },
   },
 })
 

@@ -2,15 +2,22 @@ import { ReactNode } from 'react'
 import { styled } from 'styles/stitches.config'
 
 import { MediaImage, MediaImageProps } from '../Media/MediaImage'
+import { Link, LinkProps } from '../Links/Link'
 import { TextCaption } from 'components/Text/TextCaption'
 import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 
 export interface ArticleBlockProps {
   pageLayout: 'left' | 'right'
   children: ReactNode
+  link?: LinkProps
   title: string
-  content: string
+  content: ReactNode
   imageSection: {
+    mediaImage: MediaImageProps
+    innerCaption?: string
+    caption?: ReactNode
+  }
+  secondImageSection?: {
     mediaImage: MediaImageProps
     innerCaption?: string
     caption?: ReactNode
@@ -20,10 +27,12 @@ export interface ArticleBlockProps {
 
 export const ArticleBlock = ({
   pageLayout,
+  link,
   children,
   title,
   content,
   imageSection,
+  secondImageSection,
   className,
 }: ArticleBlockProps) => {
   return (
@@ -33,12 +42,36 @@ export const ArticleBlock = ({
         <Title>{title}</Title>
       </HeaderContainer>
       <Content pageLayout={pageLayout}>{content}</Content>
-      <ImageContainer pageLayout={pageLayout}>
-        <MediaImage {...imageSection.mediaImage} />
-        {imageSection.innerCaption && (
-          <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
-        )}
-      </ImageContainer>
+      {link ? (
+        <>
+        <LinkWrap>
+          <Link {...link} />
+        </LinkWrap>
+        </>
+      ) : null}
+      {secondImageSection ? (
+        <>
+        <ImageWrap className={className}>
+          <MediaImage {...imageSection.mediaImage} />
+          {imageSection.innerCaption && (
+            <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+          )}
+          {secondImageSection.mediaImage ? (
+            <MediaImage {...secondImageSection.mediaImage} />
+          ) : null}
+          {secondImageSection.innerCaption && (
+            <InnerTextCaption>{secondImageSection.innerCaption}</InnerTextCaption>
+          )}
+          </ImageWrap>
+        </>
+      ) : (
+        <ImageContainer pageLayout={pageLayout}>
+          <MediaImage {...imageSection.mediaImage} />
+          {imageSection.innerCaption && (
+            <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
+          )}
+        </ImageContainer>
+      )}
       {imageSection.caption && (
         <CaptionWrap pageLayout={pageLayout} color="black">
           Photo: {imageSection.caption}
@@ -75,6 +108,10 @@ const ArticleWrap = styled('section', {
       },
     },
   },
+
+  '&.noMarginTop': {
+    marginTop: '0'
+  }
 })
 
 const HeaderContainer = styled('div', {
@@ -98,7 +135,7 @@ const HeaderContainer = styled('div', {
         },
       },
     },
-  },
+  }
 })
 
 const Icon = styled('div', {
@@ -144,16 +181,19 @@ const Title = styled('h2', {
   },
 })
 
-const Content = styled('p', {
+const Content = styled('div', {
   whiteSpace: 'pre-line',
   fontFamily: '$workSans',
   fontWeight: '$regular',
-  fontSize: '$XS',
+  fontSize: '3em',
   lineHeight: '$XS',
   letterSpacing: '$small',
   gridColumn: 'span 8',
   mt: '$20',
   mb: '$40',
+  '& p' : {
+    marginBottom: 20
+  },
 
   variants: {
     pageLayout: {
@@ -176,7 +216,6 @@ const Content = styled('p', {
 const ImageContainer = styled('div', {
   position: 'relative',
   gridColumn: 'span 8',
-
   variants: {
     pageLayout: {
       left: {
@@ -186,9 +225,36 @@ const ImageContainer = styled('div', {
       },
       right: {
         '@tabletUp': {
-          gridColumn: '6 / span 5',
+          gridColumn: '7 / span 4',
         },
       },
+    },
+  },
+})
+
+const ImageWrap = styled('div', {
+  position: 'relative',
+  gridColumn: 'span 8',
+  mt: '$40',
+
+  '&.twoImages': {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+
+  '&.twoImages > *': {
+    width: '100%',
+    margin: '0 0 10px'
+  },
+
+  '@tabletUp': {
+    gridColumn: '3 / span 10',
+    '&.twoImages': {
+      flexDirection: 'row'
+    },
+    '&.twoImages > *': {
+      width: '50%',
+      margin: '0 10px'
     },
   },
 })
@@ -212,5 +278,16 @@ const CaptionWrap = styled(TextCaption, {
         },
       },
     },
+  },
+})
+
+const LinkWrap = styled('span', {
+  gridColumn: 'span 8',
+
+  '@tabletUp': {
+    gridColumn: '4 / span 2',
+  },
+  '@desktopUp': {
+    gridColumn: '5 / span 2',
   },
 })

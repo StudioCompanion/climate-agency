@@ -8,6 +8,17 @@ export const globalStyles = globalCss({
       fontWeight: 300,
     },
     {
+      fontFamily: 'Inria Serif',
+      src: 'url("/fonts/InriaSerif-Bold.woff") format("woff"), url("/public/fonts/InriaSerif-Bold.woff2") format("woff2")',
+      fontWeight: 700,
+    },
+    {
+      fontFamily: 'Inria Serif',
+      src: 'url("/fonts/InriaSerif-BoldItalic.woff") format("woff"), url("/public/fonts/InriaSerif-BoldItalic.woff2") format("woff2")',
+      fontWeight: 700,
+      fontStyle: 'italic'
+    },
+    {
       fontFamily: 'Work Sans',
       src: 'url("/fonts/WorkSans-Regular.woff") format("woff"), url("/fonts/WorkSans-Regular.woff2") format("woff2")',
       fontWeight: 400,

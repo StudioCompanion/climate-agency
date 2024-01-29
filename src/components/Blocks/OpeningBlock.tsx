@@ -7,6 +7,7 @@ import { InnerTextCaption } from 'components/Text/InnerTextCaption'
 import { Link, LinkProps } from 'components/Links/Link'
 
 export interface OpeningBlockProps {
+  textPosition: 'left' | 'right'
   content: ReactNode
   imageSection: {
     mediaImage: MediaImageProps
@@ -15,21 +16,32 @@ export interface OpeningBlockProps {
   }
   layout: 'default' | 'large'
   className?: string
-  link?: LinkProps
+  leftLink: LinkProps
+  rightLink: LinkProps
+  link: LinkProps
 }
 
 export const OpeningBlock = ({
+  textPosition,
   content,
   imageSection,
   layout,
   className,
-  link,
+  leftLink,
+  rightLink,
+  link
 }: OpeningBlockProps) => {
   return (
     <OpeningBlockWrap className={className}>
-      <ContentWrap layout={layout}>
+      <ContentWrap layout={layout} textPosition={textPosition}>
         <TextContainer layout={layout}>{content}</TextContainer>
-        {link ? <Link {...link} /> : null}
+        {leftLink ?  (
+          <ButtonsWrap><Link {...leftLink} />
+          {rightLink ? <Link {...rightLink} /> : null}
+          </ButtonsWrap>
+        ) : link ? (
+          <Link {...link} />
+        ) : null}
       </ContentWrap>
       <ImageContainer layout={layout}>
         <MediaImageWrap>
@@ -62,6 +74,24 @@ const OpeningBlockWrap = styled('section', {
     gridTemplateRows: 'repeat(auto, 1fr)',
     columnGap: '$20',
     px: '$20',
+    '&.smallImg > div:nth-child(2) > div': {
+      minWidth: '80% !important',
+      maxWidth: '80% !important',
+      minHeight: '80% !important',
+      maxHeight: '100% !important'
+    }
+  },
+  '&.blackBackground': {
+    backgroundColor: '#000',
+    margin: 0,
+    paddingTop: '$40',
+    paddingBottom: '$40'
+  },
+  '&.blackBackground *:not(a)': {
+    color: '#fff'
+  },
+  '&.extraTopPadding': {
+    paddingTop: '$40'
   },
 })
 
@@ -131,6 +161,20 @@ const ContentWrap = styled('div', {
         },
       },
     },
+    textPosition: {
+      left: {
+        '@tabletUp': {
+          gridColumn: 'span 6',
+          gridRowStart: '1'
+        },
+      },
+      right: {
+        '@tabletUp': {
+          gridColumn: '7 / span 6',
+          gridRowStart: '1'
+        },
+      },
+    },
   },
 })
 
@@ -143,6 +187,9 @@ const TextContainer = styled('div', {
     fontFamily: '$inria',
     fontWeight: '$light',
     letterSpacing: '$normal',
+  },
+  '& > p b': {
+    fontWeight: 700
   },
   mb: '$40',
 
@@ -185,5 +232,20 @@ const TextContainer = styled('div', {
 const InnerCaption = styled(InnerTextCaption, {
   '& > p': {
     maxWidth: '500px',
+  },
+})
+
+const ButtonsWrap = styled('div', {
+  display: 'inline-flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  gap: '$8',
+  gridColumn: 'span 8',
+
+  '@desktopUp': {
+    flexDirection: 'row',
+  },
+  '@largeDesktopUp': {
+    gridColumn: '1 / span 6',
   },
 })

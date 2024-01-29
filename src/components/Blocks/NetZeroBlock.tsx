@@ -11,8 +11,8 @@ import { parseStringAndInsertFootnoteBetweenSupTags } from 'helpers/strings'
 import { Link } from 'components/Links/Link'
 
 export interface NetZeroBlockProps {
-  title: string
-  content: string
+  title?: ReactNode
+  content?: string
   imageSection: {
     mediaImage: MediaImageProps
     innerCaption?: string
@@ -27,29 +27,35 @@ export const NetZeroBlock = ({
 }: NetZeroBlockProps) => {
   return (
     <NetZeroWrap>
+      { title ? (
       <HeaderContainer>
-        <Communication width="27" />
-        <TitleContainer>{title}</TitleContainer>
+          <Communication width="27" />
+        {title ? (
+          <TitleContainer>{title}</TitleContainer>
+        ) : null}
       </HeaderContainer>
-      <TextContainer>
-        {parseStringAndInsertFootnoteBetweenSupTags(
-          content,
-          'The UK Carbon Trust research found that 71% of small and medium size businesses in the UK could not refer to a single web source for help on decarbonization, and one third were not familiar with the term “Net Zero”. SMEs represent 90% of businesses in the UK.',
-          {
-            tooltipProps: {
-              contentProps: {
-                alignOffset: -12,
+      ) : null}
+      {content ? (
+        <TextContainer>
+          {parseStringAndInsertFootnoteBetweenSupTags(
+            content,
+            'The UK Carbon Trust research found that 71% of small and medium size businesses in the UK could not refer to a single web source for help on decarbonization, and one third were not familiar with the term “Net Zero”. SMEs represent 90% of businesses in the UK.',
+            {
+              tooltipProps: {
+                contentProps: {
+                  alignOffset: -12,
+                },
               },
-            },
-            popoverProps: {
-              contentProps: {
-                alignOffset: -12,
+              popoverProps: {
+                contentProps: {
+                  alignOffset: -12,
+                },
               },
-            },
-          }
-        )}
-        <TextLink href="/what-we-do">{'See how'}</TextLink>
-      </TextContainer>
+            }
+          )}
+          <TextLink href="mailto:sophie@climateagency.net">{'Get in Touch'}</TextLink>
+        </TextContainer>
+      ) : null}
       <MediaContainer>
         <ImageContainer>
           {imageSection.mediaImage ? (
@@ -59,7 +65,9 @@ export const NetZeroBlock = ({
             <InnerTextCaption>{imageSection.innerCaption}</InnerTextCaption>
           )}
         </ImageContainer>
-        <CaptionWrap color="white">Photo: {imageSection.caption}</CaptionWrap>
+        {imageSection.caption ? (
+          <CaptionWrap color="white">Photo: {imageSection.caption}</CaptionWrap>
+        ) : null}
       </MediaContainer>
     </NetZeroWrap>
   )
@@ -71,6 +79,8 @@ const NetZeroWrap = styled('section', {
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
   px: '$16',
+  paddingBottom: '20px',
+  paddingTop: '20px',
 
   '@tabletUp': {
     gridTemplateColumns: 'repeat(12, 1fr)',
@@ -92,7 +102,7 @@ const HeaderContainer = styled('div', {
     flexDirection: 'row',
     gap: '$30',
     gridColumn: 'span 10',
-    mt: '$180',
+    mt: '$100',
   },
   '@desktopUp': {
     gridColumn: 'span 7',
