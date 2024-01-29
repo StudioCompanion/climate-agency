@@ -4,7 +4,6 @@ import { NextSeo } from 'next-seo'
 
 import { OpeningBlock } from 'components/Blocks/OpeningBlock'
 import { NetZeroBlock } from 'components/Blocks/NetZeroBlock'
-import { ClimateCausesBlock } from 'components/Blocks/ClimateCausesBlock'
 import { ShortArticleBlock } from 'components/Blocks/ShortArticleBlock'
 import { TestimonialsBlock } from 'components/Blocks/TestimonialsBlock'
 import { TeamBlock } from 'components/Blocks/TeamBlock'
@@ -12,8 +11,8 @@ import { CtaBlock } from 'components/Blocks/CtaBlock'
 
 import {
   hero,
+  howWeWork,
   netZero,
-  climateCauses,
   ourBackground,
   testimonials,
   services,
@@ -41,13 +40,13 @@ const Index = () => {
         }}
       />
       <Opening {...hero} />
-      <NetZeroBlock {...netZero} />
-      <ClimateCauses {...climateCauses} />
-      <ShortArticle {...ourBackground} />
+      <Opening {...howWeWork} />
       <TestimonialsBlock {...testimonials} />
       <ServicesBlock {...services} />
+      <ShortArticle {...ourBackground} />
       <TeamBlock {...team} />
       <Cta {...cta} />
+      <NetZeroBlock {...netZero} />
     </IndexWrap>
   )
 }
@@ -58,14 +57,6 @@ const IndexWrap = styled('article', {})
 
 const Opening = styled(OpeningBlock, {
   mb: '$40',
-})
-
-const ClimateCauses = styled(ClimateCausesBlock, {
-  mb: '$30',
-
-  '@tabletUp': {
-    mb: '$100',
-  },
 })
 
 const ShortArticle = styled(ShortArticleBlock, {

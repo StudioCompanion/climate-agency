@@ -2,50 +2,48 @@ import { OpeningBlockProps } from 'components/Blocks/OpeningBlock'
 import { AcceleratorBlockProps } from 'components/Blocks/AcceleratorBlock'
 import { ArticleBlockProps } from 'components/Blocks/ArticleBlock'
 import { Link } from 'components/Links/Link'
+import { NetZeroBlockProps } from 'components/Blocks/NetZeroBlock'
 
 import SpikesIcon from '../assets/Spikes.svg'
-import SunIcon from '../assets/Sun.svg'
 
 export const intro = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/wright_brothers_glider.jpg',
-        altText: 'Vintage photo of a Wright Brothers Glider',
+        src: '/images/what_we_do_nasa.jpg',
+        altText: 'Apollo 11 Lunar Module ascent, 1969, NASA Images',
         width: 765,
         height: 636,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    innerCaption: `As two unknown bicycle makers from Ohio, the Wright brothers were ignored by journalists and scorned by many. But they approached "The Flying Problem" in a different way, focusing on control rather than power.  It is this unique approach that ensured their place in history.`,
+    innerCaption: `Apollo 11 Lunar Module ascent, 1969, NASA Images`,
   },
   content: (
     <>
       <p>
-        Time and time again, human ingenuity has proven its ability to solve the
-        most complex problems. But climate change is our biggest challenge yet,
-        and climate start-ups face an uphill struggle.
+        Time and time again, <b><i>human ingenuity</i></b> has solved the most complex problems.  But climate change is our biggest challenge yet.
       </p>
       <p>
-        Our techniques help you define your vision, your message, your
-        stakeholder strategy. From accelerator workshops to spotlight campaigns,
-        our processes are fast and accessible.
+      We help climate startups get lift-off.
+      We're fast, accessible & protective of your time.
       </p>
     </>
   ),
   link: {
-    href: `mailto:sophie@climateagency.net`,
-    children: `Ready to fly?`,
+    href: `/case-studies`,
+    children: `See our case studies`,
     color: 'green',
-    isExternal: true,
+    isExternal: false,
   },
   layout: `default`,
 } as OpeningBlockProps
 
 export const accelerator = {
-  title: `The Climate Action Accelerator`,
-  subtitle: `Our accelerator module pulls forward what is traditionally a 3 to 6 months process into 3 to 6 weeks.`,
+  className: 'twoImages',
+  title: `The Climate Agency Stratcom Programme`,
+  subtitle: `Our proprietary Stratcom programme pulls forward what is traditionally a 3 to 6 months process into 3 to 6 weeks.`,
   link: {
     href: `mailto:sophie@climateagency.net`,
     children: `Get in touch`,
@@ -55,20 +53,26 @@ export const accelerator = {
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/satelite.jpg',
-        altText: 'Satellite capture from United States Geological Survey',
+        src: '/images/accelerator_1.png',
+        altText: 'The Climate Agency Stratcom Programme',
         width: 1102,
         height: 632,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    innerCaption: `Satellite capture from United States Geological Survey, who provide reliable scientific information to describe and understand the Earth.`,
-    caption: (
-      <Link href="https://www.nasa.gov/" isExternal color="captionBlack">
-        Nasa
-      </Link>
-    ),
+  },
+  secondImageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/accelerator_2.png',
+        altText: 'The Climate Agency Stratcom Programme',
+        width: 1102,
+        height: 632,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
+    },
   },
   children: [
     '2 half-day workshops, followed by a full recommendation:',
@@ -79,11 +83,10 @@ export const accelerator = {
         feel)
       </li>
       <li>
-        A stakeholder strategy (who to influence, how, with what call to action)
+        A stakeholder strategy: Who to influence, with what tools and what call to action?  How to build <b><u>trust</u></b>?
       </li>
       <li>
-        A top line, action-focused communication plan (with focus on fundraising
-        , advocacy, engagement, depending on your needs)
+        A communication strategy: including your communication guidelines, your do’s and don’ts, your action-led priorities, your recommended toolbox
       </li>
     </ul>,
     'As a non-profit dedicated to help climate innovation, we have worked hard to deliver a process which is:',
@@ -111,60 +114,114 @@ export const accelerator = {
 } as AcceleratorBlockProps
 
 export const stakeholders = {
+  className: 'noMarginTop',
   pageLayout: 'right',
   children: <SpikesIcon />,
   title: `Stakeholder Campaigns on neglected climate topics`,
-  content: `We need to shine a spotlight on some climate stories, to nudge decision-makers. For example, the urgency around Methane, or the role of the ocean as a climate solution.
+  content: (
+    <>
+    <p>We need to shine a spotlight on some climate stories, <b>such as</b> the urgency around methane, or the role of the ocean as a climate solution.</p>
 
-  Facts and figures are not enough: we want to invite some of the best creative minds to help tell these stories. We plan to focus on persuading key influencers and decision-makers.`,
+  <p>We bring global experts from many backgrounds together, to spark a narrative, a movement.  For example, we initiated a global workshop on <b>methane from cattle</b> codenamed Project M-Force, gathering 24 experts with different perspectives at the end of 2023.</p>
+  </>
+  ),
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/ripples.jpg',
-        altText: 'Ripples in water',
-        width: 541,
-        height: 686,
+        src: '/images/what_we_do_cow.png',
+        altText: 'Methane from cattle',
+        width: 432,
+        height: 432,
       },
       layout: 'responsive',
-      objectFit: 'cover',
+      objectFit: 'contain',
     },
-    caption: (
-      <Link
-        href="https://unsplash.com/@jungleboymiguel"
-        isExternal
-        color="captionBlack"
-      >
-        Miguel Bandeira
-      </Link>
-    ),
+    innerCaption: 'Shutterstock AI'
   },
 } as ArticleBlockProps
 
 export const partners = {
-  pageLayout: 'left',
-  children: <SunIcon />,
-  title: `Helping you plan, connect and deliver with great partners`,
-  content: `After the Accelerator, if you need help creating assets (website, video) or running a campaign, we can help. Thanks to our little black book, we will connect you to the right partners.`,
+  className: 'extraTopPadding smallImg',
   imageSection: {
     mediaImage: {
       image: {
-        src: '/images/team-rowing.jpg',
-        altText: 'People gathering',
-        width: 989,
-        height: 686,
+        src: '/images/partners_1.jpg',
+        altText: 'The Climate Agency',
+        width: 968,
+        height: 1026,
       },
       layout: 'responsive',
       objectFit: 'cover',
     },
-    innerCaption: `Never has teamwork been more critical than when addressing the climate emergency.`,
+    innerCaption: 'Shutterstock AI',
+  },
+  content: (
+    <>
+      <p>
+        <b>We bring your mission to life</b>, through strategic advice, best in class marketing, copywriting, design.
+      </p>
+      <p>Because you need to engage different audiences as you deploy, we can be an extra resource to help you accelerate.</p>
+    </>
+  ),
+  layout: 'default',
+} as OpeningBlockProps
+
+export const partnersSecondary = {
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/partners_2.jpg',
+        altText: 'The Climate Agency',
+        width: 1307,
+        height: 1307,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
+    },
+  },
+  className: 'blackBackground',
+  content: (
+    <>
+      <p>
+      Helping you persuade through website, pitch decks, videos, white papers, social media campaigns…
+      </p>
+
+      <p>
+      We’ve built a little black book of top class creative partners who’ve agreed our terms, for climate.
+      </p>
+    </>
+  ),
+  link: {
+    href: `/case-studies`,
+    children: `Case studies`,
+    color: `green`,
+    isExternal: false,
+  },
+  layout: 'default',
+  textPosition: 'left'
+} as OpeningBlockProps
+
+export const netZero = {
+  imageSection: {
+    mediaImage: {
+      image: {
+        src: '/images/raindrops.png',
+        altText: 'Raindrops',
+        width: 1989,
+        height: 1170,
+      },
+      layout: 'responsive',
+      objectFit: 'cover',
+    },
+    innerCaption: 'Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate.',
     caption: (
       <Link
-        href="https://unsplash.com/@quinoal"
+        href="Pockets of methane trapped within Canada’s frozen Lake Abraham.  Methane has around 80 times the warming power of CO2 when it reaches the atmosphere. The release of vast quantities of methane held by melting ice sheets and permafrost would be a tipping point for our climate."
         isExternal
-        color="captionBlack"
+        color="captionWhite"
       >
-        Quino Al
+        John Bakator
       </Link>
     ),
   },
-} as ArticleBlockProps
+} as NetZeroBlockProps

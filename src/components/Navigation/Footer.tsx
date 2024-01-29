@@ -19,6 +19,12 @@ const linksInformation = [
     isExternal: false,
   },
   {
+    href: `/case-studies`,
+    children: `Case Studies`,
+    color: 'transparent',
+    isExternal: false,
+  },
+  {
     href: `mailto:sophie@climateagency.net`,
     children: `Contact Us`,
     color: 'transparent',

@@ -27,7 +27,7 @@ export const ShortArticleBlock = ({
   content,
   link,
   imageSection,
-  className,
+  className
 }: ShortArticleBlockProps) => {
   return (
     <ShortArticleWrap className={className}>
@@ -65,6 +65,12 @@ const ShortArticleWrap = styled('section', {
     columnGap: '$20',
     px: '$20',
   },
+  '&.blackBackground': {
+    backgroundColor: '#000',
+    color: '#fff',
+    marginBottom: 0,
+    paddingTop: '40px'
+  }
 })
 
 const MediaWrap = styled('div', {

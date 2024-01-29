@@ -48,7 +48,7 @@ export const TestimonialsBlock = ({
 }
 
 const TestimonialsWrap = styled('section', {
-  backgroundColor: '$green',
+  backgroundColor: '$yellow',
   display: 'grid',
   gridTemplateColumns: 'repeat(8, 1fr)',
   columnGap: '$16',
@@ -100,25 +100,18 @@ const TitleContainer = styled('h2', {
 })
 
 const ImageContainer = styled(Marquee, {
-  gridColumn: 'span 8',
+  gridColumn: 'span 12',
   gap: '$60',
   mx: -16,
   width: 'calc(100% + 32px) !important',
 
-  '& > *': {
-    gap: '$60',
+  '> *': {
+    minWidth: 'max-content'
   },
 
-  '@tabletUp': {
-    gridColumn: 'span 12',
-
-    mx: -20,
-    width: 'calc(100% + 40px) !important',
-  },
-
-  '.marquee': {
-    minWidth: 'max-content',
-  },
+  '.rfm-child': {
+    padding: '0 4em'
+  }
 })
 
 /**

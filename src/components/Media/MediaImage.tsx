@@ -3,6 +3,9 @@ import { useState } from 'react'
 
 import { styled } from 'styles/stitches.config'
 
+import { Link, LinkProps } from 'components/Links/Link'
+
+
 import { generateSrcSetSizes } from '../../helpers/media'
 
 type ImageLayout = 'fill' | 'fixed' | 'intrinsic' | 'responsive'
@@ -27,6 +30,7 @@ export type MediaImageProps = {
   objectFit?: 'cover' | 'contain'
   sizes?: string | SizesArray
   priority?: boolean
+  link?: LinkProps
 }
 
 export const MediaImage = ({
@@ -35,6 +39,7 @@ export const MediaImage = ({
   objectFit = 'cover',
   sizes = '100vw',
   priority,
+  link
 }: MediaImageProps) => {
   const [loaded, setLoaded] = useState(false)
 
@@ -44,6 +49,9 @@ export const MediaImage = ({
 
   return (
     <ImgContainer>
+    {link ? (
+      <Link {...link} />
+    ) : null}
       <Img
         src={image.src}
         alt={image.altText}
@@ -56,12 +64,23 @@ export const MediaImage = ({
         loaded={loaded}
         onLoadingComplete={handleLoadingComplete}
       />
+
     </ImgContainer>
   )
 }
 
 const ImgContainer = styled('div', {
-  backgroundColor: '$green',
+  backgroundColor: 'transparent',
+  position: 'relative',
+  '& a': {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 3,
+    fontSize: 0
+  }
 })
 
 const Img = styled(NextImage, {

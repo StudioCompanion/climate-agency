@@ -5,12 +5,15 @@ import { NextSeo } from 'next-seo'
 import { OpeningBlock } from 'components/Blocks/OpeningBlock'
 import { AcceleratorBlock } from 'components/Blocks/AcceleratorBlock'
 import { ArticleBlock } from 'components/Blocks/ArticleBlock'
+import { NetZeroBlock } from 'components/Blocks/NetZeroBlock'
 
 import {
   intro,
   accelerator,
   stakeholders,
   partners,
+  partnersSecondary,
+  netZero
 } from '../data/whatWeDoPage'
 const WhatWeDo = () => {
   return (
@@ -33,8 +36,10 @@ const WhatWeDo = () => {
       />
       <Opening {...intro} />
       <AcceleratorBlock {...accelerator} />
-      <Partners {...partners} />
+      <Opening {...partners} />
+      <Opening {...partnersSecondary} />
       <Stakeholders {...stakeholders} />
+      <NetZeroBlock {...netZero} />
     </WhatWeDoWrap>
   )
 }
@@ -54,14 +59,6 @@ const Stakeholders = styled(ArticleBlock, {
 
   '@tabletUp': {
     pb: '$60',
-    mt: '$120',
-  },
-})
-
-const Partners = styled(ArticleBlock, {
-  mt: '$60',
-
-  '@tabletUp': {
     mt: '$120',
   },
 })

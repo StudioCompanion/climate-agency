@@ -23,6 +23,10 @@ const routes = [
     href: `/what-we-do`,
     children: `What We Do`,
   },
+  {
+    href: `/case-studies`,
+    children: `Case Studies`,
+  }
 ] as NavLinkProps[]
 
 const contactLink = {
@@ -207,7 +211,7 @@ const LinksWrap = styled(animated.ul, {
   flexDirection: 'column',
   justifyContent: 'flex-end',
   alignItems: 'end',
-  gap: '$8',
+  gap: '$3',
   p: '$20 $16',
   backgroundColor: '$green',
   position: 'fixed',
